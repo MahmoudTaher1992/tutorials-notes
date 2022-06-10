@@ -1,12 +1,9 @@
 JSX stands for JavaScript XML.
 
-It is simply a syntax extension of JavaScript.
+It is simply a syntax extension of JavaScript and allows us to write HTML in React.
 
-JSX allows us to write HTML in React.
-
-It describe what the UI should look like
-
-JSX produces React “elements”.
+JSX produces “React elements”. which describe what the UI should look like. React reads these objects and uses them to construct the DOM and 
+keep it up to date.
 
 You can put any valid JavaScript expression inside the curly braces in JSX.
     const name = 'Josh Perez';
@@ -25,8 +22,7 @@ Specifying Attributes with JSX
     Since JSX is closer to JavaScript than to HTML, React DOM uses camelCase property naming convention instead of HTML attribute names.
     For example, class becomes className in JSX, and tabindex becomes tabIndex.
 
-Basically, by using JSX you can write concise HTML/XML-like structures (e.g., DOM like tree structures) in the same file as 
-you write JavaScript code, then Babel will transform these expressions into actual JavaScript code
+JSX makes you write concise HTML/XML-like structures 
 
 The syntax is intended to be used by preprocessors (i.e., transpilers like Babel) to transform HTML-like text found in JavaScript files 
 into standard JavaScript objects
@@ -48,6 +44,4 @@ JSX Represents Objects
                 {className: 'greeting'},
                 'Hello, world!'
             );
-
-    These objects are called “React elements”. You can think of them as descriptions of what you want to see on the screen. 
-    React reads these objects and uses them to construct the DOM and keep it up to date.
+    
