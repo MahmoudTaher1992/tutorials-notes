@@ -1,0 +1,81 @@
+The break statement is used to terminate the loop immediately when it is encountered.
+
+The break statement is also used with switch statements.
+
+syntax 
+    break [label];
+
+Example 1: break with for Loop
+    Code
+        // program to print the value of i
+        for (let i = 1; i <= 5; i++) {
+            // break condition     
+            if (i == 3) {
+                break;
+            }
+            console.log(i);
+        }
+
+Example 2: break with while Loop
+    Code
+        // program to find the sum of positive numbers
+        // if the user enters a negative numbers, break ends the loop
+        // the negative number entered is not added to sum
+
+        let sum = 0, number;
+
+        while(true) {
+
+            // take input again if the number is positive
+            number = parseInt(prompt('Enter a number: '));
+
+            // break condition
+            if(number < 0) {
+                break;
+            }
+
+            // add all positive numbers
+            sum += number;
+
+        }
+
+        // display the sum
+        console.log(`The sum is ${sum}.`);
+
+    Output
+        Enter a number: 1
+        Enter a number: 2
+        Enter a number: 3
+        Enter a number: -5
+        The sum is 6. 
+
+break with Nested Loop
+    When break is used inside of two nested loops, break terminates the inner loop
+
+    Code
+        // nested for loops
+
+        // first loop
+        for (let i = 1; i <= 3; i++) {
+
+            // second loop
+            for (let j = 1; j <= 3; j++) {
+                if (i == 2) {
+                break;
+                }
+                console.log(`i = ${i}, j = ${j}`);
+            }
+        }
+
+    Output
+        i = 1, j = 1
+        i = 1, j = 2
+        i = 1, j = 3
+        i = 3, j = 1
+        i = 3, j = 2
+        i = 3, j = 3
+
+JavaScript Labeled break
+    When using nested loops, you can also terminate the outer loop with a label statement.
+
+    However labeled break is rarely used in JavaScript because this makes the code harder to read and understand.

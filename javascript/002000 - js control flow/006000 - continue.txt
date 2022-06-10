@@ -1,0 +1,32 @@
+The continue statement is used to skip the current iteration of the loop and the control flow of the 
+program goes to the next iteration.
+
+Syntax
+    continue [label];
+
+continue with for Loop
+    Code
+        // program to print the value of i
+        for (let i = 1; i <= 5; i++) {
+
+            // condition to continue    
+            if (i == 3) {
+                continue;
+            }
+
+            console.log(i);
+        }
+
+    Output
+        1
+        2
+        4
+        5
+
+continue with while Loop
+    In a while loop, continue skips the current iteration and control flow of the program jumps back to the while condition.
+
+    The continue statement works in the same way for while and do...while loops.
+
+continue with Nested Loop
+    When continue is used inside of two nested loops, continue skips the current iteration of the inner loop.

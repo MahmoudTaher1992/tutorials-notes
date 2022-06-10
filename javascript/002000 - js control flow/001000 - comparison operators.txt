@@ -1,0 +1,51 @@
+Comparison operators and Logical operators
+
+    JavaScript Comparison Operators
+        Comparison operators compare two values and give back a boolean value: either true or false. 
+        Comparison operators are used in decision making and loops.
+
+        ==
+            Equal to: true if the operands are equal
+            5==5; //true
+            5=="5"; //true
+
+        !=
+            Not equal to: true if the operands are not equal
+            5!=5; //false
+            5!="5"; //false
+
+        ===
+            Strict equal to: true if the operands are equal and of the same type
+            5==='5'; //false
+
+        !==
+            Strict not equal to: true if the operands are equal but of different type or not equal at all
+            5!=='5'; //true
+
+        >
+            3>2; //true
+        
+        >=
+            3>=3; //true
+
+        <
+            3<2; //false
+
+        <=
+            2<=2; //true
+
+
+    JavaScript Logical Operators
+        Logical operators perform logical operations: AND, OR and NOT.
+
+        &&
+            Logical AND: true if both the operands/boolean values are true, else evaluates to false
+            true && false; // false
+
+        ||
+            Logical OR: true if either of the operands/boolean values is true. evaluates to false if both are false
+            true || false; // true
+
+        !
+            Logical NOT: true if the operand is false and vice-versa.
+            !true; // false

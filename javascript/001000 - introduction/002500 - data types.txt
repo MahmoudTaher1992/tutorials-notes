@@ -1,0 +1,91 @@
+Let's start off by looking at the building blocks of any language: the types.      
+JavaScript programs manipulate values, and those values all belong to a type. JavaScript's types are:
+
+    String
+        represents textual data 
+        'hello', "hello world!"
+        Can be surrounded by quotes
+            Single quotes: 'Hello'
+            Double quotes: "Hello"
+            Backticks: `Hello`
+                Backticks are generally used when you need to include variables or expressions into a string. 
+                This is done by wrapping variables or expressions with ${variable or expression} as shown above.
+
+    Number
+        epresents integer and floating numbers (decimals and exponentials)
+        number type can also be +Infinity, -Infinity, and NaN
+
+    BigInt
+        In JavaScript, Number type can only represent numbers less than (253 - 1) and more than -(253 - 1). 
+        However, if you need to use a larger number than that, you can use the BigInt data type.
+        A BigInt number is created by appending n to the end of an integer. For example,
+
+        const value1 = 900719925124740998n;
+
+        // Adding two big integers
+        const result1 = value1 + 1n;
+        console.log(result1); // "900719925124740999n"
+
+        const value2 = 900719925124740998n;
+
+        // Error! BitInt and number cannot be added
+        const result2 = value2 + 1; 
+        console.log(result2); 
+
+        BigInt was introduced in the newer version of JavaScript and is not supported by many browsers including Safari.
+
+    Boolean
+        This data type represents logical entities. Boolean represents one of two values: true or false
+
+    undefined
+        The undefined data type represents value that is not assigned. 
+        If a variable is declared but the value is not assigned, then the value of that variable will be undefined
+
+        It is also possible to explicitly assign a variable value undefined
+
+        It is recommended not to explicitly assign undefined to a variable. Usually, null is used to assign 'unknown' or 'empty' value to a variable.
+
+    null
+        In JavaScript, null is a special value that represents empty or unknown value.
+        const number = null;
+        The code above suggests that the number variable is empty.
+        Note: null is not the same as NULL or Null.
+
+    Symbol (new in ES2015)
+        This data type was introduced in a newer version of JavaScript (from ES2015).
+        A value having the data type Symbol can be referred to as a symbol value. Symbol is an immutable primitive value that is unique.
+
+        // two symbols with the same description
+        const value1 = Symbol('hello');
+        const value2 = Symbol('hello');
+
+        Though value1 and value2 both contain 'hello', they are different as they are of the Symbol type.
+
+    Object
+        An object is a complex data type that allows us to store collections of data.
+            const student = {
+                firstName: 'ram',
+                lastName: null,
+                class: 10
+            };
+            
+        Others
+            Function
+            Array
+            Date
+            RegExp
+
+typeof to Find Type of object
+    const name = 'ram';
+    typeof(name); // returns "string"
+
+    const number = 4;
+    typeof(number); //returns "number"
+
+    const valueChecked = true;
+    typeof(valueChecked); //returns "boolean"
+
+    const a = null;
+    typeof(a); // returns "object"
+
+    Notice that typeof returned "object" for the null type. This is a known issue in JavaScript since its first release.

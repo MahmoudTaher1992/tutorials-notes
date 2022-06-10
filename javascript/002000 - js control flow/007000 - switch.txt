@@ -1,0 +1,42 @@
+Default
+    Code
+        // program using switch statement
+        let a = 1;
+
+        switch (a) {
+            case "1":
+                a = 1;
+                break;
+            case 1:
+                a = 'one';
+                break;
+            case 2:
+                a = 'two';
+                break;
+
+            default:
+                a = 'not found';
+                break;
+        }
+        console.log(`The value is ${a}`);
+
+    Result
+        The value is one.
+
+Multiple Case
+    Code
+        // multiple case switch program
+        let fruit = 'apple';
+        switch(fruit) {
+            case 'apple':
+            case 'mango':
+            case 'pineapple':
+                console.log(`${fruit} is a fruit.`);
+                break;
+            default:
+                console.log(`${fruit} is not a fruit.`);
+                break;
+        }
+
+    Result
+        apple is a fruit.

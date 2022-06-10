@@ -1,0 +1,9 @@
+JavaScript was created in 1995 by Brendan Eich while he was an engineer at Netscape
+
+It was originally going to be called LiveScript, but it was renamed in an ill-fated marketing decision that 
+attempted to capitalize on the popularity of Sun Microsystem's Java language — 
+despite the two having very little in common. This has been a source of confusion ever since
+
+Unlike most programming languages, the JavaScript language has no concept of input or output. 
+It is designed to run as a scripting language in a host environment, 
+and it is up to the host environment to provide mechanisms for communicating with the outside world.

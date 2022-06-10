@@ -1,0 +1,16 @@
+React is a JavaScript library for building user interfaces
+
+Diffrence between liberary and Framework >
+    KeyDifference:
+        The key difference between a library and a framework is “Inversion of Control”. When you call a method from a library, 
+        you are in control. But with a framework, the control is inverted: the framework calls you.
+    Library: 
+        It is just a collection of routines (functional programming) or class definitions(object oriented programming). 
+        The reason behind is simply code reuse, i.e. get the code that has already been written by other developers
+    Framework:
+        In framework, all the control flow is already there, and there are a bunch of predefined white spots that we 
+        should fill out with our code. A framework is normally more complex. 
+        It defines a skeleton where the application defines its own features to fill out the skeleton
+
+React has been designed from the start for gradual adoption, and you can use as little or as much React as you need.
+

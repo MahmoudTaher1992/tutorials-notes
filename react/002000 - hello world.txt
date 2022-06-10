@@ -1,0 +1,7 @@
+In this guide, we will examine the building blocks of React apps: elements and components. 
+Once you master them, you can create complex apps from small reusable pieces
+
+Every chapter in this guide builds on the knowledge introduced in earlier chapters.
+
+React is a JavaScript library, and so we’ll assume you have a basic understanding of the JavaScript language. 
+If you don’t feel very confident, we recommend going through a JavaScript tutorial to check your knowledge level

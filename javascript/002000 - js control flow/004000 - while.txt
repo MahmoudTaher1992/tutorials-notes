@@ -1,0 +1,18 @@
+JavaScript while Loop
+    Syntax
+        while (condition) {
+            // body of loop
+        }
+    
+    condition is evaluated first > then the body is executed
+
+
+JavaScript do...while Loop
+    Syntax
+        do {
+            // body of loop
+        } while(condition)
+
+    body is evaluated first > then the condition is executed
+
+

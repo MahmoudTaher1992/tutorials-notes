@@ -1,0 +1,7 @@
+JavaScript is a multi-paradigm, dynamic language with types and operators, standard built-in objects, and methods.
+
+    A paradigm can be defined as an approach to solving a problem. (Some of the well-known paradigms are mentioned below.)
+        Imperative Programming Paradigm
+        Declarative Programming Paradigm
+        Object-Oriented Programming Paradigm
+        Functional Programming Paradigm
