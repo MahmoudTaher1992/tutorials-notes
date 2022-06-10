@@ -1,0 +1,28 @@
+React Lifecycle Methods
+    render()
+        render() is the only required method within a class component in React.
+
+        it handles the rendering of your component to the UI. It happens during the mounting and updating of your component.
+
+        the render() method returns JSX that is displayed in the UI. A render() can also return a null if there is nothing to 
+        render for that component.
+
+        A render() method has to be pure with no side-effects.
+            It does not modify component state
+            It returns the same result each time it’s invoked
+            It does not directly interact with the browser.
+                If you need to interact with the browser, perform your work in componentDidMount() or the other lifecycle 
+                methods instead. Keeping render() pure makes components easier to think about.
+
+        This means that you can not setState() within a render().
+
+        If you do need to modify state that would have to happen in the other lifecycle methods, therefore keeping render() pure.
+
+        When called, it should examine this.props and this.state and return one of the following
+            React elements
+            Arrays and fragments
+            Portals
+            String and numbers
+            Booleans or null > null renders nothing
+
+        render() will not be invoked if shouldComponentUpdate() returns false.

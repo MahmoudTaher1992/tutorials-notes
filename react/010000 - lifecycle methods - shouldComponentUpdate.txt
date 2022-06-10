@@ -1,0 +1,23 @@
+React Lifecycle Methods
+    shouldComponentUpdate(nextProps, nextState)
+        Use shouldComponentUpdate() to let React know if a component’s output is not affected by the current change in state 
+        or props. 
+        
+        The default behavior is to re-render on every state change, and in the vast majority of cases you should rely on 
+        the default behavior.
+
+        shouldComponentUpdate() is invoked before rendering when new props or state are being received. Defaults to true. 
+        
+        This method is not called for the initial render or when forceUpdate() is used.
+
+        This method only exists as a performance optimization. Do not rely on it to “prevent” a rendering, 
+        as this can lead to bugs. 
+        
+        Consider using the built-in PureComponent instead of writing shouldComponentUpdate() by hand.
+        PureComponent performs a shallow comparison of props and state, and reduces the chance that you’ll skip a 
+        necessary update.
+
+        Return false to tell React the update can be skipped
+
+        We do not recommend doing deep equality checks or using JSON.stringify() in shouldComponentUpdate(). 
+        It is very inefficient and will harm performance.

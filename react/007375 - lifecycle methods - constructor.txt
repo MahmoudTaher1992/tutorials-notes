@@ -1,0 +1,28 @@
+React Lifecycle Methods
+    constructor()
+        If you don’t initialize state and you don’t bind methods, you don’t need to implement a constructor for your 
+        React component.
+
+        you should call super(props) before any other statement. Otherwise, this.props will be undefined in the
+        constructor, which can lead to bugs.
+
+        only used for two purposes:
+            Initializing local state by assigning an object to this.state.
+
+            Binding event handler methods to an instance.
+
+        You should not call setState() in the constructor(). Instead, if your component needs to use local state, assign
+        the initial state to this.state directly in the constructor
+
+        Constructor is the only place where you should assign this.state directly. In all other methods, use
+        this.setState() instead.
+
+        Avoid introducing any side-effects or subscriptions in the constructor. For those use cases, use componentDidMount() 
+        instead.
+
+        Avoid copying props into state! This is a common mistake:
+            The problem is that it’s both unnecessary (you can use this.props.color directly instead), and creates bugs 
+            (updates to the color prop won’t be reflected in the state).
+
+            Only use this pattern if you intentionally want to ignore prop updates.
+

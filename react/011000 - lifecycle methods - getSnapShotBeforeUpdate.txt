@@ -1,0 +1,14 @@
+React Lifecycle Methods
+    getSnapshotBeforeUpdate(prevProps, prevState)
+
+        Invoked right before the most recently rendered output is committed to e.g. the DOM. 
+        
+        It enables your component to capture some information from the DOM (e.g. scroll position) 
+        before it is potentially changed. 
+        
+        Any value returned by this lifecycle method will be passed as a parameter to componentDidUpdate().
+
+        A snapshot value (or null) should be returned.
+
+        capture scroll position and apply it after DOM updates
+            

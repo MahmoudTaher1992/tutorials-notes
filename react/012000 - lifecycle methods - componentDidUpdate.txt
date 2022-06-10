@@ -1,0 +1,14 @@
+React Lifecycle Methods
+    componentDidUpdate(prevProps, prevState, snapshot)
+        Invoked immediately after updating occurs.
+
+        Use this as an opportunity to operate on the DOM when the component has been updated. 
+        
+        This is also a good place to do network requests as long as you compare the current props to previous props 
+        (e.g. a network request may not be necessary if the props have not changed).
+
+        You may call setState() immediately in componentDidUpdate() but note that it must be wrapped in a condition, 
+        or you’ll cause an infinite loop
+
+        If your component implements the getSnapshotBeforeUpdate() lifecycle (which is rare), the value it returns will be passed 
+        as a third “snapshot” parameter to componentDidUpdate().
