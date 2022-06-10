@@ -1,0 +1,56 @@
+Components let you split the UI into independent, reusable pieces, and think about each piece in isolation
+
+Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return 
+React elements describing what should appear on the screen.
+
+Function and Class Components
+    The simplest way to define a component is to write a JavaScript function:
+        function Welcome(props) {
+            return <h1>Hello, {props.name}</h1>;
+        }
+
+    This function is a valid React component because it accepts a single “props” (which stands for properties) object argument with data and 
+    returns a React element.
+
+ES6 class to define a component:
+    class Wellcom extends React.Component {
+        render() {
+            return <h1>Hello, {props.name}</h1>;
+        }
+    }
+
+Rendering a Component
+    However, elements can also represent user-defined components:
+        const element = <Welcome name="Sara" />;
+
+    When React sees an element representing a user-defined component, it passes JSX attributes and children to this component as 
+    a single object. We call this object “props”.
+
+Composing Components
+    Components can refer to other components in their output.
+        function Welcome(props) {
+            return <h1>Hello, {props.name}</h1>;
+        }
+
+        function App() {
+            return (
+                <div>
+                    <Welcome name="Sara" />
+                    <Welcome name="Cahal" />
+                    <Welcome name="Edite" />
+                </div>
+            );
+        }
+
+Extracting Components
+    Don’t be afraid to split components into smaller components.
+
+Props are Read-Only
+    Whether you declare a component as a function or a class, it must never modify its own props.
+
+    Such functions are called “pure” because they do not attempt to change their inputs, and always return the same result for the same inputs.
+        function sum(a, b) {
+            return a + b;
+        }
+
+    All React components must act like pure functions with respect to their props.
