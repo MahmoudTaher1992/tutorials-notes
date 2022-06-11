@@ -1,0 +1,43 @@
+Composition
+    few problems where developers new to React often reach for inheritance can be solved them with composition.
+
+    Containment
+        Some components don’t know their children ahead of time Use props.children > will be passed to FancyBorder in props.children
+            <FancyBorder color="blue">
+                <h1 className="Dialog-title">
+                    Welcome
+                </h1>
+                <p className="Dialog-message">
+                    Thank you for visiting our spacecraft!
+                </p>
+            </FancyBorder>
+
+        You might need multiple “holes” in a component like if you want to pass right objects and left objects
+        Use jsx props to solve this 
+            <FancyBorder color="blue" rightObjects={<RightObjects />} leftObjects={<LeftObjects />} />
+
+    Specialization
+        WelcomeDialog that inherits from Dialog
+            function Dialog(props) {
+                return (
+                    <FancyBorder color="blue">
+                        <h1 className="Dialog-title">
+                            {props.title}
+                        </h1>
+                        <p className="Dialog-message">
+                            {props.message}
+                        </p>
+                    </FancyBorder>
+                );
+            }
+
+            function WelcomeDialog() {
+                return (
+                    <Dialog
+                    title="Welcome"
+                    message="Thank you for visiting our spacecraft!" />
+                );
+            }
+
+Inheritance
+    In facebook they have thousands of components and they never needed inheritance

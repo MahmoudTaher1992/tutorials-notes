@@ -1,0 +1,45 @@
+"this" in JavaScript
+    In general, the this references the object of which the function is a property, or from which it is called
+
+    this points to a particular object. Now, which is that object is depends on how a function which includes 
+    'this' keyword is being called.
+
+    The following four rules applies to this in order to know which object is referred by this keyword.
+        Global Scope
+        Object's Method
+        call() or apply() method
+        bind() method
+
+    Global Scope
+        If a function which includes 'this' keyword, is called from the global scope then this will point to the window object.
+
+        In the strict mode, value of 'this' will be undefined in the global scope.
+
+        'this' points to global window object even if it is used in an inner function.
+
+        a function that is not inside object is considered a global function, this will refere to the global object
+
+    Object's Method
+        You can create an object of a function using new keyword. So, when you create an object of a function using new
+        keyword then this will point to that particular object.
+            function a() {
+                this.i = 200;
+            }
+            const obj1 = new a();
+            console.log(obj1.i); // 200
+        
+    call() and apply()
+        The main purpose of call() and apply() is to set the context of this inside a function irrespective whether that 
+        function is being called in the global scope or as object's method
+
+    bind() method
+        generates another function that has context of the object in bind property
+            function fn1() {
+                console.log(this);
+            }
+            fn1(); // window || (undefined if strict mode is used)
+
+            let fn2 = fn1.bind({a: 10});
+            fn2(); // {a: 10}
+
+        even if fn2 is called from another object it will still refer to the bound object

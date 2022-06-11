@@ -1,0 +1,12 @@
+Conditional rendering
+    remember JSX is another format of react Element which is an object
+
+    {false && <div>Taher</div>} > false > nothing renders
+
+    {0 && <div>Taher</div>} > 0 > 0 renders
+
+    if JSX === (null || flase) > nothing renders
+
+    in js 
+        (true && 150) = 150
+        (false && 150) = false

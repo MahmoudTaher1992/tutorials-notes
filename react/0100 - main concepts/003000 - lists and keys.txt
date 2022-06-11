@@ -1,0 +1,20 @@
+Lists
+    including React Elements array in curly braces will result into a list of dom elements after rendering
+
+    i.e.
+        {
+            numbers.map((n) => <li key={n.toString()}>{n}</li>)
+        }
+
+Keys
+    Keys help React identify which items have changed, are added, or are removed
+
+    The best way to pick a key is to use a string that uniquely identifies a list item among its siblings
+
+    You can use items indexes but it will negatively impact performance if the order of items changed
+
+    The key should be with the react element nearest to map > not in the child react element
+
+    Key is not passed through props > use another name i.e (id)
+
+    

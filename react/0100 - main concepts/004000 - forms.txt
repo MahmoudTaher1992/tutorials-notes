@@ -1,0 +1,38 @@
+Forms
+    Controlled Components
+        In HTML, form elements such as <input>, <textarea>, and <select> typically maintain their 
+        own state and update it based on user input
+
+        React state should be the “single source of truth”
+
+        make input use value from react state, when input valuew changes handle the event and update react state > 
+        rerender > new value will appear on the input
+
+        textarea tag in html > value should be between tag
+            <textarea>
+                Hello there, this is some text in a text area
+            </textarea>
+
+            in React use value instead
+
+        select tag
+            use value is select instead od selected attribute in html
+
+            if multiple then the value will be array
+
+        Alternatives to Controlled Components
+            if it is too hard to manage controlled components > go with uncontrolled components
+
+    Uncontrolled compoenents
+        value is not editable
+
+        i.e.
+            input file
+
+    Fully fledged solutions
+        Formik
+            handles several cases
+                validation
+                visited fields
+                submission
+                
