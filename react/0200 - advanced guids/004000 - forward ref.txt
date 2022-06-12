@@ -24,4 +24,4 @@ Forwarding Refs
         <FancyButton ref={ref}>Click me!</FancyButton>;
 
     HOC
-        it can be done look for implementation in the docs
+        Refs Aren’t Passed Through
