@@ -22,6 +22,8 @@ Context
 
         available in all lifecycle methods through (this.context)
 
+        it will update even if one of the ancestor skips an update
+
         alternative subscription
             static contextType = MyContext;
 
