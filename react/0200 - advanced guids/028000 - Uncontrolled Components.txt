@@ -1,0 +1,19 @@
+Uncontrolled Components
+    For elements are controlled and Uncontrolled
+
+    Controlled compoenents are recommended
+
+    Uncontrolled components are those who keeps the source of truth in the dm elements
+
+    you can access dom element using ref
+
+    Default Values
+        use defaultValue attribute
+
+        changing defaultValue during runtime will not cause the dom element to update
+
+    The file input Tag
+        in react it is not controlled
+
+        if you want to manipulate it you hace to use the file api and ref
+
