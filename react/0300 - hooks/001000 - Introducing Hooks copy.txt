@@ -1,0 +1,26 @@
+Introducing Hooks
+    Hooks are a new addition in React 16.8
+
+    it lets you use state and other React features without writing a class.
+
+    Motivation
+        It’s hard to reuse stateful logic between components
+            With Hooks, you can extract stateful logic from a component so it can be tested independently and reused. 
+            Hooks allow you to reuse stateful logic without changing your component hierarchy. 
+            This makes it easy to share Hooks among many components or with the community.
+
+        Complex components become hard to understand
+            Hooks let you split one component into smaller functions based on what pieces are related 
+            (such as setting up a subscription or fetching data),
+
+        Classes confuse both people and machines
+            we’ve found that classes can be a large barrier to learning React.
+
+            You have to remember to bind the event handlers.
+
+            People can understand props, state, and top-down data flow perfectly well but still struggle with classes
+
+            Hooks let you use more of React’s features without classes.
+
+    There are no plans to remove classes from React.
+
