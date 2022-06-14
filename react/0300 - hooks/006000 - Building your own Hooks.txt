@@ -1,0 +1,11 @@
+Building Your Own Hooks
+    A custom Hook is a JavaScript function whose name starts with ”use” and that may call other Hooks
+
+    a custom Hook doesn’t need to have a specific signature. We can decide what it takes as arguments, 
+    and what, if anything, it should return
+
+    the hook name must start with "use"
+
+    the output of one hook can be used in another preceding hook 
+
+    Try to resist adding abstraction too early
