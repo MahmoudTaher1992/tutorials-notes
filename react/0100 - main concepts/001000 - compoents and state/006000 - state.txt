@@ -48,3 +48,5 @@ React component State
 
         If you imagine a component tree as a waterfall of props, each component’s state is like an additional water 
         source that joins it at an arbitrary point but also flows down.
+
+    Component without a state is called stateless and the one with state is called stateful
