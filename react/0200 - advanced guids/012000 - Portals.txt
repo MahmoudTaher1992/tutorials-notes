@@ -1,0 +1,27 @@
+Portals
+    Portals provide a first-class way to render children into a DOM node that exists 
+    outside the DOM hierarchy of the parent component.
+        ReactDOM.createPortal(childAsReactElement, containerAsDomElement)
+
+        render() {
+            // React does *not* create a new div. It renders the children into `domNode`.
+            // `domNode` is any valid DOM node, regardless of its location in the DOM.
+            return ReactDOM.createPortal(
+                this.props.children,
+                domNode
+            );
+        }
+
+    A typical use case for portals is when a parent component
+        dialogs, hovercards, and tooltips.
+        when you want to use z index and overflow = hidden
+
+    Event Bubbling Through Portals
+        Even though a portal can be anywhere in the DOM tree, it behaves like a normal React child
+        in every other way.
+            context works as if the portal is a real child
+
+            Event Bubbling > event fired from inside the portal will be propagate to ancestors in 
+            the containing React tree
+
+    Try the example in react
