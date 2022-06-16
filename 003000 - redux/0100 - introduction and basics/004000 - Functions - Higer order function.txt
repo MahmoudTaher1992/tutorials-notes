@@ -1,0 +1,27 @@
+Higer order function
+    A function that takes function as input or return fn as output or both
+
+    Non HOF
+        const add = (a, b) => {
+            return a + b;
+        }
+
+    HOF > accepts a function
+        const applyOperation = (firstNumber, secondNumber, operationFn) => {
+            return operationFn(firstNumber, secondNumber)
+        }
+
+        applyOperation(1, 3, add)
+
+    HOF > returns a function
+        const getLogger = () => {
+            return function(message) {
+                console.log(message);
+            }
+        }
+
+        const log = getLogger();
+        log("message");
+
+    HOF > takes a function and returns a function
+        connect function in react-redux

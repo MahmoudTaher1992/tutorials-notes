@@ -1,0 +1,13 @@
+Redux architecture
+    Store
+        Single source of thruth to the global state
+
+        accesable for every part in the app
+
+    Reducer
+        A pure function that gets the store and the action and returns new state
+
+        the only way to update the state in the store
+
+    Actions
+        Plain js objects that is used to change the state by going to reducers

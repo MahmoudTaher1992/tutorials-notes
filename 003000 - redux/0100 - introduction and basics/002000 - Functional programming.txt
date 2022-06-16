@@ -1,0 +1,13 @@
+Functional programming
+    it is one of the programming paradigms (Functional, OO, Procedural, Event-driven)
+
+    It is about decomposing the problem into small functions that take an input and return and output > compose those functions
+    to solve the problem
+
+    Pros
+        More concise (مختصرة)
+        Easier to debug
+        Easier to test
+        Scalable
+
+    Javascript is a multi paradigm programming language > can be used 4 multiple paradigms

@@ -1,0 +1,9 @@
+Core concepts
+    Store
+        centeralized place wher app state lives
+
+    Action
+        js object describes change in the state
+
+    Reducer
+        Takes the action and modifies the state (immutable)

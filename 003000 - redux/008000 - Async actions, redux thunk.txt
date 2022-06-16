@@ -1,0 +1,30 @@
+Async actions
+    allows you to write async functions and fire sync actions
+
+    it is handled by thunk middleware
+
+    i.e.
+        const fetchUsers = () => {
+            return function(dispatch) {
+                dispatch(fetchUsersLoading());
+                axios("http://dummy-api/users")
+                    .then((res) => {
+                        dsipatch(fetchUsersLoaded(res.data));
+                    })
+                    .catch((error) => {
+                        dsipatch(fetchUsersError(error.message));
+                    }) 
+            }
+        }
+
+        store.dispatch(fetchUsers())
+
+Redux thunk
+    it is the middleware used to deal with async actions
+
+    i.e.
+        export const store = redux.createStore(
+            combinedReducers,
+            redux.applyMiddleware(middleware1, thunkMiddleware)
+        );
+ 

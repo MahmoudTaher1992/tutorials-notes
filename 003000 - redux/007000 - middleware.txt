@@ -1,0 +1,16 @@
+Middleware
+    It is a way that extends redux w. custome functionality
+
+    it lies between the way from dispatching actions and reducers
+
+    used for
+        Logging
+        Crash reporting
+        performing async tasks > using thunk
+
+    i.e.
+        export const store = redux.createStore(
+            combinedReducers,
+            redux.applyMiddleware(middleware1, middleware2, middleware3)
+        );
+

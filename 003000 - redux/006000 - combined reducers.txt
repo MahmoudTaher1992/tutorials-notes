@@ -1,0 +1,11 @@
+Combined reducers
+    i.e.
+        export const combinedReducers = redux.combineReducers({
+            shoppingCart: shoppingCartReducer,
+            loginInfo: loginInfoReducer
+        });
+
+        export const store = redux.createStore(
+            combinedReducers,
+            redux.applyMiddleware(logger)
+        );

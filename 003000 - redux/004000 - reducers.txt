@@ -1,0 +1,23 @@
+Reducers
+    Specifies how app's state changes in response to action sent to store
+
+    accepts oldState and action and return new state
+
+    ite must be pure function
+
+    syntax:
+        (oldState, action) => newState
+
+    i.e.
+        const initialState = {
+            items: [],
+        };
+        export const shoppingCartReducer = function (state = initialState, action) {
+            switch (action.type) {
+                case ADD_ITEM_TO_CART:
+                    return { items: [...state.items, createItem(action.payload.itemDesc)] };
+
+                default:
+                    return state;
+            }
+        };

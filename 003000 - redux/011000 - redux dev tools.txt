@@ -1,0 +1,15 @@
+Redux devtools
+    a tool to display some tools related to redux store, actions
+
+    install it in the browser and add it to the store
+
+    i.e.
+        const store = createStore(
+            reducer,
+            composeWithDevTools(
+                applyMiddleware(...middleware)
+                // other store enhancers if any
+            )
+        );
+
+    

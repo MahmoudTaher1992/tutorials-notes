@@ -1,0 +1,44 @@
+Redux introduction
+    What is Redux
+        A state management liberary for javascript apps (react, vue, angular, vanilla js) - not only for react
+
+        Used to keep different parts of ui in sync
+
+        Centralize app state
+
+        Make data flow transparent and predictable
+
+        stores and manages state of the app
+
+    It is Predictable
+        the change in the app state will become predictable
+
+    Why to use it
+        to manage that app state in a predictable way
+
+
+    Store
+        A single source of truth to keep the global state and give it to components they need
+
+    Pros
+        Predictable state change
+        Centeralized state
+        Easy debugging
+        Preserve page state
+        implement undo/redo
+
+    Cons
+        Code complexity
+        Verbose (more code)
+
+    When NOT to use redux
+        Tight budget
+        Small to medium size apps
+        Simple UI/ Data flow
+        Static data
+
+    Liberaries uses
+        React > build ui
+        Redux > manage state in js apps
+        React-Redux > helps integrating/binding redux in react
+

@@ -1,0 +1,14 @@
+Principles
+    1st
+        the state is in one object in a single Store
+    
+    2nd
+        the only way to change the state is through dispatching an action
+            you are not allowed to directly edit the state
+
+    3rd
+        Pure reducers are the way to change the state
+            lies under the rules of pure functions
+
+            Reducer syntax
+                (prevState, action) => newState

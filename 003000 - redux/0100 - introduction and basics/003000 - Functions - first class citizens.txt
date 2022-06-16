@@ -1,0 +1,6 @@
+Functional - first class citizens
+    can be treated as variable
+        assign them to variable
+        pass them as function input
+        get them as function output
+    

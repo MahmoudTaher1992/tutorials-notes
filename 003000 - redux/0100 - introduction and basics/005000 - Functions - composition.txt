@@ -1,0 +1,22 @@
+Functions composition
+    i.e. > Convert this solution into functional programming using functions compositions
+        let input = "        Javascript     "
+        let output = `<div>${input.trim().toLowerCase()}</div>`
+        console.log(output);
+
+        Solution
+            const trim = (str) => str.trim();
+            const toLowerCase = (str) => str.toLowerCase();
+            const wrap = (htmlElement) => (str) `<${htmlElement}>${str}</${htmlElement}>`;
+            const log = (s) => console.log(s);
+
+            log(wrap("div")(toLowerCase(trim("        Javascript     "))))
+
+            // compose is loadsh function
+            const composedFn1 = compose(log, wrap("div"), toLowerCase, trim);
+            composedFn1("        Javascript     ");
+            
+            // pipe is loadsh function
+            const composedFn2 = pipe(trim, toLowerCase, wrap("div"), log);
+            composedFn2("        Javascript     ");
+

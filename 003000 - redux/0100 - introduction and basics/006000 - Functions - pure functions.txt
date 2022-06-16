@@ -1,0 +1,52 @@
+Pure Functions
+    output will be always same for the same inputs
+
+    Pure functions don't
+        generate random values
+        deal w. date/time
+        mutate params
+        update global variables
+        update the dom, files, db , etc
+
+    Pros
+        Self documenting
+        Easily testable
+        Concurrency
+        Cacheable > intensive computation can be cached
+
+    Immutability
+        in functional programming you should not mutate objects > create new objects instead
+
+        Pros
+            Predictability
+            Faster change detection > check by refrence
+            Concurrency
+
+        Cons
+            Performance down > if you are using 100,000 objects
+            Memory overhead
+
+        In javascript to be immutable you must return new objects
+            i.e. (objects)
+                const book = { id: 10, name: "book-name-10" };
+                book.name = "new-book-name" // wrong
+                const updated = { ...book, name: "new-book-name" };
+                const updated2 = Object.assign({}, book, { name: "new-book-name" })
+
+            Javascript offers shallow copying not deep
+                const book = { id: 10, name: "book-name-10", address: { city: "bns" } };
+                const updated = Object.assign({}, book, { name: "new-book-name" });
+                book.address.city = "cairo";
+                console.log(updated); // { id: 10, name: "new-book-name", address: { city: "cairo" } }
+
+                this is like this because nested objects are copied by refrence > solution > use liberary
+
+        Immutable liberaries
+            Immutable
+            Immer
+            Mori
+
+
+
+
+

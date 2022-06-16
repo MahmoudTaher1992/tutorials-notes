@@ -1,0 +1,43 @@
+React Redux
+    store
+        You have to provide the store at the top of the app using "react-redux" Provider
+
+        i.e.
+            <Provider store={store}>
+                <div className="App">
+                    <button onClick={() => setMounted(!mounted)}>
+                        {mounted ? `Unmount` : `Mount`}
+                    </button>
+                    {mounted && <ReduxExample />}
+                </div>
+            </Provider>
+
+        dispatch
+            const dispatch = useDispatch();
+            dispatch(action)
+
+        get data from state
+            const itemsCount = useSelector((state) => state.shoppingCart.items.length);
+            const itemsCount = useSelector(selectItemsCount);
+
+        connect
+            old way to consume state and dispatch in react component before useDispatch(), useSelector()
+
+            i.e.
+                const mapStateToProps = (state) => {
+                    return {
+                        itemsCount: selectItemsCount(state),
+                    };
+                };
+
+                const mapDispatchToProps = (dispatch) => {
+                    return {
+                        dispatchAddItemToCart: (itemDesc) => dispatch(addItemToCart(itemDesc)),
+                    };
+                };
+
+                export const ReduxExample = connect(mapStateToProps, mapDispatchToProps)(ReduxExampleWithOutConnect);
+
+                // you can use props.itemsCount, props.mapDispatchToProps
+                    
+        
