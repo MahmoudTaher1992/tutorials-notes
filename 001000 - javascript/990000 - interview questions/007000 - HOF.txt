@@ -1,0 +1,2 @@
+Higher order function
+    functions that either take othe functions as input or return them or both

@@ -1,0 +1,43 @@
+Objects
+    Non primitive data type
+
+    Declaration
+        Object literal
+            i.e.
+                let taher = {
+                    id: 120,
+                    name: "taher"
+                }
+
+                console.log(taher);
+
+        Object constructor
+            i.e.
+                let taher = new Object({
+                    id: 120,
+                    name: "taher"
+                })
+
+                console.log(taher);
+
+        function constructor
+            i.e.
+                function Person(id, name) {
+                    this.id = id;
+                    this.name = name;
+                }
+
+                let taher = new Person(120, "taher");
+
+                console.log(taher);
+
+        class
+            i.e.
+                class Person {
+                    id = 120;
+                    name = "taher";
+                }
+
+                let taher = new Person();
+
+                console.log(taher);

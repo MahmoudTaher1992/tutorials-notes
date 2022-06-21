@@ -1,0 +1,35 @@
+Memoization
+    a teqniques used to cache computed data instead of computing it each time
+
+    Typically used with expensive computations
+
+    i.e.
+        function expensiveFn(a) {
+            return a * a;
+        }
+
+        function memoizeExpensiveFn() {
+            const repo = new Map();
+
+            function calculateOrCache(a) {
+                if (repo.has(a)) {
+                    console.log("From cache");
+                    return repo.get(a)
+                } else {
+                    console.log("Computed");
+                    let o = expensiveFn(a);
+                    repo.set(a, o);
+                    return o;
+                }
+            }
+
+            return calculateOrCache
+        }
+
+        const memoizedExpensiveFn = memoizeExpensiveFn();
+        
+        console.log(memoizedExpensiveFn(2)); // Computed 4
+        console.log(memoizedExpensiveFn(4)); // Computed 16
+        console.log(memoizedExpensiveFn(2)); // From cache 4
+        console.log(memoizedExpensiveFn(4)); // From cache 16
+

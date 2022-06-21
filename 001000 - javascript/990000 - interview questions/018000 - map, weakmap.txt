@@ -1,0 +1,12 @@
+Map
+    An object that holds key-value pairs
+
+    key and value can be perimitive/non perimitive types
+
+WeakMap
+    An object that holds key-value pairs
+
+    keys must be objects (non permitive data type)
+
+    It is weak > if no other refrence exists to the ket object > garbage collector can destroy it
+

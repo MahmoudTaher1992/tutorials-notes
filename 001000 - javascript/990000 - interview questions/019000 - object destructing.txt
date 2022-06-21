@@ -1,0 +1,21 @@
+Object destructuring
+    extracting fields from Object
+
+    Objects
+        i.e.
+            const taher = {
+                name: "taher",
+                age: 30
+            }
+
+            const { name: personName, age: personAge } = taher;
+
+            console.log(personName); // taher
+            console.log(personAge); // 30
+
+    Array
+        i.e.
+            const names = [ "taher", "omar" ];
+            const [a, b] = names;
+            console.log(a); // taher;
+            console.log(b); // omar;

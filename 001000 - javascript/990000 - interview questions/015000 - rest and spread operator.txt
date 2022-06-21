@@ -1,0 +1,25 @@
+Rest operator
+    used to allow user to enter an infinite number of parameters without the use of array > js will create the array 4 use
+
+    i.e
+        function logConcat(seperator, ...words) {
+            console.log(words.join(seperator));
+        }
+
+        logConcat("-", "My", "name", "is", "Taher"); // My-name-is-Taher
+
+Spread operator
+    used to destruct objects and arrays
+
+    i.e.
+        const taher = { name: "taher", age: 30 };
+        const taherPrototype = { ...taher }
+        console.log(taherPrototype); // { name: "taher", age: 30 }
+
+        const numbers1 = [ 1, 2, 3, 4 ];
+        const numbers2 = [ 10, 11, 12, 13 ];
+        console.log([ ...numbers1, ...numbers2 ]); // [ 1, 2, 3, 4, 10, 11, 12, 13 ]
+
+
+
+

@@ -1,0 +1,8 @@
+Hoisting in javascript
+    Variables
+        declared with var keyword is moved up to the start of the block (without intialization),
+        if you try to access it before declaration it will return undefined but not error
+
+    Functions
+        named functions will be moved up to the begining of the scope > when it is called before declaration >
+        it will run normally

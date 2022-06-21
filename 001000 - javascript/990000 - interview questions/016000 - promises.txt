@@ -1,0 +1,25 @@
+Promises
+    Objects used to handle asyc operations in javascript
+
+    Status
+        Pending
+        Fulfilled
+        Rejected
+
+    i.e.
+        const waitAnd = function (numberOfSeconds, shouldFail) {
+            return new Promise(function (resolve, reject) {
+                setTimeout(() => {
+                    if (shouldFail) reject();
+                    else resolve();
+                }, numberOfSeconds * 1000);
+            });
+        };
+
+        waitAnd(1, false).then(() => {
+            console.log("I m done");
+        });
+
+        waitAnd(2, true).catch(() => {
+            console.log("I have a problem");
+        });

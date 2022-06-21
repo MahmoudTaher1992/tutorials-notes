@@ -1,0 +1,21 @@
+Prototypes
+    are object that is attached to new instances from the class > have shared variables and methods among all 
+    instances from the same class
+
+    changing the prototype object doesn't affect old created instances
+
+    If the value is not present in the instance > js looks in the prototype
+
+    i.e.
+        function Person(name) {
+            this.name = name;
+        }
+
+        Person.prototype = { age: 24 };
+        let omar = new Person("omar");
+        console.log(omar.age); // 24
+
+        Person.prototype = { age: 30 };
+        let taher = new Person("taher");
+        console.log(omar.age); // 24
+        console.log(taher.age); // 30

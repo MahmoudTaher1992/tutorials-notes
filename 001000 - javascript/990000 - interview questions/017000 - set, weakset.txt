@@ -1,0 +1,27 @@
+Set
+    A set is a collection of items which are unique
+
+    can have premitive and objects
+
+    iterable
+
+    i.e.
+        const s = new Set();
+        s.add(1).add(5).add(1).add(5).add(-5).add(-10).add(-10).add({ name: "taher" });
+        console.log(s); // { 1, 5, -5, -10, { name: "taher" } }
+
+Weakset
+    A set is a collection of items which are unique
+
+    can have objects only
+
+    Not iteratable
+
+    It is weak > if no other refrence exists to the object in the set > garbage collector can destroy it
+
+    i.e.
+        const taher = { name: "taher" };
+        const s = new WeakSet();
+        s.add(taher).add(taher);
+        console.log(s); // { { name: "taher" } }
+

@@ -1,0 +1,36 @@
+Declarations
+    Var
+        Oldest keyword to declare a variable
+        
+        Scope
+            Global scope 
+                variables declared in the global scope can be accessed anywhere
+                variables are attached to window object
+            Function scope
+                variables declared in the function scope can be accessed within the function only
+
+        Redeclaration is allowed
+
+        Hoisting is allowed
+            No errors are thrown if you try to access a value before initialization > undefined will show
+            To prevent it use "strict mode"
+
+    let
+        improved version of var
+
+        Scope
+            Global scope 
+                variables declared in the global scope can be accessed anywhere
+                variables are not attached to window object
+            Block scope
+                variables declared in the block scope can be accessed within the block only
+
+        Redeclaration is not allowed (in the same scope)
+
+        Hoisting is allowed
+            Errors will be thrown
+
+    const
+        Same as let
+
+        value can not be changed

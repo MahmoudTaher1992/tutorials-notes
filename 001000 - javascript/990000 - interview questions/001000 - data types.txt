@@ -1,0 +1,28 @@
+Data types
+    Two main categories of data types (Primitive and Non-Primitive)
+        Primitive
+            Data types that refer to a single value
+            Not mutable
+            Pass by value
+                let a = 10;
+                let b = a;
+                b references to another address in the memory, changing a doesn't affect by
+            i.e.
+                Number
+                string
+                boolean
+                bigint
+                null
+                undefined
+                symbol    
+
+        Non-Primitive
+            Refers to objects > multiple values
+            mutable
+            Pass by reference
+                let a = { name: "taher" };
+                let b = a;
+                b.name = "Omar"
+                console.log(a.name) // "Omar"
+                b references to same address in the memory, changing it affects the original variable
+                

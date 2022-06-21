@@ -1,0 +1,49 @@
+Functions
+    First class citizen
+        ability to put function inside a variable
+        pass function as a parameter to another function
+        get function as output from another function
+
+    Function Hoisting
+        in javascript functions declarations are moved up to the top of the current scope, 
+        so you can access it before declaration
+
+        i.e.
+            printName("taher"); // taher
+            function printName(name) {
+                console.log(name);
+            }
+
+    Declaration types
+        normal
+            function printName(name) {
+                console.log(name);
+            }
+
+        anonymous function
+            var printName = function(name) {
+                console.log(name);
+            }
+
+        Function() Constructor
+            var printName = new Function("name", "console.log(name);");
+            printName("taher"); // taher
+
+        IIFE (Immediately Invoked Function) / SIF (Self-Invoking Functions)
+            invoked once it is defined in the same statement
+
+            i.e.
+                (function (name) {
+                    console.log(name);
+                })("taher"); // taher
+
+        Arrow functions
+            simplfied syntax for the original function
+
+            i.e.
+                function add(a, b) {
+                    return a + b;
+                }
+                const add = (a, b) => a + b;
+
+

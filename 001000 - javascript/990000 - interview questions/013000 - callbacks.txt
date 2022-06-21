@@ -1,0 +1,2 @@
+Callbacks
+    Functions that is passed to another function is called callback function

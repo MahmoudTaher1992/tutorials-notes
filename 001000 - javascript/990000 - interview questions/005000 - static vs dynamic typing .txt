@@ -1,0 +1,21 @@
+Is js Static or dynamic typing
+    Static typing
+        variables have type
+        values have type
+        variables connot change its type
+        the type is checked on the compile time
+
+        i.e.
+            Typescript
+    
+
+    Dynamic typing
+        variables have no type
+        values have type
+        variables can change its type
+        the type is checked on the run time
+
+        i.e.
+            javascript
+
+    javascript is a dynamically typed language

@@ -1,0 +1,15 @@
+Curring
+    converting the way the function takes its params from fn(a, b, c) to fn(a)(b)(c)
+
+    i.e.
+        function sum(a, b) {
+            return a + b;
+        }
+
+        function _sum(a) {
+            return function(b) {
+                return a + b;
+            }
+        }
+
+        console.log(sum(2, 3) === _sum(2)(3)); // true

@@ -1,0 +1,29 @@
+Implicit Type Coercion
+    Automatic conversion of a value from a data type to another
+
+    String Coercion
+        i.e.
+            var s = "T" + 1;
+            console.log(s) // "T1"
+
+            var s = 1 + "T";
+            console.log(s) // "1T"
+
+            var s = 1 + 1 + "T";
+            console.log(s) // "2T"
+
+    Boolean Coercion
+        0, 0n, -0, null, undefined, NaN > false
+        else > true
+
+    Used in
+        If statement
+            i.e.
+                var m = "taher"
+
+                if (m) console.log("Foo")
+
+                // Foo
+
+        == operator
+            operands will be converted to similar data types and then logic takes place

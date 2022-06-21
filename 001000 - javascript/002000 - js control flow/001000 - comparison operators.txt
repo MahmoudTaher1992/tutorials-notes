@@ -38,14 +38,33 @@ Comparison operators and Logical operators
     JavaScript Logical Operators
         Logical operators perform logical operations: AND, OR and NOT.
 
+        Falsy values
+            false, 0, 0n, -0, null, undefined, "", NaN
+
+        truthy values
+            anything other than falsy values
+
         &&
-            Logical AND: true if both the operands/boolean values are true, else evaluates to false
-            true && false; // false
+            returns second value if the first is truthy, returns first value if it is falsy
+
+            i.e.
+                0 && "Taher"; // 0
+                null && true; // null
+                "Taher" && undefined // undefined
+                "Taher" && "omar" // omar
 
         ||
-            Logical OR: true if either of the operands/boolean values is true. evaluates to false if both are false
-            true || false; // true
+            returns first value if the first is truthy, returns second value if the first is falsy
+
+            i.e.
+                "Taher" || false; // Taher
+                true || undefined // true
+                0 || undefined // undefined
+                undefined || "Taher" // Taher
 
         !
-            Logical NOT: true if the operand is false and vice-versa.
-            !true; // false
+            convertes value to boolean and reverse it
+
+            i.e.
+                !"Taher" // false
+                !undefined // true
