@@ -1,4 +1,7 @@
 Data types
+    type of operator
+        returns the type of a value/variable
+        
     Two main categories of data types (Primitive and Non-Primitive)
         Primitive
             Data types that refer to a single value
@@ -25,4 +28,9 @@ Data types
                 b.name = "Omar"
                 console.log(a.name) // "Omar"
                 b references to same address in the memory, changing it affects the original variable
+
+            i.e.
+                object
+                object => array
+                    Arrays are objects in javascript
                 

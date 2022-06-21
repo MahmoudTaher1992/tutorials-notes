@@ -1,0 +1,9 @@
+ECMAScript
+    ECMAScript is a Standard for a scripting languages.
+
+    Javascript are based on the ECMAScript standard.
+
+    JavaScript is the most popular implementations of the ECMAScript Standard.
+
+    ES6
+        ES6 is the 6th version of ECMAScript, it was published in 2015

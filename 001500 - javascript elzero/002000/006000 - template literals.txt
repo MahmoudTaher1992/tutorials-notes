@@ -1,0 +1,13 @@
+Template literals
+    changed by babel transcompiler to legacy format for the older browsers to work
+
+    i.e.
+        let a = "taher";
+        let b = "omar";
+
+        console.log(`${a} ${b}`); // taher omar
+
+
+        
+
+
