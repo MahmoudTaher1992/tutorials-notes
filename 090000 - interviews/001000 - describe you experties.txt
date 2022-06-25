@@ -1,0 +1,34 @@
+Please describe your expertise as senior front-end engineer (Focus React.js)
+    I worked on big products with high quality code standards that 
+    benifited the companies in decreasing the cost of development and maintenance
+
+    scalability, testability and maintainability of the apps i wrote were approached using
+        MVVM architecture design patterns
+
+        Implementation of dependency inversion principle “ioc” using inversify.js library as a dependency injector 
+        (The app is highly testable, extendable and maintainable aka loosely coupled)
+
+        Implementation of open/closed principle (Pages are added by supplying their models and references)
+
+        Most of the code i wrote is created using TDD practice (Most of the features are unit tested with jest)
+
+    reusable components 
+        tested it with jest
+        designed it with storybook
+        styled it with styled-components library
+
+
+    liberaries
+        global state
+            redux
+
+        strongly typed langauge to decrease the number of errors
+            Typescript
+
+        charts
+            i used d3.js library to create the charts 
+
+        internationalization
+            i18next library
+
+    

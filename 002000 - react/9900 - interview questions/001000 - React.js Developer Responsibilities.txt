@@ -1,0 +1,25 @@
+React.js Developer Responsibilities
+    Planning, analysis and Design
+        Meeting with the development team to discuss user interface ideas and applications.
+        Reviewing application requirements and interface designs
+
+    Building
+        Translating designs and wireframes into high quality code
+        Monitoring and improving front-end performance.
+        Developing and implementing front-end architecture to create a scallable and testable product
+        best coding practice
+        reusable components
+        Documenting application changes and developing updates.
+
+    Launch and maintenance
+
+
+    
+
+        
+
+
+
+
+
+
