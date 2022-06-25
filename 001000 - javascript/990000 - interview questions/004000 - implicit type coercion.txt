@@ -17,6 +17,8 @@ Implicit Type Coercion
         else > true
 
     Used in
+        "taher" + 10 => "taher10"
+
         If statement
             i.e.
                 var m = "taher"
