@@ -1,4 +1,7 @@
 Please describe your expertise as senior front-end engineer (Focus React.js)
+    Frontend
+        MERN stack
+        
     I worked on big products with high quality code standards that 
     benifited the companies in decreasing the cost of development and maintenance
 
@@ -32,3 +35,9 @@ Please describe your expertise as senior front-end engineer (Focus React.js)
             i18next library
 
     
+    Backend
+        NodeJS, ExpressJS, NestJS
+
+        MySql
+        
+        Sequelize ORM

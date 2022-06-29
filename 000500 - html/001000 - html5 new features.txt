@@ -1,0 +1,31 @@
+New features of HTML5
+    svg element
+
+    Semantic tags in HTML5
+        header
+        navigation
+        aside
+        section
+        article
+        Footer
+
+    other tags
+        Video and Audio tags
+            new tags which allow to embed a video in the website
+        Figure tags
+        address tags
+        details
+        summary
+        time
+        canvas
+        progress tag
+
+    api
+        geolocation api
+        drag and drop api
+
+    input
+        email input
+        color input
+        placeholder in input
+        required attr

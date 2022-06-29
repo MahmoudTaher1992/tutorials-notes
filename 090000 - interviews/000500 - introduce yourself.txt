@@ -1,0 +1,10 @@
+Introduce yourself
+    My name is Mahmoud Taher
+
+    I am from Egypt
+
+    I am a software engineer with 6 years of experience.
+
+    I spent 4 years in building desktop applications and 2 years in building web apps. 
+
+    I am obsessed with creating clean and reusable code
