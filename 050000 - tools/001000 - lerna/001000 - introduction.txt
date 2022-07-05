@@ -1,0 +1,9 @@
+Lerna Introduction
+    Lerna is the original monorepo tool for TypeScript/JavaScript
+
+    It solves three of the biggest problems of JavaScript monorepos:
+        Lerna links different projects within the repo, so they can import each other without having to publish anything to NPM.
+
+        Lerna runs a command against any number of projects
+
+        Lerna manages your publishing process, from version management to publishing to NPM
