@@ -1,0 +1,14 @@
+What is GraphQL
+    REST ful cons
+        Too many URLs > as the app grows urls numbers increases dramatically
+
+        Too many Requests > when trying to fetch heavily nested data you will end up sending lots of HTTP requests
+
+        Over fetching > you will fetch a full company data when you only need the name
+
+    GraphQL is a query language for your API, and a server-side runtime for executing queries using a 
+    type system you define for your data
+
+    It solves the cons mentioned above
+
+    not tied to specific database or storage engine > you can fetch data from anywhere

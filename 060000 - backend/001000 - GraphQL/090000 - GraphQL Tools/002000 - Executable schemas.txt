@@ -1,0 +1,4 @@
+Executable schemas
+    graphql-tools package > create GraphQLSchema from GraphQL schema language > by makeExecutableSchema function
+
+    check graphQL tools documentation for an example

@@ -1,0 +1,19 @@
+REST-ful routing
+    Architectural style of API (application program interface)
+
+    It uses HTTP requests to manipulate (add/update/delete) data on the server
+
+    HTTP has a
+        URL
+            specifies the route to access to manipulate the data 
+
+        METHOD
+            There are many methods but most popular methods are (GET, POST, PUT & DELETE)
+                GET > Fetch data
+
+                POST > Add data
+
+                PUT > Update data
+
+                DELETE > Delete data
+

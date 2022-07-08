@@ -1,0 +1,26 @@
+GraphQL Tools
+    GraphQL Tools is a set of npm packages(@graphql-tools/*) 
+    and an opinionated structure for how to build a GraphQL schema and resolvers in JavaScript,
+    following the GraphQL-first development workflow.
+
+    The GraphQL-first philosophy
+        the GraphQL schema is the first thing you design, and acts as the contract between your frontend and backend
+
+        the best way to architect a JavaScript GraphQL API codebase (Facebook's direction about the best way to use GraphQL)
+            Use the GraphQL schema language
+
+            Separate business logic from the schema
+                This means that your actual business logic, permissions, and other concerns should not 
+                be part of your GraphQL schema
+
+                For large apps, GraphQL server code should be splitted into 4 components: 
+                    Schema, 
+                    Resolvers, 
+                    Models,
+                    Connectors
+
+            Use standard libraries for auth and other special concerns
+                Every server framework already has a wealth of technologies for auth, file uploads, and more (don't reinvent things)
+                
+
+

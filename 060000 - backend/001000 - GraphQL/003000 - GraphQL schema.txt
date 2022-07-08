@@ -1,0 +1,18 @@
+GraphQL schema
+    An object that describes the shape of your available data
+
+    You can define it using 
+        Javascript/Typescript 
+
+        Schema definition language (SDL)
+            a langauge that take your schema in string and it builds the object for you
+
+    Schema consists 
+        node types 
+        
+        relations between them
+
+        how to manipulate data
+
+        root query
+            the main query entrance to the app

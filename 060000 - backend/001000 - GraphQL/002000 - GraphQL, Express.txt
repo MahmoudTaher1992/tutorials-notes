@@ -1,0 +1,13 @@
+GraphQL, Express
+    GraphQL exports as a middleware function that can be used in express
+        i.e.
+            import  {graphqlHTTP} from "express-graphql";
+
+            export const expressGraphQLMiddleware = graphqlHTTP({
+                graphiql: true,
+                schema: schema
+            })
+
+            app.use("/graph-ql", expressGraphQLMiddleware)
+
+    GraphQL takes care of its initialization > just pass to it the schema and it will do the rest
