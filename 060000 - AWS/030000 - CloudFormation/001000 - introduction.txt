@@ -1,0 +1,13 @@
+CloudFormation
+    Setting up AWS services is hard and tedious
+
+    If you want to automate the process and just write it in a piece of document, give it someone and he will do the rest
+    That is exactly what CloudFormation does!
+
+    It allows you to defind a file > CloudFormation will do the rest.
+
+    It is easy to use.
+
+    Template files should be writting in a .yaml || .json file > .yaml is more popular.
+
+    

@@ -1,7 +1,0 @@
-AWS Introduction
-    Clouds are tiny droplets of frozen crystals of water that are high in the sky and hovering around earth
-    It proovide services to earth inhabitants > rain > water
-    This explaination can apply to clloud computing
-
-    
-

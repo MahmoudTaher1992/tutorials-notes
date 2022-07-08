@@ -1,0 +1,12 @@
+Basic AWS concepts
+    > AWS is a public cloud
+    > Provides a range of IT services that can be used as a building blocks for apps
+    > Apps can start from simple statics web pages to modern complex ERPs and live broadcasting events.
+    > AWS is a market leader in cloud computing.
+
+Benefits of AWS over Traditional Data Center
+    > No capital costs, instead there are operational costs.
+    > Economics of scale, AWS purchases in bulk so it gets better prices. This gives AWS ability to provide lower prices.
+    > No need to waste time and money on infrastructure
+    > You can scale up and down at any time
+    

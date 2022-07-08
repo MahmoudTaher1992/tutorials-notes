@@ -1,0 +1,42 @@
+AWS Introduction
+    Clouds are tiny droplets of frozen crystals of water that are high in the sky and hovering around earth
+    It provide services to earth inhabitants > rain > water
+    This explanation can apply to cloud computing
+
+    Cloud computing is a host service that are hosted somewhere far from local server and personal computer
+
+    AWS can be used for 
+        personal
+
+        commercial
+
+        enterprise-grade
+
+    Clouds are of three types
+        Private cloud
+            > A host infrastructure, platform, application services
+            > located remotely 
+            > providing compute, platform & IT services
+            > controlled only by one organization
+            > preferred by companies that need
+                > security
+                > dedicated data center / hosting space
+            > Constant upgrade required
+                > staff skills
+                > Data center infrastructure
+            > High cost, High time consuming
+
+        Public cloud
+            > Same as private but it provides on-demand services on shared isolated platforms
+            > Open and accessible to public for subscription
+            > Helps clients to focus more in their work rather than looking after the cloud problems.
+            > In cloud computing the services are provided on pay-as-you-go model
+            > It can scale on short and long-term needs
+            
+        Hybrid cloud
+            > In some situations private cloud can use public ones to meet a sudden spike in resource requirments
+            
+
+        
+    
+
