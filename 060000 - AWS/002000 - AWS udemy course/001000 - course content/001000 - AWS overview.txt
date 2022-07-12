@@ -1,0 +1,29 @@
+AWS overview
+    > AWS is the leader in the cloud market for 9 years till now
+    > over 1 million active users
+    > enables you build sophisticated, scalable apps
+    > applicable to diverse set of industries
+
+AWS regions
+    > all around the world
+    > has a name (us-east-1, eu-west-1, ....)
+    > a cluster of data centers
+    > How to choose an AWS Region?
+        > Compliance
+            > data governance should not be outside the country > you will be force to choose specific Regions
+        > Proximity
+            > closest to customer - reduced latency
+        > Available services
+            > new services and features may not be available in every Region
+        > Pricing
+            > varies from region to region
+
+AWS availability zones
+    > Each region has from 2-6 AZs
+    > Each AZ is one or more discrete data centers
+    > AZs are separate from each other - isolated disasters
+    > AZs are connected with high bandwidth, ultra-low latency networking
+        
+AWS points of presence (Edge Locations)
+    > AWS has 216 points of presence
+    > Content is delivered to end users with low latency

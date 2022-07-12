@@ -1,0 +1,23 @@
+AWS overview
+    > AWS regions and availability zones
+        > AWS regions
+            > Separate geographic area
+            > Has multiple isolated locations called availability zones
+            > Each region is independent and isolated to keep them safe from catastrophic events
+            > AZs in each region is connected using low latency networks
+
+        > It is recommended to choose the nearest region to your customers to minimize latency
+        > If the region has a problem with the services you provide then you will have to choose another region
+
+    > SaaS, PaaS, IaaS
+        > IaaS
+            > Service providers offers virtualized hardware or computing
+            > i.e (digitalocean)
+
+        > PaaS
+            > Service providers offers software platform
+            > You don't have to deal w. hardware or main platform
+
+        > SaaS
+            > Service providers offers software on top of software platform
+

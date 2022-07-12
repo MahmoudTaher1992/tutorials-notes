@@ -9,4 +9,10 @@ Benefits of AWS over Traditional Data Center
     > Economics of scale, AWS purchases in bulk so it gets better prices. This gives AWS ability to provide lower prices.
     > No need to waste time and money on infrastructure
     > You can scale up and down at any time
-    
+    > No need to wait for vendors to get your purchases of hardware
+
+Accessing AWS services
+    > AWS management console - the browser
+    > AWS command line interface
+    > AWS software development kit - packages that can be installed in projects (from npm or yarn)
+    > Query APIs - HTTP end points

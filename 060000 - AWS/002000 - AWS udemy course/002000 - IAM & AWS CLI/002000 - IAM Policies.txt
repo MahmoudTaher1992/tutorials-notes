@@ -1,0 +1,34 @@
+IAM Policies
+    > Is a JSON file that describes a permission
+    > i.e.
+        {
+            "Version": "2012-10-17",
+            "Id": "optional-id", 
+            "Statement": [
+                {
+                    "Sid": "VisualEditor0",
+                    "Effect": "Deny",
+                    "Action": [
+                        "secretsmanager:GetRandomPassword",
+                        "secretsmanager:ListSecrets"
+                    ],
+                    "Resource": "*"
+                },
+                {
+                    "Sid": "VisualEditor1",
+                    "Effect": "Deny",
+                    "Action": "secretsmanager:*",
+                    "Resource": "arn:aws:secretsmanager:*:823480715978:secret:NurseryStoryDatabasePostgre-7fIYisvrtFK0-ChUnyl"
+                }
+            ]
+        }
+    > Policy structure
+        > version: policy language version
+        > id: Identifier for the policy (optional)
+        > Statement: one or more (required)
+            > Sid: optional identifier for the Statement
+            > Effect: Allow/Deny
+            > Principle: account/user/group to which the policy applied to (optional)
+            > Action: list of actions the policy allows/denies
+            > Resource: list of resources which the actions applies to
+        > Condition: conditions for when policy is in effect (optional)

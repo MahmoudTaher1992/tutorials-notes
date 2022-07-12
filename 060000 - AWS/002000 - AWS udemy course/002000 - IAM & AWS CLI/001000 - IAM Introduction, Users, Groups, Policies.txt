@@ -1,0 +1,21 @@
+IAM
+    > Stands for Identity and Access Management
+    > Global service
+    > Is used by amazon itself
+
+    > Root account
+        > created by default
+        > should not be used or shared
+
+    > Users
+        > User - person in your organization
+        > Can be grouped together in Groups
+        > Group is collection of users, can not have a group as a child
+        > User can
+            > Belong to multiple groups
+            > Has no group
+
+    > Permissions
+        > User/Group can be assigned to JSON document called policies.
+        > Policies are used to allow or prevent user/group from/to doing something
+        > Least privilege principle - don't give more permissions than a user needs

@@ -1,0 +1,21 @@
+IAM protection
+    > to protect user from being compromised you have two ways
+        > IAM password policy
+            > Stronger passwords = higher security for your account
+            > Change the policy to force passwords to be strong
+                > min password length
+                > specific chars
+                    > uppercase
+                    > lowercase
+                    > numbers
+                    > non alphanumeric chars
+                > Require users to change passwords periodically
+                > prevent password reuse
+
+        > MFA - Multi Factor Authentication
+            > A password + security device to login
+            > The hacker will need both the password and the security device
+            > Security devices
+                > Virtual MFA device (Google authenticator, authy, ... etc)
+                > Universal 2nd Factor Security Key (i.e. YubiKey)
+                > Hardware Key Fob
