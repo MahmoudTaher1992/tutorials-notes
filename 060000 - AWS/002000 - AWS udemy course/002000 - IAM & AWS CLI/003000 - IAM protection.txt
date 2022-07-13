@@ -15,6 +15,7 @@ IAM protection
         > MFA - Multi Factor Authentication
             > A password + security device to login
             > The hacker will need both the password and the security device
+            > Increases the security of the account
             > Security devices
                 > Virtual MFA device (Google authenticator, authy, ... etc)
                 > Universal 2nd Factor Security Key (i.e. YubiKey)

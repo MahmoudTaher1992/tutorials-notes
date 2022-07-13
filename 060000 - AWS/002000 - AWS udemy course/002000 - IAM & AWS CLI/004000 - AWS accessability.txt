@@ -1,0 +1,26 @@
+AWS accessability
+    > AWS management console
+        > Protected by password + MFA
+
+    > AWS CloudShell
+        > CLI in the management console
+        > Not available in all regions, check if it is available in the region your are logged in.
+
+    > AWS command line interface (CLI)
+        > A tool that enables you to interact with AWS using commands in your command-line shell
+        > Protected by access keys
+        > Direct access to public AWS APIs
+        > Alternative to AWS management console
+        > Look for tutorials on how to install it on your machine
+
+    > AWS software development kit (SDK)
+        > Set of libraries that enables you to access and manage AWS services programmatically
+        > Embedded in your application
+        > Protected by access keys
+
+    > Access keys
+        > Generated using AWS console (Look for tutorials to generate them)
+        > They are just like username, password
+            > Don't share them with any body
+            > Access key id ~= username
+            > Secret access key ~= password

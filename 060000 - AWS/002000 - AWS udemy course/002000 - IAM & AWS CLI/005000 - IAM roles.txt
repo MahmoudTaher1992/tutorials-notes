@@ -1,0 +1,7 @@
+IAM roles
+    > Some AWS services will need to perform actions on your behalf
+    > To give them permissions > You should give them IAM roles that describe their permissions
+    > Services that need roles example
+        > EC2
+        > Lambda functions
+        > CloudFormation
