@@ -1,0 +1,9 @@
+IAM security tools
+    > IAM credentials report
+        > Account level
+        > Lists all account's users and the status of their credentials
+
+    > IAM access advisor
+        > User level
+        > Shows service permissions granted to a user and when those services were last accessed
+        > You can use this info to revise your policies

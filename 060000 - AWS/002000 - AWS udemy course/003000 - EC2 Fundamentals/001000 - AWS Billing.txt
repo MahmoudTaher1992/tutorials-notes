@@ -1,0 +1,8 @@
+AWS Billing
+    > access to the Billing
+    > You need to allow it by the root account
+    > Then you will have to create a policy allowing the billing access
+    > Attach the policy to group/user
+
+AWS Budget
+    > A tool that allows you to set a budge and actions on the budget plan

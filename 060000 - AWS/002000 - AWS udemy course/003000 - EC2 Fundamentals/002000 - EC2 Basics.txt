@@ -1,0 +1,5 @@
+EC2 Basics
+    > Most popular of EC2 offering
+    > Stands for - Elastic Compute Cloud - Infrastructure as a Service
+
+    > 

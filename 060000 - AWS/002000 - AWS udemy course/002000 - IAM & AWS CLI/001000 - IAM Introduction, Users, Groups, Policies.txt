@@ -10,7 +10,9 @@ IAM
     > Users
         > User - person in your organization
         > Can be grouped together in Groups
-        > Group is collection of users, can not have a group as a child
+        
+    > Groups
+        > Groups are collections of users, can not have a group as a child
         > User can
             > Belong to multiple groups
             > Has no group
