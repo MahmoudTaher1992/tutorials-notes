@@ -1,5 +1,39 @@
 EC2 Basics
-    > Most popular of EC2 offering
-    > Stands for - Elastic Compute Cloud - Infrastructure as a Service
+    > Most popular of AWS offering
+    > = Elastic Compute Cloud - Infrastructure as a Service
 
-    > 
+    > It consists of 
+        > Renting virtual machines (EC2)
+        > Storing data on virtual drives (EBS)
+        > Distributing load across machines (ELB)
+        > Scaling the services using an auto-scaling group (ASG)
+
+    > Knowing EC2 is fundamental to know how the cloud works
+
+    > EC2 sizing & configuration options
+        > Operating System
+            > Linux
+            > Windows
+            > Mac OS
+        > CPU - How much compute power & cores
+        > RAM - How much random access memory
+        > Storage
+            > Network attached (EBS | EFS)
+            > Hardware (EC2 instance store)
+        > Network card
+            > Speed of the card
+            > Public IP address
+        > Firewall rules - security group
+        > Bootstrap script - EC2 user data
+            > A piece of code that setups the EC2 instance for you
+            > Bootstrapping means launching commands when the machine starts
+            > It runs only once at the instance first starts
+            > Used to automate boot tasks such as:
+                > Installing updates
+                > Installing software
+                > Downloading common files from the internet
+                > Anything
+            > Runs with root user
+
+    > EC2 instance types
+        > Many types that varies in sizing and configuration options

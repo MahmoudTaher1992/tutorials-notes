@@ -1,0 +1,45 @@
+EC2 instances types basics
+    > There are different type of EC2 instances
+    > There is a website the tells you the types listings
+
+    > Naming convention
+        > m5.2xlarge
+            > m = instance class
+            > 2 = generation (improves by time)
+            > 2xlarge = size within instance class
+
+    > Instance types
+        > General purpose
+            > Great for diversity of workloads
+                > Web servers
+                > Code repositories
+            > Balance between
+                > Compute
+                > Memory
+                > Networking
+
+        > Compute optimized
+            > Great from compute intensive tasks that require high performance
+                > Batch processing workloads
+                > Media transcoding
+                > High performance web servers
+                > High performance computing
+                > Scientific modelling
+                > Machine learning
+                > Gaming servers
+
+        > Memory optimized
+            > Fast performance for workloads the process large data sets in memory
+                > High performance relational/non-relational databases
+                > Distributed web scale cache stores
+                > In-memory databases optimized for BI
+                > Applications performing real-time processing of big unstructured data
+
+        > Storage optimized
+            > Great for storage-intensive tasks that require high, sequential read and write access 
+              to large data sets on local storage
+                > High frequency online transaction processing (OLTP) systems
+                > Relational & NoSQL databases
+                > Cache and in-memory databases (i.e Redis)
+                > Data warehousing apps
+                > Distributed file systems

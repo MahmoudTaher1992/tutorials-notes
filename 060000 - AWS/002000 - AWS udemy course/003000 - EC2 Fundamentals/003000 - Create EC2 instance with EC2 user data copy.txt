@@ -1,0 +1,24 @@
+Create EC2 instance with EC2 user data
+    > Access the console > EC2 dashboard > add instance
+    > Enter instance name
+    > Choose AMI (Amazon Machine Image)
+        > Use one in the Free tier eligible
+    > Choose instance type
+    > Select Key pair
+        > To access the instance using SSH utility
+    > Use the default network settings
+        > Configure security group
+            > Allow SSH traffic from anywhere
+            > Allow HTTP traffic from anywhere
+    > Configure the storage
+        > You can use advanced options
+    > Enter user data
+        > Will be executed in the first launch of the system
+        > Try to find a quick code to setup dummy http server that serve dummy http page
+    > Launch the instance
+    > Test the instance if it serves the test html page
+        > use the public ip address
+    > Try to stop the instance
+        > When you start it again you will get a new public IP address
+        > The private IP address will remain the same
+
