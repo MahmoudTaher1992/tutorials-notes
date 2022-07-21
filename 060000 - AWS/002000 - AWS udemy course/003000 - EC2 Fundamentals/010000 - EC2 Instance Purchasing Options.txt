@@ -1,0 +1,7 @@
+EC2 Instance Purchasing Options
+    > Options
+        > On-Demand Instances - Short workload, predictable pricing, pay by second.
+        > Reserved (1 & 3 years)
+            > Reserved Instances - long workloads
+            > Converted Reserved Instances - long workloads with flexible instances
+        > Savings Plans (1 & 3 years)

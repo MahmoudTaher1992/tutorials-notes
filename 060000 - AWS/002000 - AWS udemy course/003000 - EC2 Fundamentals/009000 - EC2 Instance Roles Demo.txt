@@ -1,0 +1,11 @@
+EC2 Instance Roles Demo
+    > The aim from this demo is to tell you what IAM Roles do
+    > Connect to the EC2 instance using SSH
+    > Try listing IAM uses in the AWS account the EC2 instance on
+        > You should not provide the instance with your access keys (Remember those keys are not sharable, 
+          It for your own use only. An instance is not you). Any body can access the EC2 instance and get your keys.
+    > You will end up using IAM roles
+        > Create a role with a policy that allows listing iam users
+        > Attach this role to the EC2 instance
+        > Try listing IAM users from EC2 instance, It should work.
+        > Hint: It can take some time for the changes to take place.

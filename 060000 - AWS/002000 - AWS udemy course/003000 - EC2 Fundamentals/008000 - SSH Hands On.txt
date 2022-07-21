@@ -1,0 +1,6 @@
+SSH Hands On
+    > Try accessing EC2 instance from
+        > Linux OS
+        > Windows OS - Putty
+        > Windows 10 OS - No Putty
+        > Browser - EC2 instance connect

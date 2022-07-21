@@ -1,0 +1,5 @@
+Security Groups Hands On
+    > Try controlling access to instance using security groups
+        > Hint: Use inbound rules
+        > Hint: Try SSH and HTTP ports
+        > Hint: Allow some ips, Disallow others.
