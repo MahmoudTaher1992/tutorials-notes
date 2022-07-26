@@ -1,0 +1,4 @@
+EBS Snapshots - Hands On
+    > Try copying EBS volume from on AZ to another
+    > Try restoring deleted snapshot
+    > Try putting snapshots on the "archive tier"

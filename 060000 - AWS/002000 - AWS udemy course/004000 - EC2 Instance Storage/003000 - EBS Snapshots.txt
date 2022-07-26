@@ -1,0 +1,13 @@
+EBS Snapshots
+    > Make a backup from EBS volume
+    > It is better to do the snapshot when the volume is de-attached
+    > Can copy snapshots across AZ or Region
+        > create a snapshot from EBS > copy snapshot across AZ > create EBS from snapshot
+
+    > EBS snapshot archive
+        > Move a snapshot to "archive tier" that is 75% cheaper
+        > Takes from 24 to 72 hours for restoring the archive 
+
+    > Recycle Bin for EBS snapshots
+        > setup rules to retain deleted snapshots so you can recover them after an accidental deletion
+        > Specify retention from 1 day to 1 year

@@ -1,0 +1,4 @@
+EBS Hands On
+    > Create a volume and attach it to EC2 instance
+    > Make sure it is in the same AZ
+    > Terminate an instance and test delete on termination attribute

@@ -1,0 +1,18 @@
+EBS Overview
+    > What is EBS volume ?
+        > EBS stands for (Elastic Block Volume)
+        > It is a network drive you can attach to your instances while they run
+            > Not a physical drive
+            > It uses the network to communicate the instance - There might be a bit of latency
+        > It allows instances to persist data, even after their termination
+        > They can be only mounted at one instance at a time
+        > They are bound to a specific AZ
+            > But there is a way to move it around AZs using snapshots
+        > Analogy (Think of them as a network USB stick)
+        > Free tier - 30 GB of free EBS storage SSD/Magnetic per month
+        > You get billed for all the capacity
+            > Not for the used capacity only!
+        > You can increase the capacity by the time
+
+        > Delete on termination attribute
+            > deletes when ec2 instance terminates
