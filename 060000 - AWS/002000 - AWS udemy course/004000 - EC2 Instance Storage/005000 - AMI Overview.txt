@@ -9,4 +9,8 @@ AMI Overview
         > Your own AMI: you make and maintain them yourself
         > An AWS marketplace AMI: an AMI someone else made (and potentially sells)
 
-    > AMI Process
+    > AMI Process (from EC2 instance)
+        > Start EC2 instance and customize it
+        > Stop the instance
+        > Build an AMI - This will create EBS snapshots
+        > Launch instance from other AMIs

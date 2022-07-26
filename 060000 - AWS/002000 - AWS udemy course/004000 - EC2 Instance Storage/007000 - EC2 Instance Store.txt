@@ -1,0 +1,13 @@
+EC2 Instance Store
+    > A high performance hardware disk 
+        > physical disk connected to a physical machine that hosts your EC2 instance
+    > Differs from EBS volumes in
+        > EC2 Instance Store has a higher performance 
+        > EC2 Instance Store loses their storage if they are stopped
+    > Good for
+        > buffer
+        > cache
+        > scratch data
+        > temporary content
+    > Risk data loss if hardware fails
+    > Backups and replication are your responsibility

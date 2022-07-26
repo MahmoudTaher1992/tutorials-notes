@@ -1,0 +1,3 @@
+AMI Hands On
+    > Create an AMI from EC2
+    > Create EC2 from AMI (that you created)

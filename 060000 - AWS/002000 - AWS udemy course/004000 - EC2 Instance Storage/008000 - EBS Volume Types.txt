@@ -1,0 +1,66 @@
+EBS Volume Types
+    > Terminologies
+        > Disk throughput
+            > The measurement of how fast (per second) your storage can read/write data
+            > You may see the effect when moving on from HDD to SSD
+            > This is typically written in MB/s or megabytes per second (size of operations)
+        > IOPS
+            > = input/output operations per second
+            > lesser-known measurement of HDD or SSD performance
+            > measures the amount of read/write operations (# of operations) your storage can do in a second
+
+
+    > Comes in 6 types
+        > gp2/gp3 (SSD)
+            > General purpose SSD volume
+            > Balances price and performance for a wide variety of workloads
+            > 1 GiB - 16 TiB
+            > gp3
+                > IOPS (from 3000 IOPS to 16000 IOPS)
+                > Throughput (from 125 MiB/s to 1000 MiB/s) 
+                > can be set independently
+                    > IOPS=3000, Throughput=1000 MiB/s
+            > gp2
+                > IOPS (from 3000 IOPS to 16000 IOPS)
+                > IOPS and size of the volume are linked
+                    > 3 IOPS/GB
+                    > @ 5334 GB you get max IOPS
+
+        > io1/io2 (SSD) - Provisioned IOPS (PIOPS)
+            > High performance SSD volume
+            > Good for workloads with
+                > mission-critical - sustained IOPS
+                > low-latency
+                > high-throughput
+                > apps that need more that 16000 IOPS
+            > Great for db workload
+            > io1/io2 (4 GiB - 16 TiB)
+                > 64000 Max PIOPS for Nitro EC2 instances (32000 for others)
+                > Can increase PIOPS independently from volume
+                > io2 have more durability and more IOPS/GiB (same price as io1)
+            > io2 Block Express (4 GiB - 64 TiB)
+                > Sub-millisecond latency
+                > Max PIOPS 250000 with 1000:1 ratio IOPS/GiB
+            > Supports EBS multi attach
+
+        > Hard Disk Drives (HDD)
+            > Can't be a boot volume
+            > (125 MiB - 16 TiB)
+            > st1 (HDD)
+                > Low cost HDD volume
+                > Designed for frequently accessed, throughput-intensive workloads
+                    > Big Data
+                    > Data Warehouses
+                    > Log processing
+                > Max throughput (500 MiB/s), Max IOPS (500)  
+            > sc1 (HDD)
+                > Lowest cost HDD volume
+                > Designed for less frequently accessed workloads
+                > Max throughput (250 MiB/s), Max IOPS (250)  
+                
+
+    > EBS volumes characteristics
+        > Size
+        > Throughput (MB/s)
+        > IOPS (#/s)
+    > (gp2/gp3), (io1/io2) can be used as boot volumes
