@@ -1,0 +1,43 @@
+npm
+    > What is npm?
+        > a huge part of js ecosystem
+        > stands for node package manager
+        > A place where you have millions of packages that is ready to be used in your project
+        > You are going to need npm because you will never be able to build everything yourself
+            > It will cost you time and mony
+            > Instead you reuse packages from other developers
+        > npm helps you get parts of code from other teams
+        > authors write npm and publish them to npm registry
+            > You can then use the package by installing it using npm cli
+            > In the registry you will find all types of packages
+
+    > Installing npm
+        > Install node js and npm will be installed along side with it
+        > check if it is installed or not
+            > node -v
+            > npm -v
+
+    > Global and local packages
+        > You can install packages locally or globally
+            > Locally 
+                > Only be accessible from the project 
+                > use npm cli to install it
+                > most packages should be installed locally
+            > Globally
+                > use it when you want to access the library from any place
+                > most likely it is done for packages that need to be accessed from the cli
+                > add "-g" to install the package globally
+
+    > package.json
+        > Store info about your project
+            > name
+            > version
+            > github repo
+        > Store info about the packages you installed
+        > Run "npm install" to install all packages at once
+            > npm reads the file and installs all packages
+        > create a package.json file for you project using "npm init"
+
+    > Dealing with dependencies
+        > once you install the package you will see that it is added in package.json
+        > you will notice that there is a folder called 
