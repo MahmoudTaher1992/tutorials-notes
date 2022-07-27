@@ -1,0 +1,7 @@
+EFS Hands On
+    > Create a customized EFS
+    > Create a security group and attach it to AZs in the network settings tab
+    > Attach the EFS to Multiple EC2 instances
+        > It should be an option while creating the EC2 instance
+    > Try change a file from on EC2 instance and see it in the other instance
+    > Delete the EFS 

@@ -43,7 +43,8 @@ EBS Volume Types
                 > Max PIOPS 250000 with 1000:1 ratio IOPS/GiB
             > Supports EBS multi attach
 
-        > Hard Disk Drives (HDD)
+        > st1/sc1 (HDD)
+            > Hard Disk Drives
             > Can't be a boot volume
             > (125 MiB - 16 TiB)
             > st1 (HDD)

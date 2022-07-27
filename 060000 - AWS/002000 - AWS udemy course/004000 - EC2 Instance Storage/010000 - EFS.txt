@@ -1,0 +1,66 @@
+EFS (Elastic File System)
+    > Managed NFS (Network File System) that can be mounted on many EC2
+        > NFS
+            > A protocol that lets users on a computer access files on the Network
+            > Any one on the network will have access to the files
+            > The system can use security protocols to dictate privileges (Who does what)
+    > Works across multi AZ
+        > Multiple EC2 instances on different AZs can access the NFS
+    > Highly available, scalable, expensive, pay per use
+    > Use cases
+        > Content management
+        > Web serving
+        > Data sharing
+        > Wordpress
+    > Uses NFSv4.1 protocol
+    > Uses security groups to control access to EFS
+    > Compatible with Linux based AMI (NOT WINDOWS)
+    > Encryption at rest using KMS
+    > POSIX file system (~Linux) that has a standard file API
+    > File system scales automatically, pay-per-use, no-capacity planning 
+
+    > EFS Scale
+        > 1000s of concurrent NFS clients, 10GB/s + throughput
+        > Grow to Petabyte-scale network file system, automatically
+
+    > Performance mode (at creation time)
+        > General purpose: latency-sensitive 
+            > use cases
+                > Web server
+                > CMS
+        > Max I/O
+            > higher latency
+            > higher throughput
+            > higher parallel 
+            > use cases
+                > Big Data
+                > Media Processing
+
+    > Throughput mode
+        > Bursting:
+            > 1 TB = 50MiB/s
+            > + burst of up to 100 MiB/s
+        > Provisioned
+            > Enter your throughput regardless of storage size
+
+    > Storage tiers
+        > lifecycle management feature
+        > move file after N days
+        > tiers
+            > Standard - Frequently accessed files
+            > Infrequent access (EFS-IA)
+                > Cost to retrieve files
+                > lower price to store
+                > Enable EFS-IA with a Lifecycle Policy
+                    > if a file is not accessed after 60 days it will move to EFS-IA tier
+    
+    > Availability and durability
+        > Standard
+            > Multi-AZ - great for production
+        > One Zone
+            > One AZ
+            > Great for dev, backup
+            > Enabled by default
+            > compatible with IA > (EFS One Zone-IA)
+
+    > You can get over 90% savings if you customize the options of EFS 

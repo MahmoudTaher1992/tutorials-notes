@@ -40,4 +40,32 @@ npm
 
     > Dealing with dependencies
         > once you install the package you will see that it is added in package.json
-        > you will notice that there is a folder called 
+        > you will notice that there is a folder called node_modules added
+            > it contains a lot of other folders
+            > even if you installed one dependency you will find a lot of other folders
+                > They are the nested dependencies for the one package you installed
+        > "npm list" is used to list the packages in the project and their versions 
+
+    > Package versioning
+        > The biggest source of headache while working with npm packages
+        > because they depend on each other, They can cause problems
+        > "npm view lib-name versions"
+            > lists all versions of the library
+        > First release is 1.0.0
+        > Semantic versioning
+            > System of numbering software versions
+            > 3 digits > MajorVersion.MinorVersion.PatchVersion
+                > MajorVersion
+                    > Used for big changes
+                    > Not Backward compatible
+                    > Will probably break the old versions
+                > MinorVersion
+                    > Backwards-compatible features
+                    > Won't break older builds
+                > PatchVersion
+                    > Small bug fixes
+                    > Won't break older builds
+                > When a version is increase the next numbers are set to ZEROs
+
+                
+
