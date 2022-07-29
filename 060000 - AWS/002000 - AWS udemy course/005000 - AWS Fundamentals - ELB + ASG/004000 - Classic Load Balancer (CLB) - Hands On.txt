@@ -1,0 +1,4 @@
+Classic Load Balancer (CLB) - Hands On
+    > Create a load balancer that balances the work on 3 EC2 instances
+    > Public can access the load balancer but not the EC2 instances
+    > Setup the health checks

@@ -1,0 +1,23 @@
+EFS vs EBS
+    > EBS
+        > can be only attached to one instance at a time
+            > except for io1/io2 family they can be attached to multiple instance but in the same AZ
+        > Locked in the AZ
+        > pg2 - IO increases if hte disk size increases
+        > io - can increase IO independently
+        
+        > To migrate EBS across AZ
+            > take a snapshot
+            > restore snapshot to another AZ
+            > EBS use IO and you shouldn't run them while your app is handling a lot of traffic 
+
+        > Root EBS volumes get terminated by default if the EC2 instance gets terminated (you can disable that)
+    
+    > EFS
+        > Can be mounted to 100s of instances across AZ
+        > Only for Linux instances (POSIX)
+        > EFS has a higher price point than EBS
+        > Can leverage EFS-IA for cost savings
+
+    > Instance store
+        > gets you the highest IO performance but with high risk of losing the data

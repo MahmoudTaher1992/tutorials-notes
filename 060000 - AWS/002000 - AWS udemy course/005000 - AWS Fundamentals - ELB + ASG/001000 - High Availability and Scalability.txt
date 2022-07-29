@@ -1,0 +1,20 @@
+High Availability and Scalability
+    > Scalability
+        > An app/system can handle greater loads by adapting.
+        > Types
+            > Vertical Scalability (scale up/down)
+                > You need to increase the size of the instance
+                > Common way of scaling on RDS, ElastiCache
+                > there is a limit
+
+            > Horizontal Scalability (scale out/in)
+                > increase the number of instances/systems for the app
+                > Works with distributed systems
+                > Very common for web apps
+                > Easy to do these days using AWS EC2
+                > Usage of load balancers to manage multiple instances
+        
+    > High availability
+        > Linked but different than scalability
+        > The goal is to survive a data center loss
+        > Running you app in at least 2 data centers when one goes down the other works

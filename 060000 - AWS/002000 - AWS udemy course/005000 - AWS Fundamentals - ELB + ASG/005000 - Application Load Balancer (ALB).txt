@@ -1,0 +1,33 @@
+Application Load Balancer (ALB)
+    > Supports
+        > HTTP/2
+        > WebSocket
+        > redirect from HTTP to HTTPs
+    > Load balancing to multiple HTTP applications across multiple machines
+    > Load balancing to multiple applications on the same machine (containers)
+
+    > Routing Table
+        > Lets you redirect the request to a specific target groups
+        > Routing based on path URL
+            > example.com/users
+            > example.com/posts
+        > Routing based on hostname in URL
+            > one.example.com
+            > other.example.com
+        > Routing based on Query String, Headers
+            > example.com/users?id=123&order=false
+
+    > Great fit for micro services & container-based application (docker & Amazon ECS)
+    > Has a port mapping feature to redirect to a dynamic port in ECS
+    > In comparison, We'd need multiple CLB per application
+
+    > Target groups
+        > Can be
+            > EC2 instances (can be managed by Auto Scaling Group) - HTTP
+            > ECS Tasks (managed by ECS itself) - HTTP
+            > Lambda functions - HTTP request is translated into a JSON event
+            > IP Addresses - must be private IPs
+
+        > ALB can route to multiple target groups
+        > Health checks are the target group level
+    

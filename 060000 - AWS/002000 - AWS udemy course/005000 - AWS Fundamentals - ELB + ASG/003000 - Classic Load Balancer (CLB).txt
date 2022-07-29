@@ -1,0 +1,6 @@
+Classic Load Balancer (CLB)
+    > Support
+        > TCP (Layer 8)
+        > HTTP & HTTPS (Layer 7)
+    > Health checks are TCP ot HTTP based
+    > It gives you fixed host name (i.e. jjj.region.elb.amazonaws.com)

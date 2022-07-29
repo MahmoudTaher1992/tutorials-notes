@@ -1,0 +1,7 @@
+EFS & EBS Cleanup
+    > Go back chapter by chapter and clean what you have created  
+    > Delete all 
+        > EC2 instances
+        > EBS volumes
+        > snapshots
+        > ... etc
