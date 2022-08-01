@@ -30,4 +30,9 @@ Application Load Balancer (ALB)
 
         > ALB can route to multiple target groups
         > Health checks are the target group level
+
+    > Has a fixed hostname (iii.region.elb.amazonaws.com)
+    > The app doesn't see the IP address of the client directly but it cann access it through the 
+        > X-forwarded-For in the request Header
+        > You can also get access to X-forwarded-port, X-forwarded-porto
     

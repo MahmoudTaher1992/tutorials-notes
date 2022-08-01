@@ -1,0 +1,9 @@
+Sticky Sessions
+    > It is possible to make the request passed to the same instance 
+    > It works in CLB & ALB
+    > It is done by adding a cookie to the request
+        > Cookies
+            > Cookie is an information that a website puts on users browser
+            > Cookies store limited info from a browser session on a given website
+            > Can be retrieved in the future
+            > 

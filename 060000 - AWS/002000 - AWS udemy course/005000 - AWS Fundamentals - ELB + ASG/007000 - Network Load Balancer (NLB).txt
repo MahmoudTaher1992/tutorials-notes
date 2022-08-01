@@ -1,0 +1,16 @@
+Network Load Balancer (NLB)
+    > Layer 4
+    > Forward TCP & UDP traffic to your instances
+    > Handle millions of requests per seconds
+    > Less latency ~100ms (vs 400ms in ALB)
+
+    > NLP has one static IP per AZ
+    > Supports assigning Elastic IP (helpful for whitelisting specific IP)
+
+    > Used for extreme performance, TCP or UDP traffic
+    > NOT INCLUDED IN THE AWS FREE TIER
+
+    > Target Groups
+        > EC2 Instances
+        > IP Addresses (must be private IPs)
+        > Application load balancers

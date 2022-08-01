@@ -1,0 +1,23 @@
+Gateway Load Balancer (GWLB)
+    > Deploy, scale and manage a fleet of 3rd party network virtual appliances in AWS
+    > Examples
+        > Firewalls
+        > Intrusion detection and prevention systems
+        > Deep packet inspection systems
+        > Payload manipulation
+    > Operates at Layer 3 (Network Layer) - IP Packets
+    > Combines the following functions
+        > 1. Transparent network gateway - single entry/exit for all traffic
+        > 2. Distributes traffic to all virtual appliances
+    > Uses the GENEVE protocol on 6081
+
+    > How it works
+        > The request hits the GWLB
+        > Request is distributed on 3rd party security virtual appliances
+        > If it passes the appliances the GWLB passes it to the destination
+
+    > Target groups
+        > EC2 instances
+        > IP addresses - must be private IPs
+
+    > It is very difficult to get Hands on - it will be skipped

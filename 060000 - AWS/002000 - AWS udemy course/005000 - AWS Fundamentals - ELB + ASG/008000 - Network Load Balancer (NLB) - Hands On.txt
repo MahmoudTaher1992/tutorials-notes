@@ -1,0 +1,2 @@
+Network Load Balancer (NLB) - Hands On
+    > NOT INCLUDED IN THE AWS FREE TIER - YOU ARE GOING TO PAY FOR IT

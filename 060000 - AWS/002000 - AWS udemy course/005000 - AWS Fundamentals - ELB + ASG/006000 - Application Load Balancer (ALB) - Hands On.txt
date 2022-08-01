@@ -1,0 +1,9 @@
+Application Load Balancer (ALB) - Hands On
+    > Create ALB that 
+        > Get accessed from any where on the internet
+        > Create a routing to test it
+            > 3 routes to be routed to 3 target groups
+            > each target group should have 2 EC2 instances
+            > Try fixed response
+        > test it
+    
