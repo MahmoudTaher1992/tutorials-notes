@@ -1,0 +1,40 @@
+SSL Certificates
+    > SSL/TLS Basics
+        > An SSL certificate allows traffic between your clients and your load balancer to be encrypted in transit
+        > SSL refers to Secure Socket Layer, used to encrypt connections
+        > TSL refers to TRansport Layer Security and it is the newer version of SSL
+            > It is mainly used but people still call it SSL
+        > Public SSL certificates are issued by Certificate Authority
+            > Comodo, Symantec, GoDaddy, GlobalSign, Digicert, Letsencrypt, etc ...
+        > SSL certificates have an expiration date (you set) and then it must be renewed
+
+    > SSL certificates
+        > The load balancer uses and X.509 certificate (SSL/TLS server certificate)
+        > You can manager certificates using ACM (AWS Certificate Manager)
+        > You can create and upload your own certificates alternatively
+        > HTTPS listeners
+            > You must specify a default certificate
+            > You can add an optional list of certs to support multiple domains
+            > Clients use SNI (Server Name Indication) to specify the hostname they reach
+            > Ability to specify a security policy to support older versions of SSL/TLS (legacy clients)
+
+    > SNI (Server Name Indication)
+        > SNI solves the problem of loading multiple SSL certificates onto one web server (to serve multiple websites)
+        > It is a newer protocol and requires the client to indicate the hostname of the target server in the initial SSL handshake
+        > The server will then find the correct certificate or return the default one
+        > Only works with 
+            > ALB
+            > NLB
+            > CloudFront
+        > Doesn't work with CLB
+
+    > SSL & ELB
+        > CLB v1 (Classic Load Balancer)
+            > Supports only one SSL certificate
+            > Must use multiple CLB for multiple hostname with multiple SSL certificates
+        > ALB v2 (Application Load Balancer)
+            > Supports multiple listeners with multiple SSL certificates
+            > Uses SNI to make it work
+        > NLB v2 (Network Load Balancer)
+            > Supports multiple listeners with multiple SSL certificates
+            > Uses SNI to make it work

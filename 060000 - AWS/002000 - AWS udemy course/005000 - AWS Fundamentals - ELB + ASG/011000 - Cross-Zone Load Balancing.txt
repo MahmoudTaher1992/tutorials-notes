@@ -1,0 +1,16 @@
+Cross-Zone Load Balancing
+    > A feature that allows the load to be distributed evenly across all instances in all AZs
+        > it happens when you have two ELB each of which have multiple instances under them
+        > when activated the ELBs will communicate together to redistribute the traffic evenly on all instances
+    > Without it you won't achieve even distribution across AZs, However you will get even
+      distribution across instances in the same AZ
+    
+    > Application Load Balancer
+        > Always on (can't be disabled)
+        > No charges for inter AZ data
+    > Network Load Balancer
+        > Disabled by default
+        > You pay charges for inter AZ data if enabled
+    > Classic Load Balancer
+        > Disabled by default
+        > No charges for inter AZ data

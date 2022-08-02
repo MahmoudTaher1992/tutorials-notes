@@ -1,0 +1,5 @@
+Connection Draining
+    > It has two names
+        > CLB - Connection Draining
+        > ALB & NLB - De-registration Delay
+    > 
