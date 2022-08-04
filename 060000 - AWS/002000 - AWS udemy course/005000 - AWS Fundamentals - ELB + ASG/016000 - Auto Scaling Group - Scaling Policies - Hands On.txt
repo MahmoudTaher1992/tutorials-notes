@@ -1,0 +1,2 @@
+Auto Scaling Group - Scaling Policies - Hands On
+    > Try all types of scaling policies

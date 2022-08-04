@@ -2,4 +2,6 @@ Connection Draining
     > It has two names
         > CLB - Connection Draining
         > ALB & NLB - De-registration Delay
-    > 
+    > It is the time given to the "in-flight requests" to complete while the instance is de-registering/becoming unhealthy
+    > The ELB stops sending requests to the draining instance
+    > it is between 1-3600 secs (300 secs is the default)

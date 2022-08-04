@@ -1,0 +1,3 @@
+Auto Scaling Group - Hands On
+    > Create a launch template
+    > Try playing with min/max parameters to see how ASG works
