@@ -1,0 +1,6 @@
+Compiler and Transpiler
+    > Compiler
+        > A software that converts a programming language code into a
+            > machine code
+            > bytecode
+            > another programming language
