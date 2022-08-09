@@ -1,0 +1,14 @@
+V8 JavaScript Engine
+    > is an open source JavaScript and WebAssembly engine that compiles JavaScript to optimized machine code before execution
+    > developed for Google Chrome and Chromium web browsers to improve the performance of JavaScript execution
+    > The engine was initially designed solely for execution by web browsers, but the latest versions also execute JS code 
+      outside the browser, enabling server-side scripting.
+    > To achieve faster JavaScript execution speeds, V8 translates JS code to more efficient machine code instead of using an interpreter
+    > How it works
+        > The engine compiles and executes the JS code
+        > The engine handles the call stack
+        > The engine manages the memory heap
+        > The engine handles the garbage collection
+        > The engine provides all the data types, objects and functions
+        > The engine also provides the event loop (sometimes implemented by the browser as well)
+    > Add more info

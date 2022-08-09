@@ -1,0 +1,47 @@
+Compiler, Interpreter & Transpiler
+    > Compiler
+        > A software that converts a programming language code into a
+            > machine code
+            > bytecode
+                > A code that is not compiled totally (a last step is left to the user machine to do)
+                    > To achieve a cross platform compatibility
+                > i.e
+                    > Java
+                    > C#
+                    > VB.NET
+                    > Python
+            > another programming language
+        > Source code
+            > High level
+            > Human readable
+            > i.e
+                > C
+                > C++
+                > Objective-C
+        > The act of converting the source code into a machine code is called compilation
+        > The compiler specifies the errors and report them with line number
+        > Once compiled it will work on one platform
+        > Doesn't require resources on the user machine - faster
+        > Ready to run
+        > Source code is private
+
+    > Interpreter
+        > A software that receives a code as a high level language and compiles it on the run line by line
+        > The code can work on different platforms as the new platform can have special interpreter
+        > The machine receiving the source code must have an interpreter
+        > simpler to test
+        > slower - requires resources at the users machine
+        > easier to debug
+        > source code is public (can be uglified)
+        > Source code examples
+            > PHP
+            > JavaScript
+
+    > Transpiler
+        > Also called source-to-source compilers
+        > Is a program that converts code from high level to another high level
+        > i.e.
+            > If you write your code in typescript or coffeescript - the browser will not run it
+            > Use babel to transpile it to es5
+            > Pass it to a browser
+            > It will run !!!
