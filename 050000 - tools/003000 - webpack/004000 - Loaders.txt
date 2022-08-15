@@ -24,3 +24,29 @@ Loaders
         > analogy
             > "Hey webpack compiler, when you come across a path that resolves to a '.txt' file inside of a 
               require()/import statement, use the raw-loader to transform it before you add it to the bundle."
+
+    > Inline Loaders
+        > Not recommended as it will increase boilerplate in your source code
+        > i.e.
+            import Styles from 'style-loader!css-loader?modules!./styles.css';
+            import Styles from '!style-loader!css-loader?modules!./styles.css';
+            import Styles from '!!style-loader!css-loader?modules!./styles.css';
+            import Styles from '-!style-loader!css-loader?modules!./styles.css';
+
+    > Loaders are evaluated/executed from right to left (or from bottom to top)
+
+    > Features
+        > Loaders can be chained. Each loader in the chain applies transformations to the processed resource
+          The first loader passes its result (resource with applied transformations) to the next one, and so forth
+          Finally, webpack expects JavaScript to be returned by the last loader in the chain.
+        > can be synchronous or asynchronous
+        > run in Node.js
+        > can be configured with an options object
+        > Normal modules can export a loader in addition to the normal main via package.json with the loader field
+        > Plugins can give loaders more features.
+        > Loaders can emit additional arbitrary files
+
+    > Resolving Loaders
+        > Loaders follow the standard module resolution
+        > In most cases it will be loaded from the module path "node_modules"
+        > A loader module is expected to export a function and be written in Node.js compatible JavaScript

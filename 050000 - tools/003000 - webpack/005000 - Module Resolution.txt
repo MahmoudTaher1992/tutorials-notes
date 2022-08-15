@@ -1,0 +1,40 @@
+Module Resolution
+    > https://github.com/webpack/enhanced-resolve
+    > A special library that helps in locating a module by its absolute path
+    > A module can be required as a dependency from another module
+    > The dependency module can be from the application code or a third-party library.
+    > The resolver helps webpack find the module code that needs to be included in the bundle for every such require/import statement
+
+    > Rules
+        > webpack can resolve 3 kinds of paths
+            > Absolute paths
+                > i.e.
+                    > import '/home/me/file';
+                    > import 'C:\\Users\\me\\file';
+            > Relative paths
+                > i.e.
+                    > import '../src/file1';
+                    > import './file2';
+            > Module paths
+                > i.e.
+                    > import 'module';
+                    > import 'module/lib/file';
+                > Modules are searched for inside all directories specified in resolve.modules.
+                > You can replace the original module path by an alternate path by creating an alias for it using 
+                  the resolve.alias configuration option.
+                > If the path is a  
+                    > file => resolved
+                    > folder
+                        > search for package.json > resolve.mainFields
+                        > file names specified in the resolve.mainFiles configuration option are looked for in order
+                        > some other steps - lookup to know if needed
+    
+    > Resolving Loaders
+        > This follows the same rules as those specified for file resolution
+        > But the resolveLoader configuration option can be used to have separate resolution rules for loaders.
+
+    > Caching
+        > Every filesystem access is cached so that multiple parallel or serial requests to the same file occur faster
+        > In watch mode, only modified files are evicted from the cache
+        > If watch mode is off, then the cache gets purged before every compilation
+                

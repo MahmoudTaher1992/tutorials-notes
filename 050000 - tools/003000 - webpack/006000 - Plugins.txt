@@ -1,0 +1,6 @@
+Plugins
+    > are the backbone of webpack
+    > serve the purpose of doing anything else that a loader cannot do
+    > Webpack provides many such plugins out of the box.
+    > A webpack plugin is a JavaScript object that has an apply method
+    > This apply method is called by the webpack compiler, giving access to the entire compilation lifecycle.
