@@ -1,0 +1,13 @@
+Output
+    > tells webpack where to emit the bundles it creates and how to name these files
+    > Default 
+        > main = ./dist/main.js
+        > others = ./dist/
+    > Configure this part through 'output' property
+        > path
+            > output directory
+        > filename
+    > It has lots of other configs. Just read the docs to advance configure the output
+    > You can have multiple input config but only one output config
+    > publicPath
+        > tells the server where you assets are on the server to load them

@@ -1,27 +1,34 @@
 Webpack
     > is a static module bundler
     > It converts a project with a large files into 1+ file
-    > Replaced the work of 
+    > Replaced the work of (task runners)
         > Grunt
         > Gulp
         > Broccoli
     > There are other module bundlers
         > Rollup
         > Parcel
+    > Can be used for BE & FE
 
     > It can perform many other operations
         > Helps bundling resources
         > watches for changes and re-runs the tasks
         > can run babel transpilation to ES5
+        > can transpile coffeescript to JavaScript (using a transpiler)
+        > can convert inline images to data URIs (using a loader)
+        > allows you to use require() for CSS files.
+        > can run a development webserver
+        > can handle hot module replacement
+        > can split the output files into multiple files, to avoid having a huge js file to load in the first page hit.
+        > can perform tree shaking
 
     > How webpack works
         > It creates a dependency graph
             > Dependency graph consists of various modules which your webapp would require to work
         > It creates a new package which consists of the minimum number of files required
             > Based on the dependency graph
-            > normally 1 file is the output of webpack
+            > normally 1 file is the output of webpack (called bundle)
 
 
     > Continue from here
-        > https://flaviocopes.com/webpack/#what-is-webpack
         > Read everything from google before moving next to webpack

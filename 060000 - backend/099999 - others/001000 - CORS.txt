@@ -1,0 +1,3 @@
+CORS
+    > stands for cross-origin resource sharing
+    > A policy that allows 

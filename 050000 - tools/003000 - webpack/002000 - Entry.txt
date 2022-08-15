@@ -1,0 +1,14 @@
+Entry
+    > An entry point indicates which module webpack should use to begin building out its internal dependency graph
+    > Default value = ./src/index.js
+    > You can specify multiple entry points
+        > used to split app into multiple outputs
+        > i.e.
+            module.exports = {
+                //...
+                entry: {
+                    home: './home.js',
+                    about: './about.js',
+                    contact: './contact.js'
+                }
+            };

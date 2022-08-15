@@ -1,0 +1,26 @@
+Loaders
+    > webpack only understands JavaScript and JSON files
+    > are transformations that are applied to the source code of a module
+    > pre-process files as you import or “load” them
+    > can transform files from a different language (like TypeScript) to JavaScript
+    > allow webpack to process other types of files
+        > convert them into valid modules to be
+          consumed by your application and added to the dependency graph
+        > Module is a piece of code referred to by import
+    > To config loaders edit add a rule to module.rules property
+        > i.e.
+            module.exports = {
+                output: {
+                    filename: 'my-first-webpack.bundle.js',
+                },
+                module: {
+                    rules: [{ test: /\.txt$/, use: 'raw-loader' }],
+                },
+            };
+        > test
+            > a property identifies which file or files should be transformed
+        > use
+            > a property indicates which loader should be used to do the transforming
+        > analogy
+            > "Hey webpack compiler, when you come across a path that resolves to a '.txt' file inside of a 
+              require()/import statement, use the raw-loader to transform it before you add it to the bundle."
