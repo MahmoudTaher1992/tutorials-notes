@@ -1,0 +1,32 @@
+Configuration
+    > webpack's configuration file is a JavaScript file that exports a webpack configuration
+    > This configuration is then processed by webpack
+
+    > Because it's a standard Node.js CommonJS module, you can do the following:
+        > Import other files via require(...)
+        > use utilities on npm via require(...)
+        > use JavaScript control flow expressions, e.g. the ?: operator
+        > use constants or variables for often used values
+        > write and execute functions to generate a part of the configuration
+
+    > the following practices should be avoided (it is allowed but not recommended)
+        > Access CLI arguments, when using the webpack CLI (instead write your own CLI, or use --env)
+        > Export non-deterministic values (calling webpack twice should result in the same output files)
+        > Write long configurations (instead split the configuration into multiple files)
+
+    > Configuration Types
+        > Exporting a Function
+            > to get access to env variables
+            > to get access to argv variable
+        > Exporting a Promise
+            > Handy when you need to asynchronously load configuration variables
+        > Exporting multiple configurations
+            > this is useful for bundling a library for multiple targets such as AMD and CommonJS
+            > this outputs into 2 builds
+            > You can link between them using "dependencies"
+            > Yuo can run them in parallel using "parallelism"
+    
+    > You can write the config file in
+        > TypeScript
+        > CoffeeScript
+        > Babel and JSX

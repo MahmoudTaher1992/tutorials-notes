@@ -1,0 +1,4 @@
+Mode
+    > By setting the mode parameter to either development, production or none, you can enable webpack's 
+      built-in optimizations that correspond to each environment
+    > The default value is "production"

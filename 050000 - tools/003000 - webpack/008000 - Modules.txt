@@ -1,0 +1,28 @@
+Modules
+    > In modular programming, developers break programs up into discrete chunks of functionality called a module.
+    > Each module has a smaller surface area than a full program, making verification, debugging, and testing trivial
+    > Node.js has supported modular programming almost since its inception
+    > On the web, however, support for modules has been slow to arrive
+
+    > What is a webpack Module
+        > In contrast to Node.js modules, webpack modules can express their dependencies in a variety of ways. A few examples are:
+            > An ES2015 import statement
+            > A CommonJS require() statement
+            > An AMD define and require statement
+            > An @import statement inside of a css/sass/less file.
+            > An image url in a stylesheet url(...) or HTML <img src=...> file.
+        > Any file is a module in webpack
+        > Native modules (supported by webpack)
+            > ECMAScript modules
+            > CommonJS modules
+            > AMD modules
+            > Assets
+            > WebAssembly modules
+        > Non native modules (need loaders)
+            > CoffeeScript
+            > TypeScript
+            > ESNext (Babel)
+            > Sass
+            > Less
+            > Stylus
+            > Elm

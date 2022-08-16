@@ -1,0 +1,3 @@
+Module Federation
+	> New feature in webpack 5
+	> A runtime sharable blocks of code

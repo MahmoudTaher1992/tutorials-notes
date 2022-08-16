@@ -32,3 +32,5 @@ Webpack
 
     > Continue from here
         > Read everything from google before moving next to webpack
+
+    > Webpack 5 runs on Node.js version 10.13.0+.
