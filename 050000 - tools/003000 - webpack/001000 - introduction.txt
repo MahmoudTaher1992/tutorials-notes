@@ -25,6 +25,7 @@ Webpack
     > How webpack works
         > It creates a dependency graph
             > Dependency graph consists of various modules which your webapp would require to work
+                > When an app faces a file that is needed in another file - webpack treats it as a dependency
         > It creates a new package which consists of the minimum number of files required
             > Based on the dependency graph
             > normally 1 file is the output of webpack (called bundle)

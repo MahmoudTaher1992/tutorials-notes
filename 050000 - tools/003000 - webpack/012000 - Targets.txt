@@ -1,0 +1,9 @@
+Targets
+	> JavaScript can be written for both server and browser
+	> webpack offers multiple deployment targets
+	> Specifies which environment the bundle is going to work on
+	> depending on the target environment it acts
+		> node - it will not touch fs/path modules
+			> it knows that node environment has fs and path modules installed by default
+		> web - default value
+	> You can create two targets by creating two configs and exporting them

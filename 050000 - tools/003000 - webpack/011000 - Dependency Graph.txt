@@ -1,0 +1,6 @@
+Dependency Graph
+	> Any time one file depends on another, webpack treats this as a dependency
+	> Webpack 
+		> starts with the file defined in the CLI or in the config file (entry point)
+		> recursively builds a dependency graph that includes every module your application needs
+		> bundles all resources into one/multiple bundles

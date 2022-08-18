@@ -1,0 +1,7 @@
+Hot Module Replacement
+	> adds, or removes modules while an application is running, without a full reload
+	> significantly speed up development
+		> Keep app state and not lose it because of the full reload
+		> Save development time
+		> Instantly update the browser CSS/JS when the source code changes
+	> Comes by default in create-react-app
