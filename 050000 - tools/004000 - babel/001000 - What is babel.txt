@@ -1,0 +1,45 @@
+What is babel?
+    > a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version of 
+      JavaScript in current and older browsers or environments
+        > toolchain
+            > is a set programming tools that is used to perform a complex software development task
+        > Babel can
+            > Transform syntax
+            > Polyfill features that are missing in your target environment
+            > Source code transformations (codemods)
+
+    > Plugins
+        > code transformation in babel is enabled by applying plugins (in config file)
+        > you can config a plugin by passing options object
+        > add a plugin by
+            > adding npm package name
+                > babel will find it in the node modules folder
+            > specifying plugin path (relative/absolute)
+        > i.e.
+            {
+                "plugins": ["babel-plugin-myPlugin", "@babel/plugin-transform-runtime"]
+            }
+        > Transform plugin
+            > A plugin that apply transformation to your code
+        > Syntax plugin
+            > Change some syntaxes that are not understandable by babel (jsx syntax)
+        > The plugins order matters
+            > first one is executed first
+        > Plugins run before presets
+        > You can create your own plugin
+
+    > Presets
+        > A collection of plugins
+        > The order is reversed
+            > The last one is executed first
+        > you can config a preset by passing options object
+
+    > Type annotations
+        > Babel can remove type annotations from the code using 
+            > @babel/preset-typescript
+            > remove type definitions
+    
+    > Pluggable
+        > Babel is built out of plugins
+        > You can create your own plugin and add it to babel
+

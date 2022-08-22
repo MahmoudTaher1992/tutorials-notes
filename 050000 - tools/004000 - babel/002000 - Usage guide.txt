@@ -1,0 +1,8 @@
+Usage guide
+    > There are quite a few tools in the Babel toolchain that try to make it easy for you to use Babel
+    
+    > Overview
+        > Install babel packages
+            > @babel/core
+            > @babel/cli
+        > Create a config file `babel.config.js` to the root project
