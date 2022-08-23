@@ -6,3 +6,15 @@ Usage guide
             > @babel/core
             > @babel/cli
         > Create a config file `babel.config.js` to the root project
+            > To config babel
+        > The @Babel/cli lets you use babel from the cli
+        > Polyfill
+            > @babel/polyfill
+            > Fills the app with new js missing features in the target environment
+            > @babel/polyfill will be deprecated in favor of core-js/stable
+        > babel-preset-env
+            > polyfills missing features in old browsers
+            > if you didn't config the browserlist it will target all browsers
+                > polyfills everything
+                > The bundle will be huge
+                > You can avoid that by narrowing down the supported browsers list 
