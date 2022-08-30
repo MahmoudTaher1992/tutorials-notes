@@ -1,3 +1,2 @@
 Configure Babel
     > You can configure everything in Babel
-    > 

@@ -1,0 +1,13 @@
+What is Typescript
+    > TypeScript is a JavaScript Superset.
+        > built upon JavaScript.
+        > brings new features, syntax, and capabilities.
+    > help to write code on JavaScript easier and safer.
+    > Static typing.
+        > static typing allows us to make fewer mistakes with data types
+    > Web browser and Node can’t execute TypeScript because they work only with JavaScript
+        > compiler, that can compile (transform) code that is written in TypeScript to JavaScript code
+        > JS is understandable by Web browser and Node
+        > Transpilation can be done by 
+            > typescript compiler - tsc
+            > babel preset

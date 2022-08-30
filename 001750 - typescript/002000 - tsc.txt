@@ -1,0 +1,20 @@
+tsc
+    > A compiler is a program that compiles (transforms) one code to another
+    > The output of your typescript/javascript will be running on web browsers or node
+    > Web Browsers/node 
+        > can not understand typescript
+        > they only understand javascript
+        > some one should do the transpilation
+            > tsc can do it
+            > also babel can do it
+    > babel vs tsc
+        > tsc checks on the types before transpilation
+        > babel doesn't
+        > If you are going to go with babel, then you should let tsc do the type checking
+            > you can configure tsc to do type checking only --no-emit
+        > You can configure both so that they target specific environments
+            > specific Web Browsers
+            > specific node
+
+    https://maxkovalevsky.com/getting-started-using-and-configuring-typescript-compiler/
+        
