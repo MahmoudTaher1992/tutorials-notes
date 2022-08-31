@@ -15,6 +15,14 @@ tsc
         > You can configure both so that they target specific environments
             > specific Web Browsers
             > specific node
-
-    https://maxkovalevsky.com/getting-started-using-and-configuring-typescript-compiler/
+    > doesn't just transpile the entry file, it transpile all dependant modules
+    > Module system
+        > There are many module systems
+            > CommonJS
+                > const smth = require('module')
+            > ES Module
+                > import smth from 'module'
+        > You can specify any to tsc
+    > To advance config the tsc you should go for "Compiler Options"
+    > You can also see tsc cli reference
         

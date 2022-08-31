@@ -2,7 +2,7 @@ npm
     > What is npm?
         > a huge part of js ecosystem
         > stands for node package manager
-        > A place where you have millions of packages that is ready to be used in your project
+        > A place where you have millions of packages that are ready to be used in your project
         > You are going to need npm because you will never be able to build everything yourself
             > It will cost you time and mony
             > Instead you reuse packages from other developers

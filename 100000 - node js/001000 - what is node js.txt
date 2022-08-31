@@ -1,0 +1,3 @@
+What is NodeJs
+    > Open source, cross-platform runtime environment
+    > lets you run js apps outside browsers
