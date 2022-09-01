@@ -1,0 +1,8 @@
+Variable resolution
+    > js will look for the variable in the current scope
+    > if not found it will go the parent scope
+    > if not found it will go another level up and does that till
+        > either find the variable
+        > or reach the global scope
+    > if not found in the global scope
+        > it throws error 'var-name is not defined'

@@ -1,0 +1,20 @@
+Block scope
+    > used to group one or more statements together
+    > bounded by "curly brackets" { }
+    > You can find blocks
+        > if
+        > for
+        > while
+        > switch
+        > functions
+            > for this case it is called "function scope"
+            > There is no difference between normal function, arrow function & anonymous function
+            > They all have the same function scope
+            > let, const, var will stick with the function scope
+
+    > A code block in javascript defines a scope for variables declared using 'let' | 'var'
+    
+
+
+
+            

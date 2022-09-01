@@ -7,7 +7,8 @@ Scope and Scope chain
             avoid name collision
 
         Nested scopes
-            if you create a function nested inside another function, the child function has an inner scope that is wrapped
+            if you create a function nested inside another function, the child function has an inner scope that is 
+                wrapped
             inside the outer scope > so it has access to the variables declared in the outer scope
 
         Types
@@ -18,6 +19,11 @@ Scope and Scope chain
                 All variables inside the function can be accessed inside the function not from outside
 
             Block Scope
+                > i.e
+                    > if 
+                    > for
+                    > while
+                    
                 All variables inside the block can be accessed inside the function not from outside
 
                 let and const work only in this Scope
