@@ -1,0 +1,5 @@
+Global scope
+    > The outer most scope
+    > wraps any other scope
+    > mainly consists of the variables declared at index.js
+    > window, document are examples of variables in global scope

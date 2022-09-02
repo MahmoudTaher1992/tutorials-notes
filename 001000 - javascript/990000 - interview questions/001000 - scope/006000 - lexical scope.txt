@@ -1,0 +1,72 @@
+Lexical scope
+    > Scope 
+        > means region/place
+        > in js it is place where variables are declared/visible/accessible
+        > i.e.
+            > block scope
+                > if/for/while/...
+            > function scope
+            > module scope
+            > global scope
+    
+    > Lexical means definition
+    > Lexical scope means
+        > the scope where the variable is defined
+
+    > i.e
+        // Define a variable in the global scope:
+        const myName = "Oluwatobi";
+
+        // Call myName variable from a function:
+        function getName() {
+            return myName;
+        }
+
+        > The Lexical scope of myName is the global scope
+
+    > i.e
+        function getName() {
+            const myName = "Oluwatobi";
+            return myName;
+        }
+
+        > The Lexical scope of myName is the getName() scope
+
+    > i.e
+        // Define a function:
+        function showLastName() {
+            const lastName = "Sofela";
+            return lastName;
+        }
+
+        // Define another function:
+        function displayFullName() {
+            const fullName = "Oluwatobi " + lastName;
+            return fullName;
+        }
+
+        // Invoke displayFullName():
+        console.log(displayFullName());
+
+        // The invocation above will return:
+        Uncaught ReferenceError: lastName is not defined
+
+        > lastName is not in the scope chain of displayFullName() function
+
+    > i.e.
+        let name = "omar";
+
+        function printName() {
+            console.log(name);
+        }
+
+        function hof() {
+            let name = "Taher";
+            printName();
+        }
+
+        hof(); // omar
+
+        > organizing and accessing variables are controlled by where the function is declared not where it is called
+
+    

@@ -6,3 +6,6 @@ Variable resolution
         > or reach the global scope
     > if not found in the global scope
         > it throws error 'var-name is not defined'
+
+Scope chain
+    > unique scopes from the variable got called to the global scope

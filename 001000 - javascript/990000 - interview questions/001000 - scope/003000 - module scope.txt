@@ -1,0 +1,3 @@
+Module scope
+    > module also creates a scope of variables
+    > variables declared inside the module can not be accessed from outside the module

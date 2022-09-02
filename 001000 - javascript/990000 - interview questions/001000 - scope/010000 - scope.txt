@@ -1,6 +1,11 @@
 Scope and Scope chain
     Scope
-        refers to the accessability or visibility of variables
+        > Scope means area
+            > area where variables are defined, visible and accessible
+
+        > refers to the accessability or visibility of variables
+
+        > manages variables accessability
 
         Its importance
             ownership of variables
@@ -27,23 +32,6 @@ Scope and Scope chain
                 All variables inside the block can be accessed inside the function not from outside
 
                 let and const work only in this Scope
-
-    Lexical Scope
-        organizing and accessing variables are controlled by where the function is declared not where it is called
-
-        i.e.
-            let name = "omar";
-
-            function printName() {
-                console.log(name);
-            }
-
-            function hof() {
-                let name = "Taher";
-                printName();
-            }
-
-            hof(); // omar
 
     Scope chain
         is the way how a js looks for variables, it starts with the inner scope > then outer scope >

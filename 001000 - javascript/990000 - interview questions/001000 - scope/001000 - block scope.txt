@@ -1,7 +1,14 @@
 Block scope
     > used to group one or more statements together
+
     > bounded by "curly brackets" { }
+
     > You can find blocks
+        > standalone code block
+            > i.e.
+                {
+                    // code goes here
+                }
         > if
         > for
         > while
@@ -10,9 +17,11 @@ Block scope
             > for this case it is called "function scope"
             > There is no difference between normal function, arrow function & anonymous function
             > They all have the same function scope
-            > let, const, var will stick with the function scope
+            > function code block will create a scope for let, const & var
 
-    > A code block in javascript defines a scope for variables declared using 'let' | 'var'
+    > A code block in javascript defines a scope for variables declared using 'let' | 'const'
+
+    > A code block doesn't create a scope for var variables (but a function body does)
     
 
 
