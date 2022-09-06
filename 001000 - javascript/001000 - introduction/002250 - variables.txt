@@ -44,6 +44,9 @@ JavaScript Variables
             //invalid
             let new = 5; // Error! new is a keyword.
 
+    > If you didn't use (let | var | const)
+        > It will be global variable directly even if it is in an inner scope
+
     Notes:
         In JavaScript, the variable names are generally written in camelCase if it has multiple words. 
         For example, firstName, annualSalary

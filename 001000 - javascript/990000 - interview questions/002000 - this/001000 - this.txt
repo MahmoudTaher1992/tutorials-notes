@@ -1,0 +1,94 @@
+this keyword
+    > Functions in js
+        > are first class citizen
+            > assigned to variables
+            > passed as arguments
+            > returned from functions
+            > they have props
+                > this
+    > this
+        > stores the current execution context
+        > depends on
+            > how fn is defined
+            > how fn is invoked
+            > default execution context
+
+    > in fn invocation
+        > doesn't depend on where the function is defined
+            > global scope
+            > nested function
+        > depends on ‘use strict’
+            
+        > i.e.
+            function printName() {
+                console.log(this)
+            }
+
+            printName(); // global object
+            
+        > i.e.
+            function printName() {
+                function i() {
+                    console.log(this)
+                }
+                i();
+            }
+
+            printName(); // global object
+
+        > i.e.
+            ‘use strict’;
+
+            function printName() {
+                console.log(this)
+            }
+
+            printName(); // undefined
+
+    > method invocation, call, bind, apply
+        > this is the object who called the function
+        
+        > i.e
+            const student = {
+                name: "Mahmoud Taher",
+                age: 30,
+                keys: [1,2,3,4,5],
+                printName: function () {
+                    console.log(this);
+                },
+            }
+
+            student.printName(); // student
+
+            let s = {};
+            s.printName = student.printName;
+            s.printName(); // s
+
+            student.printName.bind(s)(); // s
+            student.printName.call(s); // s
+            student.printName.apply(s); // s
+
+    > constructor invocation
+        > refers to the constructed object
+
+        > i.e.
+            let Teacher = function() {
+                this.name = "teacher name";
+                this.age = 15;
+                this.printName = function() {
+                    console.log(this);
+                }
+                this.printAge = () => {
+                    console.log(this);
+                }
+            }
+
+            const ahmed = new Teacher();
+            
+            ahmed.printName(); // ahmed
+            ahmed.printAge(); // ahmed
+            
+            ahmed.printName.bind(student)(); // student
+            ahmed.printAge.bind(student)(); // ahmed
+
+            > arrow functions don't change this value (it uses its parent value)

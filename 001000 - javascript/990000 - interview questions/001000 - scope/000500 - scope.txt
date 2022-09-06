@@ -1,0 +1,33 @@
+Scope
+    > Scope means area
+        > area where variables are defined, visible and accessible
+
+    > refers to the accessability or visibility of variables
+
+    > manages variables accessability
+
+    Its importance
+        ownership of variables
+        avoid name collision
+
+    Nested scopes
+        if you create a function nested inside another function, the child function has an inner scope that is 
+            wrapped
+        inside the outer scope > so it has access to the variables declared in the outer scope
+
+    Types
+        Global Scope
+            variables and functions can be accessed from any where in the code
+
+        Function Scope
+            All variables inside the function can be accessed inside the function not from outside
+
+        Block Scope
+            > i.e
+                > if 
+                > for
+                > while
+                
+            All variables inside the block can be accessed inside the function not from outside
+
+            let and const work only in this Scope

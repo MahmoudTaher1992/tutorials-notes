@@ -1,0 +1,37 @@
+Closure
+    > Closure means that an inner function always has access to the variables and parameters of its outer function, 
+     even after the outer function has returned/closed.
+
+    > Its the ability of a function to remember the variables and functions that are declared in its outer scope.
+
+    > This ability of a function to store a variable for further reference even after it is executed is called Closure
+
+    > i.e. 1
+        function OuterFunction() {
+
+            var outerVariable = 1;
+
+            function InnerFunction() {
+                alert(outerVariable);
+            }
+
+            InnerFunction();
+        }
+
+    > i.e. 2
+        function OuterFunction() {
+
+            var outerVariable = 100;
+
+            function InnerFunction() {
+                alert(outerVariable);
+            }
+
+            return InnerFunction;
+        }
+        var innerFunc = OuterFunction();
+
+        innerFunc(); // 100
+
+        > here the variables in the `OuterFunction` should not be accessible because the function has been invoked
+          but the `InnerFunction` keeps reference to those variables and it can access them

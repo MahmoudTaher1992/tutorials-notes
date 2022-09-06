@@ -9,7 +9,7 @@ Declarations
             Function scope
                 variables declared in the function scope can be accessed within the function only
 
-        Redeclaration is allowed
+        Re declaration is allowed
 
         Hoisting is allowed
             No errors are thrown if you try to access a value before initialization > undefined will show
@@ -24,13 +24,15 @@ Declarations
                 variables are not attached to window object
             Block scope
                 variables declared in the block scope can be accessed within the block only
+            Function scope
+                variables declared in the function scope can be accessed within the function only
 
-        Redeclaration is not allowed (in the same scope)
+        Re declaration is not allowed (in the same scope)
 
-        Hoisting is allowed
+        Hoisting is not allowed
             Errors will be thrown
 
     const
         Same as let
 
-        value can not be changed
+        + value can not be changed
