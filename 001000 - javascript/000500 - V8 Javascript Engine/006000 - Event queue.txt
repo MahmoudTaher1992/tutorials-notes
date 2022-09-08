@@ -1,0 +1,3 @@
+Event/Callback/Task queue
+    > A data structure that stores the callbacks in a queue
+    > A web api adds callbacks to this queue 

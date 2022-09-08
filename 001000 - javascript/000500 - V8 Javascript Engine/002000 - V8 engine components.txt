@@ -1,0 +1,6 @@
+V8 Engine Components
+    > Heap
+    > Call Stack
+    > Web API
+    > Callback/Task queue
+    > Event Loop

@@ -1,0 +1,11 @@
+Memory
+    > This is related to how the engine stores data in the Memory
+    > Memory Structure
+        > Resident Set
+            > Stack Memory
+            > Heap Memory (Here where Garbage Collector works)
+                > New Space/Young generation
+                > Old Space/Old generation
+                > Large object space
+                > Code-space
+                > Cell space, property cell space, and map space

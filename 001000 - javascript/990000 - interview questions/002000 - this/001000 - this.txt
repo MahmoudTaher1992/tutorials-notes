@@ -56,17 +56,29 @@ this keyword
                 printName: function () {
                     console.log(this);
                 },
+                printAge: () => {
+                    console.log(this);
+                },
             }
 
             student.printName(); // student
+            student.printAge(); // undefined
 
             let s = {};
             s.printName = student.printName;
+            s.printAge = student.printAge;
             s.printName(); // s
+            s.printAge(); // undefined
 
             student.printName.bind(s)(); // s
             student.printName.call(s); // s
             student.printName.apply(s); // s
+
+            student.printAge.bind(s)(); // undefined
+            student.printAge.call(s); // undefined
+            student.printAge.apply(s); // undefined
+
+        > arrow function get's this from it's lexical scope and doesn't respond to bind, call or apply
 
     > constructor invocation
         > refers to the constructed object

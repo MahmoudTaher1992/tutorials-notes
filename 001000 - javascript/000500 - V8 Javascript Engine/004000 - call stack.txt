@@ -1,0 +1,39 @@
+Call stack
+    > The kitchen where all the code gets executed
+    > mechanism to keep track of the functions calls
+    > It works in LIFO style
+        > Last In First Out
+
+    > i.e
+        const lunch = () => console.log("It's time for lunch!");
+
+        const dinner = () => console.log("It's time for dinner!");
+
+        const breakfast = () => {
+            console.log("Time to breakfast!");
+            setTimeout(lunch, 3000);
+            dinner();
+        };
+
+        breakfast();
+
+        > Call stack
+            > []
+            > [main]
+            > [breakfast, main]
+            > [console.log, breakfast, main]
+            > [breakfast, main] => logs `Time to breakfast!` to console
+            > [setTimeout, breakfast, main]
+            > [breakfast, main] => setTimeout is sent to WebApi
+            > [dinner, breakfast, main]
+            > [console.log, dinner, breakfast, main]
+            > [dinner, breakfast, main] => logs `It's time for dinner!` to console
+            > [breakfast, main]
+            > [main]
+            > []
+            > [lunch] => after 3 seconds 
+                > WebApi will add `lunch` callback to callback queue
+                > Event loop will see that the call stack is empty so it will move callback to Call Stack
+            > [console.log, lunch]
+            > [lunch] => logs `It's time for lunch!` to console
+            > [] => Done !!!

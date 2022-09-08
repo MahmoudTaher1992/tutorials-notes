@@ -1,0 +1,17 @@
+Web API
+    > This is the interface of the browser that enables you to do additional stuff such as
+        > Client storage management
+        > Form Data
+        > Drag-and-Drop API
+        > Geolocation API
+        > Notification API
+        > Canvas API
+        > History API
+        > Network Requests
+        > Async tasks
+            > setTimeout
+            > setInterval
+            > Javascript is a single-threaded language
+                > it runs only one task at a moment
+                > to overcome this issue
+                    > WebApi, Callback queue & event-loop work together to implement multi-threaded operations
