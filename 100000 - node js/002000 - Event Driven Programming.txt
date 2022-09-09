@@ -1,0 +1,27 @@
+Event Driven Programming
+    > Node.js makes extensive use of events
+    > Once we start a Node.js server, it initializes the variables and 
+      functions and then listens for the occurrence of an event
+    > Makes the program simple
+    > Basic components of EDP
+        > Callback functions (handles events when triggered)
+        > Event loop that listens for events and call the relevant callbacks
+    > A function that listens to an event is called Observer
+    > Node js supplies an already in-built events 
+        > found in `events` module
+        > `events` module contains also an `EventEmitter` class
+        > Most of the in-built modules inherit from `EventEmitter` class
+
+    > EventEmitter
+        > A node module that allows objects to communicate with one another
+        > Most of the in-built modules inherit from `EventEmitter` class
+        > Does 2 things
+            > Emits named events
+            > Registers/Unregister listener functions (callbacks)
+    
+    > Event-Driven Programming Principles
+        > Blocking and Non-Blocking functions for handling events
+        > Binding registered functions to events
+        > When event is received > event loop calls the callback function
+
+    > You can combine OOP and EDP

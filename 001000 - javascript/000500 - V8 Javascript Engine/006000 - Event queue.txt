@@ -1,3 +1,7 @@
 Event/Callback/Task queue
     > A data structure that stores the callbacks in a queue
     > A web api adds callbacks to this queue 
+    > Event loop looks at the call-stack all the times
+        > Once it founds that the call stack is empty
+        > It takes a call back from the event-queue and puts it in the call stack
+        > It does that till the event queue is empty
