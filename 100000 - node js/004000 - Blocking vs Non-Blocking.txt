@@ -1,0 +1,14 @@
+Blocking vs Non-Blocking
+    > "I/O" refers primarily to interaction with the system's disk and network supported by libuv.
+    > Blocking
+        > when the execution of additional JavaScript in the Node.js process must wait 
+          until a non-JavaScript operation completes
+        > Blocking doesn't refer to intensive CPU operations, it refers to I/O operations
+        > All sync operations are blocking methods
+            > don't handle errors
+        > most of the libraries implement the non-blocking and blocking methods
+    > Concurrency
+        > Node js is single threaded
+        > concurrency refers to the ability of the event loop to execute js cb fns after async tasks are done
+        > If a request has an I/O operation that costs 45s 
+            > having it in an async will save lot of time

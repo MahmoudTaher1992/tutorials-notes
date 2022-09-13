@@ -1,0 +1,7 @@
+Callback
+    > Is a function that takes params
+        > error - 1st (null if no error)
+        > other params
+    > passed to an async function to be called after completion
+        > callback function will be the last param in the async function
+    > A pilar in non-blocking behavior of node js
