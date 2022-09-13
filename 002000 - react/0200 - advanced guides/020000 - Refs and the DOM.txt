@@ -1,0 +1,35 @@
+Refs and the DOM
+    Refs provide a way to access DOM nodes or React elements created in the render method.
+
+    In react the typical dataflow is waterfall > props fall from above to bottom
+    this typical way to update a child is through updating its props
+    Sometimes you will want to break this rule > use Refs
+
+    When to Use Refs
+        Managing focus, text selection, or media playback.
+        Triggering imperative animations.
+        Integrating with third-party DOM libraries.
+
+    Avoid using refs for anything that can be done declaratively (by props).
+
+    Don’t Overuse Refs
+        try the typical way
+
+    Creating Refs
+        this.myRef = React.createRef();
+
+    Accessing Refs
+        the react element/ Dom node becomes accessible at the current attribute
+            const node = this.myRef.current;
+
+        when ref is added to html element > current will be the dom element
+            <input ref={inputRef} />
+
+        when ref is added to Class component > current will be instance of component 
+            <CustomComponent ref={componentInstanceRef} />
+
+        in functional components you can not use ref because they don’t have instances
+            Convert into dom node or class component
+
+    Exposing DOM Refs to Parent Components
+        use forwardRef

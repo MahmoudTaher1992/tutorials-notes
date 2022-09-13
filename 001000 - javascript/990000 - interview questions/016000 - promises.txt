@@ -1,5 +1,5 @@
 Promises
-    Objects used to handle asyc operations in javascript
+    Objects used to handle async operations in javascript
 
     Status
         Pending

@@ -1,0 +1,29 @@
+Profiler API
+    The Profiler measures how often a React application renders and what the 
+    “cost” of rendering is. 
+
+    Its purpose is to measure which parts of app is slow and try to optimize it
+
+    It is disables in the production build
+
+        render(
+            <App>
+                <Profiler id="Panel" onRender={callback}>
+                    <Panel {...props}>
+                    <Profiler id="Content" onRender={callback}>
+                        <Content {...props} />
+                    </Profiler>
+                    <Profiler id="PreviewPane" onRender={callback}>
+                        <PreviewPane {...props} />
+                    </Profiler>
+                    </Panel>
+                </Profiler>
+            </App>
+        );
+
+    onRender is called w. a callback > has params of the child rendering process
+        startTime
+        commitTime
+        actualDuaration
+        etc ..
+        

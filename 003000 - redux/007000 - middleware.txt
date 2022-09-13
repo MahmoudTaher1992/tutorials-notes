@@ -1,5 +1,5 @@
 Middleware
-    It is a way that extends redux w. custome functionality
+    It is a way that extends redux w. custom functionality
 
     it lies between the way from dispatching actions and reducers
 

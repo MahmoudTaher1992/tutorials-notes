@@ -1,0 +1,10 @@
+Static Type Checking
+    identify certain types of problems before you even run your code
+
+    it is recommended to use Static Type Checking over PropsTypes for larger code base
+
+    i.e.
+        Flow
+        TypeScript
+
+    

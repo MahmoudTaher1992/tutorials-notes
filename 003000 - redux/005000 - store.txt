@@ -7,6 +7,6 @@ store
 
     Allow state updating using store.dispatch(action)
 
-    Allow listening using > const unsbscribeMethod = store.subscribe(listener)
+    Allow listening using > const unsubscribeMethod = store.subscribe(listener)
 
     

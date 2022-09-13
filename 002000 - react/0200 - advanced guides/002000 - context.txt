@@ -1,0 +1,56 @@
+Context
+    Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+
+    i.e. > authenticated user, theme, or preferred language
+
+    Before You Use Context
+        component composition is often a simpler solution than context.
+
+        you can pass down the composed object rather than passing data to make it deep in the tree
+
+    React.createContext
+        creates context
+
+        when consumers try to get the context value it will get it from the nearest provider till it reach the default value
+        if non of the providers has the value
+
+    Context.Provider
+        a react element that provides a value for the consumers down the tree
+
+    Class.contextType
+        this is how the component subscribes to the context provider
+
+        available in all lifecycle methods through (this.context)
+
+        it will update even if one of the ancestor skips an update
+
+        alternative subscription
+            static contextType = MyContext;
+
+    Context.Consumer
+        Another way to consume a context
+
+        takes one child as function of context value as input and react element as output
+
+        helps when you want to consume multiple contexts
+
+        i.e.
+            <MyContext.Consumer>
+                {value => /* render something based on the context value */}
+            </MyContext.Consumer>
+
+    Updating Context from a Nested Component
+        you can put the context value in the state of the providing component and pass down with it the changing method
+            export const ThemeContext = React.createContext({
+                theme: themes.dark,
+                toggleTheme: () => {},
+            });
+
+    Caveats
+        consumers use reference check on the value to decide rerender or not if you supplied the value as an object it 
+        will cause unintentional rerender each time
+
+        put the value in the state to avoid this problem
+
+
+    

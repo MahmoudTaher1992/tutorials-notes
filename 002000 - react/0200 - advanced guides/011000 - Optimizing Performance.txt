@@ -1,0 +1,45 @@
+Optimizing Performance
+    React uses several clever techniques to minimize the number of costly DOM operations 
+    required to update the UI.
+
+    but there are several other ways you can speed up your React application.
+
+    Use the Production Build
+        if you are testing performance > run the app in production mode
+
+        development mode includes many helpful warnings > make react larger and slower
+
+        you can use react devtools to know weather u are in production mode or development mode
+
+    There are instructions to minify the build using bundlers
+
+    Use profiling components with devtools profiler
+
+    Vistualize long lists
+        long lists of data (hundreds or thousands of rows) > technique known as “windowing"
+
+        react-window and react-virtualized are popular windowing libraries
+
+    Avoid Reconciliation
+        React builds and maintains React elements, when rerenders the react compares new 
+        elements with older elements
+        if there are changes > Dom updates
+
+        Even though this saved time but if you want more savings > go with shouldComponentUpdate
+        if return false all the sub components will not rerenders
+
+        consider using PureComponents
+
+    shouldComponentUpdate In Action
+        there is an image the describes the Reconciliation as there
+
+        PureComponents will do shallow comparison for you to ignore writing logic 4 
+        shouldComponentUpdate
+
+        If you need deep comparison PureComponents will not detect the change and updates 
+        will not happen
+            Solution > update props and state immutably > the PureComponents will do ref check 
+            and will catch the change
+
+
+    

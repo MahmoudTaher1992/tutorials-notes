@@ -1,0 +1,20 @@
+Render Props
+    refers to a technique for sharing code between React components using a prop whose value is a function.
+
+    Use Render Props for Cross-Cutting Concerns
+        the example provided in the docs says that if you want to share a feature of detecting the mouse location
+        for other components > you shoud use render prop
+        
+        i.e.
+            MousePositionTracker component tracks x, y and updates state w. it
+
+        You should put this logic inside a component and add a prop to it named "render" (or any other name)
+        inside which you will use a function that takes mousePosition as prop
+
+        The parent component (MousePositionTracker) will update mouse position and render new child component using
+        render method
+
+        You can use children prop to pass the function
+
+    React.PureComponent
+        Has a problem implementing this feature

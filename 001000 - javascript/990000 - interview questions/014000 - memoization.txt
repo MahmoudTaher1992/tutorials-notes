@@ -1,5 +1,5 @@
 Memoization
-    a teqniques used to cache computed data instead of computing it each time
+    a techniques used to cache computed data instead of computing it each time
 
     Typically used with expensive computations
 

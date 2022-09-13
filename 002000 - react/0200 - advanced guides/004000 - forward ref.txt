@@ -1,0 +1,27 @@
+Forwarding Refs
+    I don’t know why we should use React.forwardRef instead of custom prop, but from my experience i should stick with
+    the way the documentation says
+
+    React components hide their implementation details, including their rendered output
+
+    Highly usable components might need to pass a ref to inner dom element and provide it to parent components
+        managing focus, 
+        selection,
+        animations.
+
+    Ref forwarding is an opt-in feature that lets some components take a ref they receive, and pass it further down
+     (in other words, “forward” it) to a child.
+
+    Example
+        const FancyButton = React.forwardRef((props, ref) => (
+            <button ref={ref} className="FancyButton">
+                {props.children}
+            </button>
+        ));
+
+        // You can now get a ref directly to the DOM button:
+        const ref = React.createRef();
+        <FancyButton ref={ref}>Click me!</FancyButton>;
+
+    HOC
+        Refs Aren’t Passed Through

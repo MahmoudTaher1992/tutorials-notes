@@ -1,0 +1,67 @@
+Jsx in depth
+    compiles to react.createElement("div", { prop1: "prop1" }, children)
+
+    React must be in scope > imported
+
+    User defined component must be in scope
+
+    you can use dot notation (but must be capitalized)
+        i.e.
+            const MyComponents = {
+                Component1: () => <div>Component1</div>,
+                Component2: () => <div>Component2</div>,
+            }
+
+            <MyComponents.Component1 />
+            <MyComponents.Component2 />
+
+    User defined comopnents must be in scope
+
+    you can choose type @ runtime but must be capitalized
+
+    Props
+        Js expression
+            <div>{1===1 ? "Taher" : "Omar"}</div>
+
+        string litrals
+            <div>Taher</div>
+            <div>{`Taher`}</div>
+
+        default value = true if not supplied
+            <Foo autoComplete /> is equivelant to <Foo autoComplete="true" />
+
+        spread attribute
+            const props = { prop1: "prop1" }
+            <Foo {...props} />
+
+    children in Jsx
+        String literals
+            <Foo>Taher</Foo>
+
+        Nested
+            <Foo>
+                <Foo />
+                <Foo />
+            </Foo>
+
+        Js expression
+            <Foo>
+                {
+                    [1, 2, 3].map((i) => <div>{i}</div>)
+                }
+            </Foo>
+
+        Function
+            <Foo>{() => 123}</Foo>
+
+            function will be passed in props.children
+
+        boolean, null, undefined and nothing
+            resolved to nothing
+                <div />
+                <div>true</div>
+                <div>false</div>
+                <div>undefined</div>
+                <div>null</div>
+
+                all to same > <div />
