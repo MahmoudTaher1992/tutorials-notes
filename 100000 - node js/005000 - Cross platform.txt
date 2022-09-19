@@ -1,1 +1,55 @@
 Cross Platform
+    > A major strength of node.js is it is a cross-platform
+        > with a little effort you can make it work on
+            > Windows
+            > Linux
+            > OSX
+
+    > When ever you get into a problem on cross-platform you should revise/add to this topic
+
+    > Concerns
+        > Paths
+            > Windows understands c:\users\taher\bla\bla
+            > Linux & OSX understands /users/taher/bla/bla
+
+            > To make it compatible don't deal with paths manually, use the lib that is made to do so "path"
+            > path
+                > will handle the cross-platform paths issues
+                > it will make your work easier
+                > some functions
+                    > path.join
+                    > path.resolve 
+                    > path.normalize
+
+        > Scripts
+            > your have to make node start those files
+            > node ./path-to-file
+            > ./path-to-file will wok on Linux and OSX but not on windows
+
+        > Shell commands
+            > you have to write a compatible version of the commands to stop conflicts
+                > i.e.
+                    > shell.exec('mkdir folder_name; cd folder_name');
+                        > is cross-platform compatible
+                    > shell.exec('mkdir folder_name && cd folder_name');
+                        > will trow on windows
+
+        > Newline Characters
+            > Linux uses (\r)
+            > Windows uses (\r\n)
+
+            > To make the code compatible
+                > config the codebase to use one only and all the users should follow that convention
+                > You can config git to do a translation for you (on commit/pull)
+                    > may be you will have to refresh the files to get the updated
+
+        > Temp files path
+            > use os.tmpdir()
+            > don't statically type it
+
+        > Home directories
+            > Linux > process.env.HOME
+            > Windows > proces.env.HOMEPATH
+
+        > "os" module will help you
+            > var os = require('os');

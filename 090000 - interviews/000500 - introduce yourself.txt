@@ -1,6 +1,18 @@
 Introduce yourself
     My name is Mahmoud Taher.
     I am from Egypt
-    I am a software engineer with 6 years of experience.
-    I spent 4 years in building desktop applications and 2 years in building web apps. 
+    I am a Senior Full-stack react/node developer 
+     with 6 years of experience.
+    I have a Bachelor’s degree in Architectural engineering 
+    My main stack is MERN
+        > React/Redux in front
+            > d3 charting
+            > styled-components
+        > Node, Express, Nest, GraphQL
+        > PostgreSQL, MySQL
+    I spent 3 years in building desktop applications and 3 years in building web apps. 
     I am obsessed with creating clean and reusable code.
+
+    > I look to become a team lead in the future 
+
+    > I like reading and watching documentaries in my free time

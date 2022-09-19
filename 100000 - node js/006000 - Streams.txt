@@ -1,0 +1,40 @@
+Streams
+    > Helps you write performant apps
+    > `stream` module helps you work with streaming data
+
+    > Pattern description
+        > If you have a very big data and you want to perform any operations on it
+          (read, write, transform)
+        > Very big data means that its size is bigger than the memory size i.e. (50 GB)
+        > You can not load it to the memory 
+            > And if you somehow could it will take lots of time
+        > The stream pattern solves the problem
+            > It starts reading the file bit by bit
+            > each bit (called chunk) is stored in a buffer zone 
+            > when the buffer/bucket is full it is sent through the pipeline
+            > this pipeline can be targeted any where
+            > there are lots of events that lets you control the stream
+                > `data` => chunk entered the pipeline
+                > `end` => done
+                > `error`
+                > etc
+
+    > Types of Streams
+        > Readable stream
+            > allows node js read data from source
+            > Any class that extends `Readable`
+            > i.e.
+                > fs
+                > process.stdin
+        > Writable stream
+            > allows you to write a stream to a file/destination
+            > i.e.
+                > fs
+                > process.stdout
+        > Duplex stream
+            > A combination between both readable/writable Streams
+            > Both sides are totally separated from each other
+            > i.e.
+                > Socket
+        > Transform stream
+            > 
