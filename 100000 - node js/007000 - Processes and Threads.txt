@@ -1,0 +1,24 @@
+Processes and Threads
+    > A process is a running program
+    > A processor understands only binary executable code
+        > compilers do that work
+    > Older computers supported one process at a time
+        > today - multiple - at same time
+
+    > Thread
+        > is a basic unit of execution in a process
+        > each process can have one/more threads
+
+    > Each program running on a computer represents a process
+    > It's a top level task that an operating system such as Windows or Linux uses to encapsulate a running program
+    > Process contains
+        > Code that is running
+        > Memory that is allocated to it by the OS
+        > Files or sockets that it has open
+        > One or more threads running within the process
+    > When process exits/crashes
+        > OS automatically cleans up resources
+            > closes files/sockets
+            > returns memory back to the OS
+            > shuts-down threads
+    

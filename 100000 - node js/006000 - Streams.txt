@@ -37,4 +37,31 @@ Streams
             > i.e.
                 > Socket
         > Transform stream
-            > 
+            > Similar to duplex stream but readable side is connected to the writable side
+            > i.e.
+                > crypto.Cipher
+                > stream.PassThrough
+
+    > Stream events
+        > Readable
+            > data
+                > chunk arrived from data source and ready to be consumed
+            > end
+                > emitted when there is no more data to be consumed
+        > Writable
+            > drain
+                > writable can receive more data
+            > finish
+                > all data has been flushed to underlying system
+        > You can use `pipe` instead of data and connect it to the next stream
+
+    > Flowing modes of readable streams
+        > pause, resume => converts between 2 modes
+        > Paused Mode
+            > default mode
+            > can be switched to flowing and vise versa easily
+            > once you listen to data will switch the state to flowing
+        > Flowing Mode
+
+    > You can write your own implementations
+        > `new Readable`, `new Writable`, `new Duplex`, `new Transform`
