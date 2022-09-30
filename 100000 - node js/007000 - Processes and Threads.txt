@@ -1,5 +1,6 @@
 Processes and Threads
     > A process is a running program
+        > An OS container for an app that is running
     > A processor understands only binary executable code
         > compilers do that work
     > Older computers supported one process at a time
@@ -21,4 +22,15 @@ Processes and Threads
             > closes files/sockets
             > returns memory back to the OS
             > shuts-down threads
+    > OS shares the CPU cores among all the different process and threads
+        > even if lots of programs are all trying to use the CPU at once, they all get some of the CPU time and all appear to be making forward progress.
+        > one gets to run for a little bit of time, then the next, then the next and so on, but those time slices can be so small that they all appear to be running together
+    > The term process is an OS term not a node.js term
+
+    > Process in node js
+        > a central place where the designers of node.js put a bunch of methods that relate to the overall process
+            > process.exit() => exits the application and thus stops the process
+            > process.env => access to the environment variables for your program
+            > process.argv => access to the command line arguments your process was started
+            > etc
     

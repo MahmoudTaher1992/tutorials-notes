@@ -1,0 +1,55 @@
+Child Process
+    > When a user executes a single Node.js program, it runs as a single OS process that represents 
+      the instance of the program running
+    > Within that process, Node.js executes programs on a single thread.
+    > operations that take a long time to execute in JavaScript can block the Node.js thread 
+      and delay the execution of other code
+    > A key strategy to work around this problem is to launch a child process
+      (a process created by another process)
+
+    > child_process module
+        > has functions to create new processes
+        > can also interface with the OS and run shell commands
+        > methods
+            > exec
+            > execFile
+            > spawn
+            > fork
+
+    > exec
+        > devs commonly create child processes to execute commands on their OS
+        > exec creates new shell process and executes command in the shell
+        > the output is kept in the memory till the end of the process and passed to the callback
+        > error is different than stderr
+            > error => when execution problem happens
+            > stderr => when the command it self throws something
+            > handle both of them
+
+    > execFile
+        > the difference between it and exec is
+            > in execFile => you specify the link of the file not the command to run
+            > no shell is created
+            > it will only run the file
+            > script files will work on linux (because it doesn't need shell) but .bat and .cmd files will not work 
+              on windows because it needs a shell (.exe will work)
+
+    > spawn
+        > does the same thing (runs another process with/without shell with command)
+        > doesn't create a new shell before running a process
+            > you have to supply the command separated from the parameters
+            > the params will be the 2nd argument and will be in an array
+        > gets the output and errors is stream instead of buffer/string
+            > stdin, stdout & stderr
+        > returns EventEmitter object that has multiple events
+            > error
+            > data
+            > close
+            > etc
+        > It is helpful when you expect big data to be returned because 
+          the performance may decrease or the system may crash
+
+    > fork
+        > same as spawn
+        > it launches node.js process with the modulePath as the first argument
+        > but parent can talk to child and child can talk to parent `.send`
+        > you can play w. options to play with stdio, execPath, ... others

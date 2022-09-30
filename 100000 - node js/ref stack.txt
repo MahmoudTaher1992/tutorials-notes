@@ -1,6 +1,5 @@
 ref stack
     [
-        https://stackoverflow.com/questions/61423136/what-is-process-in-node-js
         https://www.freecodecamp.org/news/node-js-child-processes-everything-you-need-to-know-e69498fe970a
         https://www.freecodecamp.org/news/scaling-node-js-applications-8492bd8afadc/
         https://shapeshed.com/writing-cross-platform-node/
