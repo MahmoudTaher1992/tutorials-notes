@@ -1,0 +1,25 @@
+bookingHeader
+    > id
+    > childId
+    > staffId
+    > scheduleTimeId
+    > from
+    > to
+    > recurrenceType
+        > ONE_OFF
+        > WEEKDAY
+        > WEEKLY
+        > CUSTOM
+    > monday (boolean)
+    > tuesday (boolean)
+    > wednesday (boolean)
+    > thursday (boolean)
+    > friday (boolean)
+    > saturday (boolean)
+    > sunday (boolean)
+
+> bookingDetails
+    > id
+    > headerId
+    > date
+    > isOverridden
