@@ -1,8 +1,6 @@
 ref stack
     [
-        https://www.freecodecamp.org/news/node-js-child-processes-everything-you-need-to-know-e69498fe970a
-        https://www.freecodecamp.org/news/scaling-node-js-applications-8492bd8afadc/
-        https://shapeshed.com/writing-cross-platform-node/
+        https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/#:~:text=The%20event%20loop%20is%20what,operations%20executing%20in%20the%20background.
         https://github.com/learning-zone/nodejs-interview-questions#-1-introduction
         https://gist.github.com/paulfranco/9f88a2879b7b7d88de5d1921aef2093b
         https://github.com/Devinterview-io/nodejs-interview-questions

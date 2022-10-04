@@ -1,0 +1,12 @@
+Strategies of Scalability
+  > Event loop
+    > handles long tasks with out blocking the main js process
+  > Cloning
+    > creating multiple instances in the same server
+    > cluster module
+  > Decomposing
+    > micro-services
+  > Splitting
+    > creating multiple servers and a load balancers
+    > create multiple region handlers
+      > like AWS

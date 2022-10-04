@@ -47,9 +47,14 @@ Child Process
             > etc
         > It is helpful when you expect big data to be returned because 
           the performance may decrease or the system may crash
+        > you can play w. options to play with
+          > stdio (inherit - prints to parent stdio)
+          > shell (runs a shell)
+          > cwd (current working directory)
+          > env (environmental variables)
+          > detached (detached from parent process)
 
     > fork
         > same as spawn
         > it launches node.js process with the modulePath as the first argument
         > but parent can talk to child and child can talk to parent `.send`
-        > you can play w. options to play with stdio, execPath, ... others

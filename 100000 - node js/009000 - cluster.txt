@@ -1,0 +1,23 @@
+Cluster
+  > node js runs on one process (single threaded)
+  > to take advantage of other cores you can launch a cluster of node js process
+    and distribute load between them
+  > it will increase the throughput (requests that can be handled concurrently/second)
+  
+  > Cluster module enables the creation of child processes (workers) that run 
+    simultaneously and share the same server port.
+  > Each spawned child has its own event loop, memory, and V8 instance.
+  > Having multiple processes to handle incoming requests means that several requests 
+    can be processed simultaneously and if there is a long-running/blocking operation on one worker, 
+    the other workers can continue handling other incoming requests 
+
+  > if you want to test the performance try using `load testing libraries`
+    > `loadtest`
+
+  > Cluster only performs well if there are CPU intensive work to be done (otherwise it may perform bad) 
+    > because the rest of the cluster will take care of other requests
+
+  > PM2
+    > a process management tool that runs cluster for you
+    > handles the load balancing
+    > creates another instances to replace of the failed ones
