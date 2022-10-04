@@ -1,4 +1,19 @@
 questions
+    > What should be the value of "Assigned" in the schedules ?
+
+    > Should the booking date range follow the following ?  
+        > start date >= today
+        > start date >= schedule start date
+        > end date >= start date
+        > end date <= schedule end date
+        > Are there any other criteria ?
+
+    > ONE_OFF
+        > Can I select multiple days ? (2 weeks for example)
+        > Can we rename it to daily ?
+
+    > What is the "room" that discussed in `Frame 550` ?
+
     > Schedule times changes from ongoing to period
         > What should happen to
             > booking details that are outside the period
@@ -11,21 +26,15 @@ questions
                 > recurrence ?
                     > when the new date is out of range
 
-    > ONE_OFF
-        > Can I select multiple days ? (2 weeks for example)
-        > Can we rename it to daily ?
+    > Hierarchy rules ?
 
-    > What should be the value of "Assigned" in the schedules ?
+    > How to deal w. closing days/opening hours ?
+        > Should we add booking details or show a warning ?
 
-    > Should the booking date range follow the following ?  
-        > start date >= today
-        > start date >= schedule start date
-        > end date >= start date
-        > end date <= schedule end date
-        > Are there any other criteria ?
-
-    > What is the "room" that discussed in `Frame 550` ?
-
-    > 
-    
-        
+    > Add booking Weekly on thursday (Frame 575)
+        > date => monday (3) - friday (16)
+            > should the from be (6) & to be (13)
+        > date => monday (3) - friday (5)
+            > what should be the output
+        > date => monday (5) - friday (7)
+            > should the from be (6) & to be (6)
