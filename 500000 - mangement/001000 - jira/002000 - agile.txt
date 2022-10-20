@@ -1,0 +1,11 @@
+Agile
+    > iterative approach to project management and software development
+    > helps teams deliver value to their customers 
+        > faster
+        > fewer headaches
+    > instead of delivering everything at once => its delivered bit by bit
+    > Evaluations are done continuously for (so teams can respond to changes quickly)
+        > Requirements
+        > Plans
+        > Results
+        
