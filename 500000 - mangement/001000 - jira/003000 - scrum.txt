@@ -1,0 +1,29 @@
+Scrum
+    > A framework that implements that agile principles
+    > Scrum 
+        > encourages teams to learn through experiences 
+        > self organize while working on a problem
+        > look at the wins/losses to continuously improve
+    > It can work with all kinds of teams not only development teams (that's why it is popular)
+    > Scrum
+        > is a framework not a principles set
+        > describes a set of (staff that help teams structure and manage their work) 
+            > meetings
+            > tools
+            > roles
+        > is heuristic and it agrees with the fact that the team doesn't know everything from the beginning 
+          but will evolve through experience
+        > scrum is structured so that it helps teams to adapt naturally to the changes 
+          in the conditions and users requirements
+        > it is not entirely rigid
+            > Clear communication, transparency and a dedication to continuous improvements 
+              should be the center of any framework and the rest is up to the team
+    > Scrum artifacts
+        > Artifacts is something made by a human (tool) tht solves a problem
+        > In scrum there are 3
+            > Product Backlog
+            > Sprint Backlog
+            > Increment
+
+    > Product Backlog
+        > 

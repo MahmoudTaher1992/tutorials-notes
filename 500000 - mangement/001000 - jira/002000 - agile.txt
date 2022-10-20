@@ -8,4 +8,45 @@ Agile
         > Requirements
         > Plans
         > Results
-        
+    > Waterfall approach
+        > Does all things at once and move it to the next phase
+        > i.e.
+            > planning is done for all the app
+            > designs
+            > programming
+            > testing
+            > customer changes
+    > Agile works bit by bit
+        > the team should be cross-functional
+            > multiple roles
+            > i.e.
+                > designer
+                > developer
+                > product owner
+                > scrum master
+                > tester
+                > may be CI/CD
+        > The team should experience
+            > Open collaboration and communication
+            > Quick adaption
+            > Trust
+        > the team should 
+            > take lead on how they will get the work done
+            > self organizing around tasks and assignments
+    > Agile is
+        > a group of principles that guide you
+        > not a set of events/ceremonies
+        > not a development techniques
+        > is a set of methodologies that makes commitment to tight feedback cycles and continuous improvement.
+    > Agile Manifesto
+        > a group of 17 devs put principles of agile
+        > Principles
+            > Individuals and interactions over processes and tools
+            > Working software over comprehensive documentation
+            > Customer collaboration over contract negotiation
+            > Responding to change over following a plan
+    > Why Agile ?
+        > Quickly respond to customer feedback/changes (without waiting months!!), decreased costs
+        > Flexibility in ways to achieve the goal (which is common in all agile teams)
+            > Each team will have his own implementation
+        > When the team feels that they have trust from the management they tend to perform better 
