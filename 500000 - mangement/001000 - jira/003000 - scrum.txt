@@ -5,6 +5,7 @@ Scrum
         > self organize while working on a problem
         > look at the wins/losses to continuously improve
     > It can work with all kinds of teams not only development teams (that's why it is popular)
+
     > Scrum
         > is a framework not a principles set
         > describes a set of (staff that help teams structure and manage their work) 
@@ -18,6 +19,7 @@ Scrum
         > it is not entirely rigid
             > Clear communication, transparency and a dedication to continuous improvements 
               should be the center of any framework and the rest is up to the team
+
     > Scrum artifacts
         > Artifacts is something made by a human (tool) tht solves a problem
         > In scrum there are 3
@@ -25,5 +27,116 @@ Scrum
             > Sprint Backlog
             > Increment
 
-    > Product Backlog
-        > 
+		> Product Backlog
+			> list of work to be done
+			> maintained by product owner/manager
+			> acts as input for sprint Backlog
+			> constantly revisited, re-prioritized and maintained by the Product Owner
+				> because when the requirements change the backlog changes
+
+		> Sprint Backlog
+			> list of tickets/issues/bugs selected by devs to be implemented in the sprint
+			> Before each sprint > the team decides which items will be added to the sprint backlog
+			> it flexible and can be change during the sprint
+			> but the sprint goal can not be changed
+
+		> Increment
+			> the usable end product of the sprint
+			> will be showed in the end-of-sprint demo/meeting
+			> has lots of synonyms (each team uses his own term !!)
+				> Done
+				> Milestone
+				> Sprint goal
+				> Full version
+				> Shipped Epic
+
+		> You should be open to have variations in the artifacts
+			> You should deal with the framework with agility
+				> continuous improvements
+			> This is a part of agile (be flexible)
+	
+	> Scrum ceremonies/events
+		> One of the main components of the scrum framework
+		> Set of meetings that are done on a regular basis (not a must)
+			> Organize the backlog
+			> Sprint planning
+			> Sprint
+			> Daily scrum/standup
+			> Sprint review
+			> Sprint Retrospective
+
+		> Organize the backlog
+			> known as backlog grooming
+			> Products owner responsibility
+				> Note: One of the product owner work is to constantly look at the market/customer feedback
+				  in order to drive the product towards the product version
+			> Keeps up with the customer/market needs to re prioritize and clean the product backlog
+		
+		> Sprint Planning
+			> the meeting is lead by scrum master
+			> they agree on the sprint goal
+			> the entire team should attend and participate in the meeting
+			> scrum backlog is filled from the product Backlog
+			> the tasks are aligned with the sprint goal
+			> the tasks should be feasible within the sprint period
+			> At the end scrum master should be clear on what is the increment and how will it be delivered
+		
+		> Sprint
+			> actual time used to get the increment done
+			> 2 weeks is the typical time
+			> The more complex the work/ the less the sprint period should be
+			> It should be flexible
+			> During the sprint the scope may be changed with the product owner
+			> Once the period is agreed upon is should not change because it will be the reference which the team will depend on
+			> All events should happen during the sprint !!
+				> I don't know why/how
+
+		> Daily scrum/standup
+			> Daily super short meeting
+			> Usually in the morning
+			> ~ 15 mins
+			> The goal of this meeting is to 
+				> bring every one to the same page
+				> See if they are aligned with the sprint goal
+				> Plan to unblock those who are blocked
+				> get a plan for the next 24 hrs
+			> A typical questions in the meeting to be asked
+				> What did you doo yesterday ?
+				> What will you do today ?
+				> Are there any blockers
+			> It helps people get more focus on the day goals
+
+		> Sprint review
+			> hold at the end of the Sprint
+			> Preview a demo for the increment
+			> Show to the stakeholders the job that is done on the backlog
+			> Get a feedback from the customer/product owner
+			> Should not exceed hrs
+
+		> Sprint Retrospective
+			> The team discuss what worked and what didn't in the prev sprint
+			> Come up with suggestion of improvements
+			> It should be more about how to get things right not on blaming each other
+
+	> Scrum roles
+		> 3 main roles
+			> Product owner
+			> Scrum master
+			> Development team
+				> devs
+				> UI/UX designer
+				> Testers
+				> etc
+
+		> Product owner
+			> Champion of the product
+			> Focused on
+				> understanding the business, market & customers
+				> prioritizing the work to be done by the development team
+			> Effective product owners should 
+				> Build and maintain the backlog
+				> Closely be with the team to make sure that they understand the work
+				> Give the team a clear guidance on what will be done next
+				> Decides when to ship to product
+			> Ensures the most value from the team
+			> Should be individual, we don't want the team to get confused from two/more sources of guidance 
