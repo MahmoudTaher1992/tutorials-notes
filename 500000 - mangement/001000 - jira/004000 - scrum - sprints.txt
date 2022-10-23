@@ -1,0 +1,38 @@
+Sprints
+	> Is a short period of time at which the team works to complete an amount of work
+	> The heart of scrum framework
+	> if done right helps teams ship better software with fewer headaches
+	
+	> How to plan and execute scrum Sprints ?
+		> Sprint planning meeting (that answers 2 questions)
+			> What will be done in the sprint ?
+				> Collaborative work between product owner, scrum master and dev. team
+				> The product owner sets that goal of the sprint and the backlog items that relates to it  
+			> How will it be done ?
+				> The team plans how to get it done during the sprint 
+				> do a very detailed plan on all the work that will be done
+				> Break down the work into stories, issues and bugs 
+
+		> Daily standup
+			> The team check how the progress is going
+			> The team tries to resolve any blockers
+
+		> Sprint Review
+			> A meeting to show the stakeholders the increment before pushing it to production
+		
+		> Sprint retrospective
+			> Discusses the improvements to be done in the future
+
+	> Do's
+		> Make sure that the team understands the sprint goal, it helps in getting it done.
+		> Ensure that the backlog is groomed, organized and prioritized
+		> Ensure you have a good understanding of velocity
+		> In sprint planning 
+			> do a very detailed plan on all the work that will be done
+			> Break down the work into stories, issues and bugs 
+		> Skip the work that needs a dependencies from other teams
+		> Get every detail to the team management tool i.e. (JIRA)
+
+	> Don't
+		> Pull too many stories
+		> Over estimate velocity

@@ -140,3 +140,26 @@ Scrum
 				> Decides when to ship to product
 			> Ensures the most value from the team
 			> Should be individual, we don't want the team to get confused from two/more sources of guidance 
+
+		> Scrum master
+			> Champion of scrum within the team
+			> Coach team, product owner and the business on the scrum process
+			> look for ways to improve their practice of it
+			> Effective scrum master Should
+				> deeply understand the work done by the team
+				> help team optimize their transparency and delivery flow
+				> takes care of organizing and facilitating all the scrum ceremonies/events
+
+		> Scrum development team
+			> The team that gets work done
+			> They are the champions of a sustainable development process
+			> Most effective team should be
+				> co-located => in the same place
+				> 5-7 members (the team should be small enough to share 2 pizzas)
+				> tight-kit > bound together
+				> self organizing
+				> have the attitude of we > help each other to reach the sprint goal
+			> They drive a plan for each sprint
+				> They take only the work that they believe they are going to do during the sprint
+				> Keeping the sprint period constant helps the team in accurate estimation 
+				  of the work that can be done within the sprint
