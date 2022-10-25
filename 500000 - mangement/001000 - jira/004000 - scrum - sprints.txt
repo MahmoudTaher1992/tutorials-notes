@@ -35,4 +35,9 @@ Sprints
 
 	> Don't
 		> Pull too many stories
-		> Over estimate velocity
+		> Over estimate velocity (Seamus)
+		> Forget about quality/technical debit
+		> Forget to estimate time for bug-fixes/meetings/QA
+		> Let the team has a fuzzy view on the sprint's goal
+		> Take a large unknown/high-risk work
+		> Ignore team's concern on velocity/low estimations

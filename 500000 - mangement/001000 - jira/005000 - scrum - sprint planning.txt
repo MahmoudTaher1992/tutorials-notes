@@ -1,0 +1,69 @@
+Sprint planning
+	> It is a scrum ceremony/event
+	> The event that starts the Sprint
+	> Done with the collaboration of the whole team
+	> Purpose of the event
+		> What will be done in the sprint ?
+		> How will it be done ?
+	> You need to decide upon the time of the sprint
+	
+	> The What
+		> The product owner specifies a goal for the sprint
+		> The product owner specifies the backlog items that will be transferred to the sprint
+		> The team contributes on what can be done during the sprint
+
+	> The How
+		> The team plans the work necessary to achieve the sprint's goal
+		> There may be a negotiation between the product owner and the development team
+
+	> The Who
+		> Product owner and development team should both attend the meeting
+		> If either is missing the planning will be invalid
+
+	> The Inputs
+		> The product's backlog is the main input for the sprint
+
+	> The outputs
+		> The team should describe the following
+			> The goal of the sprint
+			> How will they achieve it
+
+	> Prep for sprint planning
+		> The product owner should be prepared with
+			> Lessons from the prev sprint
+			> Feedback from the stakeholders
+			> Vision of the product
+		> The product backlog should be groomed/updated
+			> This is a main job for the product owner
+			> Making the team participate in it will bring them more to the picture
+				> Having it in the middle of the sprint is a good thing so that the team 
+				  can have a bigger image of the situation of the project 
+
+	> Time-boxing
+		> Max of 2hrs/sprint week
+			> sprint(2weeks) => 4 hrs sprint planning
+		> The scrum master is the one who should monitor this
+
+	> Focus on the outcome not the work
+		> Don't sink in details (It is normal that you will not know everything from the beginning)
+			> the order of the tasks
+			> who should do what
+			> the estimation of the tasks
+	
+	> Estimation
+		> Any sprint planning should include estimation to the work that can be done withing the sprint
+		> Estimations will be more accurate if the info about the work is detailed
+		> Techniques
+			> t-shirt sizing
+			> story-points
+
+	> Best practices
+		> Don't sink in the details (the goal is a plan for the sprint)
+		> Should not be with high details (leave a space for team members to self-organize)
+		> Instead of sinking into the details (focus on the sprint goal)
+		> ensure that the product's backlog is ordered
+
+	> Scrum is a process framework aimed to solve complex problems
+		> Complex problems require `learn by doing`
+		> The plan will never be perfect because we are solving complex vague problems
+		> The plan will focus on the goal instead of the details
