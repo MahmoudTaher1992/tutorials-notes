@@ -4,3 +4,24 @@ Modularity introduction
     > Rely mainly on import/export keywords
 
     > Export
+        > types
+            > Named
+                > i.e.
+                    > export const x = 1;
+            > Default
+                > you can have only one in a file
+                > i.e.
+                    > export default const x = 1;
+
+        > place
+            > in-line individually
+            > all at the bottom
+
+    > import
+        > export types
+            > named
+                > i.e.
+                    > import { x } from './x';
+            > default
+                > i.e.
+                    > import x from './x';
