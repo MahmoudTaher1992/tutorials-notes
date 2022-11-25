@@ -1,0 +1,6 @@
+Modularity introduction
+    > Allows you to break the code into separate files
+    > Easier to maintain the codebase
+    > Rely mainly on import/export keywords
+
+    > Export
