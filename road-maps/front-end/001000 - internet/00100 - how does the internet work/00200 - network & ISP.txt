@@ -1,0 +1,39 @@
+Network and ISP    
+    > Network 
+        > is one or more computers connected together using Ethernet cables
+        > To connect 10 computers together you will need 45 cables
+            > it is impossible to connect all the computers in the world this way and here comes the router role
+
+    > Router
+        > is a tiny computer that manages the messages delivery to all the computers/routers connected to it
+        > you can connect all the computers directly to the router and then you will use 10 cables only
+        > routers can be connected together using another routers
+        > by that you can connect infinite computers together through routers
+
+    > now you can create a network that consists of infinite number of computers, 
+      but how can you connect two networks together 
+        > (say your computers in your home to the computers in your friends home)
+        > you can run cables from your home to your fiend's home but it will be v. expensive
+        > instead you can use existing telephone infrastructure but you will need to add a device called modem
+
+    > Modem
+        > is a device that converts data passing in the computers network into the telephone infrastructure and vise versa
+
+    > ISP
+        > Stands for Internet Service Provider
+        > A company that will connect your network to the Internet
+        > Has lots of routers that ends up with big network in a country level
+        > they also take care of connecting their network to other ISP networks globally which ends up with the Internet
+
+    > LAN
+        > Stands for Local Area Network
+        > A network that spans on small places
+            > office
+            > home
+            > etc
+
+    > WAN
+        > Stands for Wide Area Network
+        > A network that connects many LANs together
+        > Spans over large geographic Area
+        > Like a network that connects all companies computers all over the 

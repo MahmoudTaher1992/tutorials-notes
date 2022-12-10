@@ -1,0 +1,19 @@
+Data Journey
+    > Data can be converted into many forms
+        > electrical pulses
+        > electro-magnetic waves in cellular towers
+        > light in optical fibers
+    > i.e.
+        > traffic light transfer 3 data to human beings
+            > Green => Go
+            > Yellow => Prepare for stop
+            > Red => stop
+    > There are lots of devices to convert the data from one form to another
+    > A message journey from a keyboard to the Whatsapp of another phone
+        > thermal energy from fingers to the screen => electrical energy
+        > electrical pulses to the processor => another electrical pulses (request)
+        > request (electrical pulses) to antenna => electro-magnetic wave => cellular towers
+        > Cellular tower converts electro-magnetic waves to electrical pulses
+        > electrical pulses are converted into light and sent through high-tech optical fibers
+        > optical fibers (light) => electrical pulses => electro-magnetic waves => recipient's mobile
+        > electrical pulses => processor => message in whatsapp

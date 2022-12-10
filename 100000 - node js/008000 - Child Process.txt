@@ -17,8 +17,10 @@ Child Process
             > fork
 
     > exec
-        > devs commonly create child processes to execute commands on their OS
+        > developers commonly create child processes to execute commands on their OS
         > exec creates new shell process and executes command in the shell
+          > shell is a process that accepts commands that make something in the OS
+          > shell is a computer program that exposes an operating system's services to a human user or other programs
         > the output is kept in the memory till the end of the process and passed to the callback
         > error is different than stderr
             > error => when execution problem happens
@@ -36,10 +38,10 @@ Child Process
     > spawn
         > does the same thing (runs another process with/without shell with command)
         > doesn't create a new shell before running a process
-            > you have to supply the command separated from the parameters
-            > the params will be the 2nd argument and will be in an array
+          > you have to supply the command separated from the parameters
+          > the params will be the 2nd argument and will be in an array
         > gets the output and errors is stream instead of buffer/string
-            > stdin, stdout & stderr
+          > stdin, stdout & stderr
         > returns EventEmitter object that has multiple events
             > error
             > data

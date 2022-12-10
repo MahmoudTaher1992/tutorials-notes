@@ -1,0 +1,4 @@
+Web
+    > what is web ?
+    > stands for (World Wide Web)
+    > it is a collection of information that can be accessed through the internet   

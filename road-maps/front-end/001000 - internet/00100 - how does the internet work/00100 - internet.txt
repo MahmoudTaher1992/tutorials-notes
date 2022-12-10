@@ -1,0 +1,24 @@
+internet
+    > a new way of communication between entities all over the world
+        > history
+        > At the 1960s a group of researchers at the us military researched the internet
+        > After that at the 1980s it went public with the help of multiple universities and companies
+        > the technologies have evolved dramatically by the time but the concepts remained the same
+
+    > Internet
+        > Stands for Interconnected Networks
+        > is the infrastructure that connects all the computers all over the world together
+        > billions of networks connected together
+        > you can add a network through connecting your network to the ISP
+        > it has no center and no one owns it
+        > it is designed to be fault tolerant
+            > amazon has multi-zones for this purpose (if one failed the other will serve as a backup)
+
+    > Intranet
+        > small network that is allowed to authorized people
+        > has information that is only accessible to the users
+
+    > Extranet
+        > an intranet which is fully/partially open to external entities
+
+

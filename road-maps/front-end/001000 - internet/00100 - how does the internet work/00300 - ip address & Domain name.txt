@@ -1,0 +1,14 @@
+IP address
+    > Stands for Internet Protocol address
+    > a unique address for the computer in the internet
+    > nnn.nnn.nnn.nnn
+        > nnn is from 0 to 255
+        > i.e. => 206.124.213.111
+    > so if you want to send a api request you will have to specify the ip address of the server
+
+
+Domain name
+    > it is very hard to remember all the ip addresses
+    > A domain name is linked to specific ip address
+    > it is a human readable word that refers to ip address
+        > google.com => 142.250.190.78
