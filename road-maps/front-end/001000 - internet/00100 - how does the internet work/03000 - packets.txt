@@ -1,0 +1,12 @@
+Packets
+    > Data on the internet is divided into small parts of info that is called Packets
+    
+    > each packet has a header that contains
+        > sender ip address
+        > destination ip address
+        > used by routers to direct the packet to the right destination
+
+    > The recipient computer gathers and combines all the packets together to get the full message
+
+    > The data can be transferred as a whole without dividing it into packets but there will be a big delay
+        > the message will have to wait for the proceeder message to be delivered to start its journey

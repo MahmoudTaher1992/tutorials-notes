@@ -6,6 +6,14 @@ IP address
         > i.e. => 206.124.213.111
     > so if you want to send a api request you will have to specify the ip address of the server
 
+    > versions
+        > ipv4
+            > 32 bit
+            > 206.124.213.111
+        > ipv6
+            > 128-bit
+            > bigger than it's proceeder to accommodate the boom in the devices on the network
+
 
 Domain name
     > it is very hard to remember all the ip addresses

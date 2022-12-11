@@ -1,4 +1,30 @@
 Web
     > what is web ?
     > stands for (World Wide Web)
+    > also known as WWW or W3
     > it is a collection of information that can be accessed through the internet   
+    > a collection of web sites that can be accessed through the internet
+    > people can access the web content any where in the world (when connected to the internet)
+    > the building block of the web is a web page
+        > built using HTML
+        > linked together using HyperText/HyperLink
+        > accessed using HTTP
+    > A web page can be accessed by it's URL
+        > The URL is made up of protocol://hostname.domain-name/path
+    > Small websites store all the data in a single server
+    > Big websites store the data in multiple servers that can be in different parts in the world
+    > the web is not the internet
+        > the internet is the network (hardware)
+        > the web is the information stored on servers that are connected to the internet
+
+    > How the web works
+        > the model is client-server model
+        > the data is web pages (that is made up of HTML)
+        > the data/web pages are stored on computers called servers
+        > It is accessed through another computer that is called client
+        > the app used to open the web page is called browser
+        > The rules that manage the transfer of data over the internet is called internet protocols
+
+    > A web page can be accessed by it URL (Uniform Resource Locator)
+    > HTTP
+        > Is a protocol that is followed to transfer the data over the internet
