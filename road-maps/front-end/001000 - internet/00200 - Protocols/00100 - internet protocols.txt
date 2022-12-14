@@ -1,2 +1,86 @@
 Internet Protocol
-    > a set of rules that organize the 
+    > a set of rules, conventions and data structures that determines how data is transmitted between different devices on the Internet
+    > it is a common language that all devices on the internet can talk and understand regardless of their architecture and design
+    
+    > OSI model
+        > stands for Open Systems Interconnection model
+        > Considered the primary architectural model for internet communications
+        > OSI is a Framework
+        > the majority of network protocols are structurally based on the OSI model
+        > It splits the communication process into 7 layers (ordered)
+            > Application
+            > Presentation
+            > Session
+            > Transport
+            > Network
+            > Data-Link
+            > Physical
+
+    > Lots of hardware and software work together to move the data through the layers to be transmitted to another devices
+
+    > To send the data from one end to another it should pass through all layers of protocols 
+
+    > Application layer (layer 7)
+        > it has nothing to do with the user application like chrome or safari (it is just a term) 
+        > It is the protocol that browsers and apps use to send requests and receive responses, this protocol lies in the Layer 1
+        > Then they use the network services to send the request
+            > the request contains
+                > target ip address
+                > target port
+                > target path
+                > body
+                > some other data in the headers
+        > The job of this layer ends with the created request as string
+        > then it passes the request to next layer
+        > Application layer protocols example
+            > HTTP
+            > FTP
+            > DNS
+            > POP
+            > SMTP
+
+    > Presentation layer (layer 6)
+        > Encryption/Decryption happens in this layer
+        > Compression/Decompression Happens in protocols that follow this layer
+        > ensures the data is in usable format
+            > if it is going to the application layer it should be decrypted
+            > if it is going to the session layer it should be encrypted
+    
+    > Session Layer (layer 5)
+        > establish sessions between users and maintains them
+        > tags the request with session id
+        > protocols that follow this layer create communication channels between devices
+            > creates sessions and maintain them while data is being transmitted and then closes it
+            > if the session is interrupted protocols will reestablish them and continue transmitting data from the last checkpoint
+
+    > Transport layer (layer 4)
+        > Breaks the request into small parts called Segments
+        > adds a metadata on it with the target and source port
+        > also it adds a sequence on the segments to be easily combined again
+        > combines different segments together on the target
+            > if any segment is missing it requests it again
+            > at the end it will supply the session layer the same data that was divided as the source device
+
+    > Network layer (layer 3)
+        > Breaks the segments into packets
+        > attaches the sender and receiver ip addresses
+        > involves in routing the packets correctly to the target device
+
+    > Data Like (layer 2)
+        > Breaks down into frames
+        > attaches the sender and receiver mac address
+        > establish a connection between two physical devices on the network
+        > made up of two parts
+            > LLC - Logical Link Control
+                > Error checking
+                > sync frames
+            > MAC - Media Access Control
+                > uses mac addresses to connect two devices
+    
+    > Physical layer (layer 1)
+        > Changes the frames into zeros and ones
+        > sends the data to the target using
+            > light
+            > electrical signals
+            > radio waves
+        > responsible of sending raw data through the physical devices between two devices on the network

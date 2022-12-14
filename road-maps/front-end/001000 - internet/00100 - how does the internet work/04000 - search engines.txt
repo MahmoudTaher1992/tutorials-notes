@@ -1,2 +1,8 @@
 Search Engines
-    > 
+    > are websites that help you filter the web pages on the web
+    > they constantly run a program called a spider that crawls all over the web pages and keeps indexes in the search engine to use it in the filtering
+    > it also use machine learning to get better results and understand what the user want to search for
+
+    > SEO
+        > Search Engine Optimization
+        > is a method that could improve the traffic and quality coming to the web page from search engines without any costs
