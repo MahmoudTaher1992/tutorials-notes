@@ -34,10 +34,16 @@ Internet Protocol
         > then it passes the request to next layer
         > Application layer protocols example
             > HTTP
+            > HTTPs
             > FTP
             > DNS
             > POP
             > SMTP
+            > SSH
+            > SOAP
+            > DHCP
+            > NFS
+            > Telnet
 
     > Presentation layer (layer 6)
         > Encryption/Decryption happens in this layer
@@ -45,6 +51,9 @@ Internet Protocol
         > ensures the data is in usable format
             > if it is going to the application layer it should be decrypted
             > if it is going to the session layer it should be encrypted
+        > Protocols examples
+            > SSL
+            > TLS
     
     > Session Layer (layer 5)
         > establish sessions between users and maintains them
@@ -60,11 +69,16 @@ Internet Protocol
         > combines different segments together on the target
             > if any segment is missing it requests it again
             > at the end it will supply the session layer the same data that was divided as the source device
+        > examples
+            > TCP
+            > UDP
 
     > Network layer (layer 3)
         > Breaks the segments into packets
         > attaches the sender and receiver ip addresses
         > involves in routing the packets correctly to the target device
+        > examples
+            > IP
 
     > Data Like (layer 2)
         > Breaks down into frames

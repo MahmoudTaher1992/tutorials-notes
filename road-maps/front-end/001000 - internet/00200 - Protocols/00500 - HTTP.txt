@@ -1,3 +1,69 @@
 HTTP
     > stands for Hyper Text Transfer Protocol
-    > 
+    > a protocol for fetching the resources (i.e HTML pages) over the internet
+    > it is a foundation for any data transfer over the internet
+
+    > the protocol is evolved over time
+    > it is an application level protocol
+    > sent over TCP or over TLS-TCP or any other transport protocol
+
+    > used to fetch
+        > HTML documents
+        > images
+        > audio
+        > video
+        > strings
+
+    > it is a client server protocol
+        > a request is sent from the client (a user agent - i.e. browser) to the server
+            > a user agent can be any thing 
+        > the server replies with many documents
+        > the browser gathers the documents to show you the result
+        
+        > clients and servers communicate by exchanging messages 
+            > a message sent by the client is called request
+            > a message sent by the server is called response
+
+    > Client - the user agent
+        > it is any tool that acts on behalf of the user
+        > the browser is the one who always starts the request
+
+        > To display a web page
+            > a user writes a URL
+            > the browser sends HTTP request to fetch the HTML document (which represents the web page)
+            > when the browser receives the response with the HTML document it analysis its dependencies and send HTTP requests to load them
+            > once everything is ready it combines everything together and displays the web page
+            > when the user clicks on another link in the page the same process occurs
+
+    > The web server
+        > a machine/software that responds to the requests coming from the clients
+        > the requests may be handled by multiple machines with a load balancer
+        > you can setup multiple server as a software on the same machine
+
+    > Proxies
+        > Between the client and the server there are numerous amount of machines that relay the HTTP messages
+        > They can be
+            > Transparent
+                > Don't change anything in the HTTP messages
+            > Non-Transparent
+                > perform actions on the HTTP messages
+                    > caching
+                    > logging
+                    > authentication
+                    > load balancing
+                    > filtering
+
+    > HTTP aspects
+        > Simple
+            > Human readable
+        > Extensible
+            > Easy to expand and perform other tasks
+            > audio, video can be transferred because HTTP is extensible
+        > Stateless but not session-less
+            > no link between any requests
+            > cookies are used to have some info about the session
+
+    > HTTP and connections
+        > a connection is 
+        > continue from here
+            > https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
