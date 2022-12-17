@@ -4,7 +4,7 @@ IP address
     > nnn.nnn.nnn.nnn
         > nnn is from 0 to 255
         > i.e. => 206.124.213.111
-    > so if you want to send a api request you will have to specify the ip address of the server
+    > so if you want to send an api request you will have to specify the ip address of the server
 
     > versions
         > ipv4

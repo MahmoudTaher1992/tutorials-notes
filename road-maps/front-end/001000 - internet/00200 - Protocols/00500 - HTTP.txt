@@ -64,6 +64,30 @@ HTTP
             > cookies are used to have some info about the session
 
     > HTTP and connections
-        > a connection is 
-        > continue from here
-            > https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview
+        > a connection is maintained at the Transport Layer
+            > HTTP requires reliable connection so it doesn't care which transport protocol is used as long as it is reliable
+                > reliable means that the messaging can not be lost and the connection can be restored
+            > Most common protocols on the internet are
+                > TCP => reliable
+                > UDP => not reliable
+            > HTTP relies on TCP which is connection based
+    
+        > before a client can exchange a HTTP request with the server it must establish a TCP connection
+            > it is a round trip
+            > HTTP 1.0 opens a separate connection for each req/res pair => less efficient
+            > HTTP 2 multi messaging over the same connection
+
+    > What can be controlled by HTTP
+        > the extensible nature of HTTP allowed for more control and functionality over the time
+            > caching
+            > Relaxing the origin constraint
+            > authentication
+        > Caching
+            > can be controlled by HTTP
+            > the server can instruct the proxies and the clients about what to cache and for how long
+            > the client can instruct the proxies to ignore a cached document
+        > Relaxing the origin constraint
+            > Sometimes the browsers have constraints (i.e. CORS)
+            > you can overcome this problem by attaching some headers to the HTTP response
+        > authentication
+            > https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#what_can_be_controlled_by_http

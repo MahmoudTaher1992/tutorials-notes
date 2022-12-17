@@ -8,7 +8,7 @@ Data Journey
             > Green => Go
             > Yellow => Prepare for stop
             > Red => stop
-    > There are lots of devices to convert the data from one form to another
+    > There are lots of devices that convert the data from one form to another
     > A message journey from a keyboard to the Whatsapp of another phone
         > thermal energy from fingers to the screen => electrical energy
         > electrical pulses to the processor => another electrical pulses (request)

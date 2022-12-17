@@ -2,8 +2,8 @@ DNS
     > stands for Domain Name System
     > the phone book of the internet
         > keeps track of all host names and their linked ip address
-    > When you send a request the first thing is that it will pass a query to the dns server to get the ip address
-        > it will start looking it in the cache first and if not found it will be passed to the dns
+    > When you send a request the first thing happens is the client will pass a query to the dns server to get the ip address
+        > it will start looking it in the cache first and if nothing is found it will be passed to the dns
     > when you buy a domain name from GoDaddy for example
         > GoDaddy will register your hostname in the dns registry
         > when any request is sent from anywhere it will be returned with the registered ip address

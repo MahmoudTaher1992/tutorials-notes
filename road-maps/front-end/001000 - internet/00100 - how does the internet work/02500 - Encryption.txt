@@ -1,5 +1,5 @@
 Encryption
-    > The process of changing the data from an understandable for into another form that can not be understood by the hackers in the middle
+    > The process of changing the data from an understandable form into another form that can not be understood by the hackers in the middle
     > this transformation protects the data
     > to decrypt it you need to have the encryption keys
     > the keys will be only with the sender and the recipients
