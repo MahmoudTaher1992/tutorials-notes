@@ -90,4 +90,43 @@ HTTP
             > Sometimes the browsers have constraints (i.e. CORS)
             > you can overcome this problem by attaching some headers to the HTTP response
         > authentication
-            > https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#what_can_be_controlled_by_http
+            > authentication can be integrated in the BE app or it can be provided by an http proxies
+            > you can talk to the authentication proxies using headers in HTTP
+        > Sessions
+            > using the HTTP cookies allow you to link the http request to the state of the server
+            > in the same time the http is still stateless protocol
+            > useful for
+                > e-commerce shopping cart
+
+    > HTTP Flow
+        > Open a TCP connection
+            > used to send requests and receive responses
+            > the client may
+                > open a new connection
+                > use old one
+                > open several connections
+        > Send HTTP message
+        > Receive the response
+        > Close the connection or reuse it
+
+    > HTTP messages
+        > readability
+            > HTTP/1.1 is human readable
+            > HTTP/2 are embedded into binary structure (frames)
+                > allowing optimization such as compression for headers ans multiplexing
+
+    > HTTP multiplexing
+        > multiplexing allows your browser to fire off multiple requests at the same time and receive the requests at any order
+        > HTTP/1.1
+            > sync, sends a request and waits for the response and then sends the next req and so on
+            > if you have 100 requests it will take 30 secs to resolve them (.3 sec each)
+            > both client and server wait for the http message to be sent/received
+            > the problem is with the protocol that works sync
+            > remember that opening the TCP connection takes time as well
+            > work around
+                > to get around this the browsers open multiple connections with the server but it is also limited to 6 connections
+                > a good improvement but still it is not enough
+                > and it is also slowed by opening 6 TCP connections instead of 1
+
+                https://stackoverflow.com/questions/36517829/what-does-multiplexing-mean-in-http-2
+                https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#what_can_be_controlled_by_http
