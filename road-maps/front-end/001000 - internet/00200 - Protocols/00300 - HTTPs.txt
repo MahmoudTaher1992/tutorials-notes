@@ -1,0 +1,6 @@
+HTTPs
+    > Stands for Hypertext Transfer Protocol Secure
+    > is a secure version of the HTTP protocol that uses SSL/TSL protocol (presentation layer) for encryption and authentication
+    > uses 443 port instead of 80
+
+    https://www.ssl.com/faqs/what-is-https/

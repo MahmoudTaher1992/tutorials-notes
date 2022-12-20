@@ -113,20 +113,55 @@ HTTP
         > readability
             > HTTP/1.1 is human readable
             > HTTP/2 are embedded into binary structure (frames)
-                > allowing optimization such as compression for headers ans multiplexing
+                > allowing optimization such as compression for headers and multiplexing
+                    > HTTP multiplexing
+                        > multiplexing allows your browser to fire off multiple requests at the same time and receive the requests at any order
+                        > HTTP/1.1
+                            > sync, sends a request and waits for the response and then sends the next req and so on
+                            > if you have 100 requests it will take 30 secs to resolve them (.3 sec each)
+                            > both client and server wait for the http message to be sent/received
+                            > the problem is with the protocol that works sync
+                            > remember that opening the TCP connection takes time as well
+                            > work around
+                                > to get around this the browsers open multiple connections with the server but it is also limited to 6 connections
+                                > a good improvement but still it is not enough
+                                > and it is also slowed by opening 6 TCP connections instead of 1
+                                
+                                > another work around is the HTTP/1.1 - pipelining
+                                    > you can send multiple requests but the responses will be in order so it will wait for the responses queue to be resolved
+                                    > If one request takes long time the next response will wait for it to return the responses in order
+                        > HTTP/2
+                            > allows you to send multiple requests on the same connection
+                            > This has a very great performance optimization as it doesn't wait for connections to be freed
+                            > all the requests are sent in parallel by the browser and the server respond to each one
+                            > A heavy request will not block the others
+                            > The time for 100 requests to be resolved will be .3 sec instead of 30s
+    > Types
+        > Requests
+            > Consists of
+                > HTTP method
+                    > GET
+                    > POST
+                    > OPTIONS
+                    > POST
+                > Resource path
+                    > path of the resource
+                    > without
+                        > protocol
+                        > host/domain-name
+                        > port
+                > The protocol + it's version
+                > optional headers
+                > The body from some HTTP methods (i.e. POST)
+        > Responses
+            > Consists of
+                > The protocol + it's version
+                > Status code
+                > Status Message
+                > Headers
+                > body (optional)
 
-    > HTTP multiplexing
-        > multiplexing allows your browser to fire off multiple requests at the same time and receive the requests at any order
-        > HTTP/1.1
-            > sync, sends a request and waits for the response and then sends the next req and so on
-            > if you have 100 requests it will take 30 secs to resolve them (.3 sec each)
-            > both client and server wait for the http message to be sent/received
-            > the problem is with the protocol that works sync
-            > remember that opening the TCP connection takes time as well
-            > work around
-                > to get around this the browsers open multiple connections with the server but it is also limited to 6 connections
-                > a good improvement but still it is not enough
-                > and it is also slowed by opening 6 TCP connections instead of 1
-
-                https://stackoverflow.com/questions/36517829/what-does-multiplexing-mean-in-http-2
-                https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview#what_can_be_controlled_by_http
+    > browser HTTP api
+        > XMLHttpRequest API => old
+        > Fetch API => modern
+        > server-sent events
