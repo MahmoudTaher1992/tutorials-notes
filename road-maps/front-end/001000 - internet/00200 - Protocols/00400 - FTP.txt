@@ -1,0 +1,22 @@
+FTP, SFTP, TFTP
+    > protocols used for transferring files over the internet
+
+FTP
+    > stands for File Transfer Protocol
+    > you can use the browser as a FTP client or a specific app (i.e. FileZella)
+    > Sometimes you will require a username or password
+    > not a secure protocol because the data is not encrypted while transmission
+    > should be used on a limited basis
+    > uses TCP => the connection is trustable
+
+SFTP
+    > stands for Secure File Transfer Protocol
+    > Adds a layer of security to FTP
+    > Data is encrypted using a secure shell
+    > uses port 22
+
+TFTP
+    > stands for Trivial File Transfer Protocol
+    > used to transfer files over local network
+    > uses UDP which is a connection less protocol (not trustable)
+    > doesn't provide security

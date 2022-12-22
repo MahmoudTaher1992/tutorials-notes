@@ -37,11 +37,11 @@ Internet Protocol
             > HTTPs
             > FTP
             > DNS
+            > DHCP
             > POP
             > SMTP
             > SSH
             > SOAP
-            > DHCP
             > NFS
             > Telnet
 

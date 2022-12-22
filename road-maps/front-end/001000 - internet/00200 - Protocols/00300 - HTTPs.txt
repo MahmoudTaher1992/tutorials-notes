@@ -8,20 +8,19 @@ HTTPs
         > authentication
         > integrity
 
-    > Encryption
         > HTTP is designed to be clear/understandable text
         > so it is vulnerable to middle attacks
         > this is done through SSL/TSL encryption
             > Handshake
                 > First the client establish a TCP connection with the server
-            > Certificate check
+            > Certificate check (authentication)
                 > the server sends ssl/tsl certificate
                 > the browser validates the certificate and gets the public key from it
             > Session key exchange
                 > the client encrypts a session key (Symmetric) with the public key and sends it to the server
                 > the server then decrypts the session key with the private key
-            > Transmission starts
+            > Transmission starts (Encryption)
                 > the data sent between the server and client will be encrypted/decrypted with the session key (Symmetric)
+        > each document includes a digital signature that a web browser can check that no body altered the message (integrity)
 
-
-    https://www.ssl.com/faqs/what-is-https/
+    > HTTPS is a safer protocol to use while transmitting data
