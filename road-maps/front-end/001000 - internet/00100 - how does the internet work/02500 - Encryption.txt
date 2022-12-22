@@ -3,3 +3,20 @@ Encryption
     > this transformation protects the data
     > to decrypt it you need to have the encryption keys
     > the keys will be only with the sender and the recipients
+
+    > Types of encryption
+        > Symmetric
+            > encryption is done with a key and decryption is done with the same key
+            > anyone has the key can decrypt the message
+            > very fast to use
+        > Asymmetric
+            > this includes 2 keys (public and private key)
+            > messages can be encrypted only with the public key
+            > messages can only be decrypted with the private key
+            > much more expensive than Symmetric (but much more safer)
+            > public key can be sent to anyone to send you an encrypted key
+            > private key is the only key that can decrypt the message
+                > no body should take the private key
+
+            > RSA algorithms
+                > an algo that is used to do the Asymmetric encryption

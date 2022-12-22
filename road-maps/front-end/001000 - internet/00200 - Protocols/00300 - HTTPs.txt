@@ -2,5 +2,26 @@ HTTPs
     > Stands for Hypertext Transfer Protocol Secure
     > is a secure version of the HTTP protocol that uses SSL/TSL protocol (presentation layer) for encryption and authentication
     > uses 443 port instead of 80
+    > makes it possible for internet users to safely transmit sensitive data over the internet as it will be encrypted
+    > HTTPS adds to HTTP the following
+        > Encryption
+        > authentication
+        > integrity
+
+    > Encryption
+        > HTTP is designed to be clear/understandable text
+        > so it is vulnerable to middle attacks
+        > this is done through SSL/TSL encryption
+            > Handshake
+                > First the client establish a TCP connection with the server
+            > Certificate check
+                > the server sends ssl/tsl certificate
+                > the browser validates the certificate and gets the public key from it
+            > Session key exchange
+                > the client encrypts a session key (Symmetric) with the public key and sends it to the server
+                > the server then decrypts the session key with the private key
+            > Transmission starts
+                > the data sent between the server and client will be encrypted/decrypted with the session key (Symmetric)
+
 
     https://www.ssl.com/faqs/what-is-https/
