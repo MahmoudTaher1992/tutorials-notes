@@ -38,12 +38,12 @@ Internet Protocol
             > FTP
             > DNS
             > DHCP
+            > Telnet
+            > SSH
             > POP
             > SMTP
-            > SSH
             > SOAP
             > NFS
-            > Telnet
 
     > Presentation layer (layer 6)
         > Encryption/Decryption happens in this layer

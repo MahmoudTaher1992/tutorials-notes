@@ -1,0 +1,25 @@
+DHCP
+    > stands for Dynamic Host Configuration Protocol
+    > is a service that runs on a server and can also run on a router
+    > every device on the internet must have an ip address
+    > devices can have ip address 
+        > static/manual ip address
+            > user is doing this step in the internet configuration options
+            > a lot of work as you have to make sure that the ip-address is unique
+        > dynamic ip address
+            > easier by delegating this task to a computer called DHCP server
+            > it assigns an auto ip address to the computer alongside with other configs such as
+                > subnet mask
+                > default gateway
+                > DNS server
+    > DHCP assigns ip addresses from its scope (start and end ip addresses)
+    > it also assigns a lease (expiry date) for each ip address
+        > helps make sure that the DHCP server doesn't run out of ip-addresses
+        > after the lease is expired the device will send a request to the DHCP to renew the lease
+        > if it didn't send the request the DHCP server will return the ip address to the pool
+    > address reservation
+        > ensures that specific device will always be given the same ip address
+        > i.e.
+            > network printers
+            > routers
+            > servers

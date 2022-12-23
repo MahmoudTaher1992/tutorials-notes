@@ -7,3 +7,8 @@ DNS
     > when you buy a domain name from GoDaddy for example
         > GoDaddy will register your hostname in the dns registry
         > when any request is sent from anywhere it will be returned with the registered ip address
+
+    > all devices on the internet communicate using their ip addresses
+    > you don't have to remember the ip addresses - you can just enter the domain names instead
+    > DNS service does that job of translating domain names into ip addresses
+    > the DNS request is called queries

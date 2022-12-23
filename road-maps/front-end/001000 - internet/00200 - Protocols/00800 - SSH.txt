@@ -1,0 +1,10 @@
+SSH
+    > stands for secure shell
+    > is a communication protocol (application layer)
+    > does nearly everything on the remote computer
+    > traffic is encrypted
+    > used mostly in the terminal/command line
+
+
+
+    https://www.youtube.com/watch?v=hQWRp-FdTpc

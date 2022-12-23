@@ -1,0 +1,21 @@
+Telnet
+    > stands for teletype network
+    > is a terminal emulation program that is used to remote access linux servers
+    > is a command line tool
+        > very fast (no graphics)
+    > you can use the commands on the telnet to control the server
+        > CRUDE files and folders 
+        > start/stop services
+    > other usage
+        > manage and config other network devices
+            > routers
+            > switches
+        > test ports are open on servers
+
+    > no encryption
+        > vulnerable to attacks
+        > should not be used over the internet
+        > not a choice for controlling old servers
+
+    > a good alternative is SSH
+        > is same as telnet but secure
