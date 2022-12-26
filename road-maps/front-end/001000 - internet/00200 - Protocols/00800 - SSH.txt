@@ -4,7 +4,26 @@ SSH
     > does nearly everything on the remote computer
     > traffic is encrypted
     > used mostly in the terminal/command line
+    > similar to telnet (but telnet is not secure)
 
+    > Client/Server communication
+        > SSH is the client
+        > You can not access any machine on the internet even if you have all the credentials (you must install and run SSH-daemon on the target machine)
+        > linux come with sshd installed by default
 
+    > Authentication methods (username + host ip address + ...)
+        > password
+        > private/public key pair
 
-    https://www.youtube.com/watch?v=hQWRp-FdTpc
+    > Generating keys
+        > use ssh-keygen
+        > create
+            > private key under "~/.ssh/id_rsa"
+            > public key under "~/.ssh/id_rsa.pub"
+            > public key goes to the server in the file "~/.ssh/authorized_keys"
+
+    > Windows
+        > ssh is a linux based command and it can not be used with windows
+        > Putty is used with older versions of windows
+        > Putty-gen is used to create the keys on windows instead of ssh-keygen
+        > you can also use git-bash on windows

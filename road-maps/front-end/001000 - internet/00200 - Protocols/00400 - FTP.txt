@@ -3,7 +3,7 @@ FTP, SFTP, TFTP
 
 FTP
     > stands for File Transfer Protocol
-    > you can use the browser as a FTP client or a specific app (i.e. FileZella)
+    > you can use the browser as a FTP client or a specific app (i.e. FileZella, WinSCP)
     > Sometimes you will require a username or password
     > not a secure protocol because the data is not encrypted while transmission
     > should be used on a limited basis

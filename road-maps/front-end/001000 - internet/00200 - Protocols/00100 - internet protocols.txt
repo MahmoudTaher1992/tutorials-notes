@@ -41,7 +41,9 @@ Internet Protocol
             > Telnet
             > SSH
             > POP
+                > protocol for exchanging mails
             > SMTP
+                > protocol for exchanging mails
             > SOAP
             > NFS
 
