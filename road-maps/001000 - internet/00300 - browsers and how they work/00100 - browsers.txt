@@ -1,0 +1,68 @@
+Web browsers
+    > most widely used app
+    > it takes the url from you > fetches the page from the server > renders it on the screen
+    > there are 5 major browsers (desktop)
+        > chrome
+        > firefox
+        > safari
+        > opera
+        > internet explorer
+    > There are browsers for
+        > desktops and lab-tops
+            > mac
+            > windows
+            > linux
+        > mobile phones
+            > android
+            > apple
+        > all of which does the same thing
+
+    > Main functionality
+        > present the web resource you choose by requesting it from the server and presenting it on the browser
+        > the resource is usually
+            > image
+            > HTML page
+            > PDF
+            > ... etc
+        > The location is specified by the user through the URI
+
+    > In any browser you will find 
+        > Address bar (for entering URI)
+        > Backward/Forward buttons
+        > Refresh/Stop refresh
+        > Bookmarking
+        > Home button
+
+    > Browsers main components
+        > The user interface
+            > toolbar
+            > bookmarking menu
+            > tabs
+            > and all you see from the browser except the window where the web page will be rendered
+
+        > The browser engine
+            > organizes actions between UI and rendering engine
+
+        > The rendering engine
+            > it is responsible for rendering HTML pages alongside with its css
+            > some browsers runs new rendering engine for each tab
+
+        > Networking
+            > for network calls such as HTTP requests
+
+        > UI backend
+            > responsible for drawing widgets such as
+                > comboboxes
+                > windows
+
+        > Javascript interpreter
+            > parse and execute js code
+
+        > Data storage
+            > a persistence layer
+            > saves the data locally
+                > cookies
+                > localStorage
+                > IndexedDB
+                > WebSQL
+                > FileSystem

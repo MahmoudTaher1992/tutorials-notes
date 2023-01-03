@@ -26,4 +26,4 @@ SSH
         > ssh is a linux based command and it can not be used with windows
         > Putty is used with older versions of windows
         > Putty-gen is used to create the keys on windows instead of ssh-keygen
-        > you can also use git-bash on windows
+        > you can also use git-bash on windowsx

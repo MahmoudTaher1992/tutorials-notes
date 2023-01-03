@@ -1,0 +1,20 @@
+Rendering Engine
+    > displays the quested content on the browser's screen
+    > can display
+        > HTML
+        > XML
+        > images
+    > can also use plugins to display
+        > PDFs
+
+    > Different browsers use different rendering engines
+        > chrome & opera => blink
+        > Internet Explorer => Trident
+        > Firefox => Gecko
+        > Safari => WebKit
+
+    > The main flow
+        > The rendering engine will get the content of the requested document from the networking layer 
+
+
+    > https://web.dev/howbrowserswork/#the-main-flow
