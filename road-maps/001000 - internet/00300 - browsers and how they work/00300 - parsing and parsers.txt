@@ -1,0 +1,30 @@
+Parsing and parsers
+    > Parsing
+        > is a significant process within the rendering engine
+        > Parsing a document means translating it to a structure the code can use
+        > the result of parsing is usually a tree of nodes that represent the structure of the document
+
+        > every format you can parse must have a deterministic grammar consisting of vocabulary and syntax rules
+            > Human languages are not such formats and that's why it can not be parsed using normal parsers
+        
+        > Parsing can be separated into 2 sub processes (Lexical analysis and Syntax analysis)
+            > Lexical analysis
+                > the process of breaking the input into tokens
+                    > Token => is the language vocabulary (like words in human languages)
+            > Syntax analysis
+                > is applying the language syntax rules
+
+        > Parsers usually divide the work between two components
+            > Lexer (Tokenizer)
+                > responsible for breaking the input into valid tokens
+            > Parser
+                > responsible for constructing the parse tree by analyzing the document structure according to the language syntax rules
+
+        > Translation
+            > In many cases the parse tree is not the final product
+            > the parsed document is translated into another format before being used
+            > Compilers
+                > the compilers first parses the code into a document
+                > then it translates it into machine code 
+
+    > https://web.dev/howbrowserswork/#the-main-flow

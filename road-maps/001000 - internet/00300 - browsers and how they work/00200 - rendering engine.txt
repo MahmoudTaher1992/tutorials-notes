@@ -14,7 +14,21 @@ Rendering Engine
         > Safari => WebKit
 
     > The main flow
-        > The rendering engine will get the content of the requested document from the networking layer 
+        > The rendering engine will get the content of the requested document from the networking layer
+        > The flow
+            > 1. Content tree (DOM tree)
+                > the engine constructs the content tree (DOM nodes in a tree)
+            > 2. Render tree 
+                > the engine will parse the style data in the CSS and the style in elements
+                > Styling info and visual instructions in the HTML will be used to construct the render tree
+                > contains rectangles with visual attributes such as the color and dimensions 
+            > 3. Layout process
+                > process of giving each node the exact coordinates where it should appear on the screen
+            > 4. Painting
+                > Each node will be painted using the UI backend layer
 
+            > it is a gradual process
+                > the rendering engine will try to display contents to the user as soon as possible
+                > some of the contents will be parsed and displayed while the process continues with the rest of the contents
 
-    > https://web.dev/howbrowserswork/#the-main-flow
+            > each rendering engine will have it's own flow of rendering but they are somehow similar

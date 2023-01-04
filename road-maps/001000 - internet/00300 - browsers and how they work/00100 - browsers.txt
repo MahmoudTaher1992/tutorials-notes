@@ -44,7 +44,7 @@ Web browsers
             > organizes actions between UI and rendering engine
 
         > The rendering engine
-            > it is responsible for rendering HTML pages alongside with its css
+            > it is responsible for rendering HTML pages and images alongside with its css
             > some browsers runs new rendering engine for each tab
 
         > Networking
