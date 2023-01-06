@@ -1,0 +1,30 @@
+components
+    > Watchman
+        > a tool developed by facebook
+        > watches files > if changed > triggers actions
+        > react native needs this tool to be installed because it uses it for hot reload
+
+    > JDK
+        > stands for java development kit
+        > software development environment that offers a collection of tools and libraries necessary for developing java apps
+        > tools are needed to convert source code into a format JRE (Java runtime environment) can execute
+        > tools examples
+            > JRE - Java runtime environment
+            > JAVA - interpreter
+            > javac - compiler
+            > jar - archiver
+            > javadoc - document generator
+            > ... etc
+
+    > Android SDK
+        > SDK stands for Software Development Kit
+        > a set of development tools used to develop android apps
+        > includes
+            > required libraries
+            > Debugger
+            > An emulator
+            > Documentation for APIs
+            > Sample source code
+            > tutorials
+        > SDK can be used using command prompt but you can use your favorite IDE
+        > Android apps are written with Java so you have to install JDK 

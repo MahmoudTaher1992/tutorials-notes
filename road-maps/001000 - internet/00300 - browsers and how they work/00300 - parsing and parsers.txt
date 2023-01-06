@@ -27,4 +27,26 @@ Parsing and parsers
                 > the compilers first parses the code into a document
                 > then it translates it into machine code 
 
-    > https://web.dev/howbrowserswork/#the-main-flow
+        > Formal definition for vocabulary and syntax
+            > vocabulary
+                > defined using regex
+                > i.e.
+                    > INTEGER: 0|[1-9][0-9]*
+                    > PLUS: +
+                    > MINUS: -
+            > syntax
+                > i.e.
+                    > expression :=  term  operation  term
+                    > operation :=  PLUS | MINUS
+                    > term := INTEGER | expression
+
+        > Types of parsers
+            > Top-down parsers
+            > Bottom-up parsers
+
+        > Generating parsers automatically
+            > There are tools that can create parsers automatically
+            > you feed them with vocabulary and syntax and they generate a working parser
+            > i.e
+                > Flex
+                > Bison

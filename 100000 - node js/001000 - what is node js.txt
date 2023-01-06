@@ -1,5 +1,5 @@
 What is NodeJs
-    > Open source, cross-platform runtime environment
+    > Open source, cross-platform javascript runtime environment
     > Build on top of chrome v8 engine
     > lets you run js apps outside browsers
     > Highly scalable server-side apps
