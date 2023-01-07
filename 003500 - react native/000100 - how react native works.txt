@@ -28,3 +28,6 @@ components
             > tutorials
         > SDK can be used using command prompt but you can use your favorite IDE
         > Android apps are written with Java so you have to install JDK 
+
+    > Android emulator
+        > simulates Android devices on your computer

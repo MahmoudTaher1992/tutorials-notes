@@ -1,0 +1,23 @@
+head
+    > an HTML element that is a container of metadata (data about data)
+    > placed between html and body
+    > is data of the document
+    > metadata is not displayed
+    > define the document title, character set, styles, scripts, ... etc
+
+    > character set
+        > codes that represent characters
+        > for the data to be transmitted over the internet it needs to be encoded
+            > encoding means changing the data from an un-transmittable format into a transmittable operation
+        > there are multiple character sets that were evolved over time
+            > i.e.
+                > ASCII
+                > ANSI
+                > ISO-8859-1 
+                > UTF-8
+        > UTF-8 is the default character set for html5
+        > You have to tell the browser which character set to use while decoding the data
+            > by supplying it through meta element in head
+                > <meta charset='utf-8' />
+
+    > elzero ep08
