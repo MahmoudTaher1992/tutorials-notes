@@ -1,0 +1,6 @@
+syntax
+    > spaces more that one is ignored in the html
+    > tag's attribute value can be between
+        > single quote
+        > double quote
+        > no quotes if the value is one word only

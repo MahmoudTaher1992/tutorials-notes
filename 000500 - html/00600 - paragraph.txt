@@ -1,0 +1,4 @@
+paragraph
+    > is a block element
+        > takes new line 
+    > it is an element that holds text inside it

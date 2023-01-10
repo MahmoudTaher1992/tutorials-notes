@@ -31,3 +31,8 @@ components
 
     > Android emulator
         > simulates Android devices on your computer
+        > AVD - Android Virtual device
+            > is a configuration that defined the characteristics of the android phone to be simulated on the emulator
+
+    > react native needs environment variables in order to work
+        > 

@@ -1,0 +1,20 @@
+elements and attributes
+    > html is made up of elements (with specific tags)
+    > attributes
+        > data the customizes an element
+        > types
+            > global attributes
+                > applies to all elements
+                > i.e.
+                    > id
+                    > class
+                    > hidden 
+                    > ... etc
+
+            > element attributes
+                > specific
+                > i.e.
+                    > <img src="" alt="" />
+                    > <a href="" />
+
+    > continue from ep11

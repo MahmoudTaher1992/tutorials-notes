@@ -1,0 +1,6 @@
+heading
+    > from h1 to h6
+    > tags that represent headers with 6 levels 
+    > 'user agent stylesheet'
+        > default styling supplied by the browser
+    > all headings is styled by the browser by default through the 'user agent stylesheet'
