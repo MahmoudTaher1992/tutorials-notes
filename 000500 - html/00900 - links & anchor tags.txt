@@ -1,0 +1,15 @@
+Links & Anchor tags
+    > <a href="" target="" title="">Link Text</a>
+    >  stands for anchor 
+    > href
+        > stands for hypertext reference
+        > #osama
+            > scrolls to element with id = "osama"
+        > mailto:a@gmail.com
+            > opens an email page to send an email
+    > inline element (not block element) 
+    > target
+        > blank
+            > opens the website in a new tab
+    > title
+        > sets the value of the hover label

@@ -1,0 +1,11 @@
+html entities
+    > Some characters are reserved in HTML.
+    > If you use the less than (<) or greater than (>) signs in your text, the browser might mix them with tags.
+    > Character entities are used to display reserved characters in HTML.
+
+    > i.e.
+        > &lt; => '<'
+        > &gt; => '>'
+        > &pound; => '£'
+        > &nbsp; => non breaking space
+        > there are a list of html entities that can be used

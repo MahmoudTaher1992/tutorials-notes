@@ -1,0 +1,10 @@
+span
+    > is an inline container
+    > used to style part of the text without using `div` which will create a new block element
+
+hr
+    > tag for creating a horizontal rule
+    > block element
+
+br
+    > inserts a single line break

@@ -1,0 +1,13 @@
+Formatting elements
+    > there are some tags that are used to format text without the need of css
+        > b => bold
+        > strong => bold => important text
+        > i => italic
+        > em => emphasized
+        > mark => marked text or highlighted text
+        > u => underline
+        > small => smaller text
+        > del => deleted text
+        > ins => inserted text
+        > sub => subscript
+        > sup => superscript

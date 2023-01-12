@@ -1,0 +1,5 @@
+div
+    > defines a division or a section in an HTML document
+    > used as a container for HTML elements
+    > anything can be inside the div element
+    > an inline element

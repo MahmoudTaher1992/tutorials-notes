@@ -1,0 +1,60 @@
+tables
+    > i.e.
+        <table style="width:100%">
+            <caption>Table Header</caption>
+            <colgroup>
+                <col span="2" style="background-color:red">
+                <col style="background-color:yellow">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                    <td>30</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Footer</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </tfoot>
+        </table>
+    
+    > table
+        > defines a table
+    > th
+        > defines a header cell
+    > tr
+        > defines a row
+    > tb
+        > defines a cell
+    > caption
+        > defines a table caption
+    > colgroup
+        > Specifies a group of one or more columns in a table for formatting
+    > col
+        > Specifies column properties for each column within a <colgroup> element
+    > thead
+        > Groups the header content in a table
+    > tbody
+        > Groups the body content in a table
+    > tfoot
+        > Groups the footer content in a table
