@@ -1,0 +1,70 @@
+input types
+    > text
+        > defines a single-line text input field
+
+    > password
+        > defines a password field
+
+    > submit
+        > defines a button for submitting form data to a form-handler
+        
+    > reset
+        > defines a reset button that will reset all form values to their default values
+
+    > radio
+        > defines a radio button
+        > Radio buttons let a user select ONLY ONE of a limited number of choices
+
+    > checkbox
+        > defines a checkbox
+        > Checkboxes let a user select ZERO or MORE options of a limited number of choices
+
+    > button
+        > defines a button
+
+    > color
+        > used for input fields that should contain a color
+
+    > date
+        > used for input fields that should contain a date
+
+    > datetime-local
+        > specifies a date and time input field, with no time zone
+
+    > email
+        > used for input fields that should contain an e-mail address
+
+    > image
+        > defines an image as a submit button
+
+    > file
+        > defines a file-select field and a "Browse" button for file uploads
+
+    > hidden
+        > defines a hidden input field (not visible to a user)
+
+    > month
+        > allows the user to select a month and year
+
+    > number
+        > defines a numeric input field
+
+    > range
+        > defines a control for entering a number whose exact value is not important (like a slider control)
+        > Default range is 0 to 100, However, you can set restrictions on what numbers are accepted with the min, max, and step attributes
+
+    > search
+        > used for search fields
+        > behaves like a regular text field
+
+    > tel
+        > used for input fields that should contain a telephone number
+
+    > time
+        > allows the user to select a time (no time zone)
+
+    > url
+        > used for input fields that should contain a URL address
+
+    > week
+        > allows the user to select a week and year

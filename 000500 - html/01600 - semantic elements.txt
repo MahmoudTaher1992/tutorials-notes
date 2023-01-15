@@ -1,2 +1,44 @@
 semantic elements
-    > https://www.w3schools.com/html/html5_semantic_elements.asp
+    > elements with a meaningful name
+    > i.e.
+        <article>
+        <aside>
+        <details>
+        <figcaption>
+        <figure>
+        <footer>
+        <header>
+        <main>
+        <mark>
+        <nav>
+        <section>
+        <summary>
+        <time>
+
+    > non-semantic elements
+        > elements with no meaning
+        > i.e.
+            > div
+            > span
+
+    > section
+        > A section is a thematic grouping of content, typically with a heading.
+
+    > article
+        > independent, self-contained content.
+        > An article should make sense on its own, and it should be possible to distribute it independently from the rest of the web site.
+
+    > section can be nested inside articles and vise versa
+
+    > header
+        > represents a container for introductory content or a set of navigational links
+
+    > footer
+        > defines a footer for a document or section
+
+    > nav
+        > defines a set of navigation links
+
+    > aside
+        > element defines some content aside from the content it is placed in (like a sidebar)
+        > content should be indirectly related to the surrounding content

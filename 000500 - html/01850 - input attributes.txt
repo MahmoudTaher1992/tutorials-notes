@@ -1,0 +1,64 @@
+input attributes
+    > value
+        > specifies an initial value for an input field
+
+    > readonly
+        > specifies that an input field is read-only
+        > A read-only input field cannot be modified (however, a user can tab to it, highlight it, and copy the text from it)
+        > The value of a read-only input field will be sent when submitting the form!
+
+    > disabled
+        > specifies that an input field should be disabled
+        > A disabled input field is unusable and un-clickable
+        > The value of a disabled input field will not be sent when submitting the form!
+
+    > size
+        > specifies the visible width, in characters, of an input field.
+
+    > maxlength
+        > specifies the maximum number of characters allowed in an input field
+
+    > min and max
+        > The input min and max attributes specify the minimum and maximum values for an input field
+        > work with the following input types: number, range, date, datetime-local, month, time and week
+
+    > multiple
+        > specifies that the user is allowed to enter more than one value in an input field
+        > works with the following input types: email, and file
+
+    > pattern
+        > specifies a regular expression that the input field's value is checked against, when the form is submitted
+        > works with the following input types: text, date, search, url, tel, email, and password
+
+    > placeholder
+        > specifies a short hint that describes the expected value of an input field (a sample value or a short description of the expected format)
+
+    > required
+        > specifies that an input field must be filled out before submitting the form
+
+    > step
+        > specifies the legal number intervals for an input field
+        > Example: if step="3", legal numbers could be -3, 0, 3, 6, etc
+
+    > autofocus
+        > specifies that an input field should automatically get focus when the page loads
+
+    > height and width
+        > specify the height and width of an <input type="image"> element
+
+    > list
+        > refers to a <datalist> element that contains pre-defined options for an <input> element
+        > i.e.
+            <form>
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+            </form>
+
+    > autocomplete
+        > specifies whether a form or an input field should have autocomplete on or off

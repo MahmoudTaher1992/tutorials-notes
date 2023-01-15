@@ -1,0 +1,21 @@
+audio
+    > element is used to play an audio file on a web page.
+    
+    <audio controls>
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    > The text between the <audio> and </audio> tags will only be displayed in browsers that do not support the <audio> element
+
+video
+    > element is used to show a video on a web page
+
+    <video width="320" height="240" controls>
+        <source src="movie.mp4" type="video/mp4">
+        <source src="movie.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    > The text between the <video> and </video> tags will only be displayed in browsers that do not support the <video> element

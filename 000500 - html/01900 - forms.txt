@@ -1,0 +1,15 @@
+Forms
+    > used to collect user input
+    > is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons
+
+    > input
+        > is the most used form element
+        > can be displayed in many ways, depending on the type attribute
+
+    > label
+        > defines a label for many form elements
+        > useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.
+        > The for attribute of the <label> tag should be equal to the id attribute of the <input> element to bind them together
+
+    > submit
+        > defines a button for submitting the form data to a form-handler
