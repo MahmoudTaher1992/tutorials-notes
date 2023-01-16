@@ -1,0 +1,5 @@
+Select
+    > used to create a drop-down list
+    > name attribute is needed to reference the form data after the form is submitted
+    > The <option> tags inside the <select> element define the available options in the drop-down list
+    > options can be grouped into groups
