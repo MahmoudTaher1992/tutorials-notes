@@ -1,0 +1,36 @@
+Combinator selectors
+    > Descendant Selector
+        > i.e.
+            div p {
+                background-color: yellow;
+            }
+        > selects all p elements inside any div
+        > p should be a Descendant to the div (no matter which level => grand grand child is accepted)
+        > i.e.
+            <div>
+                <p>This will be selected</p>
+                <section>
+                    <article>
+                        <p>This will be selected</p>
+                    </article>
+                </section>
+            <div>
+
+    > Child Selector
+        > i.e.
+            div > p {
+                background-color: yellow;
+            }
+        > selects all elements that are the children of a specified element
+        > p should be a child of div (not a descendant)
+        > i.e.
+            <div>
+                <p>This will be selected</p>
+                <section>
+                    <article>
+                        <p>This will NOT be selected</p>
+                    </article>
+                </section>
+            <div>
+
+    > https://www.w3schools.com/css/css_combinators.asp

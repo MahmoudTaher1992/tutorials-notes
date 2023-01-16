@@ -1,0 +1,16 @@
+syntax
+    > i.e.
+        selector {
+            property: value;
+            property: value;
+        }
+
+    > selector
+        > points to the element/s to be styled
+    
+    > declaration
+        > is the "property: value;" line
+
+    > declaration block
+        > contains one or more declarations separated by semicolons
+        > surrounded by curly braces
