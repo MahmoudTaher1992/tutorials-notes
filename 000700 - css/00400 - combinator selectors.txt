@@ -33,4 +33,29 @@ Combinator selectors
                 </section>
             <div>
 
-    > https://www.w3schools.com/css/css_combinators.asp
+    > Adjacent Sibling Selector (+)
+        > i.e.
+            div + p {
+                background-color: yellow;
+            }
+        > select all <p> that are directly after <div>
+        > "adjacent" means "immediately following"
+
+    > General Sibling Selector (~)
+        > i.e.
+            div ~ p {
+                background-color: yellow;
+            }
+        > selects all <p> siblings after the <div>
+        > i.e.
+            <div>
+                <div>aaa</div>
+                <p>This will be selected</p>
+                <section>
+                    <article>
+                        <p>This will NOT be selected</p>
+                        <p>This will NOT be selected</p>
+                    </article>
+                </section>
+                <p>This will be selected</p>
+            <div>

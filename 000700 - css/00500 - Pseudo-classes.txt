@@ -1,0 +1,74 @@
+Pseudo-classes
+    > A pseudo-class is used to define a special state of an element
+    > syntax
+        selector:pseudo-class {
+            property: value;
+        }
+    > i.e.
+        a:hover {
+            color: #ff0000;
+        }
+        > when you hover over the link the color will change to red
+
+    >i.e.
+        div:hover p {
+            display: block;
+        }
+        > targets & styles all the <p> descendants of <div> WHEN div is hovered
+
+    > first-child
+        > i.e.
+            p:first-child {
+                color: blue;
+            }
+        > matches the p when it is the first child of any element
+
+        > i.e.
+            p i:first-child {
+                color: blue;
+            }
+        > selects all <i> elements (that are the first child of their ancestor) inside <p>
+
+    > classes
+        > active
+            > an element becomes active when you click on it
+        > checked
+            > matches every checked <input> element (only for radio buttons and checkboxes) and <option> element
+        > disabled
+            > matches every disabled element
+        > empty
+            > selects every element that has no children
+        > enabled
+            > matches every enabled element
+        > first-child
+            > selects the element if it is the first child
+        > first-of-type
+            > matches every element that is the first child, of a particular type, of its parent
+        > focus
+            > used to select the element that has focus
+        > hover
+            > used to select the element that is hovered
+        > in-range
+            > selects the inputs that its value is in its range
+        > out-of-range
+            > selects the inputs that its value is out of its range
+        > invalid
+            > selects inputs that are invalid
+        > lang(language)
+            > select elements with specific lang
+        > last-child
+            > selects the element if it is the last child
+        > last-of-type
+            > matches every element that is the last child, of a particular type, of its parent
+        > link
+            > selects all unvisited links
+        > visited
+            > selects all visited links
+        > not(selector)
+            > matches every element that is NOT the specified element/selector
+        > selector:nth-child(n)
+            > matches every element that is the nth child of its parent
+        > selector:nth-last-child(n)
+            > matches every element that is the nth child, regardless of type, of its parent, counting from the last child
+
+        >https://www.w3schools.com/css/css_pseudo_classes.asp
