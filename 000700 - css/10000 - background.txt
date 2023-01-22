@@ -1,0 +1,11 @@
+background
+    > background-color
+        > specifies the background color of an element
+    > background-image
+        > specifies an image to use as the background of an element
+    > background-repeat
+        > repeats an image both horizontally and vertically or no-repeat
+    > background-position
+        > specifies the position of an element
+    > background-attachment 
+        > specifies whether the background image should scroll or be fixed

@@ -70,5 +70,18 @@ Pseudo-classes
             > matches every element that is the nth child of its parent
         > selector:nth-last-child(n)
             > matches every element that is the nth child, regardless of type, of its parent, counting from the last child
-
-        >https://www.w3schools.com/css/css_pseudo_classes.asp
+        > selector:nth-last-of-type(n)
+            > selector matches every element that is the nth child, of a particular type, of its parent, counting from the last child
+        > selector:nth-of-type(n)
+            > selector matches every element that is the nth child, of a particular type, of its parent, counting from the first child
+        > only-of-type
+        > only-child
+        > optional
+        > out-of-range
+        > read-only
+        > read-write
+        > required
+        > root
+        > target
+        > valid
+        > visited

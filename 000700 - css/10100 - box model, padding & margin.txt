@@ -1,0 +1,31 @@
+Box model
+    > a box that wraps around every HTML element
+    > it consists of 
+        > margin
+            > space goes around the border
+        > border
+        > padding
+            > space around the content
+        > content
+            > where text and image appear
+    > Width and Height of an Element
+        > the normal width and height is given to the content-box
+        > you can change that to the border box by setting the following
+            > box-sizing: border-box;
+
+padding
+    > padding properties are used to generate space around an element's content, inside of any defined borders
+    > Individual Sides
+        > padding-top
+        > padding-right
+        > padding-bottom
+        > padding-left
+    > short-hand property
+        > padding: 0 0 0 0;
+        > padding: 0 0;
+        > padding: 0;
+
+margin
+    > sets the dimensions of the margin box
+    > auto value
+        > centers the element in its parent (horizontally only not vertically)

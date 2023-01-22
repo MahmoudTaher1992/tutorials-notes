@@ -1,0 +1,19 @@
+Attribute selector
+    > i.e.
+        a[target] {
+            background-color: yellow;
+        }
+
+        > selects all a elements with attribute "target"
+    > [attribute="value"]
+        > selects all elements with attribute = "value"
+    > [attribute~="value"]
+        > selects all elements with attribute containing the FULL word "value"
+    > [attribute|="value"]
+        > selects all elements with attribute starting with "value" like ("value" or "value-number-one") but not this ("value_number")
+    > [attribute^="value"]
+        > selects all elements with attribute that begins with "value"
+    > [attribute$="value"]
+        > selects all elements with attribute that ends with "value"
+    > [attribute*="value"]
+        > selects all elements with attribute that contains "value"

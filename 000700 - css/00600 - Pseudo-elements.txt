@@ -1,0 +1,17 @@
+Pseudo-elements
+    > syntax
+        selector::pseudo-element {
+            property: value;
+        }
+    > ::after
+        > inserts something after the content of each selected element(s)
+    > ::before
+        > inserts something before the content of each selected element(s)
+    > ::first-letter
+        > used to add a style to the first letter of the specified selector
+    > ::first-line
+        > used to add a style to the first line of the specified selector
+    > ::marker
+        > selector selects the marker of a list item.
+    > ::selection
+        > matches the portion of an element that is selected by a user.
