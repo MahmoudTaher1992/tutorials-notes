@@ -1,0 +1,10 @@
+outline
+    > line drawn outside the element's border
+    > OUTSIDE the borders
+    > props
+        > outline-style
+        > outline-color
+        > outline-width
+        > outline-offset
+        > outline
+    > it takes its width from the margin space

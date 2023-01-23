@@ -1,0 +1,22 @@
+units
+    > CSS has several different units for expressing a length
+    > length units are of 2 types
+        > absolute
+        > relative
+    > absolute
+        > fixed and a length expressed in any of these will appear as exactly that size
+        > not recommended
+        > i.e.
+            > cm
+            > mm
+            > pt
+            > px
+            > in
+            > pc
+    > relative
+        > specify a length relative to another length property
+        > i.e.
+            > em
+            > ex
+            > %
+            > etc

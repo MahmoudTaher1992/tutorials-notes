@@ -12,3 +12,9 @@ selectors
             > select and style a part of an element
         > Attribute selectors 
             > select elements based on an attribute or attribute value
+
+    > grouping selectors
+        > syntax
+            selector1, selector2, selector3 {
+                property: value;
+            }

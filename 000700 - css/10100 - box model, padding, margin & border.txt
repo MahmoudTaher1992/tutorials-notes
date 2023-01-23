@@ -29,3 +29,17 @@ margin
     > sets the dimensions of the margin box
     > auto value
         > centers the element in its parent (horizontally only not vertically)
+
+border
+    > allow you to specify the style, width, and color of an element's border
+    > border-style
+        > specifies what kind of border to display
+        > i.e.
+            > dotted
+            > dashed
+            > solid
+            > ... etc
+    > border-width
+        > specifies the width of the four borders
+    > border-color
+    > border-radius

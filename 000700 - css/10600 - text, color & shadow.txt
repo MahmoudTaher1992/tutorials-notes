@@ -1,0 +1,42 @@
+Text
+    > color
+        > used to set the color of the text
+    > background-color
+    > alignment
+        > text-align
+            > used to set the horizontal alignment of a text
+            > i.e.
+                > center
+                > left
+                > right
+                > justify
+                    > each line is stretched so that every line has equal width
+        > text-align-last
+            > specifies how to align the last line of a text
+        > direction
+            > specifies the text direction/writing direction within a block-level element
+        > vertical-align
+            > sets the vertical alignment of an element
+    > Decoration
+        > used to add and style a decoration line to text
+        > props
+            > text-decoration-line
+            > text-decoration-color
+            > text-decoration-style
+            > text-decoration-thickness
+            > text-decoration
+    > text-transform
+        > values
+            > uppercase
+            > lowercase
+            > capitalize
+    > spacing
+        > controls all the spacing props in the text
+        > values
+            > text-indent
+            > letter-spacing
+            > line-height
+            > word-spacing
+            > white-space
+    > shadow
+        > adds a shadow to a text

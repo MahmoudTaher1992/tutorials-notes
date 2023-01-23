@@ -1,0 +1,2 @@
+cursor
+    > specifies the mouse cursor to be displayed when pointing over an element
