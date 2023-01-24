@@ -1,0 +1,32 @@
+position
+    > specifies the type of positioning method used for an element
+    > values
+        > static
+        > relative
+        > fixed
+        > absolute
+        > sticky
+
+    > static
+        > default position
+        > positioned as the normal flow of the document
+        > not affected byt the left, right, top and bottom props
+
+    > relative
+        > positioned relative to its normal position
+        > affected by left, right, top and bottom props
+
+    > fixed
+        > positioned relative to the viewport
+        > it always stays in the same place even if the page is scrolled
+
+    > absolute
+        > positioned relative to the nearest positioned ancestor
+            > positioned ancestor means an ancestor with (position = relative)
+        > if an absolute positioned element has no positioned ancestors, it uses the document body, and moves along with page scrolling
+
+    > sticky
+        > positioned based on the user's scroll position
+        > A sticky element toggles between relative and fixed, depending on the scroll position
+            > positioned relative until a given offset position is met in the viewport
+            > then it "sticks" in place (like position:fixed).

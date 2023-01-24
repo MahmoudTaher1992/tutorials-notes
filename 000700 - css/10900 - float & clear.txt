@@ -1,0 +1,9 @@
+float
+    > specifies how an element should float
+    > values
+        > right
+        > left
+
+clear
+    > specifies what should happen with the element that is next to a floating element
+    > next element below (not on right or left)

@@ -1,0 +1,11 @@
+vendor prefix
+    > when there is a new feature added to the css it is not implemented directly in the browsers
+        > they use a prefix props instead for some experimental time and then it is moved to production without prefixes
+
+    > you have to check for the compatibility of the prop before using it 
+        > there are websites 
+            > caniuse
+            > .. etc
+
+    > you can also use task runner to automatically add that for you
+        > there is a webpack plugin for that as well

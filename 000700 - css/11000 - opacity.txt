@@ -1,0 +1,6 @@
+opacity
+    > specifies the opacity/transparency of an element
+    > the opacity can be applied to any element
+    > you can use an alternative to it 
+        > add the transparency to the color it self
+        > rgba(76, 175, 80, 0.3)

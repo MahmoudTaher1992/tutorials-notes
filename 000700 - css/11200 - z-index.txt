@@ -1,0 +1,3 @@
+z-index
+    > specifies the stack order of an element (because elements might overlap each other)
+    > can have a positive or negative stack order
