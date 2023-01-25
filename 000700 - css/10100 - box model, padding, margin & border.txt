@@ -29,6 +29,10 @@ margin
     > sets the dimensions of the margin box
     > auto value
         > centers the element in its parent (horizontally only not vertically)
+    > margin collapse
+        > Sometimes two margins collapse into a single margin
+        > Top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
+        > This does not happen on left and right margins! Only top and bottom margins!
 
 border
     > allow you to specify the style, width, and color of an element's border

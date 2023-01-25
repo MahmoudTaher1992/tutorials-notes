@@ -3,7 +3,7 @@ vendor prefix
         > they use a prefix props instead for some experimental time and then it is moved to production without prefixes
 
     > you have to check for the compatibility of the prop before using it 
-        > there are websites 
+        > there are websites that help you with that
             > caniuse
             > .. etc
 

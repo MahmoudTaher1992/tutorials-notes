@@ -1,0 +1,52 @@
+transition
+    > allows you to change property values smoothly, over a given duration
+    > To create a transition effect, you must specify two things
+        > the CSS property you want to add an effect to
+        > the duration of the effect
+    > i.e.
+        div {
+            transition: width 2s, height 4s;
+        }
+    > props
+        > transition-property
+            > Specifies the name of the CSS property the transition effect is for
+        > transition-duration
+            > Specifies how many seconds or milliseconds a transition effect takes to complete
+        > transition-timing-function
+            > specifies the speed curve of the transition effect
+            > values
+                > ease
+                > linear
+                > ease-in
+                > ease-out
+                > ease-in-out
+        > transition-delay
+            > specifies a delay (in seconds) for the transition effect
+
+animation
+    > lets an element gradually change from one style to another
+    > props
+        > keyframes
+            > describes the animation stages that will happen during the animation
+            > i.e.
+                @keyframes example {
+                    0%   {background-color:red; left:0px; top:0px;}
+                    25%  {background-color:yellow; left:200px; top:0px;}
+                    50%  {background-color:blue; left:200px; top:200px;}
+                    75%  {background-color:green; left:0px; top:200px;}
+                    100% {background-color:red; left:0px; top:0px;}
+                }
+        > animation-delay
+            > Specifies a delay for the start of an animation
+        > animation-direction
+            > Specifies whether an animation should be played forwards, backwards or in alternate cycles
+        > animation-duration
+            > Specifies how long time an animation should take to complete one cycle
+        > animation-iteration-count
+            > Specifies the number of times an animation should be played
+        > animation-name
+            > Specifies the name of the @keyframes animation
+        > animation-timing-function
+            > Specifies the speed curve of the animation
+        > animation-play-state
+            > Specifies whether the animation is running or paused

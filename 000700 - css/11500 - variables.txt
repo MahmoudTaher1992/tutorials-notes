@@ -1,0 +1,36 @@
+variables
+    > The var() function is used to insert the value of a CSS variable
+    > syntax
+        > var(--name, value)
+            > value is optional and it is the fallback value (used if the variable is not found)
+
+    > i.e.
+        :root {
+            --global-variable: orange;
+            --blue: #1e90ff;
+            --white: #ffffff;
+        }
+
+        body { background-color: var(--blue); }
+
+        h2 { border-bottom: 2px solid var(--blue); }
+
+        .container {
+            --local-variable: red;
+            color: var(--blue);
+            background-color: var(--white);
+            padding: 15px;
+        }
+
+        button {
+            background-color: var(--white);
+            color: var(--blue);
+            border: 1px solid var(--blue);
+            padding: 5px;
+        }
+
+    > scope
+        > global
+            > can be accessed/used through the entire document
+        > local
+            > can be used only inside the selector where it is declared

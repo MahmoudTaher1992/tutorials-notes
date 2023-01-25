@@ -1,0 +1,60 @@
+Flexbox
+    > consists of two components
+        > Flex container
+            > parent container
+        > Flex items
+            > children of the container
+    > Flex container
+        > to make a container you have to set the display prop to (flex)
+        > props
+            > flex-direction
+                > defines in which direction the container wants to stack the flex items
+                > values
+                    > column
+                    > column-reverse
+                    > row
+                    > row-reverse
+            > flex-wrap
+                > specifies whether the flex items should wrap or not
+                > values
+                    > wrap
+                    > nowrap
+                    > wrap-reverse
+            > justify-content
+                > used to align the flex items (horizontally)
+                > values
+                    > center
+                    > flex-start
+                    > flex-end
+                    > space-around
+                    > space-between
+            > align-items
+                > used to align the flex items (vertically)
+                > values
+                    > center
+                    > flex-start
+                    > flex-end
+                    > stretch
+                    > baseline
+            > align-content
+                > used to align the flex lines
+                > values
+                    > center
+                    > flex-start
+                    > flex-end
+                    > space-around
+                    > space-between
+                    > stretch
+
+    > Flex items
+        > props
+            > order
+                > specifies the order of the flex items
+            > flex-grow
+                > specifies how much a flex item will grow relative to the rest of the flex items
+            > flex-shrink
+                > specifies how much a flex item will shrink relative to the rest of the flex items
+            > flex-basis
+                > specifies the initial length of a flex item
+            > align-self
+                > specifies the alignment for the selected item inside the flexible container
