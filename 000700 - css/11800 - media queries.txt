@@ -1,0 +1,39 @@
+Media Queries
+    > Design can be adjusted for different screens/devices
+    > initiated by `@media` keyword
+
+    > it checks for
+        > width and height of the viewport
+        > width and height of the device
+        > orientation (is the tablet/phone in landscape or portrait mode?)
+        > resolution
+
+        > and then it applies different styles based on the medias
+
+    > syntax
+        @media not|only mediatype and (expressions) {
+            CSS-Code;
+        }
+
+        > mediatype
+            > screen
+                > Used for computer screens, tablets, smart-phones etc
+            > speech
+                > Used for screenreaders that "reads" the page out loud
+            > print
+                > Used for printers
+            > all
+                > Used for all media type devices
+
+    > i.e.
+        background-color: pink;
+
+        @media screen and (min-width: 480px) {
+            body {
+                background-color: lightgreen;
+            }
+        }
+
+        > targets all screens
+        > when the width is more than 480px
+        > the background-color will be `lightgreen`

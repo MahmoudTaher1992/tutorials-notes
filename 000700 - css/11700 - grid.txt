@@ -1,0 +1,59 @@
+Grid
+    > CSS Grid Layout Module offers a grid-based layout system, with rows and columns
+    > making it easier to design web pages without having to use floats and positioning
+    
+    > elements
+        > parent element called grid-container
+        > child elements
+            > a direct child of a grid container is a grid child by default
+
+    > to make an element a grid
+        > change the display to "grid" or "inline-grid"
+
+    > Grid columns
+        > The vertical lines of grid items
+
+    > Grid rows
+        > The horizontal lines of grid items
+
+    > Grid gaps
+        > The spaces between each column/row
+        > gaps can be adjusted by the following props
+            > column-gap
+            > row-gap
+            > gap
+
+    > Grid lines
+        > The lines between columns are called column lines
+        > The lines between rows are called row lines
+        > lines numbers are 1-based not 0-based
+        > grid lines is used when placing the grid items in the grid container
+
+    > Grid container
+        > props
+            > grid-template-columns
+                > defines the number and the width of columns
+                > i.e.
+                    grid-template-columns: 80px 200px auto 40px;
+            > grid-template-rows
+                > defines the number and the height of rows
+                > i.e.
+                    grid-template-rows: 80px 200px;
+            > justify-content
+                > used to align the whole grid inside the container
+            > align-content
+                > used to vertically align the whole grid inside the container
+
+    > Grid item
+        > by default there is a one grid item for each cell in the grid but it can be customized
+        > props
+            > grid-column
+                > defines on which column(s) to place an item
+                > You define where the item will start, and where the item will end
+                > is a shorthand prop for `grid-column-start` & `grid-column-end`
+            > grid-row
+                > defines on which row(s) to place an item
+                > You define where the item will start, and where the item will end
+                > is a shorthand prop for `grid-row-start` & `grid-row-end`
+            > grid-area
+                > used as a shorthand property for the grid-row-start, grid-column-start, grid-row-end and the grid-column-end properties
