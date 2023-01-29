@@ -1,0 +1,46 @@
+schema
+    > is a contract between the server and the client
+    > defines what a GraphQL API can and can't do and how clients can request or change data
+    > describes the shape of your available data
+
+    > consists of
+        > object types
+        > relations between them
+        > how to manipulate data
+        > root query
+            > the main entrance to the graph
+
+    > is a collection of object-types that contain fields
+        > each field is of a scalar-type or and object-type
+            > scalar-types
+                > INT
+                > STRING
+                > DATE
+                > ... etc
+
+SDL
+    > stands for Schema Definition Language
+    > A language used to declare the graphql design
+
+    > object type is declared as follows
+        type Person {
+            id: ID!
+            name: STRING!
+            age: INT
+            friends: [Person]!
+        }
+        > type name is better to be in PascalCase
+        > fields are declared by camelCase
+        > fields are not separated by commas
+        > ! is added for non-nullable fields
+        > in this case `age` is nullable
+
+    > comments
+        > you can add a one-line and multi-line comments as follows
+            "This is a one line comment"
+
+            """
+            This is a 
+            multi-line
+            comment
+            """
