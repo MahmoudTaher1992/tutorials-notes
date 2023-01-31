@@ -1,0 +1,49 @@
+What is GraphQL
+    > query language for your API
+        > GraphQL is a language for querying data like SQL
+            > client can now dynamically query data instead of the rigid way that was provided by REST apis
+            > SQL is used to query data from one data source (the databases)
+                > GraphQL is a language used to query data from any data source
+    > is not tied to a specific database, you can fetch the date from anywhere
+
+    > Served over HTTP
+        > plain text send to server and also plain text returned from the server
+
+    > it is made so that
+        > it gives the clients the exact data they need (no-more)
+        > to be faster than REST APIs
+            > construct a request that pulls data from different data source in a single API call
+        > to overcome REST APIs' cons
+            > REST API's cons
+                > Too many URLs > as the app grows urls numbers increases dramatically
+                > Too many Requests > when trying to fetch heavily nested data you will end up sending lots of HTTP requests
+                > Over fetching > you will fetch a full company data when you only need the name
+
+    > created by facebook in 2012
+
+    > operations in GraphQL
+        > query
+        > mutations
+            > CRUD operations
+
+    > key features of GraphQL
+        > performance
+            > prevents over fetching (getting more than what you want)
+                > reduced bandwidth (is good for mobile devices and low-energy devices)
+            > prevents under fetching
+                > graphQL lets you get all the data you need in one request instead of multiple requests
+                > saves time as each request costs lots of time as overhead (establishing connection, sending, receiving, ..etc)
+        > developer experience
+            > Hierarchical api
+                > the data is structured in Hierarchical way which makes it easier to understand and work with
+        > Architecture
+            > Decouples the client from the server
+                > FE devs don't need to wait for BE devs as they can mock the resolvers easily
+            > Scalable with Federation
+
+    > Challenges
+        > caching
+        > query complexity 
+        > security
+
+        > now there are common solutions and best practices to the majority of these problem areas.
