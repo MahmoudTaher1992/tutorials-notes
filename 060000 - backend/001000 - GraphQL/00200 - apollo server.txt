@@ -1,0 +1,13 @@
+Apollo server
+    > responsibilities
+        > receive graphQL queries from the client
+            > apollo-server can receive any query from any graphQL client (not just apollo-client)
+        > validate the query against the schema
+        > populate the schema fields
+        > return the response
+
+    > apollo server is one easily way to handle those things but you can handle it yourself the hard way
+
+    > try starting the apollo server
+        > https://www.npmjs.com/package/@apollo/server
+        > https://www.apollographql.com/tutorials/lift-off-part1/05-apollo-server

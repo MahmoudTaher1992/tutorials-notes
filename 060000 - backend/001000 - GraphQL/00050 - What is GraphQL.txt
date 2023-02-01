@@ -43,6 +43,7 @@ What is GraphQL
 
     > Challenges
         > caching
+            > it is very easy to setup the caching in express and nest.js
         > query complexity 
         > security
 

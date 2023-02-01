@@ -18,6 +18,11 @@ schema
                 > DATE
                 > ... etc
 
+    > Query type
+        > is a special type that acts as an entry point to the rest of the schema
+        > it is mandatory
+        > contains the top-level queries
+
 SDL
     > stands for Schema Definition Language
     > A language used to declare the graphql design
@@ -32,7 +37,7 @@ SDL
         > type name is better to be in PascalCase
         > fields are declared by camelCase
         > fields are not separated by commas
-        > ! is added for non-nullable fields
+        > ! is added for non-nullable (required) fields
         > in this case `age` is nullable
 
     > comments
