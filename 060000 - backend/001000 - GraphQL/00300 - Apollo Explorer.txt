@@ -1,0 +1,15 @@
+Apollo explorer
+    > it is a part of apollo sandbox
+        > apollo sandbox is a special mode of apollo studio that lets you test your local graph
+
+    > a free tool that lets you test the apollo server
+    
+    > it provides
+        > interactive query builder
+        > query history
+        > response
+        > schema view
+
+    > you can save the operations on the apollo studio (cloud)
+
+    https://www.apollographql.com/docs/apollo-server/

@@ -8,6 +8,8 @@ Apollo server
 
     > apollo server is one easily way to handle those things but you can handle it yourself the hard way
 
-    > try starting the apollo server
-        > https://www.npmjs.com/package/@apollo/server
-        > https://www.apollographql.com/tutorials/lift-off-part1/05-apollo-server
+    > can populate mock data for you
+        > you can set it in the server config or a new way in the new versions
+        > you can customize the mock the way you want
+
+    > https://www.apollographql.com/tutorials/lift-off-part1/05-apollo-server
