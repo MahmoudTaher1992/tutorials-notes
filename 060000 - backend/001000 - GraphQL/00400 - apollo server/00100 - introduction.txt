@@ -1,0 +1,6 @@
+introduction
+    > Apollo server is an open-source GraphQL server that can deal with any type of GraphQL client
+    > you can use the apollo server as
+        > GraphQL server for a subgraph in a federated supergraph
+        > a stand alone GraphQL server
+        > an addon to an existing application as Node.js middleware (express, AWS lambda function or Fastify)

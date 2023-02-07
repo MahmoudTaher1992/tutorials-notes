@@ -1,0 +1,120 @@
+schema - basics
+    > GraphQL uses the schema to define the shape of the data
+    > The schema defines the data in a shape of types, fields, Queries and Mutations
+        > type
+            > represents an object type
+            > the details of the object is described by fields
+        > fields
+            > building block of the type
+            > can be
+                > Int
+                > String
+                > Date
+                > ... etc
+                > another type
+        > Queries
+            > contains end points that are used to fetch data from the server
+        > Mutations
+            > end points used to mutate data in the server
+    > The schema defines the relationship between objects
+    > The schema is not responsible for how to get/store/mutate the data (it is the resolvers job)
+
+    > SDL
+        > stands for schema definition language
+        > it is the language used to define the GraphQL schema
+    
+    > Field definitions
+        > each field returns data of specific type
+        > field types can be
+            > Scalar
+            > object
+            > enum
+            > union
+            > interface
+            > lists
+                > books [Book]
+        > nullability
+            > the field can be nullable or non-nullable
+            > add (!) to mark the field as non-nullable
+            > in arrays
+                > [Book]
+                    > may return a list or a null
+                    > the list may contain null objects
+                > [Book!]
+                    > may return a list or a null
+                    > the list will never contain null
+                > [Book]!
+                    > the list can never be null
+                    > the list may contain null objects
+                > [Book!]!
+                    > the list can never be null
+                    > the list will never contain null
+
+    > supported types
+        > are
+            > Scalar
+            > object
+                > includes root operations types
+                    > query
+                    > Mutations
+                    > Subscriptions
+            > input
+            > enum
+            > union
+            > interface
+
+        > Scalar types
+            > similar to primitive data types
+            > i.e.
+                > Int (32-bit integer)
+                > Float (floating point value)
+                > String (utf-8 character sequence)
+                > Boolean (true/false)
+                > ID (serialized as string)
+
+        > Object types
+            > contains a collection of fields
+            > __typename
+                > mandatory field added to each object
+                > the value is the name of the object type as a string
+
+                > used by GraphQL clients to
+                    > update the cache 
+                    > to know which object they are dealing with when they return unions or interfaces
+
+        > Query type
+            > object used to define the top level entry points to the GraphQL
+            > you can have multiple Query definitions in the schema
+                > each one will add its fields to the graph top level entry points
+
+        > Mutation type
+            > similar to Query type
+            > here it defines the mutating entry points
+
+        > Subscription type
+            > similar to Query type
+            > here it defines the subscribing entry points
+
+        > Input types
+            > special object types that allow you to provide hierarchical data as arguments to fields
+            > Each field of an input type can be only a scalar, an enum, or another input type
+            > i.e.
+                input BlogPostContent {
+                    title: String
+                    body: String
+                    media: [MediaDetails!]
+                }
+
+                input MediaDetails {
+                    format: MediaFormat!
+                    url: String!
+                }
+
+                enum MediaFormat {
+                    IMAGE
+                    VIDEO
+                }
+
+                Mutation {
+                    addPost(content: BlogPostContent!): Post
+                }

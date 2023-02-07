@@ -1,0 +1,51 @@
+introduction
+    > gradle is a build automation tool
+        > takes your code and packages it into a deployable unit
+    > written in groovy language (built on top of JVM)
+    > highly configurable to meet your project needs
+    > makes building and running apps very easy (because it is designed for that purpose)
+    > no need for any previous installation (the wrapper will install the gradle for you)
+        > ./gradlew build
+    > it is fast (because it supports incremental builds)
+        > it won't run the tests again if the code has not changed 
+
+    > concepts
+        > build.gradle
+            > groovy script that describes hoe the project is built 
+            > lives at the top level of the project
+
+            > content
+                > plugins
+                    > main way you can have more functionality to gradle
+                > metadata
+                    > group
+                    > version
+                    > information about the build
+                > repositories
+                    > where to find dependencies
+                > dependencies
+                    > requirements to build your code
+
+        > tasks
+            > defines a unit of work to be executed in your build
+                > i.e.
+                    > compiling your code
+                    > deploy it to remote server
+                    > ...executed
+            > you can invoke it from the command line
+                > i.e.
+                    > ./gradlew build
+            > see available tasks by
+                > ./gradlew tasks
+            > you can create your own tasks
+            > tasks can have dependencies on another tasks 
+                > dependencies get executed first before the target task 
+
+        > wrapper (gradlew)
+            > contains a specific version of gradle
+            > installs gradle if not installed
+            > cross-platform option 
+            > always use it
+
+        > settings.gradle
+            > file contains project's metadata (name, ...)
