@@ -1,0 +1,6 @@
+Design guides
+    > Design your schema based on what is needed by the client not on how it is stored in the data sources
+    > It is safer to add to the schema not to update/delete from it
+        > if something is not needed don't add it until it is needed
+
+    > https://www.apollographql.com/docs/apollo-server/schema/schema#example-of-a-query-driven-schema

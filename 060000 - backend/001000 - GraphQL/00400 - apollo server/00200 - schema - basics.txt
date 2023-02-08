@@ -98,6 +98,7 @@ schema - basics
         > Input types
             > special object types that allow you to provide hierarchical data as arguments to fields
             > Each field of an input type can be only a scalar, an enum, or another input type
+            > useful for sharing argument types over multiple fields
             > i.e.
                 input BlogPostContent {
                     title: String
@@ -118,3 +119,49 @@ schema - basics
                 Mutation {
                     addPost(content: BlogPostContent!): Post
                 }
+
+        > Enum types
+            > similar to a scalar type
+            > autocomplete in tools like the Apollo Studio Explorer
+            > GraphQL maps the values of the enum to another values by
+                > i.e.
+                    const schema = gql`
+                        enum Color {
+                            BLACK
+                            BLUE
+                            RED
+                        }
+                    `;
+
+                    const resolver = {
+                        Color: {
+                            BLACK: "bla---------",
+                            BLUE: "blu---------",
+                            RED: "re---------"
+                        },
+                    }
+
+        > Unions and interfaces
+            > check the next file
+
+    > Growing with schema
+        > By the time the schema will grow and be changed
+        > changes can break the app
+        > you can hardly track the changes on github and you can use apollo studio to track it for you
+
+    > comments
+        > comments are used to document your schema
+        > you can add a one-line and multi-line comments as follows
+            "This is a one line comment"
+
+            """
+            This is a 
+            multi-line
+            comment
+            """
+
+    > Naming conventions
+        > Field names > camelCase
+        > Type names > PascalCase
+        > Enum names > PascalCase
+        > Enum values > ALL_CAPS
