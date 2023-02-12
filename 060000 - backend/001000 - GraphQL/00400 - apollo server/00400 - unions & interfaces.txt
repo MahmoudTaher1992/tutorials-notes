@@ -1,0 +1,121 @@
+Unions and interfaces
+    > Union
+        > a type that can be any of other types
+        > i.e.
+            union Media = Book | Movie
+
+            type Query {
+                allMedia: [Media]!
+            }
+        > it will return list of "Book" and "Movie"
+        > union accepts only object types (not scalar, input, enum, interfaces)
+
+        > union query example
+            query GetSearchResults {
+                search {
+                    __typename
+                    "here you put all the wanted fields common to Book and Author types"
+                    id
+                    ... on Book {
+                        "here you put all the wanted field in the Book type"
+                        title
+                    }
+                    ... on Author {
+                        "here you put all the wanted field in the Author type"
+                        name
+                    }
+                }
+            }
+
+        > resolving a union
+            > apollo can not resolve the type of the returned object for a union type by itself
+            > you have to define __resolveType function
+
+            > i.e.
+                const resolvers = {
+                    Media: {
+                        __resolveType(obj, contextValue, info) {
+                            // Only Book has a title field
+                            if(obj.title){
+                                return 'Book';
+                            }
+                            // Only Movie has a name field
+                            if(obj.name){
+                                return 'Movie';
+                            }
+                            return null; // GraphQLError is thrown
+                        },
+                    },
+                    Query: {
+                        allMedia: () => { ... }
+                    },
+                };
+
+            > if __resolveType didn't return a valid object type in GraphQL, an error will be thrown
+    
+    > interface
+        > an interface is a set of fields that must be included in the types it implements
+        > i.e.
+            > schema
+                interface Book {
+                    title: String!
+                    author: Author!
+                }
+
+                type Textbook implements Book {
+                    title: String! # Must be present
+                    author: Author! # Must be present
+                    courses: [Course!]!
+                }
+
+                type ColoringBook implements Book {
+                    title: String!
+                    author: Author!
+                    colors: [String!]!
+                }
+
+                type Query {
+                    books: [Book!]! # Can include Textbook objects
+                }
+            
+            > query
+                query GetBooks {
+                    books {
+                        # Querying for __typename is almost always recommended,
+                        # but it's even more important when querying a field that
+                        # might return one of multiple types.
+                        __typename
+                        title
+                        ... on Textbook {
+                            courses {
+                                # Only present in Textbook
+                                name
+                            }
+                        }
+                        ... on ColoringBook {
+                            colors # Only present in ColoringBook
+                        }
+                    }
+                }
+
+            > resolver
+                > you must include the resolver for the type because graphQL can not do it by itself
+                > i.e.
+                    const resolvers = {
+                        Book: {
+                            __resolveType(book, contextValue, info) {
+                                // Only Textbook has a courses field
+                                if(book.courses){
+                                    return 'Textbook';
+                                }
+                                // Only ColoringBook has a colors field
+                                if(book.colors){
+                                    return 'ColoringBook';
+                                }
+                                return null; // GraphQLError is thrown
+                            },
+                        },
+                        Query: {
+                            books: () => { ... }
+                        },
+                    };

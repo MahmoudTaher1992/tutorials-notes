@@ -65,6 +65,7 @@ schema - basics
 
         > Scalar types
             > similar to primitive data types
+            > you can create your own scalar type
             > i.e.
                 > Int (32-bit integer)
                 > Float (floating point value)

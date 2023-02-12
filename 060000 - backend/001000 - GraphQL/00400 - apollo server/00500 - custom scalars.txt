@@ -1,0 +1,54 @@
+Custom scalars
+    > you can create your own type
+    > you have to add it to the schema
+        > i.e.
+            scalar MyCustomScalarType
+    > you have to instruct apollo-server on how to deal with MyCustomScalarType
+        > you define it in an instance of GraphQLScalarType class
+        > the instructions are on 
+            > how to serialize BE format into JSON format
+            > how to serialize JSON format into BE format
+
+    > i.e.
+        import { GraphQLScalarType, Kind } from 'graphql';
+
+        const dateScalar = new GraphQLScalarType({
+            name: 'Date',
+            description: 'Date custom scalar type',
+            serialize(value) {
+                if (value instanceof Date) {
+                    return value.getTime(); // Convert outgoing Date to integer for JSON
+                }
+                throw Error('GraphQL Date Scalar serializer expected a `Date` object');
+            },
+            parseValue(value) {
+                if (typeof value === 'number') {
+                    return new Date(value); // Convert incoming integer to Date
+                }
+                throw new Error('GraphQL Date Scalar parser expected a `number`');
+            },
+            parseLiteral(ast) {
+                if (ast.kind === Kind.INT) {
+                    // Convert hard-coded AST string to integer and then to Date
+                    return new Date(parseInt(ast.value, 10));
+                }
+                // Invalid hard-coded value (not an integer)
+                return null;
+            },
+        });
+
+    > serialize
+        > change BE representation to JSON compatible format
+            > Json compatible formats
+                > string
+                > number
+                > array
+                > boolean
+                > null
+                > json object
+    
+    > parseValue
+        > change JSON compatible format to BE representation
+        > graphql calls this when before adding it to the resolver's arg
+    
+    > https://www.apollographql.com/docs/apollo-server/schema/custom-scalars#parseliteral
