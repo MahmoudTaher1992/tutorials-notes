@@ -1,0 +1,76 @@
+Resolvers
+    > apollo server needs to know to populate the data for every field in the schema so it can respond to requests
+    > it does that by the resolvers
+    
+    > a resolver is a function that is responsible for populating data for a single field in the schema
+        > you can use it to get the data from anywhere
+
+    > resolver map
+        > is an object that have props named with all graphql object types
+        > each prop of them is an object with props of graphql fields
+        > the values of those nested props are functions that return the values of those fields
+        > it is then passed to apollo server
+
+        > i.e.
+
+            const schema = `
+                type Author {
+                    name: String!
+                    age: Int!
+                }
+
+                type Book {
+                    id: Int!
+                    title: String!
+                    author: Author!
+                }
+
+                type Query {
+                    allBooks: [Book!]!
+                }
+            `
+
+            const resolvers = {
+                Book: {
+                    author: (parent, args, context, info) => {
+                        return this.authors.filter((author) => author.id === args.id)
+                    }
+                }
+
+                Query: {
+                    allBooks: (parent, args, context, info) => [
+                        { id: 1, name: "taher" },
+                        { id: 2, name: "omar" },
+                    ]
+                }
+            }
+
+    > resolver parameters
+        > parent
+            > is the returned value from the parent's resolver
+            > in author field you will get the Book
+            > in book the parent will be the value from rootValue function passed to ApolloServer
+
+        > args
+            > an object containing the argument of the field
+        
+        > contextValue
+            > is a sharable object among all resolvers
+            > resolvers should not change the context to ensure consistency among all other resolvers
+            > i.e.
+                > data loaders
+                > connectors
+                > authentication info
+
+        > info
+            > contains information about the operation's execution state
+            > i.e.
+                > field name
+
+    > resolver chain
+        > graphql resolves the root field and return objects
+        > for each object graphql will try to resolve all the fields inside it
+        > and that is done till all the result match the query graph
+        > each resolver will get the result of the prev resolver in the parameter `parent`
+
+    > https://www.apollographql.com/docs/apollo-server/data/resolvers/#return-values

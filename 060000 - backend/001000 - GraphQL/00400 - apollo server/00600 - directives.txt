@@ -1,0 +1,30 @@
+Directives
+    > a directive decorates part of schema with additional configuration
+    > apollo server can read those directives and apply custom logic
+    
+    > i.e.
+        type ExampleType {
+            oldField: String @deprecated(reason: "Use `newField`.")
+            newField: String
+        }
+
+        > directives can take arguments
+        > directives appear after the declaration of what they decorate
+
+    > locations
+        > you can configure the directive to be specific schema locations
+        > i.e.
+            directive @deprecated(
+                reason: String = "No longer supported"
+            ) on FIELD_DEFINITION | ARGUMENT_DEFINITION | INPUT_FIELD_DEFINITION | ENUM_VALUE
+            
+            > deprecated directive is configured to be accepted at 4 locations
+            > if it appears on any other location it will produce an error
+
+    > default directives
+        > deprecated
+        > skip => skips resolution if true is supplied
+        > include => includes resolution if true is supplied
+
+    > you can create your own custom directive
+        > mentioned in the docs

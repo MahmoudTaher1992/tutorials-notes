@@ -38,7 +38,7 @@ Functions
                 })("taher"); // taher
 
         Arrow functions
-            simplfied syntax for the original function
+            simplified syntax for the original function
 
             i.e.
                 function add(a, b) {

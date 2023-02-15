@@ -12,6 +12,10 @@ Custom scalars
     > i.e.
         import { GraphQLScalarType, Kind } from 'graphql';
 
+        const schema = `
+            scalar DateScalar
+        `
+
         const dateScalar = new GraphQLScalarType({
             name: 'Date',
             description: 'Date custom scalar type',
@@ -37,6 +41,10 @@ Custom scalars
             },
         });
 
+        const resolvers = {
+            DateScalar: dateScalar
+        }
+
     > serialize
         > change BE representation to JSON compatible format
             > Json compatible formats
@@ -50,5 +58,25 @@ Custom scalars
     > parseValue
         > change JSON compatible format to BE representation
         > graphql calls this when before adding it to the resolver's arg
+
+    > parseLiteral
+        > this works when an incoming query has a hard coded argument value in it
+            > means that the value is in the query document
+            > i.e.
+                query GetCrmProfiles {
+                    crmProfiles(ids: 123) {
+                        id
+                    }
+                }
+                > here the ids argument value is hard coded in the query document => it will be parsed by 'parseLiteral'
+        > it should convert it into BE representation
+
+    > you have to include the resolver of the new type to the server resolvers
+        > i.e.
+            const resolvers = {
+                DateScalar: dateScalar
+            }
     
-    > https://www.apollographql.com/docs/apollo-server/schema/custom-scalars#parseliteral
+    > there are 3rd parties custom scalars that you can use 
+        > i.e.
+            > graphql-type-json
