@@ -1,0 +1,16 @@
+Error handling
+    > when an error is thrown during a graphQL operation, it sends a response with errors array
+    > errors array contains
+        > extensions => code, stacktrace
+        > location
+        > message
+
+    > there is an exported ApolloServerErrorCode for you to use if needed
+
+    > custom errors
+        > you can create your custom error by throwing GraphQLError with custom details
+        
+    > automatic errors
+        > sometimes apollo server throws errors when schema validation fails, input fails, ... etc
+
+    > https://www.apollographql.com/docs/apollo-server/data/errors#omitting-or-including-stacktrace

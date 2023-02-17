@@ -1,5 +1,5 @@
 Resolvers
-    > apollo server needs to know to populate the data for every field in the schema so it can respond to requests
+    > apollo server needs to know how to populate the data for every field in the schema so it can respond to requests
     > it does that by the resolvers
     
     > a resolver is a function that is responsible for populating data for a single field in the schema
@@ -49,10 +49,10 @@ Resolvers
         > parent
             > is the returned value from the parent's resolver
             > in author field you will get the Book
-            > in book the parent will be the value from rootValue function passed to ApolloServer
+            > in allBooks the parent will be the value from rootValue function passed to ApolloServer
 
         > args
-            > an object containing the argument of the field
+            > an object containing the arguments of the field
         
         > contextValue
             > is a sharable object among all resolvers
@@ -73,4 +73,19 @@ Resolvers
         > and that is done till all the result match the query graph
         > each resolver will get the result of the prev resolver in the parameter `parent`
 
-    > https://www.apollographql.com/docs/apollo-server/data/resolvers/#return-values
+    > resolver return values
+        > scalar/object
+        > array
+        > null/undefined
+            > an error will be thrown if the field is not nullable
+        > promise
+        
+    > default resolvers
+        > if a field don't have a resolver in the resolvers map
+        > a default resolver will be called
+            > it will search for the value in the `parent` parameter
+                > it can be a function or a value
+            > otherwise it will throw
+
+    > performance
+        > you can monitor the performance for all your fields in the schema through integrating it with apollo-studio

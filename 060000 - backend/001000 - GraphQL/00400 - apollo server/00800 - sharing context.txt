@@ -1,0 +1,18 @@
+Sharing context
+    > is a sharable object among all resolvers and plugins
+    > resolvers should not change the context to ensure consistency among all other resolvers
+    > i.e.
+        > data loaders
+        > connectors
+        > authentication info
+
+    > context creation function
+        > a context creation function is passed to the server for it to create a contextValue for each requests
+        > it runs once for each request
+        > it can return a promise so that you do all async tasks
+            > i.e.
+                > wait for establishing db connection
+
+        > throwing an error
+            > you can throw a normal error and a 500 response will be sent
+            > or you can throw a GraphQLError to customize the response
