@@ -13,4 +13,57 @@ Error handling
     > automatic errors
         > sometimes apollo server throws errors when schema validation fails, input fails, ... etc
 
-    > https://www.apollographql.com/docs/apollo-server/data/errors#omitting-or-including-stacktrace
+    > stacktrace
+        > you can control the visibility of stacktrace through includeStacktraceInErrorResponses prop in server initialization
+        > it should not be included in production !! 
+
+    > formatError
+        > you can control the shape of the error returned to the client by customizing it through `formatError`
+        > you may want to filter all database errors if you are on production
+        > if a resolver throws an error it is wrapped in a GraphQLError
+            > you can unwrap it using `unwrapResolverError` method to get the original error
+        > you can use it for localization or personalization
+
+    > plugins   
+        > you can also use custom plugins to customize the errors
+            > by implementing `didEncounterErrors` method
+
+    > apollo studio errors reporting
+        > you can use apollo studio to analyze the errors and their rates
+        > ApolloServerPluginUsageReporting
+            > a plugin used to send errors to the studio
+            > sendErrors.unmodified
+                > by default errors details are not sent to the studio
+                > if set to true details will be sent
+            > sendErrors.transform
+                > is called before sending the error to the studio
+                    > you can skip sending some errors by returning null
+                > you can skip trivial errors
+                    > you have access to all error props
+                > you can remove sensitive data from errors
+
+    > Http status code and headers
+        > there is a default convention for http status codes in graphQL
+            > 500
+                > if server had a problem in starting
+                > if server is shutting down
+                > if you are not properly drained your server
+                > if context function throw an error
+            > 400
+                > request parsing failure
+                > request validation failed against the schema
+            > 405
+                > request is using invalid HTTP method
+            > 200
+                > always is used even if there are problems with the resolvers
+
+        > you can customize the response http status and headers through
+            > GraphQLError.extensions.http.status
+            > GraphQLError.extensions.http.headers
+
+            > if multiple resolvers are trying to override the http status they may override each other
+                > instead you can use a plugin
+
+            > plugin
+                > requestDidStart => willSendResponse
+                    > you will have access to the response to do whatever you want
