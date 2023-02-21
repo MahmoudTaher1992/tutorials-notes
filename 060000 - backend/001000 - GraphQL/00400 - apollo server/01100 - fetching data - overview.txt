@@ -1,0 +1,21 @@
+Fetching data - overview
+    > you can fetch data from any where because it is a node app
+    > it is recommended that you create a datasource file for each data source
+        > you can configure it to use data loaders for caching and batching
+
+    > Batching and caching
+        > it is very important to add this functionality to your data sources to avoid N+1 query problem
+        
+        > N+1 query problem
+            > graphQl executes a separate resolver function for every field whereas REST has one resolver per end point
+            > if you fetch books with authors
+                > first you will fetch the list of books => 1
+                > for each book graphQL will fetch the author in a separate fetch => N times
+
+            > we need to test weather the graphql batches the database queries to the BE in the N times or not
+                > it is very hard to imagine that dataloader gets inside the resolvers to batch the requests
+            > https://shopify.engineering/solving-the-n-1-problem-for-graphql-through-batching
+            > https://www.apollographql.com/docs/apollo-server/data/fetching-data
+
+        > i.e.
+            > dataloader package

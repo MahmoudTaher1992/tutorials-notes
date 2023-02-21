@@ -1,2 +1,10 @@
 Subscriptions
-    > https://www.apollographql.com/docs/apollo-server/data/subscriptions
+    > subscriptions is not implemented in apollo server you have to add 'graphql-ws'
+    > in this operations the server can send data to the client
+    > it generally use websocket protocol
+    > it is complex to implement so make sure that you really need it
+    > you should put subscription fields in the object type Subscription
+
+    > follow the setup steps because it is somehow not popular
+
+    > Please read the docs and write down you notes here
