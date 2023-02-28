@@ -1,0 +1,6 @@
+Web frameworks
+    > if you want to integrate between a package and apollo-server you can create an integration package
+    > a common integration module is the expressMiddleware
+        > integrates between graphql and express
+
+    > there are more details in the docs on how to create an integration package

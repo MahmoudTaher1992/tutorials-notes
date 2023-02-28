@@ -52,5 +52,8 @@ Context
 
         put the value in the state to avoid this problem
 
+    > re-renders
+        > all components that consume (NOT ALL THE CHILDREN OF THE PROVIDER ONLY THOSE WHICH USE useContext) the context value will rerender when the context value changes
+
 
     

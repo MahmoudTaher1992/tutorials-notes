@@ -1,0 +1,26 @@
+Development workflow
+    > Build and run queries
+        > apollo sandbox is a GUI tool that used to query the apollo-server
+        > most likely it is used in the development mode
+        > by default apollo-server disables introspection in production
+            > apollo-sandbox won't work 
+            > you can customize that
+        > changing the landing page
+            > it is totally customizable
+                > configure the default landing page
+                > serve graphql playground
+                > serve a custom page
+                > disable the landing page totally
+
+    > Request format
+        > the graphql client (i.e. apollo-client) takes care of formatting the request to match the graphql server's expectation 
+        > apollo-server accepts the queries and mutations in a POST request
+            > queries alone can also be accepted in GET request
+
+            > POST requests
+                > should have a json body with
+                    > variables
+                    > extensions
+                    > query
+                    > operationName
+                        > specifies which operation to run if the query parameter has multiple operations

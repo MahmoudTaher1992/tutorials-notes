@@ -7,7 +7,7 @@ Sharing context
         > authentication info
 
     > context creation function
-        > a context creation function is passed to the server for it to create a contextValue for each requests
+        > a context creation function is passed to the server for it to create a contextValue for each request
         > it runs once for each request
         > it can return a promise so that you do all async tasks
             > i.e.

@@ -1,6 +1,6 @@
 Fetching data - overview
     > you can fetch data from any where because it is a node app
-    > it is recommended that you create a datasource file for each data source
+    > it is recommended that you create a data-source file for each data source
         > you can configure it to use data loaders for caching and batching
 
     > Batching and caching
@@ -14,8 +14,25 @@ Fetching data - overview
 
             > we need to test weather the graphql batches the database queries to the BE in the N times or not
                 > it is very hard to imagine that dataloader gets inside the resolvers to batch the requests
-            > https://shopify.engineering/solving-the-n-1-problem-for-graphql-through-batching
-            > https://www.apollographql.com/docs/apollo-server/data/fetching-data
+                > after the test the dataLoader work as expected and as written in the docs
+                    > within a single tick dataloader batches all the requests in one request
+                    > you can edit it to behave the way you want by editing the schedule function in the dataloader
 
-        > i.e.
-            > dataloader package
+        > Caching is storing the data in the memory and using it instead of getting it from the database
+        > Batching is grouping multiple requests and sending them in one request
+
+    > data sources
+        > you can add your data sources to the context so it can be used in the resolvers
+        > if your data source is stateful (uses an in-memory cache) the context function should return a new context for each request
+            > this ensures that data sources don't accidentally cache results across requests 
+
+        > RESTDataSource package is maintained by apollo
+            > you can use it to query REST apis
+            > caching
+                > it provides two layers of caching away from the dataloader
+            > intercepting fetches
+                > you can intercept fetches to add to the headers or the parameters
+            > dataloader
+                > there is some details on how you should integrate dataloader with RESTDataSource
+
+        > there are other data source packages that you can use
