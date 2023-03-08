@@ -16,6 +16,7 @@ Development workflow
         > the graphql client (i.e. apollo-client) takes care of formatting the request to match the graphql server's expectation 
         > apollo-server accepts the queries and mutations in a POST request
             > queries alone can also be accepted in GET request
+                > there are some rules to follow if you are going to use GET method
 
             > POST requests
                 > should have a json body with
@@ -24,3 +25,42 @@ Development workflow
                     > query
                     > operationName
                         > specifies which operation to run if the query parameter has multiple operations
+
+        > Batching
+            > by default it is not supported, you have to manually configure it
+            > when you enable it you can batch the queries in a single http request
+
+        > Incremental delivery (experimental)
+            > an experimental feature that allow you to delay some of the heavy fields to be served later
+                > like laze loading
+            > can not be combined with batching
+
+    > Generating TS types
+        > there are libraries that can read your code (schema) and generate TS types for you
+            > i.e.
+                > GraphQL Code Generator
+        > TS types can be used in the resolvers to check type (get all the advantages of strongly typed language - typescript)
+
+        > GraphQL Code Generator
+            > as any tool, you can configure it to work as you want
+                > codegen.yml is the config file for the codegen
+            > you will have types for
+                > Resolvers object
+                > graphql types
+                > graphql input
+                > graphql enum
+                > graphql union
+                > graphql interfaces
+            > for further guidance look into the docs
+
+    > Mocking
+        > you can customize the server to return mock data
+
+    > integration testing
+        > executeOperation allows you to run operations on the server without the need for HTTP request
+        
+        > E2E testing
+            > apollo server won't help if you want to fully test your api (including HTTP layer)
+            > you can use other libraries like
+                > supertest
+                > apollo client

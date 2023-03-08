@@ -1,0 +1,3 @@
+Performance - Server-side caching
+    > https://www.apollographql.com/docs/apollo-server/performance/caching#in-your-schema-static
+    > after reading the docs try to test the caching feature locally
