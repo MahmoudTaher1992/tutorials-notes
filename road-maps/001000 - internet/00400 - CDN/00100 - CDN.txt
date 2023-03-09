@@ -1,0 +1,9 @@
+CDN
+    > stands for Content Delivery Network
+    > it is a service that helps you decrease the distance between the data and the users requesting those data
+    > CDN does that by caching the files in different servers around the world
+        > when a user request a file, CDN will direct the request to the nearest CDN server
+
+    > benefits
+        > decrease latency
+        > decrease the load on the server (that difference will be carried by the CDN)

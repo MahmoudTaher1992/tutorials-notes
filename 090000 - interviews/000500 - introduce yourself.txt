@@ -16,3 +16,11 @@ Introduce yourself
     > I look to become a team lead in the future 
 
     > I like reading and watching documentaries in my free time
+
+
+    More than 5 years of experience in software development in multiple fields like finance, CRM and nurseries management field with highly professional skills as a full stack developer.
+    Has the variety of using multiple technologies like javascript, typescript, node.js, express.js, graphql, storyboard, react, redux and much more
+    Good team player with the ability to work independently.
+    
+    Has an experience of Software installation,
+    configuration and administration. 

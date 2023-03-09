@@ -1,3 +1,45 @@
 Performance - Server-side caching
-    > https://www.apollographql.com/docs/apollo-server/performance/caching#in-your-schema-static
-    > after reading the docs try to test the caching feature locally
+    > apollo lets you control the cache of fields
+    
+    > Setting cache hints
+        > you can define it
+            > statically
+                > in the schema definition
+            > dynamically
+                > in the resolver
+
+        > it is important to understand
+            > which fields that can be safely cached
+            > how long the cache remains valid
+            > should the cache be private (for specific user) or public (for all users)
+
+    > Statically definition
+        > you have to define the @cacheControl directive
+        > can be used for each field or for the whole type
+
+    > dynamically   
+        > throw the info object passed to the resolver function
+        > i.e.
+            > cacheControl.setCacheHint
+            > cacheControl.cacheHint.restrict
+            > cacheControl.cacheHintFromType
+
+    > Calculating cache behavior
+        > the cache is calculated based on the maxAge and the scope
+
+    > Default maxAge
+        > by default is 0 for
+            > All root fields
+            > All fields that return non-scalar type
+        > all other fields inherits its maxAge from the parent
+        > you can change the default maxAge through the ApolloServerPluginCacheControl
+
+    > there are details on implementing the cache with Federation
+
+    
+
+    > https://www.apollographql.com/docs/apollo-server/performance/caching/#caching-with-a-cdn
+
+    > learn more
+        > caching from the BE roadmap
+        > HTTP caching
