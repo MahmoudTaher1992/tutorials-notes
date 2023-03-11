@@ -1,4 +1,9 @@
 Performance - Server-side caching
+    > apollo can change the `Cache-Control` field in the http response header
+        > depending on the cache-hint of the types/fields
+        > apollo server will calculate and set the response `Cache-Control`
+        > then this will be used by the proxy/CDN to cache or return cached responses
+
     > apollo lets you control the cache of fields
     
     > Setting cache hints
@@ -12,6 +17,7 @@ Performance - Server-side caching
             > which fields that can be safely cached
             > how long the cache remains valid
             > should the cache be private (for specific user) or public (for all users)
+                > if the cache is private you will have to supply a function for generating the sessionID
 
     > Statically definition
         > you have to define the @cacheControl directive
@@ -34,12 +40,21 @@ Performance - Server-side caching
         > all other fields inherits its maxAge from the parent
         > you can change the default maxAge through the ApolloServerPluginCacheControl
 
-    > there are details on implementing the cache with Federation
+    > there are details on implementing the cache with 
+        > Federation
+        > CDN
 
+    > Because CDNs and caching proxies only cache GET requests, you will have to customize the request to be GET instead of POST (the default)
+
+    > you can stop the server from setting the cache-control on all the app by adding ApolloServerPluginCacheControl 
+        > even if you added the @cacheControl directive to numerous fields/types
+
+    > you can cache the response in stores like Redis, Memcached, or Apollo Server's default in-memory cache
     
-
-    > https://www.apollographql.com/docs/apollo-server/performance/caching/#caching-with-a-cdn
-
-    > learn more
-        > caching from the BE roadmap
-        > HTTP caching
+    > you can configure responseCachePlugin to
+        > shouldReadFromCache
+            > when to skip the cache
+        > shouldWriteToCache
+            > when to write to cache
+        > generateCacheKey
+        > extraCacheKeyData
