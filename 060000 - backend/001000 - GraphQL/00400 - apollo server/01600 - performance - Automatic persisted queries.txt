@@ -1,0 +1,20 @@
+Performance - Automatic persisted queries
+    > this features allows the client to use a lightweight hash of the graphql document instead of the document itself
+
+    > lifecycle
+        > the client sends query document hash
+        > the server responds with an error (hash is not cached)
+        > the client sends the query document and it's hash
+        > the server caches and returns the response
+        > any future requests from the client (with the hash only) will be known from the server
+
+    > the result is the requests become lighter
+
+    > you can test this feature using the command-line tool
+
+    > In order to integrate APQ with CDN you have to use GET requests
+        > there are multiple steps to follow (check the documentation)
+
+    > the default server cache used is local in-memory cache, but you can configure the server's cache to be (redis, Memcached, ... etc)
+
+    > you can disable APQ through the apollo-server config (it is enabled by default)

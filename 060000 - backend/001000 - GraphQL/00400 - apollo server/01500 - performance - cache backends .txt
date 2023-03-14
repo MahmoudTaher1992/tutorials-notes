@@ -1,2 +1,16 @@
 Performance - cache backends
-    > https://www.apollographql.com/docs/apollo-server/performance/cache-backends
+    > if you want to handle the cache you can pass the cache handler to the apollo server
+
+    > cache handlers examples
+        > InMemoryLRUCache
+        > KeyvAdapter
+        > Redis
+        > Keyv
+
+    > any cache should always be bounded (has size limit), otherwise attackers can exhaust the memory and may cause server's crash
+
+    > you can use `Keyv` as an ORM to the caching services i.e. (Redis, Memcached, ... etc)
+
+    > you can implement your own cache by implementing KeyValueCache interface
+
+    > you can configure redis/Memcache to be your cache
