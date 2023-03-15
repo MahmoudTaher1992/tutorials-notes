@@ -1,0 +1,32 @@
+Authentication and authorization
+    > definitions
+        > Authentication is
+            > determining if the user is logged in 
+            > or checking the identity of the user and give him authentication data
+        > authorization is
+            > determining what a user can see or do
+
+    > you should put a users data in the context
+        > when you create the context => get the token from the headers
+        > validate the toke is valid and not expired
+        > get userId from the token
+        > fetch user info from the db and attach it to the context
+
+    > Authorization methods
+        > API-wide authorization
+            > you can authorize user at the context after you fetch his data
+                > if no user => you may throw ('un-authenticate')
+
+        > in resolvers
+            > you can authorize at resolvers because you have the data in the context
+            > it can be more specific because you can differently check roles (roles can be attached to the user at the context)
+
+        > in the model
+            > you can pass it to the model (delegate it to take the decision)
+
+        > special directives
+            > you can create a special directive and use it to schema
+
+        > outside of graphql
+            > you can pass the token to external api to do the authorization
+            > the external api can just do the authorization or it can return data (after authorizing the user)

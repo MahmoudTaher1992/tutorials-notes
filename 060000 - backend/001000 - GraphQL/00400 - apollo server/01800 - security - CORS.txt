@@ -1,0 +1,21 @@
+Security - CORS
+    > CORS stands for Cross-Origin Resource Sharing
+        > it is an HTTP-header-based protocol that enables a server to dictate which origins can access its resources
+        > in another way your server can specify which websites can talk to it on which HTTP method
+
+    > Why use CORS ?
+        > CORS error arise when you try to send an API call from a client to a server (on different host/domain)
+
+        > background context
+            > internet users should be careful when installing software on their devices (sites should be trusted)
+            > when it comes to internet browsing, all the time lots of data is loaded from different servers, so the risk is much more higher
+            > we should be careful from the users while they are calling our server (while they are visiting another websites)
+            > Browser's security mechanisms (CORS, SOP, ...etc) adds a protection by
+                > specifying which browsers' origins can request resources from the server
+                > origin is
+                    > protocol + domain + port
+            > SOP
+                > stands for Same Origin Policy
+                > restricts scripts from one origin from accessing resources from another origin
+                > no one else outside the origin can access resources
+            > https://www.apollographql.com/docs/apollo-server/security/cors#why-use-cors
