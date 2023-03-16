@@ -1,0 +1,4 @@
+Security - Proxy Configuration
+    > try to understand what http proxy is in graphql and node.js
+    > https://www.youtube.com/watch?v=KOibBdrdyY0
+    > https://www.apollographql.com/docs/apollo-server/security/proxy-configuration

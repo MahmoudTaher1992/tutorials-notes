@@ -18,4 +18,25 @@ Security - CORS
                 > stands for Same Origin Policy
                 > restricts scripts from one origin from accessing resources from another origin
                 > no one else outside the origin can access resources
-            > https://www.apollographql.com/docs/apollo-server/security/cors#why-use-cors
+                > but this policy is too much restricted (and here comes the value of CORS)
+
+            > CORS
+                > allows to share resources across different origins
+                > enables servers to specify which external clients access their resources
+
+    > CORS settings
+        > you can setup CORS to
+            > control which origins can access server resources
+            > control whether to accept cookies with the requests or not
+
+    > CORS uses  Access-Control-Allow-Origin HTTP header as a part of it's protocol
+        > it guides the server on which origins can access the resources
+
+    > Any app on private network server MUST specify specific origins for CORS (security issue)
+
+    > in order to allow cross-origin cookies you must specify origins for your CORS configurations
+
+    > in production you have to specify origins for CORS, it is really dangerous out there !!!
+
+    > Preventing Cross-Site Request Forgery (CSRF)
+        > ...
