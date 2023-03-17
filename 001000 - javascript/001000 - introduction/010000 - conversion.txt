@@ -3,7 +3,6 @@ For example: converting String data to Number.
 
 There are two types of type conversion in JavaScript
     Implicit Conversion - automatic type conversion
-        ضمني - تلقائي
     Explicit Conversion - manual type conversion
 
 

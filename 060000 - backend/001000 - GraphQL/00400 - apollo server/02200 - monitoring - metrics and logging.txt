@@ -1,0 +1,3 @@
+Monitoring - metrics and logging
+    > apollo server integrates with graphOS to help you monitor the execution of the operations
+    > https://www.apollographql.com/docs/apollo-server/monitoring/metrics#sending-metrics-to-graphos

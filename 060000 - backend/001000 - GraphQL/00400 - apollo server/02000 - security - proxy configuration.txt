@@ -1,4 +1,26 @@
 Security - Proxy Configuration
     > try to understand what http proxy is in graphql and node.js
-    > https://www.youtube.com/watch?v=KOibBdrdyY0
-    > https://www.apollographql.com/docs/apollo-server/security/proxy-configuration
+    
+    > agent is an object in node js that manages the connections to another hosts
+        > instead of opening a new connection to another host each time a request is sent, agent takes the responsibility of managing the connections so that
+            > it is used multiple times before closed (if applicable)
+            > it can keep the connection alive as long as the agent is alive and use it over and over
+        > it is a performance player
+
+        > manages the connections for the HTTP clients
+            > it means that it serves axios
+
+        > http.request(), http.get() makes a request to another servers from node.js 
+            > they use agent (connections manager)
+            > they use http.globalAgent (used by default if no custom agent is supplied)
+
+    > GraphQL will need to make requests to outside servers
+        > requests go through http and then to the globalAgent
+        > you might want to configure the globalAgent and here is how you do it
+
+    > you can configure it through https.globalAgent directly but it is recommended to use global-agent package
+        > it lets you configure the globalAgent through environment variables (which is not supported by node js)
+
+    > Depending on the deployment environment (e.g. AWS, Heroku, Kubernetes, Docker, etc.), environment variables may be set differently
+
+    > you can also configure a custom SSL/TLS certificate

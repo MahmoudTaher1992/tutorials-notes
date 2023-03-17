@@ -12,7 +12,7 @@ JavaScript programs manipulate values, and those values all belong to a type. Ja
                 This is done by wrapping variables or expressions with ${variable or expression} as shown above.
 
     Number
-        epresents integer and floating numbers (decimals and exponentials)
+        represents integer and floating numbers (decimals and exponential)
         number type can also be +Infinity, -Infinity, and NaN
 
     BigInt

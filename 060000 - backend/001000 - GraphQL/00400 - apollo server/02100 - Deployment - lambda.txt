@@ -1,0 +1,4 @@
+Deployment - lambda
+    > AWS lambda is a serverless computing platform that lets you deploy your app without taking care of the setting up a server
+
+    > here is how to deploy your server to lambda function
