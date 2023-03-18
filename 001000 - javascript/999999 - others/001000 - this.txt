@@ -17,7 +17,7 @@
 
         'this' points to global window object even if it is used in an inner function.
 
-        a function that is not inside object is considered a global function, this will refere to the global object
+        a function that is not inside object is considered a global function, this will refer to the global object
 
     Object's Method
         You can create an object of a function using new keyword. So, when you create an object of a function using new

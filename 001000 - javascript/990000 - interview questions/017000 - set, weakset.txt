@@ -1,7 +1,7 @@
 Set
     A set is a collection of items which are unique
 
-    can have premitive and objects
+    can have primitive and objects
 
     iterable
 
@@ -15,9 +15,9 @@ Weakset
 
     can have objects only
 
-    Not iteratable
+    Not iterable
 
-    It is weak > if no other refrence exists to the object in the set > garbage collector can destroy it
+    It is weak > if no other reference exists to the object in the set > garbage collector can destroy it
 
     i.e.
         const taher = { name: "taher" };

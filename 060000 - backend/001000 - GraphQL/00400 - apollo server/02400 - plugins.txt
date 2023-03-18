@@ -1,0 +1,69 @@
+Plugins
+    > Plugins extend Apollo Server's functionality by performing custom operations in response to certain events.
+    > events
+        > request lifecycle events
+        > server lifecycle events
+
+    > built-in Plugins
+        > Usage reporting plugin
+            > gathers data on how your clients use the operations and fields in your GraphQL schema
+            > handles pushing this usage data to Apollo Studio
+        > Schema reporting plugin
+            > enables your GraphQL server to register its latest schema with the Apollo schema registry every time it starts up
+        > Inline trace plugin
+            > enables your GraphQL server to include encoded performance and usage traces inside responses
+        > Drain HTTP server
+            > designed for use with expressMiddleware and other framework integrations built on top of Node http.Servers
+            > Apollo Server will drain your HTTP server when you call the stop() method
+            > it will
+                > Stop listening for new connections
+                > Close idle connections (i.e., connections with no current HTTP request)
+                > Close active connections whenever they become idle
+                > Wait for all connections to be closed
+                > After a grace period, if any connections remain active, forcefully close them.
+        > Cache control plugin
+            > Apollo Server installs this plugin by default in all servers
+            > used to configure cache-control settings
+        > Landing page plugins
+            > add a landing page to Apollo Server's base URL
+            > includes
+                > ApolloServerPluginLandingPageLocalDefault
+                > ApolloServerPluginLandingPageProductionDefault
+                > ApolloServerPluginLandingPageGraphQLPlayground
+                > ApolloServerPluginLandingPageDisabled
+            > Default behavior
+                > non-production environments
+                    > ApolloServerPluginLandingPageLocalDefault
+                > production environments
+                    > ApolloServerPluginLandingPageProductionDefault
+
+    > custom plugins
+        > Plugins are JavaScript objects that implement one or more functions that respond to events
+        > Almost all plugin events are async functions except for willResolveField and schemaDidLoadOrUpdate.
+
+        > Server lifecycle events
+            > serverWillStart
+            > drainServer
+            > serverWillStop
+            > renderLandingPage
+            > requestDidStart
+            > schemaDidLoadOrUpdate
+            > startupDidFail
+
+        > request lifecycle events
+            > didResolveSource
+            > parsingDidStart
+            > validationDidStart
+            > didResolveOperation
+            > responseForOperation
+            > executionDidStart
+            > willResolveField
+            > didEncounterErrors
+            > didEncounterSubsequentErrors
+            > willSendResponse
+            > willSendSubsequentPayload
+            > contextCreationDidFail
+            > invalidRequestWasReceived
+            > unexpectedErrorProcessingRequest
+
+        > load more from the docs ...

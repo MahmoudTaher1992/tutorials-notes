@@ -1,3 +1,26 @@
 Monitoring - metrics and logging
     > apollo server integrates with graphOS to help you monitor the execution of the operations
-    > https://www.apollographql.com/docs/apollo-server/monitoring/metrics#sending-metrics-to-graphos
+
+    > apollo graph os
+        > acts as a silo for graphql performance data
+        > gives you details on
+            > schema
+            > queries
+            > requests
+            > errors
+        > you can configure alerts to be sent to you on slack & datadog
+
+    > to connect graphOS to your app you have to set an env variables
+        > APOLLO_KEY
+        > APOLLO_GRAPH_REF
+
+    > by default apollo server sends statistics to graphOS every minute
+
+    > you can identify clients (ios/kotlin/react) by supplying a proper parameter
+        > most likely by adding headers to the requests sent to the server
+            > clientName: headers['apollo-graphql-client-name'],
+            > clientVersion: headers['apollo-graphql-client-version'], 
+
+    > logging
+        > you can access the request lifecycle events through custom plugins
+        > you can log whatever you want there 

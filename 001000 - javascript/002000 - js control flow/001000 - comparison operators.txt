@@ -63,7 +63,7 @@ Comparison operators and Logical operators
                 undefined || "Taher" // Taher
 
         !
-            convertes value to boolean and reverse it
+            converts value to boolean and reverse it
 
             i.e.
                 !"Taher" // false

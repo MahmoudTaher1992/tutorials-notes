@@ -10,4 +10,4 @@ Variable resolution
 Scope chain
     > unique scopes from the variable got called to the global scope
     > is the way how a js looks for variables, it starts with the inner scope > then outer scope >
-      and goes up till it reaches to the global scope > otherwise it throws an error1
+      and goes up till it reaches to the global scope > otherwise it throws an error

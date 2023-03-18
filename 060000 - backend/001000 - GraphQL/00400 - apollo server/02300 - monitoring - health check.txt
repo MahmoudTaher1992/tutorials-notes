@@ -1,0 +1,12 @@
+Monitoring - health check
+    > health checks are used by load balancers
+
+    > all graphql responds to this query
+        > https://your.server/graphql?query=%7B__typename%7D
+        > you can use it as a health check
+
+    > you can also check the health of the server
+        > i.e.
+            app.get('/health', (req, res) => {
+                res.status(200).send('Okay!');
+            });

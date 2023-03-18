@@ -9,7 +9,7 @@ Example 1
     }
     // check if number is 0
     else if (number == 0) {
-    console.log("The number is 0");
+        console.log("The number is 0");
     }
     // if number is neither greater than 0, nor zero
     else {
@@ -25,5 +25,5 @@ Example 2
     if (number > 0) {
         console.log("The number is positive.");
     } else {
-    console.log("The number is negative or zero.");
+        console.log("The number is negative or zero.");
     }

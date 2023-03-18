@@ -9,7 +9,7 @@ Data types
             Pass by value
                 let a = 10;
                 let b = a;
-                b references to another address in the memory, changing a doesn't affect by
+                b references to another address in the memory, changing a doesn't affect b
             i.e.
                 Number
                 string

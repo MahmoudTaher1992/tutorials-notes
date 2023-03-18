@@ -2,7 +2,7 @@ Is js Static or dynamic typing
     Static typing
         variables have type
         values have type
-        variables connot change its type
+        variables can't change its type
         the type is checked on the compile time
 
         i.e.

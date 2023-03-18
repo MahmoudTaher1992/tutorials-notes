@@ -2,8 +2,8 @@ Rest operator
     used to allow user to enter an infinite number of parameters without the use of array > js will create the array 4 use
 
     i.e
-        function logConcat(seperator, ...words) {
-            console.log(words.join(seperator));
+        function logConcat(separator, ...words) {
+            console.log(words.join(separator));
         }
 
         logConcat("-", "My", "name", "is", "Taher"); // My-name-is-Taher
