@@ -15,7 +15,7 @@ Function and Class Components
     data and returns a React element.
 
 ES6 class to define a component:
-    class Wellcom extends React.Component {
+    class Welcome extends React.Component {
         render() {
             return <h1>Hello, {props.name}</h1>;
         }
@@ -41,8 +41,8 @@ Composing Components
             return (
                 <div>
                     <Welcome name="Sara" />
-                    <Welcome name="Cahal" />
-                    <Welcome name="Edite" />
+                    <Welcome name="Alan" />
+                    <Welcome name="John" />
                 </div>
             );
         }

@@ -1,0 +1,31 @@
+Apollo federation
+    > open architecture for combining multiple graphQL apis
+
+    > Apollo GraphOS 
+        > provides a managed mode for Apollo Federation
+        > helps you modify and grow your supergraph without any downtime.
+
+    > How it works
+        > each individual graphql api is called subgraph
+        > when composed it makes a supergraph
+        > calling the supergraph's router
+            > client can query multiple subgraphs in one request
+        > the router 
+            > acts as a public access point for the supergraph
+            > it takes care of routing the requests across the subgraphs till it is fulfilled
+        > fo the client it looks exactly the same as one graph api
+
+    > a supergraph schema
+        > created by composing subgraphs' schema together
+
+    > server instances
+        > in federated architecture, each subgraph instance is a GraphQL service that's queried only by the router
+        > the router is exposed to clients and open for queries
+        > the router then queries individual subgraphs to obtain, combine, and return results
+
+    > benefits of federation    
+        > unify the graph (one api instead of many)
+        > Break up monolithic code
+        > Adopt incrementally
+        > Separation of concerns
+        > 

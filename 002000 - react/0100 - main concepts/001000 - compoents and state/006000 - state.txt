@@ -3,7 +3,7 @@ React component State
 
     A component’s state can change over time; whenever it changes, the component re-renders. 
 
-    Guidlines
+    Guidelines
         A state can be modified based on user action or network changes
 
         Every time the state of an object changes, React re-renders the component to the browser
@@ -23,7 +23,7 @@ React component State
 
         setState() function performs a shallow merge between the new and the previous state
 
-        setState(null) will update nothing and will remo nothing as well
+        setState(null) will update nothing and will remove nothing as well
 
     State Updates May Be Asynchronous
         React may batch multiple setState() calls into a single update for performance.

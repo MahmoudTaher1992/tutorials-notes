@@ -24,7 +24,7 @@ Specifying Attributes with JSX
 
 JSX makes you write concise HTML/XML-like structures 
 
-The syntax is intended to be used by preprocessors (i.e., transpilers like Babel) to transform HTML-like text found in JavaScript files 
+The syntax is intended to be used by pre-processors (i.e., transpilers like Babel) to transform HTML-like text found in JavaScript files 
 into standard JavaScript objects
 
 JSX Represents Objects
