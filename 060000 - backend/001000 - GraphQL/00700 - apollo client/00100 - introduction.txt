@@ -1,0 +1,7 @@
+Introduction
+    > apollo-client
+        > state-management library that manages local and remote data
+        > fetch, cache & modify app data
+
+    > handles the complete cycle (from start to finish)
+    > tracks loading state and error state

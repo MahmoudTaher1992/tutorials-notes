@@ -1,0 +1,31 @@
+Server state
+    > server-state library is taking care of the BE data in the FE
+    > there should be a library that takes care of
+        > fetching data from BE
+        > caching this data
+            > part of it is a state management library
+        > keeping it in sync with the BE
+        > mutate the data in the BE
+
+    > React examples
+        > apollo-client react 
+        > react-query/TanStack Query
+        > relay
+        > react-transmit (depreciated)
+        > adrenaline (depreciated)
+        > urql
+
+    > examples
+        > mattermost-webapp
+            > they use their own implementation for this lib
+            > packages/client
+
+        > airbyte
+            > react-query
+
+        > nursery-story
+            > apollo-client
+
+    > concerns
+        > pagination
+        > caching
