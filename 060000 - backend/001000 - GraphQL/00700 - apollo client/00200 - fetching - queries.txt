@@ -1,0 +1,55 @@
+Fetching - queries
+    > executing a query
+        > you can query something from the BE through useQuery hook
+        > when a component renders useQuery fires a request to the BE and keeps track of it
+            > returns the state in loading, error, and data objects
+
+        > you have to pass the query to the hook
+        > you can pass the query parameters to useQuery through 'variables' option
+
+    > caching results
+        > after fetching the data, apollo client automatically caches the data locally
+        > it saves subsequent requests to the BE
+        > it is your responsibility to make sure that your the cached data remains fresh by updating cached results
+
+    > updating cached results
+        > to make the data fresh with the backend through 2 strategies
+            > polling
+            > refetching
+
+        > polling
+            > by supplying a 'pollInterval' in milliseconds the client will send a request to the BE periodically to update the cache contentiously
+            > pollInterval = 0 means it will not poll
+            > you can control polling by 'startPolling' and 'stopPolling'
+
+        > refetching
+            > use refetch to manually execute a refetch
+            > by default it uses the last variables supplied
+            > you can supply new variables to the refetch function
+            > it introduces some complexity with loading state
+
+    > inspecting loading states
+        > loading works only on the first time and it doesn't work on ('refetch', 'poll', ... )
+        > by setting 'notifyOnNetworkStatusChange' to true you will
+            > cause a re-render when the network status changes
+                > network status
+                    > loading
+                    > setVariables
+                    > fetchMore
+                    > refetch
+                    > poll
+                    > ready
+                    > error
+            > it also updates 'loading' accordingly
+
+    > Inspecting error states
+        > there is a separate section on how to deal with queries errors
+
+    > Manual execution with useLazyQuery
+        > by default once the react component renders the useQuery sends the request
+        > if you want to take control over the start of request sending use useLazyQuery
+            > it returns a query function for you to start the query request
+        > you can pass variables to both the hook and the query function 
+            > the query function takes precedence
+
+    > https://www.apollographql.com/docs/react/data/queries#setting-a-fetch-policy

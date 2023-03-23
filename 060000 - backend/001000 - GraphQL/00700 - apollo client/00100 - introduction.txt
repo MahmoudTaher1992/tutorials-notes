@@ -5,3 +5,5 @@ Introduction
 
     > handles the complete cycle (from start to finish)
     > tracks loading state and error state
+
+    > create the apollo client instance and supply it to the react through the provider
