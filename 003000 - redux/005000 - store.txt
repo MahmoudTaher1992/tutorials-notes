@@ -1,12 +1,7 @@
 store
-    there should be only one store in the app
-
-    Holds app state
-
-    Allow access to state using store.getState()
-
-    Allow state updating using store.dispatch(action)
-
-    Allow listening using > const unsubscribeMethod = store.subscribe(listener)
-
+    > there should be only one store in the app
+    > Holds app state
+    > Allow access to state using store.getState()
+    > Allow state updating using store.dispatch(action)
+    > Allow listening using > const unsubscribeMethod = store.subscribe(listener)
     

@@ -15,7 +15,7 @@ Jsx in depth
             <MyComponents.Component1 />
             <MyComponents.Component2 />
 
-    User defined comopnents must be in scope
+    User defined components must be in scope
 
     you can choose type @ runtime but must be capitalized
 
@@ -28,7 +28,7 @@ Jsx in depth
             <div>{`Taher`}</div>
 
         default value = true if not supplied
-            <Foo autoComplete /> is equivelant to <Foo autoComplete="true" />
+            <Foo autoComplete /> is equivalent to <Foo autoComplete="true" />
 
         spread attribute
             const props = { prop1: "prop1" }

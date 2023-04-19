@@ -1,9 +1,7 @@
 Rules of Hooks
-    Only Call Hooks at the Top Level
-        Don’t call Hooks inside loops, conditions, or nested functions.
+    > Only Call Hooks at the Top Level
+        > Don’t call Hooks inside loops, conditions, or nested functions.
+        > By following this rule, you ensure that Hooks are called in the same order each time a component renders.
 
-        By following this rule, you ensure that Hooks are called in the same order each time a component renders.
-
-    Only Call Hooks from React Functions or from custom Hooks
-
-    add eslint-plugin-react-hooks to check those rules 4 u
+    > Only Call Hooks from React Functions or from custom Hooks
+    > add eslint-plugin-react-hooks to check those rules 4 u

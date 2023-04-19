@@ -1,9 +1,9 @@
 Uncontrolled Components
     For elements are controlled and Uncontrolled
 
-    Controlled compoenents are recommended
+    Controlled components are recommended
 
-    Uncontrolled components are those who keeps the source of truth in the dm elements
+    Uncontrolled components are those who keeps the source of truth in the dom elements
 
     you can access dom element using ref
 

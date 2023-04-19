@@ -5,3 +5,6 @@ Lifting State Up
     also need it, you can lift it up to their closest common ancestor
 
     Always the data should flow from up to down
+
+    > to share the state you can use the render prop to pass a function containing the state manipulation within it
+        > it helps with optimization as you can easily skip it in the dif check in `shouldComponentUpdate`

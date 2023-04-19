@@ -33,3 +33,7 @@ Refs and the DOM
 
     Exposing DOM Refs to Parent Components
         use forwardRef
+
+    > another usage
+        > refs can be used to keep a value the same as the component rerenders
+        > also if you want to change it without causing a rerender you should use it

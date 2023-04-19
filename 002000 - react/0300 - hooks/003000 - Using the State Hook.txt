@@ -1,26 +1,17 @@
 Using the State Hook
-    What’s a Hook?
-        A hook is a special function that lets you “hook into” React features.
+    > What’s a Hook?
+        > A hook is a special function that lets you “hook into” React features.
+        > useState is a Hook that lets you add React state to function components.
 
-        useState is a Hook that lets you add React state to function components.
-
-    Declaring a State Variable
-        const [count, setCount] = useState(0);
-
-        count is the value of the state, setCount is used to update the value of the state
-
-        0 is the initial value of the state
-
-        you can have many states as you want
-
-        the syntax uses javascript "Array destructuring" to get the state and the setState method
-
-        you can use it without this
-
-        the first time count will be 0 > when using setCount(10) > it will cause rerender > new count will be 10
-
-        you can have an object as a state
-
+    > Declaring a State Variable
+        > const [count, setCount] = useState(0);
+        > count is the value of the state, setCount is used to update the value of the state
+        > 0 is the initial value of the state
+        > you can have many states as you want
+        > the syntax uses javascript "Array destructuring" to get the state and the setState method
+        > you can use it without this
+        > the first time count will be 0 > when using setCount(10) > it will cause rerender > new count will be 10
+        > you can have an object as a state
     
 
 

@@ -1,15 +1,11 @@
 Actions
-    the only way to interact w. the Store
+    > the only way to interact w. the Store
+    > carry info from app to store (through payload property or any other property)
+    > plain js object
+    > have a type to indicate the action being performed
+    > the type property is string
 
-    carry info from app to store (through payload property or any other property)
-
-    plain js object
-
-    have a type to indicate the action being performed
-
-    the type property is string
-
-    i.e.
+    > i.e.
         let action = {
             type: "ADD_ITEM_TO_CART",
             payload: {
@@ -18,12 +14,11 @@ Actions
             }
         }
 
-    Action creators
-        Normal functions that help you create the action
+    > Action creators
+        > Normal functions that help you create the action
+        > Helps in making all the code in one place > less bugs
 
-        Helps in making all the code in one place > less bugs
-
-        i.e.
+        > i.e.
             function addItemToCart() {
                 return {
                     type: "ADD_ITEM_TO_CART",

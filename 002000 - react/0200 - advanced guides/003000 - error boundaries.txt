@@ -6,7 +6,7 @@ Error Boundaries
         Event handlers (learn more)
         Asynchronous code (e.g. setTimeout or requestAnimationFrame callbacks)
         Server side rendering
-        Errors thrown in the error boundary itself (rather than its child
+        Errors thrown in the error boundary itself (rather than its child)
 
     A class component becomes an error boundary if it defines either (or both) of the lifecycle methods 
     static getDerivedStateFromError() or componentDidCatch()

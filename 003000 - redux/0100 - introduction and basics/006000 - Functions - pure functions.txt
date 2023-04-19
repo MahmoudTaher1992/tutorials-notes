@@ -12,14 +12,14 @@ Pure Functions
         Self documenting
         Easily testable
         Concurrency
-        Cacheable > intensive computation can be cached
+        Cachable > intensive computation can be cached
 
     Immutability
         in functional programming you should not mutate objects > create new objects instead
 
         Pros
             Predictability
-            Faster change detection > check by refrence
+            Faster change detection > check by reference
             Concurrency
 
         Cons
@@ -39,9 +39,9 @@ Pure Functions
                 book.address.city = "cairo";
                 console.log(updated); // { id: 10, name: "new-book-name", address: { city: "cairo" } }
 
-                this is like this because nested objects are copied by refrence > solution > use liberary
+                this is like this because nested objects are copied by reference > solution > use library
 
-        Immutable liberaries
+        Immutable libraries
             Immutable
             Immer
             Mori

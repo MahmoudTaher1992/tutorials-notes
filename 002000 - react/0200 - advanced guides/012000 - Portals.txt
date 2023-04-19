@@ -13,7 +13,7 @@ Portals
         }
 
     A typical use case for portals is when a parent component
-        dialogs, hovercards, and tooltips.
+        dialogs, hover-cards, and tooltips.
         when you want to use z index and overflow = hidden
 
     Event Bubbling Through Portals

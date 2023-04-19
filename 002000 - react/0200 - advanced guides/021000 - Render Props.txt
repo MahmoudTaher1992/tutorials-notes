@@ -3,7 +3,7 @@ Render Props
 
     Use Render Props for Cross-Cutting Concerns
         the example provided in the docs says that if you want to share a feature of detecting the mouse location
-        for other components > you shoud use render prop
+        for other components > you should use render prop
         
         i.e.
             MousePositionTracker component tracks x, y and updates state w. it

@@ -9,10 +9,10 @@ Async actions
                 dispatch(fetchUsersLoading());
                 axios("http://dummy-api/users")
                     .then((res) => {
-                        dsipatch(fetchUsersLoaded(res.data));
+                        dispatch(fetchUsersLoaded(res.data));
                     })
                     .catch((error) => {
-                        dsipatch(fetchUsersError(error.message));
+                        dispatch(fetchUsersError(error.message));
                     }) 
             }
         }

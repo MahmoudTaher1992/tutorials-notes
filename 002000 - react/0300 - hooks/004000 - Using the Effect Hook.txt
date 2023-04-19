@@ -1,12 +1,11 @@
 Using the Effect Hook
-    lets you perform side effects in function components
+    > lets you perform side effects in function components
 
-    Data fetching, setting up a subscription, and manually changing the DOM in 
-    React components are all examples of side effects
+    > Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects
 
-    You can think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
+    > You can think of useEffect Hook as componentDidMount, componentDidUpdate, and componentWillUnmount combined.
 
-    i.e.
+    > i.e.
         export function UseEffectExample() {
             const [count, setCount] = useState(0);
 
@@ -35,42 +34,41 @@ Using the Effect Hook
         // useEffect logic cleared with count = 2
 
 
-    Effects Without Cleanup
-        the logic is called after the first render and in the next rerenders
+    > Effects Without Cleanup
+        > the logic is called after the first render and in the next rerenders
 
-        using the useEffect hook > you tell React that you need to do somthing after render/re-render
-        you pass the logic and it will be called after the dom updates are done
+        > using the useEffect hook > you tell React that you need to do something after render/re-render
+        > you pass the logic and it will be called after the dom updates are done
 
-        logic can be fetching data. updating dom
+        > logic can be fetching data. updating dom
 
-        using the hook inside the render function let you use the state and the props
+        > using the hook inside the render function let you use the state and the props
 
-        the logic will be new each render > to catch the updated state and props
+        > the logic will be new each render > to catch the updated state and props
 
-        Unlike componentDidMount or componentDidUpdate, effects scheduled with useEffect don’t block the browser 
+        > Unlike componentDidMount or componentDidUpdate, effects scheduled with useEffect don’t block the browser 
         from updating the screen. The majority of effects don’t need to happen synchronously. In the uncommon 
         cases where they do i.e (useLayoutEffect)
 
-    Effects with Cleanup
-        some times you need to do cleanup so that we don’t introduce a memory leak > if you want to use setInterval
+    > Effects with Cleanup
+        > some times you need to do cleanup so that we don’t introduce a memory leak > if you want to use setInterval
+        > return a function that has the cleanup logic
 
-        return a function that has the cleanup logic
+    > Benefits of using effects
+        > Separate Concerns
+            > in class components you have to put all effects logic in on lifecycle event > in hooks it is separated
 
-    Benifits of using effects
-        Separate Concerns
-            in class components you have to put all effects logic in on lifecycle event > in hooks it is seperated
-
-        It is run on each updated
-            helps in decreasing the bugs and the code volume > in class component you might want to add some login in
+        > It runs on each updated
+            > helps in decreasing the bugs and the code volume > in class component you might want to add some login in
             componentDidUpdate to update the subscriptions with new props/state values > in hooks you don't > less bugs 
             , less code
 
-    Optimizing Performance by Skipping Effects
-        pass to the useEffect an array as a second param > each rerender react will check prev array with new array >
+    > Optimizing Performance by Skipping Effects
+        > pass to the useEffect an array as a second param > each rerender react will check prev array with new array >
         if no changes > logic will not be called
 
-        if the array is empty > the logic will be called once (on mount and unmount) > because it will always 
-        equal to prev array >
+        > if the array is empty > the logic will be called once (on mount and unmount) > because it will always 
+        equal to prev array
 
 
 

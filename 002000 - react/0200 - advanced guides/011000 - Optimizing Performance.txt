@@ -15,7 +15,7 @@ Optimizing Performance
 
     Use profiling components with devtools profiler
 
-    Vistualize long lists
+    Visualize long lists
         long lists of data (hundreds or thousands of rows) > technique known as “windowing"
 
         react-window and react-virtualized are popular windowing libraries
@@ -41,5 +41,16 @@ Optimizing Performance
             Solution > update props and state immutably > the PureComponents will do ref check 
             and will catch the change
 
+    > check this and add it to the docs
+        > https://developer.chrome.com/docs/devtools/performance/
+
+    > optimization tips
+        > if you are not measuring the performance you will never know weather the optimization is good or harmful
+        > If you aren't measuring, you can't even know if your optimizations are better, and you certainly won't know if they make things worse!
+        > optimization has it costs
+        > Never prematurely optimize
+        > may be the weight of the optimization becomes more that the optimization target
+            > it is like buying a nail factory to produce 1kg of nails
+                > the initial + running costs of the factory exceeds the value of the product
 
     

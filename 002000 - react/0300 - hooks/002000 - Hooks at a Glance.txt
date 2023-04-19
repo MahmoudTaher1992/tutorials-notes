@@ -11,19 +11,19 @@ Hooks at a Glance
 
     You can also create your own Hooks to reuse stateful behavior between different components.
 
-    Effect Hook
-        You’ve likely performed data fetching, subscriptions, or manually changing the DOM from React components before. 
-        We call these operations “side effects” (or “effects” for short) because they can affect other components 
-        and can’t be done during rendering.
+    > Effect Hook
+        > You’ve likely performed data fetching, subscriptions, or manually changing the DOM from React components before. 
+        > We call these operations “side effects” (or “effects” for short) because they can affect other components 
+        > and can’t be done during rendering.
 
-        It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes, 
+        > It serves the same purpose as componentDidMount, componentDidUpdate, and componentWillUnmount in React classes, 
         but unified into a single API
 
-        When you call useEffect, you’re telling React to run your “effect” function after flushing changes to the DOM
+        > When you call useEffect, you’re telling React to run your “effect” function after flushing changes to the DOM
 
-        React runs the effects after every render — including the first render
+        > React runs the effects after every render — including the first render
 
-        Effects may also optionally specify how to “clean up” after them by returning a function
+        > Effects may also optionally specify how to “clean up” after them by returning a function
             useEffect(() => {
                 console.log("setting interval");
                 const intervalId = setInterval(() => {
@@ -36,24 +36,23 @@ Hooks at a Glance
                 };
             }, []);
 
-            React will run the clean up function
-                when componentWillUnmount
-                before rerunning the effect due to subsequent render
+            > React will run the clean up function
+                > when componentWillUnmount
+                > before rerunning the effect due to subsequent render
 
-    Hooks let you organize side effects in a component by what pieces are related
+    > Hooks let you organize side effects in a component by what pieces are related
 
-    Rules of Hooks
-        Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions.
+    > Rules of Hooks
+        > Only call Hooks at the top level. Don’t call Hooks inside loops, conditions, or nested functions.
+        > Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions.
 
-        Only call Hooks from React function components. Don’t call Hooks from regular JavaScript functions.
+    > Building Your Own Hooks
+        > A 3rd way to reuse stateful logic between components
+            > the other 2 ways are HOC and render purpose
 
-    Building Your Own Hooks
-        A 3rd way to reuse stateful logic between components
-            the other 2 ways are HOC and render purpose
+        > it makes you do this without adding more components to the tree
 
-        it makes you do this without adding more components to the tree
+        > the naming convention is useSomething
 
-        the naming convention is useSomething
-
-        you can write hooks to do nearly everything
+        > you can write hooks to do nearly everything
 

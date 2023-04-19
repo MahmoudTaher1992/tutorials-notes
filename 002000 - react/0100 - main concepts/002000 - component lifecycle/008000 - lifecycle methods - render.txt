@@ -18,7 +18,7 @@ React Lifecycle Methods
 
         If you do need to modify state that would have to happen in the other lifecycle methods, therefore keeping render() pure.
 
-        When called, it should examine this.props and this.state and return one of the following
+        When called, it should examine this.props and this.state and return one of the following (ReactNode)
             React elements
             Arrays and fragments
             Portals

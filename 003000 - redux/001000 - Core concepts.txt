@@ -1,6 +1,6 @@
 Core concepts
     Store
-        centeralized place wher app state lives
+        centralized place where app state lives
 
     Action
         js object describes change in the state

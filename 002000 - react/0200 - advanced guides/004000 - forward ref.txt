@@ -25,3 +25,5 @@ Forwarding Refs
 
     HOC
         Refs Aren’t Passed Through
+
+    > ref is similar to state except it doesn't cause a rerender when it's value changes

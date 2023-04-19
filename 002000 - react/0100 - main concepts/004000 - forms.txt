@@ -5,7 +5,7 @@ Forms
 
         React state should be the “single source of truth”
 
-        make input use value from react state, when input valuew changes handle the event and update react state > 
+        make input use value from react state, when input value changes handle the event and update react state > 
         rerender > new value will appear on the input
 
         textarea tag in html > value should be between tag
@@ -16,7 +16,7 @@ Forms
             in React use value instead
 
         select tag
-            use value is select instead od selected attribute in html
+            use value is select instead of selected attribute in html
 
             if multiple then the value will be array
 

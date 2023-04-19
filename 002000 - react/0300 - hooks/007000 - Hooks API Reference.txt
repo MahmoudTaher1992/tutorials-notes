@@ -26,6 +26,8 @@ Hooks API Reference
 
         useCallback(fn, deps) is equivalent to useMemo(() => fn, deps).
 
+        > check optimizing performance before using useCallback
+
     useMemo
         Returns a memoized value.
 
@@ -42,8 +44,12 @@ Hooks API Reference
         you should try to optimize the performance of your code before using the useMemo > sometimes it is skipped and 
         recalculated when the memory is low
 
-    useRef
-        to create ref in functional component
+        > check optimizing performance before using useMemo
+
+    > useRef
+        > to create ref in functional component
+
+        > ref is similar to state except it doesn't cause a rerender when it's value changes
 
     useId
         to create unique id
@@ -53,7 +59,8 @@ Hooks API Reference
 
         Use this to read layout from the DOM and synchronously re-render. 
 
-        Updates scheduled inside useLayoutEffect will be flushed synchronously, before the browser has a chance to paint.
+        > Updates scheduled inside useLayoutEffect will be flushed synchronously, before the browser has a chance to paint while
+        useEffect runs after the changes are painted to the dom
 
         It is recommend starting with useEffect first and only trying useLayoutEffect if that causes a problem.
 

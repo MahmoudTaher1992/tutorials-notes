@@ -24,6 +24,6 @@ Profiler API
     onRender is called w. a callback > has params of the child rendering process
         startTime
         commitTime
-        actualDuaration
+        actualDuration
         etc ..
         

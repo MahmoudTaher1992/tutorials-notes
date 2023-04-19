@@ -1,4 +1,4 @@
-Higer order function
+Higher order function
     A function that takes function as input or return fn as output or both
 
     Non HOF
