@@ -52,4 +52,5 @@ Fetching - queries
         > you can pass variables to both the hook and the query function 
             > the query function takes precedence
 
-    > https://www.apollographql.com/docs/react/data/queries#setting-a-fetch-policy
+    > fetch policy
+        > 
