@@ -1,0 +1,31 @@
+React component breakdown
+    > target
+        > feature
+        > components
+        > config
+        > models
+
+    > folders
+        > constants
+        > types/interfaces
+        > types utils
+        > types utils tests
+        > hooks
+        > context
+        > config
+        > assets
+            > font
+            > images
+        > pages/screens
+
+
+    > code reusability in React
+        > HOC
+            > you can share logic and UI
+        > hooks
+            > share logic only
+        > components
+            > share logic and UI
+
+    > common utils
+        > routing utils

@@ -1,0 +1,38 @@
+Config Store
+    > props
+        > backingStore
+            > the store where lives the saved config
+            > types
+                > database
+                > file
+                > memory
+
+    > functions
+        > Load
+            > steps
+                > loads config from backing store
+                > merges loaded config on top of custom defaults
+                > set default values for nil values
+                > creates two versions of the config => config(environment on top of the config), configNoEnv
+                > fix the configs
+                > validates config
+                > saves the new config (custom defaults + old config + default values + fixes) to the backing store
+                > notifies listeners if the config has changed
+        > Set
+            > set new config
+            > steps
+                >  
+
+    > stores
+        > database
+        > file
+        > process environment
+        > memory
+
+    > A package that handles
+        > loading config from stores
+        > saving new config to stores
+        > compare two configs
+        > merge multiple configs
+
+    > 
