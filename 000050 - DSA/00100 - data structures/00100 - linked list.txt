@@ -1,0 +1,16 @@
+Linked list
+    > group of elements/nodes linked together
+
+    > types
+        > single
+            > navigation is forward only
+        > doubly
+            > navigation is forward and backward
+        > circular
+            > the tail is connected to the head so you can circle in it
+
+    > node is an object that contains 
+        > data
+        > links
+            > prev node
+            > next node

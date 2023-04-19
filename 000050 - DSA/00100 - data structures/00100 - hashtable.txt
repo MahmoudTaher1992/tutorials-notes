@@ -1,0 +1,30 @@
+Hash table
+    > is a data structure that maps key to value
+    > but this one is very fast when it comes to all operations
+    
+    > how it works
+        > in order to find an element in an array with the key you have to iterate through all the items inside the array
+            > time complexity = O(n)
+        > if we know the index of the item we can get it in no time
+        > what hashtable does is that it converts the key into an index
+            > by hashing algo
+            > then the hash may be converted to an index
+        > then ise the index to store the value
+    
+    > collisions
+        > keys are infinite and indexes are finite
+        > with a simple probability you will find out that you will have multiple keys that result into the same index
+        > this is called collisions
+        > can be solved by different ways but the most common is to store the items with the same hash index in a linked list inside the parent array
+        > can also be solved by choosing another index other than the filled one
+
+    > to retrieve the value by key
+        > convert key into index
+        > go to the index
+        > iterate through the linked list till you find the key
+        > return the value
+    
+    > time complexity
+        > from O(1) to O(n) in rare cases
+        > it is considered as O(1)
+        > if we implemented binary search tree we car achieve time complexity of O(log N)
