@@ -1,0 +1,89 @@
+mahmoud.taher.1992.mt@gmail.com
+
++201029828788
+
+https://www.linkedin.com/in/mahmoud-taher-b1891ab0/
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Alexandra
+2. Maximilian
+3. Dejan
+4. Mads
+5. Rory
+6. Gina
+7. Sina
+8. Daria
+9. Viktoriia
+10. Diana
+11. Julia
+12. Diana
+13. Kate
+14. Olena
+15. Karina 
+16. Aikan
+17. Karina
+18. Larissa
+19. Yuliya
+
+Hi Tanja,
+
+I am Mahmoud Taher, a senior full stack react/node developer and I am looking for a fully remote fullstack opportunity, 
+Please let me know if you have an opportunity for me.
+
+Regards,
+
+
+
+
+
+
+***I am willing to pay you 10% from the contract that you get me for 2 years (from the salary at the end of each month) [Reverse Recruiter's Fee]***
+
+
+
+
+
+> Responsible for developing and maintaining various software components
+> Developed clean Nest.js/GraphQL RESTful API, ensuring high-quality performance
+> Conducted unit testing via jest to ensure the reliability and accuracy of developed software
+
+> Followed the Agile / Scrum Methodology to develop the application
+
+> Managed the global state using redux
+> Built the app locally and on production using webpack
+
+> Developed and implemented the MVVM Architectural Pattern using inversify and IOC design principles
+> Improved reusability of the code using HOC, custom hooks and reusable components
+> Ensured type checking by using typescript and tsc
+> Used AWS CDK and Github actions to automate the deployment of developers/production environments
+
+
+> Skills: [] Object-Oriented Programming (OOP) · NoSQL · Web Development · JavaScript · HTML5 · Cascading Style Sheets (CSS) · React.js · Bootstrap · JSON · AJAX · REST APIs · HTML · Node.js · Express.js · MongoDB · npm · Git · Computer Animation · Adobe Photoshop · Graphic Illustrations · Graphic Design · Adobe Illustrator · Sales
+
+
+
+Produce fast and responsive sites with Html5, CSS3 and JavaScript.
+Test and debug a variety of browser compatibility and performance problems.
+Communicate with customers during the design and creative process.
+Manage budgets and time constraints to obtain the best results from the completed program.
+Create website illustrations, logos and brand personalities.
+Integrate digital 3-D rendering prototype for simulated commercial presentation.
+Configuring email submissions and mobile contact functions.
+Grow business Instagram account pages to more than 50,000 combined followers. 
+Boost site SEO and conduct strategic advertising campaigns using Facebook pixels. 
+Design compelling social media and e-commerce ads.
+Create graphic illustrations for merchandise and website needs.
+Create 3D animated visuals and produce soundtracks for ad campaigns.
+Setup Shopify and affiliate marketing partnerships.
+Manage products shipped worldwide through drop-shipping partners

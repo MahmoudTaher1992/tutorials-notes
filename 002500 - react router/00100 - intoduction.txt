@@ -1,0 +1,16 @@
+Introduction
+    > react-router is an open source project
+    > it is a routing library
+    > used for client/server side routing
+
+    > for the react-router to do it's work it has to have reference to
+        > history
+    
+    > BrowserHistory component
+        > gets the reference to the browser built-in history object and make it available to the children tree
+        > it acts as a provider
+
+    > Router component
+
+    > https://betterprogramming.pub/how-and-why-you-should-store-react-ui-state-in-the-url-f2013a204cb2
+    > https://ui.dev/react-router-tutorial

@@ -1,0 +1,29 @@
+Computer system operation
+    > to understand os you have to have some knowledge of computer system
+
+    > a modern computer system consists of
+        > CPU/s
+            > brain of the computer
+            > processing part of the computer
+            > small ship embedded in the motherboard
+        > device controllers
+            > each controller is responsible for a specific type of devices
+            > Disk controllers
+                > hard disks
+            > USB controllers
+                > mouse
+            > Video adapter/controllers
+                > monitors
+        > connected through a common bus that provides access to shared memory
+            > the CPU and controllers work concurrently competing for memory cycle
+            > memory controller organize the access to the memory
+
+    > important terms
+        > Bootstrap Program
+            > is the initial program that runs when the computer turns on
+            > it is stored in the ROM
+            > it must know where the OS exists and runs it
+            > it must locate and load the kernal into the memory
+
+        > Interrupt
+            > https://www.youtube.com/watch?v=VjPgYcQqqN0&list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O&index=2

@@ -1,0 +1,10 @@
+Binary search algo
+    > an algo used to cut down the time complexity from O(n) to O(log n)
+    > used to search for an item in a sorted array
+    
+    > steps
+        > divide the array into 2 parts
+        > search for the item in the middle item
+        > if less than the target, go to the right
+        > if greater than the target, go the left
+        > iterate using these steps until you find the item

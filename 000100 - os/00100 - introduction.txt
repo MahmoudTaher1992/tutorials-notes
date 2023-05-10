@@ -1,0 +1,61 @@
+introduction
+    > os
+        > stands for operating system
+        > is a program that manages the computer hardware
+        > acts as a medium between the user and the computer hardware
+
+    > os examples
+        > windows
+        > linux
+        > ubuntu
+        > mac os
+        > ios
+        > android
+
+    > levels (up to down)
+        > system/applications programs
+            > system softwares
+                > softwares that directly control the hardware
+            > application softwares
+                > softwares used by users to perform tasks 
+                > i.e.
+                    > office
+                    > browsers
+                    > compilers
+                    > editors
+        > operating system
+        > hardware
+            > CPU
+            > memory (RAMs, ROMs)
+            > I/O devices
+
+    > for the application softwares to work they have to tell the hardware what to do
+        > i.e.
+            > load the app into the memory
+            > open the app
+            > write some text
+        > this communication is done through binary code
+        > it is very hard to develop some apps like that
+        > here comes the function of the OS
+        > OS exposes functions that can be used by the software app developers to control the hardware
+        
+    > Some types of OSs
+        > Batch OS
+        > Time sharing OS
+        > Distributed OS
+        > Network OS
+        > Real time OS
+        > Multi programming/processing/tasking OS
+
+    > Functions of OSs
+        > acts as an interface between User and Hardware
+        > allocation of resources
+        > management of memory, security, ... etc
+
+    > Goals of OS
+        > convenience
+            > makes it easy for users to communicates with hardware
+        > efficiency
+            > who gets what resources for how long
+            > resources management
+        > Both
