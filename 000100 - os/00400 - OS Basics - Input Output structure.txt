@@ -1,0 +1,25 @@
+I/O structure
+    > stands for input/output devices
+    > a general purpose computer system consists of cpu + device controllers connected through the same bus with shared memory
+    > each device controller 
+        > is responsible for specific type of devices
+        > maintains
+            > local buffer storage
+            > set of special purpose registers
+    > each operating system has a device driver for each device controller
+        > the driver understands the controller and exposes an API to the operating system to deal with the controller
+
+    > working of a I/O operation
+        > the driver loads registers within the device controller
+        > the controller examines the contents of the registers to determine the next actions
+        > the controller starts transferring data from the device to the local buffer
+        > the controller informs the driver (via an interrupt) that the operation is complete
+        > the driver turns the control to the operating system to take the next actions
+        > most likely the CPU will transfer the data from the local buffer to the memory to handle it
+        
+        > this protocol is fine for moving small amounts of data but it is not for large data
+            > to solve this issue DMA is used
+            > DMA stands for direct memory access
+                > in which the controller will have direct access to the memory
+                > it will transfer the data directly to the memory without the need for the CPU
+                > after the transfer an interrupt is sent to the cpu to inform that the transfer is complete

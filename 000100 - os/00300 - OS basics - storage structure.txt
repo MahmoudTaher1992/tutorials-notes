@@ -1,0 +1,19 @@
+Storage structure
+    > storage examples hierarchy
+        > volatile (data is lost if power is removed)
+            > registers
+            > cache
+            > main memory
+
+        > non-volatile (data is not lost if power is removed)
+            > electronic disk
+            > magnetic disk
+            > optical disk
+            > magnetic tapes
+
+    > when you go down the hierarchy
+        > the price goes down
+        > the storage increases
+        > access time increases
+
+    > when you have more of the main memory the speed of the computer increases

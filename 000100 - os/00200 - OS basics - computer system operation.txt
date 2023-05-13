@@ -26,4 +26,13 @@ Computer system operation
             > it must locate and load the kernal into the memory
 
         > Interrupt
-            > https://www.youtube.com/watch?v=VjPgYcQqqN0&list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O&index=2
+            > event raised by the hardware send through the system bus
+            > informs the CPU to stop what is it is doing and finish the new work (interrupt)
+
+        > System Call/Monitor Call
+            > an interrupt sent from a software (not a hardware)
+
+    > when the CPU is interrupted , it stops what it is doing and executes the interrupt
+        > the interrupt has a starting address of the service routine
+        > the CPU executes the service routine at the specified address
+        > after the interrupt is executed the CPU returns to do what it was doing before

@@ -1,0 +1,36 @@
+Computer system architecture
+    > based on the number of general purpose processor
+        > there are small micro-processors that may exist in some devices to help them execute specific tasks
+            > such as micro-processors in the keyboards to convert key stroke into a key number
+        > those are not general purpose processor, instead they are specific processors
+        > they are not included in the count of system processors
+
+    > types (based on general purpose processors count)
+        > single processor systems
+        > Multi-processors systems
+        > clustered systems
+
+    > single processor systems
+        > contains on CPU in the system
+
+    > Multi-processors systems
+        > contains multiple processors in the same system
+        > advantages
+            > increased throughput
+                > throughput is the speed of transferring data
+                > more CPUs will transfer the data faster
+            > economy of scale
+                > it is cheaper to get such systems if you want more processing power instead of buying a complete single processor system (in which you don't need all other parts of the system)
+            > increased reliability
+                > if one processor fail the others will handle the work 
+        > types
+            > symmetric multi-processing
+                > all the processors are in the same level and they do the work together
+            > asymmetric multi-processing
+                > one processor is acting as a master and dividing the work among all other processors (salves)
+    
+    > Clustered systems
+        > multiple systems (not CPUs) work together to handle the loads
+        > advantages
+            > increased reliability 
+        > can be structured in symmetric or asymmetric
