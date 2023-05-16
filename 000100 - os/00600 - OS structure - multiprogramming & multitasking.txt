@@ -1,0 +1,27 @@
+Multiprogramming & Multitasking
+    > operating systems vary internally from each other but they all must apply
+        > Multiprogramming
+        > time sharing / multitasking
+
+    > Multiprogramming systems
+        > a single user can not keep the CPU busy all the time (he must release it to be efficient)
+        > it increases the efficiency of the CPU by organizing the jobs so that the CPU has something to do
+        > the jobs are tasks to be done by the CPU
+        > the jobs are created and added to the job pool
+        > the jobs are moved from the pool to fill the available memory
+        > the the os handles the jobs in the memory efficiently
+            > if the job is using something other than the CPU (i.e. I/O devices)
+            > it lets other loaded jobs use the CPU instead of waiting 
+            > the CPU will always have something to do (efficiency) 
+
+        > provide an environment in which the resources are used efficiently
+        > they don't let the user interact with the computer system
+
+    > time sharing / multitasking
+        > the CPU executes multiple jobs by switching between them
+        > switching is done so quickly in a way it allows the user to interact with each program
+        > provides a direct communication between the user and the system
+        > allows many users share the computer between them
+
+    > CPU scheduling is used to organize the work done by the CPU
+    > a process is a program loaded in the memory to be executed by the CPU
