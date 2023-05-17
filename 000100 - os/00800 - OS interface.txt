@@ -1,0 +1,27 @@
+OS interface
+    > types
+        > CLI
+            > also known as command interpreter
+            > also known as shells
+        > GUI
+
+    > command interpreter
+        > some operating systems include the command interpreter in the kernel
+            > kernel is the heart of the os
+        > others treat the command interpreter as a separate program
+            > i.e.
+                > windows
+                > UNIX
+        > some systems have more than one command interpreter
+            > i.e.
+                > bourne shell
+                > c shell
+                > bourne-again shell (BASH)
+                > korn shell
+
+        > performing task approaches
+            > some shells have the commands built in and they execute it directly
+            > others have the commands in external programs and the shell only calls those programs
+                > i.e.
+                    > zsh
+                        > it calls and external programs

@@ -1,2 +1,41 @@
 OS services
-    > 
+    > OS provides 
+        > an environment for the execution of the programs
+        > services to programs and users
+
+    > user interface
+        > a way to communicate with the OS
+        > i.e.
+            > GUI
+            > command line interfaces
+
+    > program execution
+        > gives you the ability to execute a program
+            > converts source code into machine code by compiler
+            > runs the machine code
+
+    > I/O operations
+        > handles the data from I/O throughout the system
+
+    > File system manipulation
+        > files/folders CRUD
+        > read/write access 
+
+    > communications
+        > between systems over the network
+        > between processes over the same system
+        > between processes over different systems
+
+    > Error detection
+        > logging errors
+        > handling them
+
+    > resources allocation
+        > to achieve high optimization
+
+    > accounting
+        > registering who did what, when
+        > provides data for future improvements and monitoring 
+
+    > protection and security
+        > no body is going to use an os if it is not secure from any threats
