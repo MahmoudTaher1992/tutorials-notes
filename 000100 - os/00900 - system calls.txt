@@ -1,0 +1,33 @@
+System calls
+    > are the way in which you ask for tasks from the OS services
+    > it is the programmatic way in which programs can request services from the OS
+    
+    > types
+        > Process control
+            > end, abort process
+            > load, execute
+            > create, terminate
+            > get, set process attributes
+            > wait, signal event
+            > allocate, free memory
+
+        > File manipulation
+            > create, delete, open, close, read, write files
+            > get, set file attributes
+
+        > Device manipulation
+            > request, release Device
+            > read, write, reposition
+            > get, set device attributes
+            > logically attach, detach device
+
+        > information management
+            > get, set time or date
+            > get, set data
+            > get, set process, file or system attribute
+
+        > communications
+            > create, delete communications connections
+            > send, receive messages
+            > transfer status information
+            > attach/de-attach remote devices

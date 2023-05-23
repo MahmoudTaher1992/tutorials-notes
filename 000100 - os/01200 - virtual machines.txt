@@ -1,0 +1,6 @@
+Virtual machines
+    > the idea is
+        > share the hardware of a single computer into several different execution environments
+        > each environment will be dealing with the hardware as if it is a separate system
+
+    > the virtualization software will run on your main os and you can access all virtual machines through it

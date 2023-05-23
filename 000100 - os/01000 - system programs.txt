@@ -1,0 +1,50 @@
+System programs
+    > a collection of programs that for an environment for program development and execution
+    > some of them are simple interface for system calls
+    
+    > categories
+        > File management
+            > create
+            > delete
+            > rename
+            > copy
+            > dump
+
+        > Status information (ask os for)
+            > Date, Time
+            > available memory or disk space
+            > number of users
+            > detailed performance
+            > logging/debugging information
+
+        > file modification
+            > multiple text editors that allows to to modify the content of the files
+        
+        > programming language support (for common programming languages)
+            > compilers
+            > interpreters
+            > assemblers
+            > debuggers
+
+        > program loading and execution (loads and executes compiled programs)
+            > absolute loaders
+            > relocatable loaders
+            > linkage editors
+            > overlay loaders
+
+        > communications
+            > creating connections
+            > allowing users to send messages to another screens
+            > to send emails
+            > login remotely
+            > transfer files from one machine to another
+
+    > in addition to system programs os provides some application programs that solve common problems
+        > web browsers
+        > word processors
+        > excel processors
+        > database systems
+        > games
+        > etc
+
+
