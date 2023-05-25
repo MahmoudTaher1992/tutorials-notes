@@ -1,0 +1,71 @@
+Process management
+    > process
+        > process is a program in execution, before that it is a normal program.
+        > old computers supports one process at a time
+
+    > threads
+        > a unit of execution within a process
+        > a process can have from one thread to multiple threads
+    
+    > you can view the processes running on your os at the task manager
+    > you can also see the threads within each process
+
+    > process states
+        > New
+            > the process is being created
+
+        > Ready
+            > the process is waiting to be assigned to a processor
+
+        > running
+            > instructions are being executed
+
+        > waiting
+            > is waiting for some event to occur (I/O operation for example)
+
+        > terminated
+            > is finished execution
+
+    > process control block
+        > is a block that contains an information about the process
+        > info examples
+            > process id
+            > state
+            > number
+            > counter
+            > registers
+            > memory limits
+            > open files list
+            > I/O status
+            > CPU scheduling info
+            > memory management info
+            > accounting info
+
+    > process scheduling
+        > the aim of multiprogramming/time sharing
+            > have some process run at all the time
+            > maximize CPU utilization
+            > switch the CPU over all the process so quickly that each program looks like it is continuously running
+
+        > what does these things is the process schedular
+            > it priorities the process
+            > it makes all of them ass over the CPU for some time
+            > one will be executed, the rest will have to wait there round
+
+        > scheduling queues
+            > queues of process that are waiting to be executed
+            > types
+                > job queue
+                    > consists of all processors in the system
+                > ready queue
+                    > consists of all processors in the main memory that are ready and waits to be executed
+
+    > context switch
+        > interrupts cause the OS to stop the CPU's current task and do another task, it happens a lot.
+        > When it happens, the system saves the data of the process in something called context.
+        > when the CPU is free again، it takes back the stopped process with it's context and resumes it.
+        > the context is stored in the Process Control Block (PCB) of the process
+
+        > context switch 
+            > is the action by which the context is saved when the process stops, and restored when the process resumes
+            > context switch time is a pure overhead because the system does nothing while the switch occurs.
