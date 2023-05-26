@@ -69,3 +69,22 @@ Process management
         > context switch 
             > is the action by which the context is saved when the process stops, and restored when the process resumes
             > context switch time is a pure overhead because the system does nothing while the switch occurs.
+
+    > Process creation
+        > a process may create several process via create-process system call, during the course of execution
+        > the creating process is called parent-process and the new processes are called children processes
+        > some of the children may create their children processes forming a tree
+
+        > execution
+            > the parent may execute concurrently with its children
+            > or it may wait until all of its children have terminated
+
+        > space
+            > the children processes may share the same data and program of the parent
+            > or they may have their own program and data
+
+    > Process termination
+        > a process terminates when after it executes the last statement and asks the os to terminate it by calling exit system call
+        > the child process sends a status to the parent process via a system call
+        > all the resources of the process are de-allocated to the os
+        > the parent process may kill one of it's children process

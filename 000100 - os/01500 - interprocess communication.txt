@@ -1,0 +1,43 @@
+Inter-process communication (IPC)
+    > processes in the system may be
+        > independent
+            > can not be affected by other processes in the system
+        > cooperating
+            > can be affected by other processes
+            > share the same data
+            > work together to achieve a big task quickly, AKA speedup
+            > modularity
+
+    > IPC is required by the cooperating processes to exchange data and information
+    > IPC communication types
+        > shared memory
+            > a region of the memory is shared by multiple process
+            > processes can read and write the data to the shared memory
+        > message passing
+            > messages exchanged between the processes
+            > the os takes care of delivering the message to the target process
+
+    > Shared memory systems
+        > shared memory is established between the cooperating processes
+        > each process that wills to enter the group of cooperating processes must share it's memory address
+        > os will prevent process from accessing their memory unless they approve
+
+        > i.e. (producer consumer problem)
+            > a problem when a process is creating a output that id used by another process
+            > some times the consumer process takes incomplete segment of the data
+            > a solution is a shared memory in which a buffer of items are filled by the producer and consumed by the consumer
+            > the must work in sync so that they don't be blocked or produce corrupted outputs
+
+        > Buffers types
+            > Unbounded buffer
+                > no limit on the size of the buffer
+                > the producer is not limited
+                > the consumer may wait if the buffer is empty
+
+            > Bounded buffer
+                > their is a specific size of the buffer
+                > the producer may wait if the buffer it full
+                > the consumer may wait if the buffer is empty
+
+    > Message passing system
+        > 
