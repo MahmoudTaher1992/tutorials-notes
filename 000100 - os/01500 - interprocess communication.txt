@@ -40,4 +40,54 @@ Inter-process communication (IPC)
                 > the consumer may wait if the buffer is empty
 
     > Message passing system
-        > 
+        > allows the communication to happen between the processes if the process are on different systems (distributed systems)
+        > it is done by 
+            > send message operation
+            > receive message operation
+        > a message can be of 
+            > fixed size
+            > variable size
+        > a communication link must exist between the processes for it to start messaging
+
+        > communication link implementation logic
+            > Direct/Indirect communications
+            > Sync/Async communications
+            > Automatic/Explicit buffering
+        
+        > Direct/Indirect communications
+            > Direct
+                > the sender must know the name(identity) of the receiver
+                > the link is associated with two processes only
+                > between two processes, one link exists only
+
+                > symmetric
+                    > the sender and the receiver must know each other
+                > asymmetric
+                    > the sender know the receiver but not vise versa
+
+            > Indirect
+                > the messages are sent/received through a mailbox
+                > each mailbox has a unique identifier
+                > processes send to the mailbox and the receiver reads from the mailbox
+                > the link is established if the processes have the same shared mailbox
+                > the mailbox maybe shared between more that two processes
+                > when the message reaches the mailbox
+                    > all the processes may read it
+                    > the system may choose which process should read it (based on a criteria)
+
+        > Sync/Async communications
+            > Also known as Blocking/non-blocking 
+            > blocking
+                > the sender and the receiver is blocked until the message is received
+            > non-blocking
+                > the sender and the receiver is are not blocked
+
+        > buffering
+            > messages pass through a queue before being sent
+            > implementation
+                > zero capacity
+                    > the sender is blocked from sending messages until the buffer is free again (1 message at a time)
+                > bounded capacity
+                    > the sender is blocked after the buffer is full (depending on it's size)
+                > unbounded capacity 
+                    > the sender is never blocked (the buffer can have infinite messages)

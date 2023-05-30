@@ -1,0 +1,5 @@
+Sockets
+    > used in communication in client/server systems
+    > a socket is an end point for communication
+    > a pair of processes require a pair of sockets to communicate (one for each process)
+    > a socket is identified by an ip address followed by a port number
