@@ -1,0 +1,5 @@
+threads
+    > a program is a code stored on a drive that can do a certain task/s
+    > There are many types of programs
+    > https://www.backblaze.com/blog/whats-the-diff-programs-processes-and-threads/
+    > 

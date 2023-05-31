@@ -1,2 +1,20 @@
 RPC
-    > What is the difference between RPC and sockets
+    > RPC is a request-response protocol
+    > it follows under client-server interaction
+    > it is a form of inter-process communication
+
+    > it is a protocol used by a program to execute a procedure in another program in a different host, as if it is running locally
+    > a message is sent to the remote process with the details of the task, a reply is delivered with the results.
+    > RPC provides a higher level abstraction that allows the developers to deal with the remote process easily without the need to take care of the communications details
+    
+    > implementation
+        > Sun RPC in UNIX
+        > DCOM & CORBA in microsoft
+
+    > a glance of the stub
+        > when a program using the RPC framework is compiled, stubs are created for each remote procedure
+            > stub is a piece of code that handles the communication
+        > two stubs are created for each procedure, one in the client side and the other is on the server side
+        > when the client program calls a RPC, the call is forwarded to the stub which locates the port and sends an appropriate message to the server's stub
+        > the server's stub receives the message, unpacks it and forwards it to the server program
+        > the return message is created after the procedure is executed and sent back to the client using the same path

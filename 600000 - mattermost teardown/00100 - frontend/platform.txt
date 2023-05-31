@@ -1,0 +1,21 @@
+Platform
+    > is a package that serves common modules to all frontend packages
+    > i.e
+        > client
+            > client
+            > Websocket client
+            > all the methods used to send REST api requests
+
+        > types
+            > REST response data types
+
+        > components
+            > hooks
+                > common html/js logic     
+
+            > components
+                > Focus trap
+                > Modal
+                > paginator
+                > skeleton loader components
+                > TourTip
