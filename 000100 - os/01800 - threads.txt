@@ -1,5 +1,28 @@
 threads
-    > a program is a code stored on a drive that can do a certain task/s
+    > a program is a code stored on a non-volatile memory in an executable format that can do a certain task/s
+        > executable (binary) format is what the CPU understands - 0s & 1s
     > There are many types of programs
-    > https://www.backblaze.com/blog/whats-the-diff-programs-processes-and-threads/
-    > 
+
+    > processes
+        > to execute the program you have to load it into the memory
+            > the memory acts as a silo for the CPU
+            > it takes a part of the code, computes it and returns the output to the memory, until the code is finished
+        > once the program is loaded into the memory, it is called a process
+        > each process will have resources allocated to it i.e. (register, program counter, stack, ...)
+        > there may be multiple process having the same program
+            > each with it's own resources
+
+    > threads
+        > a thread is a unit of execution within the process
+        > a process can have from one thread to multiple
+        > multi-threading is created to increase the overall performance of the system
+            > they are more performant than multiple process because they are
+                > cheaper to create/terminate
+                > share resources without the need of expensive inter-process communication
+                > inter-thread communications are cheaper than inter-process communications
+                > context switching is fast
+            > they take advantage of multi core processors
+        > a thread is a sequential flow of tasks within a process
+        > each thread has its own (register, program counter, stack) and share (code, data, files) with all threads in the process
+        > a multi-threaded process can execute more than a task in the same time
+ 
