@@ -7,3 +7,5 @@ Core concepts
 
     Reducer
         Takes the action and modifies the state (immutable)
+
+    > 

@@ -1,0 +1,8 @@
+Redux toolkit - introduction
+    > RTK is the shorthand
+    > contains utilities that makes it easier to build a redux store
+        > store setup
+        > creating reducers with immutable update logic
+        > creating slices
+
+    > 

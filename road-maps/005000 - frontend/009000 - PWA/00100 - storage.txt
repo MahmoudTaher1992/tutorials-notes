@@ -1,0 +1,33 @@
+storage
+    > there are multiple ways to store data in the FEs
+        > local storage
+        > session storage
+        > IndexedDB
+        > Web SQL
+        > Cookies
+    
+    > local storage
+        > stores the data in key-value pairs
+        > the values are stored as strings only
+        > there are a 5mb limit for each value
+        > it is stored even after the browser is closed
+
+    > session storage
+        > similar to local storage
+        > it loses the data once the browser is closed
+
+    > IndexDB
+        > the schema is up to you
+        > the data is indexed
+        > no limitation on the size
+        > it is slower that local/session storage
+
+    > Web SQL
+        > a depreciated API for security and extendability reasons
+        > used to store the data in any way you like because it uses SQLLite under the hood
+        > you can deal with the data in SQL statements
+
+    > Cookies
+        > limited size
+        > data is stored in key-value pairs
+        > any data in the cookies will be added to all the requests sent to the BEs

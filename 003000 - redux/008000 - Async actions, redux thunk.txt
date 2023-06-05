@@ -27,4 +27,30 @@ Redux thunk
             combinedReducers,
             redux.applyMiddleware(middleware1, thunkMiddleware)
         );
+
+    > thunk in programming means writing a piece of a code that does a delayed work
+    > thunk is a pattern in which writing a code with side effects that has access to the store and dispatch function
+    > instead of dispatching an action you will dispatch a function with two parameters (dispatch & store)
+    > the thunk middleware intercepts the dispatched function and it executes it instead of passing it to the reducer
+        > the thunk middleware is very simple
+            // standard middleware definition, with 3 nested functions:
+            // 1) Accepts `{dispatch, getState}`
+            // 2) Accepts `next`
+            // 3) Accepts `action`
+            const thunkMiddleware = ({ dispatch, getState }) => next => action => {
+                // If the "action" is actually a function instead...
+                if (typeof action === 'function') {
+                    // then call the function and pass `dispatch` and `getState` as arguments
+                    return action(dispatch, getState)
+                }
+
+                // Otherwise, it's a normal action - send it onwards
+                return next(action)
+            }
  
+    > you can inject config value to the thunk functions (through the third parameter)
+    > it is very important to keep the dispatched function dependant on the parameters instead of passing a global store and dispatcher
+        > this is the power of redux actions (it can work on any store)
+        > DON'T make it dependant on one store
+
+    > 

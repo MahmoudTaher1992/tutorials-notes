@@ -1,0 +1,7 @@
+https://redux.js.org/introduction/ecosystem
+https://github.com/reduxjs/reselect
+https://react-redux.js.org/api/hooks
+https://redux-toolkit.js.org/introduction/getting-started
+https://dev.to/raaynaldo/rtk-query-tutorial-crud-51hl
+https://www.npmjs.com/package/redux-batched-actions
+https://medium.com/@reinelmp/batching-redux-actions-a68daaa2d492
