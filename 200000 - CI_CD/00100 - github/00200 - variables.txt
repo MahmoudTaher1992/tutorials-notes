@@ -1,0 +1,37 @@
+Variables
+    > provide a way to store and reuse non sensitive config info
+    > commands that run in job's steps can CRUD the Variables
+    > you can defined your own custom variables or use a default one
+    
+    > you can share multiple variable among several workflows by 
+        > defining it in the repo settings
+        > they will be available at vars context
+
+    > defined your own variables in the workflow by
+        > defining it under env key
+        > you can use workflow, job, step scopes
+
+    > you can access the variable through
+        > context
+            > ${{ env.PARAM1 }}
+        > runner environmental variable
+            > linux
+                > $PARAM1
+            > windows
+                > $env:PARAM1
+
+    > There are naming conventions to follow
+
+    > there are limits for the number and the size of the variables at different levels
+
+    > you can store and access secrets through the secrets context
+
+    > Default variables
+        > runner.os || RUNNER_OS
+            > the name of the runner's os
+        > GITHUB_ENV
+            > path of the file the runner use to set the variables
+
+    > to pass the variables between steps write it to GITHUB_ENV
+    > to pass the variables between jobs
+        > write it to the job output and get it from the next job

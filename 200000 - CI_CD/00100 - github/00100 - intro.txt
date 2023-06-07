@@ -1,0 +1,51 @@
+intro
+    > github actions are CI/CD platform that help you automate
+        > building
+        > testing
+        > deployment
+
+    > terms
+        > workflow
+            > a process to be done
+            > contains multiple jobs
+            > written in YAML file
+            > triggers
+                > manually
+                > on schedule
+                > on event occurrence
+                > on an api call
+            > defined in the .github/workflows directory
+            > you can have multiple workflows for each repository
+            > workflows can be referenced within each other
+
+        > triggers
+            > activity in the repo that triggers the execution of a workflow
+            > i.e.
+                > pull request created
+                > issue created
+                > pull request merged
+
+        > job
+            > a building unit of the workflow
+            > contains multiple steps
+            > it runs on  a VM called runners
+            > you can control the dependencies of the jobs in the workflow
+
+        > runner
+            > a VM used to run a job
+            > one runner for each job
+            > can run in parallel or sequential
+            > hosting
+                > github hosting
+                > self hosted
+
+        > steps
+            > a shell command or an action
+            > are executed in order
+            > data is shared between the steps
+
+        > action
+            > is a custom github application for github actions platform
+            > executes a complex task
+            > saves you a lot of steps to write
+            > you can create your own custom actions

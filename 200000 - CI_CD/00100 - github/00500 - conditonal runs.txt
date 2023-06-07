@@ -1,0 +1,14 @@
+conditional runs
+    > by if key you can control the running of 
+        > workflow
+        > job
+        > step
+
+    > i.e.
+        if: matrix.version == 12
+
+    > i.e.
+        if: | 
+            matrix.version == 12 || 
+            (matrix.version == 11 && runner.os == "ubuntu")
+        > use | to write a multiline condition

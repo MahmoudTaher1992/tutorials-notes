@@ -1,0 +1,18 @@
+actions
+    > can be used as a step
+    > does a complex work
+
+    > i.e.
+        - uses: actions/checkout@v3
+
+    > examples
+        > actions/checkout@v3
+            > copies the source code to the runner it can access it
+        
+        > actions/cache@v3
+            > caches files and directories and uses them the next time
+            > it speeds up the job execution
+            > you have to supply a key and a path
+
+        > actions/setup-node@v3
+            > setups node on the runner

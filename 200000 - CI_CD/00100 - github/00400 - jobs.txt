@@ -1,0 +1,39 @@
+jobs
+    > continue-on-error
+        > continues even if the job fails
+
+    > matrices
+        > uses variables to create multiple jobs
+        > types
+            > single dimension matrix
+                > one variable only
+            > multiple dimensions matrix
+                > multiple variables
+
+        > matrix variables can come from another variable
+
+        > you can play with the variables combination through the include/exclude keys
+
+        > i.e.
+            > syntax
+                jobs:
+                    example_matrix:
+                        strategy:
+                            matrix:
+                                version: [10, 12, 14]
+                                os: [ubuntu-latest, windows-latest]
+            > this will create 6 jobs with those variables
+                > {version: 10, os: ubuntu-latest}
+                > {version: 10, os: windows-latest}
+                > {version: 12, os: ubuntu-latest}
+                > {version: 12, os: windows-latest}
+                > {version: 14, os: ubuntu-latest}
+                > {version: 14, os: windows-latest}
+
+            > use the matrix context to get the variables
+                > ${{ matrix.version }}
+                > ${{ matrix.os }}
+
+        > the jobs will run concurrently depending on the runners availability
+            > you can set a max value through 
+                > max-parallel key

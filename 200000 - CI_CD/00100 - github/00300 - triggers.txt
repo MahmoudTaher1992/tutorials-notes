@@ -1,0 +1,73 @@
+triggers
+    > events that cause a workflow to run
+    > types
+        > events occur to the repo
+            > pull request
+            > push
+        > events occur outside github
+            > api call
+        > scheduled times
+        > manual
+
+    > defined in the `on` key
+
+    > single event
+        > on: push
+
+    > multiple events
+        > on: [push, fork]
+
+    > multiple events w. types and filters
+        > on:
+            label:
+                types:
+                    - created
+                    - deleted
+            push:
+                branches:
+                    - master
+
+    > activity types
+        > i.e
+            > on:
+                label:
+                    types:
+                        - created
+                        - deleted
+                issues:
+                    types:
+                        - opened
+                        - labeled
+
+            > this triggers once a label is created or deleted and when issues are opened or labeled
+            
+
+    > filters
+        > you can specify some filters to filter the events that trigger the workflow
+        > on:
+            push:
+                branches:
+                    - master
+        > it triggers once you push any change on the master branch
+
+    > examples
+        > pull_request
+            > filters
+                > branches
+                > branches-ignore
+                > paths
+                > paths-ignore
+                > tags
+                > tags-ignore
+
+            > activities
+                > closed
+                > opened
+
+        > workflow_run
+
+        > workflow_dispatch
+            > must be added if you want to allow manual trigger
+
+    > event info
+        > you can access all the info of the event through github.event context
