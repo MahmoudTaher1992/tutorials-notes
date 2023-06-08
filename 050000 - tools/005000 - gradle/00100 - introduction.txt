@@ -11,7 +11,7 @@ introduction
 
     > concepts
         > build.gradle
-            > groovy script that describes hoe the project is built 
+            > groovy script that describes how the project is built 
             > lives at the top level of the project
 
             > content

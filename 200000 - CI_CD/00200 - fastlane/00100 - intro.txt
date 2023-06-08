@@ -1,2 +1,26 @@
-intro
-    > 
+fastlane intro
+    > the easiest way to automate IOS and android apps deployment
+        > deployment
+            > is the process of making an app available to use on a specific environment
+            > it involves all the tasks/activities that make this thing work
+                > i.e.
+                    > Infrastructure Setup
+                    > Configuration Management
+                    > Code Compilation/Build
+                    > Testing and Quality Assurance
+                    > Deployment
+                    > Monitoring and Maintenance
+    
+    > integrates will with tools, services, and CI pipelines
+    > open-source
+
+    > fastlane is written with ruby
+        > to work it needs
+            > ruby (runtime environment)
+            > bundler (package manager)
+                > fastlane have dependencies within it, so a package manager should resolve them (bundler)
+
+    > how to run fastlane
+        > through fastlane command
+        > through bundler
+            > faster

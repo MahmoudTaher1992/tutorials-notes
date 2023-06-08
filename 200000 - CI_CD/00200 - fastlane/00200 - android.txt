@@ -1,0 +1,8 @@
+fastlane android
+    > fastlane init
+        > creates the structure of fastlane files
+        > use gemfile to add all your fastlane dependencies
+
+    > you can setup the process to publish the app directly to the play store (by Supply fastlane tool)
+    > you can test the app before deployment
+    > you can even take screenshots
