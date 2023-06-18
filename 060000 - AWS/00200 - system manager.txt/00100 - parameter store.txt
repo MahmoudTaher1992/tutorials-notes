@@ -1,0 +1,27 @@
+parameter store
+    > a service of aws systems manager that provides
+        > secure
+            > encrypt parameters' values 
+        > hierarchial storage
+        > for config data
+        > and secrets
+
+    > i.e.
+        > passwords
+        > database strings
+        > IDs
+        > license codes
+
+    > usage
+        > you can access the values by
+            > referencing it in aws services
+            > aws cloudformation's template
+            > use it in the cli
+            > use it in the apps using AWS SDKs
+
+    > secrets manager and parameter store can interact with each other
+    > if you want to implement password rotation lifecycle, you should use Secrets manager
+    > you can protect a parameter from certain user groups
+    > you can use amazon event bridge to listen to all changes in the AWS services
+
+    > https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html
