@@ -1,0 +1,95 @@
+Distribute
+    > manages the app distribution to the end users
+
+    > you upload the binary file (apk/ipa) to the app center and it 
+        > will deliver it to the stores and individual testers
+        > you can upload the file via 
+            > app center cli
+                > fastlane uses the cli to upload the file
+            > app center build
+            > you can configure the app center to get the build from external source via url
+
+    > IOS device registration
+        > app signing
+            > apple stores requires the distributed app to be signed for security reasons
+                > it ensures that no body tampered with the app 
+        > the ios device you are used for testing should be registered in the signing certificate
+            > those whom their UDID is not in the certificate are called un-provisioned
+            > they must be added to apple developer account
+            > download the new certificate 
+            > re-sign the app
+            > redistribute the app
+
+        > the process can be automated in codepush
+
+    > distribution group
+        > used to control the access to the releases
+        > types of groups
+            > private
+                > only members can access the releases
+            > public
+                > anyone having the link can access the release
+            > shared
+
+    > stores
+        > apple app store
+            > app store uses fastlane to publish apps to app store and test flight
+            > the first version of the app must be published through the app store connect
+                > app store connect is a platform that helps developers to
+                    > publish apps to app store
+                    > monitor the statistics of the apps
+                    > others
+            > the app must be signed and having the appropriate certificates
+
+            > you have to connect app center to app store connect
+
+            > once the app is submitted to app store connect, it will handle it and publish it to app store
+
+            > you can publish it to test flight for 
+                > external users
+                > internal users
+                    > users registered in the app store connect
+            > you can always do every thing through the cli
+
+        > google play store
+            > google requires the first release to be published through the google console
+            > you have to connect app center to google play store
+                > setup an API project and service account for app center
+            > setup the app signing to be done by google
+                > you can submit .aab file to google and it will sign it and generate .apk for you
+                > or you can do it yourself
+            > you can always do every thing through the cli
+
+    > testers
+        > will get an email with the link to the released app
+        > they will install it on the device and start testing
+
+    > codepush
+        > an app center service
+        > enables react native developers to deploy mobile updates directly to customers' devices
+        > acts as a central repository where 
+            > devs can push changes to
+            > users' devices can check updates and download new ones
+        > helps in directly deploying small bug fixes and features that don't require to build a binary
+
+        > after you make the changes push it to codepush 
+            > app center codepush release-react -a <ownerName>/MyApp
+
+        > you can do nearly everything by app center cli
+            > Check management CLI in the codepush docs
+
+        > React native client-side SDK
+            > this is the SDK responsible for pulling the updates from the codepush server
+            > this is installed on the app running on the users' devices
+
+        > How it works
+            > react native apps are composed of js file and images bundled together by metro (bundler), and distributes as .ipa and .apk files
+            > after the app is released, the codepush cdk queries the repo for any updates, pulls it and replaces the files. the next launch will have the updates
+            > the codepush sdk keeps track of old updates, and rolls back to it if the new update crashes
+
+            > there are rules in the IOS store for integrating codepush in the app
+            
+            > i.e.
+                > in android the app will ask codepush the location of the js bundle, codepush will direct it to the most recent one
+            
+            configuring code-push is done in the root react file

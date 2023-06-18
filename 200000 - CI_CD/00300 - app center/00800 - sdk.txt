@@ -1,0 +1,7 @@
+SDK
+    > there is an app center skd (to be added inside the app) that can does lots of things
+    
+    > i.e.
+        > analytics
+        > crashes
+        > install updates

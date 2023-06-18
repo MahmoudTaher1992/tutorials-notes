@@ -1,0 +1,4 @@
+Build
+    > you can customize the app center to build the app for you
+    > you have to give it a access to the github repo
+    > and follow the steps

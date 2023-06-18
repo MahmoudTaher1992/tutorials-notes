@@ -1,0 +1,18 @@
+> Cloud formation 
+    > a service that helps you setup your aws resources instead of doing it manually
+
+    > concepts
+        > templates
+            > a document that describes the shape of your AWS resources
+            > can by in .json, .yaml, .txt and .template extensions
+
+        > stacks
+            > you submit the template to the cloudformation and it will create a product called stack
+            > a stack is a set of aws resources created by aws cloudformation
+            > you can delete the stack and leave some resources by configuring DeletionPolicy
+
+        > change set 
+            > a summary of changes that you want to do the stack
+            > the changeset will give you any warning related to the changes you make (i.e. data loss)
+
+            > you will update the template, submit it to cloudformation and it will create the changeset

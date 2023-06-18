@@ -1,0 +1,12 @@
+introduction
+    > a devops cloud-based solution that provides multiple services
+        > app building
+        > app testing
+        > app distribution
+        > app analytics and diagnostics after distribution
+        > codepush
+
+    > you can customize the app center to send you emails on events
+        > you can also customize it to send the event to another api by webhooks
+
+    > there is a cli for app-center that does any thing you can think of
