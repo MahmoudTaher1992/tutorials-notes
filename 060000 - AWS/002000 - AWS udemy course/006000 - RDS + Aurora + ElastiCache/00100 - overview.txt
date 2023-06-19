@@ -1,0 +1,25 @@
+RDS overview
+    > stands for Relational Database service
+    > managed DB services for DBs that uses SQL
+    > allows you to create DBs in the cloud that is managed by AWS
+        > Postgres
+        > MySQL
+        > MariaDB
+        > Oracle
+        > SQL Server
+        > Aurora (AWS database)
+
+    > RDS manages
+        > Automated provisioning, OS patching
+            > setting up the infrastructure for the database to work
+        > Continuous backup and restore to specific timestamp
+        > monitoring dashboards
+        > read replica for improved read performance
+        > Multi AZ setup for Disaster recovery
+        > Maintenance windows for upgrades
+        > scaling capabilities (vertical and horizontal)
+        > Storage backed by EBS (gp2 or io1)
+
+    > you can not SSH into your RDS instances
+
+    > https://hevodata.com/learn/amazon-rds-read-replicas/#Replication

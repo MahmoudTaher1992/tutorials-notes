@@ -1,0 +1,10 @@
+Auto scaling - instance refresh
+    > if you want to update the launch template of an entire auto scaling group
+    > all old EC2 instances will be killed and new ones will be started
+    > instead of killing them all at once and have your services down, you can use instance refresh feature
+    > you will set 
+        > min healthy percentage (EC2s will not be less than that percentage)
+        > warm up time 
+            > time taken by new EC2 instances to be fully functional
+
+    > it will start killing old instances and create new ones while keeping the parameters
