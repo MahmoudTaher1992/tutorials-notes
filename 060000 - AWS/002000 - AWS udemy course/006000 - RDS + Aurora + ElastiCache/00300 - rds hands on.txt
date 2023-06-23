@@ -1,0 +1,4 @@
+RDS hands on
+    > you can setup RDS to allow EC2 instances to connect to the database
+        > save the time in creating security groups and assigning them
+    > 

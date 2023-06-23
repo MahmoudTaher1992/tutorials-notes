@@ -1,0 +1,30 @@
+Amazon Aurora
+    > not an open source db
+    > owned by aws, you can not find it except on aws
+    > is optimized and 5x performance improvement on AWS MySQL and 3x performance improvement on AWS Postgres
+    > automatic storage increments (of 10GB), up to 128GB
+    > can have 15 replicas
+    > failover is the fastest among siblings, almost instantaneous
+    > cost more than RDS by 20%, but more efficient
+
+    > High availability and read scaling
+        > data is stored in 3AZs (6 copies)
+        > self healing by peer to peer replication
+    > one aurora instance (master) takes writes and all the others takes reads
+    > automatic failover (in 30 seconds at most)
+    > up to 15 read replicas
+        > you can setup it to be auto scaling
+        > there is a reader endpoint that is connected to load balancer to control the scaling
+
+    > Features
+        > automatic failover
+        > backup and recovery
+        > isolation and security
+        > industry compliance
+        > push-button scaling
+        > automated patching with 0 downtime
+        > advanced monitoring
+        > routine maintenance
+        > backtrack => restore data at any point of time without using backups
+
+    > https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/learn/lecture/19733954#notes

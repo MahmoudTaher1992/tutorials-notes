@@ -1,0 +1,9 @@
+Configure build variants
+    > you can create different versions of the app from the same project
+        > manage the dependencies
+        > signing configs
+    > build variant
+        > represent different version of the app that you can build
+        > is a result of gradle being configured to produce different apps
+    > Configure build types
+        > 

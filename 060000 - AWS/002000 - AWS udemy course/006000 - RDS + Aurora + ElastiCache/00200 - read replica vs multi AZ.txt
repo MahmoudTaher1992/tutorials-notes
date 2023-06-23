@@ -1,0 +1,23 @@
+Read replica vs multi AZ
+    > Read replica
+        > if you want to scale the readability of the database, this is an option
+        > you can create up to 15 replica
+        > replicas can be promoted to their own database
+        > applications must update the connection string setup to connect to the replicas
+        > you can not use CRUD SQL statements on replicas
+        > replication is done ASYNC
+
+        > there is an aws cost associated with moving the data across different AZs
+            > but not with this service, as long as AZs are in the same region
+            > you will pay if you move the data across regions (replicas are in different regions than the original database)
+
+    > Multi AZ
+        > replication is done SYNC
+        > there will be on DNS
+        > increased availability
+        > an automatic failover will happen and database is switched directly
+        > no manual setup is done in the application level
+        > Read replica can be setup as RDS multi AZs
+        > you can change RDS from single AZ to multi AZ
+            > no down time
+            > it means that a standby database will be created and linked with the master one

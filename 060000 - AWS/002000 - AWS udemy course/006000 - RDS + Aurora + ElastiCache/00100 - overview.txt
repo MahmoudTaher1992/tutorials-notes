@@ -22,4 +22,10 @@ RDS overview
 
     > you can not SSH into your RDS instances
 
-    > https://hevodata.com/learn/amazon-rds-read-replicas/#Replication
+    > storage auto-scaling
+        > helps increase storage on RDS dynamically
+        > you will set thresholds limits, when hit RDS will increase the storage automatically
+            > threshold examples
+                > storage exceeds 90%
+                > after 5mins from low storage alert 
+        > works with all kinds of dbs
