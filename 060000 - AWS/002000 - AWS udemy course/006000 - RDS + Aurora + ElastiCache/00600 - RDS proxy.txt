@@ -1,0 +1,10 @@
+RDS proxy
+    > a service that can be used between the clients and the database
+    > it's main goal is to create a pool for the connections and reuse them 
+    > benefits
+        > improves the db efficiency by reducing the stress on the db and minimize open connections
+        > reduce failover time by 66%
+    > it is serverless, auto scaling and highly available
+    > no code changes required from the clients
+    > enforce IAM authentication only and stop username and password
+    > can not be publicly accessible (must be accessible from vpc)

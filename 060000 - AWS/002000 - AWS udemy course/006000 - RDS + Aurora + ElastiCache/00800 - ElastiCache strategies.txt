@@ -1,0 +1,53 @@
+ElastiCache strategies
+    > considerations
+        > Is it safe to cache the data ?
+            > it may go out of date
+        > Is caching effective for that data ?
+            > if the data is changing quickly then caching is not suitable for it
+        > Is data structured well for caching ?
+        > Which caching design pattern is most appropriate ?
+
+    > caching design patterns
+        > lazy loading/cache aside/lazy population
+        > write through
+
+    > Lazy loading
+        > process
+            > check if cache hast the data
+                > cache hit
+                    > data is found
+                > cache miss
+                    > data is not found in the cache
+                    > query it from the RDS
+                    > store it in the cache
+        
+        > pros
+            > easy implementation
+            > only requested data is cached (the cache is not filled with unwanted data)
+            > node failure is not fatal (the cache will be filled again)
+
+        > cons
+            > cache mis penalty is 3 round trip (high latency)
+            > stale data
+                > data may be updated in the db and out dated in the cache
+
+    > Write through
+        > add and update the cache when the database is updated
+        
+        > pros  
+            > data cache is never stale (reads are quick)
+            > write penalty equals read penalty (2 rounds each)
+        > cons
+            > Data is missing until it is added/updated
+                > a work around is to use lazy loading if data is not in the cache yet
+            > Cache churn
+                > a lot of data may be added to the cache and it is not used
+
+    > Cache evection and Time to live (TTL)
+        > cache evection can happen in different ways
+            > data is deleted explicitly
+            > item is evicted because the cache is full (LRU)
+                > you may consider increasing the capacity of the cache if this is the case
+            > you set TTL
+
+        > TTL can range from seconds to days

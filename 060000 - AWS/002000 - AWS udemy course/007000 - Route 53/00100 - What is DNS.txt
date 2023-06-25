@@ -1,0 +1,46 @@
+What is DNS
+    > stands for domain name system
+    > it translates the user friendly url into an ip address
+    > www.example.com => 194.234.645.2
+    > it is the backbone of the internet
+
+    > DNS terms
+        > Domain registrar
+            > GoDaddy
+            > Amazon Route 53
+            > ... etc
+        > DNS records
+            > A
+            > AAAA
+            > CNAME
+            > NS
+            > ... etc
+        > Zone file
+            > contains DNS records
+        > Name server
+            > resolves DNS queries
+        > Top level domain (TLD)
+            > .com
+            > .gov 
+            > .us
+        > Second level domain
+            > google.com
+            > amazon.com
+
+        > https://api.www.example.com.
+            > . => root
+            > .com => TLD
+            > example.com => SLD
+            > www.example.com => Sub domain
+            > api.www.example.com => FQDN => Fully Qualified Domain Name
+            > https => protocol
+            > https://api.www.example.com. => URL
+
+    > process
+        > Local DNS Server
+            > your web browser send a DNS request to it
+            > it checks the cache
+            > if cache miss, it will send a request to Root DNS server, it will receive a reply with the ip address of TLD DNS server
+            > it will send a request to TLD DNS server, it will receive a reply with the ip address of SLD DNS server
+            > it will send a request to SLD DNS server, it will receive a reply with the ip address of DNS sent
+            > it will cache with TTL

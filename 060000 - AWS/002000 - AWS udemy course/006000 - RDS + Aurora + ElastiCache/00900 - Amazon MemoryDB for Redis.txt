@@ -1,0 +1,9 @@
+Amazon MemoryDB for Redis
+    > Redis compatible
+    > durable with multi-AZ transaction log
+    > in-memory database service
+    > Ultra fast 
+    > scales well
+    > use cases
+        > online gaming
+        > media streaming

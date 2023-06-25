@@ -1,0 +1,17 @@
+RDS & Aurora security
+    > encryption
+        > at rest
+            > replication can be done the master and replicas using AWS KMS, but must be configured during launch time
+            > replicas can be encrypted only if the master is encrypted
+            > if you want to encrypt an unencrypted database, take a snapshot and restore it as encrypted
+        > in-flight
+            > use AWS TLS certificates in the client side to decrypt the data
+    > authentication
+        > username and password
+        > IAM roles attached to EC2 instances
+    > network access
+        > security groups manage the ports and hosts inbound/outbound access
+        > you can not SSH the database server except on RDS custom
+    > logs
+        > can be enabled but it has short life
+        > you can send it to cloudwatch to have longer retention

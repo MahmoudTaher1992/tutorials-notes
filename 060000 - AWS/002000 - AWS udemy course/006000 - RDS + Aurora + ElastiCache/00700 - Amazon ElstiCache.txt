@@ -1,0 +1,30 @@
+AWS ElastiCache
+    > is to get managed Redis or MemCached
+    > it is in-memory databases with really high performance and low latency
+    > helps in reducing the read load from the databases
+    > helps in making the apps stateless
+    > requires heavy changes in the apps
+
+    > solution architecture
+        > DB cache
+            > apps queries the data from the cache, if not present then it queries it from the database and writes it to the cache
+            > cache must have an invalidation strategy to make sure that the data is valid
+        > user session store
+            > use cache to store user's session 
+            > when the user logs in from any machine he will still access his session's data
+            > aka stateless apps
+
+    > Redis vs MemCached
+        > Redis
+            > High availability
+                > Multi AZ with failover
+                > read replicas
+            > data persistence
+                > using AOF persistence
+                > backup and restore
+            > supports sets and sorted sets
+        > MemCached
+            > no high availability
+            > no data persistence
+            > multi node for partitioning data (sharding)
+            > multi threaded architecture

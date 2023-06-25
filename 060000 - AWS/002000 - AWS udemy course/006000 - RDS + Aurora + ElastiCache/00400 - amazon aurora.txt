@@ -26,5 +26,3 @@ Amazon Aurora
         > advanced monitoring
         > routine maintenance
         > backtrack => restore data at any point of time without using backups
-
-    > https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/learn/lecture/19733954#notes
