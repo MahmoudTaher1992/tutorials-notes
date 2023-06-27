@@ -1,0 +1,22 @@
+Health checks
+    > are only for public resources
+        > you can setup for private but with a different way
+    > Health checks are created and associated with DNS to make Automated DNS failover
+    > Possible Health checks
+        > Health checks that monitor end points
+        > Health checks that monitor another health checks
+        > Health checks that monitor cloud watch alarms
+
+    > Have it's own metrics and you can access it from the cloudwatch
+
+    > you setup a health check
+        > there are 15 global heath checkers that will run your health check
+            > interval is 30 secs
+            > supports multiple protocols
+            > if 18%+ health checkers report that an end point is healthy, then Route 53 considers it healthy
+            > You can configure Route 53 to choose the location of the health checkers
+
+        > it passes if the response is with 2xx or 3xx status codes
+        > at the endpoints you have to allow incoming requests from Route 53 Health checkers ip addresses
+
+    > 

@@ -1,0 +1,36 @@
+Routing Policies
+    > Defines how Route 53 will respond to DNS queries
+    > Routing here doesn't mean the load balancer's routing, DNS just respond to DNS queries
+
+    > Policies
+        > Simple
+        > Weighted
+        > Failover
+        > Latency based
+        > Geolocation
+        > Multi Value answer
+        > Geoproximity (using Route 53 Traffic flow feature)
+
+    > Simple
+        > route traffic to a single resource
+        > can specify multiple values in the same record
+            > all the values will be returned to the client to choose from
+        > when Alias is enabled, only one resource is allowed
+        > can not be associated with health checks
+
+    > Weighted
+        > controls % of requests for each resource
+        > weights don't need to sum up to 100%
+        > DNS records must have the same name and type
+        > can be associated with health checks
+        > Use cases
+            > load balancing
+            > testing new apps on a small traffic 
+        > if all weights are 0 then traffic will be directed evenly
+        > if one is 0 then it will receive no traffic
+
+    > Latency
+        > redirect to the resource which has the least Latency
+        > Route 53 will calculate the distance between the request location and the resource location and will decide base on it
+        > Helpful when the latency is a priority
+        > can be associated with health checks

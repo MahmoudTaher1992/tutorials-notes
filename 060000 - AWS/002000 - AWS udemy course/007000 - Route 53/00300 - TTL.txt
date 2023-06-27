@@ -1,0 +1,27 @@
+TTL
+    > stands for Time To Live
+    > specifies how long does the browser cache the ip resolution of the domain
+    
+    > High TTL
+        > i.e. 24hrs
+        > pros 
+            > low cost
+        > cons
+            > outdated records
+
+    > Low TTL
+        > i.e. 30 secs
+        > pros
+            > 30 secs only to get the new record
+        > cons
+            > high cost
+
+    > TTL is a must for non alias records
+
+    > a good technique
+        > make High TTL in normal periods
+        > when you want to change the values of the records
+            > first decrease the TTL to 60 secs
+            > wait for 24 hrs or the high TTL you use
+            > change the values
+            > put the TTL to the high value again

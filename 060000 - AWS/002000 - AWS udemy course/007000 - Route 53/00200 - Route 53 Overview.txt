@@ -1,2 +1,46 @@
 Route 53 Overview
-    > 
+    > Route 53 is a domain registrar
+    > highly available, scalable, fully managed and authoritative DNS
+        > authoritative
+            > you can update the DNS records
+    > gives you the availability of your resources
+    > The only AWS resource that offers 100% availability SLA
+    > 53 refers to the traditional DNS port
+
+    > Records
+        > entities that describe how you want to route traffic for a domain
+        > Each record contains
+            > domain/sub-domain name
+                > www.example.com
+            > record type
+                > A
+                > AAAA
+            > value
+                > 193.982.187.22
+            > routing policy
+                > how route 53 respond to queries
+            > TTL
+                > amount of cache time at DNS resolvers
+        
+    > Record Types
+        > A
+            > maps hostname to ipv4
+        > AAAA
+            > maps hostname to ipv6
+        > CNAME
+            > maps hostname to hostname
+            > can not create CNAME for top node of a DNS namespace
+                > i.e.
+                    > you can not create CNAME for example.com
+        > NS
+            > name servers of the hosted zone
+            > control how the traffic is routed for a domain
+
+    > Hosted zones
+        > a container for records that defines how to route traffic for domains and subdomains
+        > Types
+            > public hosted zones
+                > contains records to route traffic on the internet
+            > private hosted zones
+                > contains records to route traffic within one or more vpc
+        > you pay .5$ per month per hosted zones

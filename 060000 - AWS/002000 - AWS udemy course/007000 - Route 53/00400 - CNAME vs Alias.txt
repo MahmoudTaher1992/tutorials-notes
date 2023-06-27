@@ -1,0 +1,31 @@
+CNAME vs alias
+    > AWS resources expose an AWS host name
+        > i.e.
+            > aaa.eu-west-1.elb.amazonaws.com
+
+    > CNAME
+        > points a hostname to another hostname
+        > only for non-root domain
+            > example.com is not accepted
+
+    > Alias
+        > points a hostname to aws resource
+        > works for root domain and non root domain
+        > free
+        > Native health check
+        > is an extension to DNS functionality
+        > automatically detects the change in the aws resource's ip address
+        > always of type A and AAAA for aws resource ipv4/ipv6
+        > you can not set TTL
+
+        > record targets
+            > Elastic load balancers - ELB
+            > CloudFront distributions
+            > API gateway
+            > Elastic beanstalk environments
+            > S3 websites
+            > VPC interface endpoints
+            > Global Accelerator accelerator
+            > Route 53 record in the same hosted zone
+
+            > you CAN NOT set alias for EC2 DNS name
