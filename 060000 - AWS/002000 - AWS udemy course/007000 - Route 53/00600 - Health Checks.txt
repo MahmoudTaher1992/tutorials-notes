@@ -12,11 +12,27 @@ Health checks
     > you setup a health check
         > there are 15 global heath checkers that will run your health check
             > interval is 30 secs
-            > supports multiple protocols
+            > supports multiple protocols (i.e. http, https, ...)
             > if 18%+ health checkers report that an end point is healthy, then Route 53 considers it healthy
             > You can configure Route 53 to choose the location of the health checkers
 
         > it passes if the response is with 2xx or 3xx status codes
         > at the endpoints you have to allow incoming requests from Route 53 Health checkers ip addresses
+            > router
+            > firewall
+            > security group
 
-    > 
+    > Calculated health checks
+        > combine the results of multiple health checks into one (parent) health check
+        > you can use OR, AND, NOT
+        > you can monitor up to 256 child health checks
+        > specify how many health checks need to pass to pass the parent health check
+        > usage
+            > perform maintenance to your website without cause all health checks to fail
+
+    > private hosted zones
+        > route 53 health checkers are outside the vpc
+            > they can't access private endpoints (private vpc or on-premises resource)
+        > solution
+            > create CloudWatch metric + CloudWatch Alarm
+            > create a health check that checks on the alarm itself

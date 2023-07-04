@@ -1,0 +1,2 @@
+Failover
+    > you can setup route 53 to redirect traffic to another ip address if a certain target has a failing health check

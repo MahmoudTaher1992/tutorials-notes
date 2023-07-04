@@ -1,0 +1,32 @@
+VPC, Subnets, IGW and NAT
+    > VPC
+        > Virtual private cloud
+        > it is a foundation for AWS services
+            > i.e.
+                > EC2 instances can not be accessed without an underlying VPC
+        > it behaves like a traditional TCP/IP network (Physical Data Center) that can be expanded and scaled as needed
+        > a place where the AWS resources are deployed
+        > it is regional resource
+
+    > Subnets
+        > Building block of VPC
+        > allows you to partition your network inside the VPC
+        > it is a AZ resource
+
+        > types
+            > public subnets
+                > a subnet that is accessible from the internet
+            > private subnets
+                > a subnet that is not accessible from the internet
+
+    > Route tables
+        > defines the accessability between 
+            > the subnets and each other
+            > the subnets and the internet
+
+    > Internet Gateway (IGW)
+        > helps VPC to connect with the internet
+        > public subnets have a route to the internet gateway
+
+    > NAT Gateway & NAT instances 
+        > allow private subnets to access the internet while remaining private

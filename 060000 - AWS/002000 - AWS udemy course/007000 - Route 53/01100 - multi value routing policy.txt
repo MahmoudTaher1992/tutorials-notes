@@ -1,0 +1,6 @@
+Multi value routing policy
+    > routing traffic to multiple resources
+    > Route 53 return multiple values/resources
+    > can be associated with health checks (so that route 53 returns only the healthy endpoints)
+    > up to 8 healthy records are returned for each multi-value query
+    > multi-value is not a substitute for having an ELB

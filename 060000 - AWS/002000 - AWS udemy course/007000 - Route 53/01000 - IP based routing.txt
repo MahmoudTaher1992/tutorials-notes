@@ -1,0 +1,5 @@
+IP based routing
+    > routing is based on the client's IP address
+    > you provide a list of CIDR for your clients and the corresponding endpoints/locations
+    > in other words
+        > this range of ip addresses go to this endpoint

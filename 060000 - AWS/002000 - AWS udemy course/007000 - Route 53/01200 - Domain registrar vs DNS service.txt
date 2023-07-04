@@ -1,0 +1,18 @@
+Domain registrar vs DNS service
+    > Domain registrar
+        > a place where you buy the domain name
+        > is typically done by paying an annual fee
+        > i.e.
+            > GoDaddy
+            > Amazon Registrar
+            > ...
+    > DNS Service
+        > manage your DNS records
+        > you can use another DNS service provider other than the provider that you bought the registrar from
+        > i.e.
+            > you buy the domain name from GoDaddy and use AWS Route 53 to manage the DNS records
+            > you will have to config GoDaddy to pass the DNS requests to Route 53
+                > update the GoDaddy records to use Route 53 name servers
+
+    > Domain registrar !== DNS Service
+    > each Domain registrar come with some DNS features

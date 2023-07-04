@@ -1,0 +1,15 @@
+Geoproximity routing policy
+    > route traffic to your resources based on the geographic location of the user
+    > ability to shift more traffic to resources based on the bias values
+        > bias values can vary from 1-99
+    > resources can be 
+        > AWS resources
+        > Non AWS resources
+    > You must use Route 53 Traffic Flow to use this feature
+    
+    > Traffic Flow
+        > a tool used to simplify the process of creating and maintaining records in large and complex configuration
+        > visual editor to manage complex routing decision trees
+        > configs can be saved as traffic flow policies
+            > can be applied to different Route 53 Hosted zones (different domain names)
+            > support versioning

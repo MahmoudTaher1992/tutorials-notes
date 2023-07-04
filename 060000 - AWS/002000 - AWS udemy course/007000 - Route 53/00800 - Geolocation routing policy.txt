@@ -1,0 +1,10 @@
+Geolocation Routing Policy
+    > different from latency based
+    > based on user location
+    > specify location by continent, country or by US state
+        > if no match is found then it will use the default record
+    > use cases
+        > localization
+        > load balancing 
+        > restrict content distribution
+    > can be associated with health checks
