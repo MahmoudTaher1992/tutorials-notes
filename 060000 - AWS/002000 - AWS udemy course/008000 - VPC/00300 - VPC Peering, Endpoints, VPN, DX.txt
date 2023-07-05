@@ -1,0 +1,36 @@
+VPC Peering, Endpoints, VPN, DX
+    > VPC Peering
+        > if you want to connect two vpcs together you should use VPC peering
+        > Makes them behave as if they are one VPC
+        > Must not have an overlapping CIDR (IP address range)
+        > VPC Peering is not transitive
+            > if you connect VPC1 & VPC2 
+            > then you connect VPC2 & VPC3
+            > VPC1 & VPC3 will not be able to connect to each other, you have to add VPC1 & VPC3 connection
+
+    > VPC endpoints
+        > allow you to connect to AWS services using the private network instead of the internet
+        > pros
+            > higher speed
+            > higher security
+        
+        > types
+            > VPC endpoint gateway
+                > S3
+                > DynamoDB
+            > VPC endpoint interface
+                > rest of AWS services
+
+    > VPN, DX
+        > to connect AWS VPN to an on premises data center
+            > two ways
+                > site to site VPN
+                    > connect on premises VPN to AWS
+                    > the connection is automatically encrypted
+                    > goes over the public internet
+
+                > Direct connect (DX)
+                    > establish a physical connection between on premises and AWS
+                    > the connection is private, fast and secure
+                    > goes over private network
+                    > takes at least a month to establish

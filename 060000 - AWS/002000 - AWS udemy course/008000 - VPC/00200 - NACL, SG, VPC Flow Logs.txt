@@ -1,0 +1,24 @@
+NACL, SG, VPC Flow Logs
+    > NACL
+        > Network ACL
+        > is a firewall around the subnets that controls the traffic
+        > can have Allow/Deny rules
+        > rules will contain only ip addresses
+
+    > SC
+        > Security group
+        > is a firewall around ECI/EC2 instance that controls the traffic
+            > ECI stands for Elastic Network Interface
+        > can have Allow rules only
+        > rules will contain ip addresses and other SG
+
+    > the default NACL for a public subnet allows all traffic in and out
+
+    > VPC Flow Logs
+        > logs all the traffic for diagnostic/other purposes
+            > helps monitor and troubleshoot connectivity issues
+        > capture info about ip traffic going into your interfaces
+            > VPC flow logs
+            > Subnets flow logs
+            > Elastic Network Interface flow logs
+        > can save data to S3, CloudWatch Logs & Kinesis Data Firehose

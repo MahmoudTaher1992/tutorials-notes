@@ -1,0 +1,23 @@
+Three Tier Architecture
+    > to make your solution at AWS it is recommended to follow an architecture pattern
+        > you will find suggestions at AWS
+        > the architecture will show you how to build the solution
+
+    > Three Tier Architecture
+        > an architecture that states that you have to divide the solution into 3 tiers
+            > public subnet
+            > private subnet
+            > data subnet
+
+        > public subnet
+            > put the ELB (Elastic Load Balancer) in it
+
+        > private subnet
+            > put EC2 instances in it
+            > you can put it in ASG (Auto scaling group)
+
+        > data subnet
+            > put the database anf the cache services in it
+
+        > all the services should be private and allow the private connection between them
+        > the only public component will be the ELB
