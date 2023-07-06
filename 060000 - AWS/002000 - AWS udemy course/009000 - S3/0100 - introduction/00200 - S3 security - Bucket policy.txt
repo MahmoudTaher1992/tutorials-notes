@@ -1,0 +1,33 @@
+S3 security - Bucket policy
+    > security types
+        > User Based
+            > IAM policies
+                > which user is allowed to the bucket
+        
+        > Resource based
+            > Bucket policies
+                > Bucket wide rules
+                > written from the s3 console
+                > allow cross account
+
+            > Object access control list (Object ACL)
+            > Bucket access control list (Bucket ACL)
+
+        > encryption
+
+    > an IAM principle can access s3 object if
+        > there is not DENY rule
+        > IAM polices allow it OR resource policies allows it
+
+    > Bucket policies
+        > json based
+        > states
+            > resources (bucket/objects)
+            > Allow/Deny
+            > actions (i.e. s3:GetObject)
+            > Principle (account/user applies to)
+
+        > uses
+            > grant public access to the bucket
+            > force objects to be encrypted on upload
+            > grant access to another account (cross account)

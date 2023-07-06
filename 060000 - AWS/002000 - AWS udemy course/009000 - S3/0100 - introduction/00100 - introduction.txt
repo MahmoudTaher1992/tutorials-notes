@@ -16,3 +16,21 @@ S3 introduction
         > buckets must have a globally unique name
         > defined at region level, although it looks global (it is not)
     
+    > Objects
+        > have a key
+            > is a full path
+            > bucket key + prefix + object name
+
+        > there is no directories in buckets, just keys with very long names with slashes
+        > values are the content
+            > up to 5TB
+
+        > metadata
+            > list of string key/value pairs
+
+        > tags
+            > up to 10 tags
+            > unicode key/value pair
+
+        > versioning is allowed
+            > version id 

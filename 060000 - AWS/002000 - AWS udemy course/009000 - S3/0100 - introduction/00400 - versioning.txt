@@ -1,0 +1,12 @@
+Versioning
+    > S3 allows Versioning
+    > it is enabled in the bucket level
+    > if you overwrite the key, a new version will be created
+    
+    > pros
+        > protects against unintended deletion (with the ability to restore a version)
+        > easy rollback to prev versions
+
+    > notes
+        > any file that is not versioned prior versioning activation will have a null version
+        > deactivating versioning will not delete the prev versions

@@ -1,0 +1,4 @@
+S3 static website hosting
+    > s3 bucket can be configured to serve static web sites
+    > it should be publicly accessible
+    > you will get a url to use
