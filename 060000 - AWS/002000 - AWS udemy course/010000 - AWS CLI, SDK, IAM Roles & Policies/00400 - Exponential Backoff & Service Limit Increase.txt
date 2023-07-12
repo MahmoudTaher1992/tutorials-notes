@@ -1,0 +1,25 @@
+Exponential Back-off & Service Limit Increase
+    > AWS Limits (Quotas)
+        > API rate limits
+            > there are limits on AWS APIs
+            > i.e.
+                > DescribeInstances API has a limit of 100 calls per second
+                > GetObject on S3 has a limit of 5500 GET request per second per prefix
+            > solution
+                > intermittent errors => Exponential Back-off
+                    > 5xx errors
+                    > Exponential Back-off
+                        > this is the solution to the API rate limits 
+                        > increase the retry period exponentially
+                            > if you get the error retry in
+                                > 1 sec
+                                > 2 sec
+                                > 4 sec
+                                > 8 sec
+                                > 16 sec
+                        > by the time you will get the error solved
+                        
+                > consistent errors => api throttling limit increase
+
+        > Service quotas (Service limits)
+            > you can demand to increase the limit

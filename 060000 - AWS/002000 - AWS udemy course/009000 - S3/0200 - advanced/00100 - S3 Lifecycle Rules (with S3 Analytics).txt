@@ -1,0 +1,32 @@
+S3 Lifecycle Rules (with S3 Analytics)
+    > Moving objects between storage classes
+        > you can move down the objects through different tiers to lower the costs
+            > tiers
+                1. Standard
+                2. Standard IA
+                3. Intelligent tiering
+                4. One-Zone IA
+                5. Glacier instant retrieval
+                6. Glacier flexible retrieval
+                7. Glacier deep archive
+        > moving objects can be automated using Lifecycle rules
+
+    > Lifecycle rules
+        > Transition actions
+            > configure objects to transition to another storage classes
+            > move objects to Standard IA class 60 days after creation
+            > move objects to glacier for archiving after 6 months
+
+        > Expiration actions
+            > configure objects to be deleted after some time
+            > access logs can be set to be deleted after 1 year
+            > can be used to delete old versions, if versioning is enabled
+            > can be used to delete incomplete multi-part uploads
+
+        > rules can be created for a certain prefix
+        > rules can be created for a certain object tags
+
+    > Storage class analysis
+        > helps you to decide when to transition object to right storage classes
+        > report is updated daily
+        > 1-2 days to start seeing data analysis

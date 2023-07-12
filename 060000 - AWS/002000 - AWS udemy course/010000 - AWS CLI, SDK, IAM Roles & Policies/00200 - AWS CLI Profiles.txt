@@ -1,0 +1,6 @@
+AWS CLI Profiles
+    > you can setup multiple profiles and switch between them while using AWS CLI
+
+    > MFA
+        > you can use the CLI when the account has a MFA
+        > you have to setup and download the credentials

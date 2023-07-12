@@ -1,0 +1,22 @@
+AWS EC2 Instance Metadata
+    > IMDS
+    > powerful and one of the least known features to the users
+    > Allows EC2 instances to know more about themselves without the need of IAM role
+    > they visit a url to do so
+        > http://169.254.169.254/latest/meta-data/
+        > it may change with time
+    > you can retrieve IAM role with it but not the policy
+    > Metadata
+        > data about the EC2 instance
+    > Userdata
+        > launch script of the EC2 instance
+
+    > versions
+        > IMDSv1
+            > by accessing the url directly
+        > IMDSv2
+            > you have to use a token to do so
+
+
+
+             AWS CLI Profiles

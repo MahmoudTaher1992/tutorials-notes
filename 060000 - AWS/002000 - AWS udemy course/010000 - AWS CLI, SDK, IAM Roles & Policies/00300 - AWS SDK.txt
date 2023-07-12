@@ -1,0 +1,12 @@
+AWS SDK
+    > a tool that is used to deal with aws directly from apps (without the CLI)
+    > available SDKs
+        > .net
+        > java
+        > node.js
+        > php
+        > python
+            > cli uses this SDK under the hood
+        > go
+        > ruby
+        > c++

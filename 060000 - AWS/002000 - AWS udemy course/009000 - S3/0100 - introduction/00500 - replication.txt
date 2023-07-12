@@ -1,0 +1,26 @@
+Replication
+    > can be done by
+        > Cross region replication (CRR)
+        > Same region replication (SRR)
+
+    > must enable versioning in source and destination buckets
+    > buckets can be in different AWS accounts
+    > copying is async
+    > S3 must have a proper IAM permissions
+
+    > use cases
+        > CRR
+            > compliance
+            > lower latency
+        > SRR
+            > log aggregation
+            > live replication between production and test accounts
+
+    > after enabling replication, only new objects will be replicated
+        > you can replicate existing objects using S3 batch replication
+            > it can also be used for failed objects
+        > can replicate delete markers
+
+    > there is no chaining in replication
+        > i.e.
+            > bucket1 is replicated to bucket2, and bucket2 is replicated to bucket3. then bucket1 will not be replicated to bucket3

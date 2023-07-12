@@ -1,0 +1,9 @@
+AWS Signature v4 Signing (Sigv4)
+    > if you want to send a http request to AWS it must be signed
+        > the sign is used by aws to verify that the request is from you
+    > Sigv4 is the service that does the signing process
+    > some requests don't need signing
+    > if you are using the SDK or the CLI then the signing is done automatically by them
+    > the signature is attached to the request to
+        > http header options
+        > query string option
