@@ -1,0 +1,25 @@
+S3 performance
+    > AWS S3 automatically scales to high request rates and low latency 100-200 ms
+    > you can achieve
+        > 3500 PUT/POST/DELETE/COPY per second per prefix
+        > 5500 GET/HEAD per second per prefix
+
+        > prefix is the path between the bucket name and the file name
+        > there is no limit for the number of prefixes in a bucket
+
+    > Multi part upload 
+        > recommended for files > 100MB
+        > must for files > 5GB
+
+        > can help parallelize uploads to speed up the upload
+            > the file will be divided into smaller files and will be uploaded
+
+    > S3 transfer acceleration
+        > increase transfer speed by transferring file into edge location, and it will be transferred with higher speed from there
+        > edge location is a place which has a high speed private connection with the target S3 service
+        > compatible with multipart upload
+        
+    > S3 byte ranges fetches
+        > parallelize GETs by requesting specific byte ranges
+        > can be used to speed the downloads
+        > can be used to used to retrieve some parts of the file (use it if you want to get the header of the file for example)

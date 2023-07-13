@@ -1,0 +1,15 @@
+Object tags & metadata
+    > metadata  
+        > key-value pairs
+        > must begin with "x-amz-meta-"
+        > S3 stores the metadata keys in lowercase
+        > metadata can be retrieved while retrieving the object
+
+    > tags
+        > key-value pairs
+        > useful for fine-grained permissions (only access specific objects that have a tag)
+        > useful for analysis purposes (using S3 analytics to group objects by tags)
+
+    > you can not search objects by tags or metadata
+
+    > you must use an external database to maintain an indexes for tha tags and metadata

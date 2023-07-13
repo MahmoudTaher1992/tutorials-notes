@@ -1,0 +1,6 @@
+S3 select & Glacier select
+    > it is the implementation of moving the filtering process from the FE to the server side
+        > to reduce the costs associated with transferring the data to the FE to do the filtering
+
+    > can filter rows and columns using sql statements
+    > less network transfer and less CPU cost at the client side

@@ -1,0 +1,55 @@
+Encryption
+    > encryption methods
+        > server side encryption (SSE)
+            > SSE with S3 managed keys
+                > encryption keys are created, maintained and owned by AWS
+            > SSE with KMS
+                > encryption keys are managed by AWS key management service
+            > SSE with customer provided keys
+                > encryption keys are managed and supplied by the customer
+        > client side encryption
+
+    > SSE-S3
+        > encryption keys are created, maintained and owned by AWS
+        > objects are encrypted in the server side
+        > encryption types is AES-256
+        > must set header
+            > "x-amz-server-side-encryption": "AES-256"
+        > ENABLED BY DEFAULT FOR NEW BUCKETS AND NEW OBJECTS
+
+    > SSE-KMS
+        > encryption keys are managed by AWS key management service
+        > objects are encrypted in the server side
+        > must set header
+            > "x-amz-server-side-encryption": "aws:kms"
+
+        > limitations
+            > you may be impacted by KMS limits
+            > when you upload/download a file you send a request to the KMS-API
+            > if the KMS quota is exceeded you can request an increase or apply Exponential Back-off technique
+
+    > SSE-C
+        > encryption keys are managed and supplied by the customer
+        > keys are stored outside AWS
+        > encryption key must be provided in each request
+        > HTTPS is a must in this case
+
+    > client side encryption
+        > client manages the encryption/decryption full cycle
+        > client can use any encryption tool 
+            > i.e.
+                > AWS S3 client side encryption library
+
+    > encryption in transit (SSL/TLS)
+        > AWS S3 exposes two endpoints 
+            > HTTP
+                > non encrypted
+            > HTTPS
+                > encryption in flight
+                > recommended
+                > is a must in SSE-C
+                > most clients are using this by default
+
+        > you can force encryption in transit by attaching a policy to the bucket
+
+            
