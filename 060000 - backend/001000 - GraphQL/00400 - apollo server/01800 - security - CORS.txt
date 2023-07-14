@@ -40,3 +40,7 @@ Security - CORS
 
     > Preventing Cross-Site Request Forgery (CSRF)
         > ...
+
+    > That's why the browsers send a preflight OPTIONS request to the server before sending the original request
+        > it asks about if it is allowed to send the request in terms of CORS
+        > if allowed it will send the original request

@@ -1,0 +1,5 @@
+S3 access logs
+    > you can log all access to the objects
+    > all requests (authorized or denied) will be logged
+    > the logs must be saved to another bucket (in the same AWS region) not the same
+        > otherwise it will grow exponentially

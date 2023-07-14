@@ -1,0 +1,14 @@
+S3 object lambda
+    > you can use S3 object lambda to edit the object before returning it to the requester
+    > only one S3 bucket will be needed
+    > to achieve that
+        > add S3 access point to allow access to the bucket
+        > add a lambda function with the logic that will change the object
+        > add S3 object lambda access point to allow users to query it
+
+    > you can create as many lambdas as you want
+
+    > use cases
+        > remove sensitive data from a document
+        > converting objects formats
+        > resizing, watermarking, ...

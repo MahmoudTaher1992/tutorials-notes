@@ -52,4 +52,8 @@ Encryption
 
         > you can force encryption in transit by attaching a policy to the bucket
 
+    > Default encryption
+        > all new objects are encrypted by SSE-S3 by default
+        > you can attach a policy to the bucket to enforce the requests to contain an encryption method
+
             

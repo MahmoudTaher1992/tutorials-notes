@@ -1,0 +1,8 @@
+CORS
+    > cross origin resource sharing
+    > origin is
+        > protocol + host + port
+            > i.e.
+                > https://www.example.com:3998
+
+    > you have to setup s3 bucket to allow request from your origins

@@ -1,0 +1,11 @@
+S3 access points
+    > simplifies security management for S3 buckets
+    > has it's own DNS name
+    > it has it's access point policy
+        > the policy can allow read/write or non
+        > it can allow access to specific prefixes
+
+    > you can allow access only within VPC
+    > you have to define a VPC endpoint to be able to connect to the vpc access point
+        > vpc endpoint must allow access to the bucket and the access point
+    

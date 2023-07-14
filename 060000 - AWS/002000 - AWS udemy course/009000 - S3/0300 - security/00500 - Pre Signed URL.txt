@@ -1,0 +1,10 @@
+Pre Signed URL
+    > if you have a private bucket and you want to share an object with someone with no access, this is the way
+    > a signed url that expires after a period of time
+    > you can sign a url with
+        > s3 console
+            > 1 min to 12 hrs
+        > aws cli
+            > 1 min to 168 hrs
+        > aws sdk
+    > allows user to GET/PUT

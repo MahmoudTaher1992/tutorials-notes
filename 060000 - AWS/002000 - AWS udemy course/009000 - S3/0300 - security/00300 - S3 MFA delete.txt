@@ -1,0 +1,12 @@
+S3 MFA delete
+    > MFA stands for Multi-factor authentication
+    > a specific feature related to versioning in AWS S3 (versioning must be enabled)
+    > an extra protection to the objects in a bucket
+    > force users to MFA before doing important S3 operations
+    > MFA will be required to
+        > permanently delete an object version
+        > suspend versioning in a bucket
+    > MFA will not be required if
+        > enable versioning 
+        > list deleted versions
+    > only the bucket owner (root account) will be allowed to enable/disable S3 MFA
