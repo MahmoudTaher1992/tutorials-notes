@@ -1,0 +1,41 @@
+Caching & Caching Policies
+    > Caching
+        > the cache lives in the edge locations
+        > CloudFront identifies the caches at edge locations by the cache key
+        > you want to maximize the cache hit ratio by minimizing the requests to the origin
+        > you can invalidate part of the cache by using CreateInvalidation API
+
+        > cache key
+            > a unique identifier for every object in the cache
+            > by default it consists of the 
+                > hostname
+                > resource portion of the url
+            > you can manage the cache key by CloudFront Cache Policies
+
+        > Cache policy
+            > cache can be based on
+                > http headers (none, whitelist)
+                > cookies (none, whitelist, include all except, all)
+                > query strings (none, whitelist, include all except, all)
+            > control the TTL
+                > from 0s to 1y
+                > can be set by the origin by setting 
+                    > cache control header
+                    > expires header
+            > you can use the predefined managed policies or you can create your own
+            > All HTTP headers, cookies and query strings included in the cache key are automatically included in the origin request
+
+            > Cache policy - HTTP headers  
+                > none
+                    > don't include any headers in the cache key
+                    > headers are not forwarded to the origin (except default)
+                    > best caching performance
+                > whitelist
+                    > only specified headers are included in the cache key
+                    > specified headers are also forwarded to the origin
+
+            > Cache policy - Query strings
+                > none
+                > whitelist
+                > include all except
+                > all

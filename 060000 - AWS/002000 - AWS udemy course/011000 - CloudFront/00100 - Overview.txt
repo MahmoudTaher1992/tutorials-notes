@@ -1,0 +1,34 @@
+CloudFront overview
+    > it is a Content Delivery Network (CDN)
+    > improves the read performance by caching the data at the edge
+    > improves user experience
+    > there are 216 edge points and they are increasing
+    > it provides a protection against DDos because it is hard to attach the 216 points at once
+
+    > origins
+        > S3 bucket
+            > for distributing files and caching them on the edge
+            > enhanced security with CloudFront Origin Access Control
+            > CloudFront can be used to upload files
+        > Custom Origin (HTTP)
+            > Application Load Balancer
+            > EC2 instance
+            > S3 website 
+            > any HTTP backend you want
+
+    > how it works
+        > the clients requests from the edge
+        > if not found in the edge location, the edge will request it from the origin and cache it
+        > it will serve it to the requester and continuo serving it until it's TTL expires
+
+    > CloudFront vs S3 cross region replication
+        > CloudFront
+            > Data will be in the Global Edge Network
+            > Files are cached for a TTL
+            > great for static content
+
+        > S3 cross region replication
+            > must be setup for each region you want replication to happen
+            > files are updated in real time
+            > read only
+            > great for dynamic content that needs to be available at low latency in few regions
