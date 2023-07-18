@@ -1,0 +1,3 @@
+Signed URL & cookies
+    > when you want to make CloudFront private, you will have to use signed Urls and signed cookies to give access to specific users
+    > you will have to take care of keys generation that will be used to sign the urls

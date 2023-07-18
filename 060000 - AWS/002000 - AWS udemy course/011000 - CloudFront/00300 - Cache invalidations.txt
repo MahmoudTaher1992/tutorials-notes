@@ -1,0 +1,5 @@
+Cache invalidations
+    > In case you updated the files in the origins, CloudFront doesn't know anything about it until the TTL expires
+    > you can force full or partial refresh by performing CloudFront Invalidation
+        > you can invalidate all files by *
+        > you can invalidate a special path by /images/*

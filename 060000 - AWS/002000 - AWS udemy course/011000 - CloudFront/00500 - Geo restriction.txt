@@ -1,0 +1,6 @@
+Geo restriction
+    > you can restrict who can access your distribution by
+        > Allowlist
+        > Blocklist
+
+    > the country is determined using a 3rd party Geo-IP database

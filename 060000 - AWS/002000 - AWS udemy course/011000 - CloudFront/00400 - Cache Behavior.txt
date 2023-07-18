@@ -1,0 +1,11 @@
+Cache Behavior
+    > you can configure different behavior for different URL pth pattern
+        > different behavior means
+            > different cache policies
+            > different origin
+        > based on different content type
+            > http headers
+            > cookies
+            > query strings
+
+    > when adding additional cache behaviors, the default caching behavior is always the last to be processed

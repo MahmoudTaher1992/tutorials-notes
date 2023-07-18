@@ -36,6 +36,39 @@ Caching & Caching Policies
 
             > Cache policy - Query strings
                 > none
+                    > don't include any query strings in the cache key
+                    > query strings are not forwarded to the origin (except default)
                 > whitelist
+                    > only specified query strings are included in the cache key
+                    > specified query strings are also forwarded to the origin
                 > include all except
+                    > all query strings are included in the cache key except the specified list
+                    > all query strings are also forwarded to the origin except the specified list
                 > all
+                    > all query strings are included in the cache key
+                    > all query strings are also forwarded to the origin
+                    > worst caching performance
+
+            > Cache policy - cookies
+                > none
+                    > don't include any cookies in the cache key
+                    > cookies are not forwarded to the origin (except default)
+                > whitelist
+                    > only specified cookies are included in the cache key
+                    > specified cookies are also forwarded to the origin
+                > include all except
+                    > all cookies are included in the cache key except the specified list
+                    > all cookies are also forwarded to the origin except the specified list
+                > all
+                    > all cookies are included in the cache key
+                    > all cookies are also forwarded to the origin
+                    > worst caching performance
+        
+        > Origin request policy
+            > specifies the values that needs to be included in the origin request without including them in the cache key
+            > you can include
+                > http headers (none, whitelist)
+                > cookies (none, whitelist, include all except, all)
+                > query strings (none, whitelist, include all except, all)
+            > ability to add new values that are not included in the original request
+            > you can use the predefined managed policies or you can create your own
