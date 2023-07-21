@@ -1,0 +1,4 @@
+Real time logs
+    > send a real-time requests sent to kinesis  data streams
+    > monitor, analyze and take actions
+    > you can choose the amount and the type of data you want from CloudFront

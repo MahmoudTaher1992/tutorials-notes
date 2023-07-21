@@ -1,0 +1,60 @@
+Overview
+    > Elastic Beanstalk is a higher-level service that simplifies application deployment and management
+        > while CloudFormation is a lower-level service that provides more control over resource configuration.
+
+    > beanstalk uses cloudformation under the hood to deploy the stack
+
+    > developer problem on AWS
+        > managing infrastructure
+        > deploying code
+        > configuring all components
+        > scaling concerns
+        > all the devs want to just run the code
+        > 
+        
+    > most web apps have the same architecture (ALB + ASG)
+    
+    > Elastic Beanstalk is a developer centric view of deploying an application
+    > it uses all the components
+    > Elastic Beanstalk
+        > automatically handles 
+            > capacity provisioning
+            > load balancing 
+            > scaling
+            > application health monitoring
+            > instance configuration
+            > ...
+        > makes the developer's responsibility is just writing the code
+        > the developer still have full control over the configuration
+        > is free, but you pay for underlying services
+
+    > components
+        > application
+            > collection of Elastic Beanstalk components
+                > versions
+                > environments
+                > configurations
+        > versions
+            > an iteration of an application code
+        > Environment
+            > collection of AWS resources running an application version (only one application version)
+            > tiers
+                > web server environment tier
+                    > uses ELB to scale the groups
+                > worker environment tier
+                    > uses SQS queue to scale the groups
+            > you can create multiple environments
+
+    > steps
+        > create an application
+        > upload version
+        > launch environment
+        > manage environment
+
+    > deployment modes
+        > single instance
+            > great for developer
+            > EC2 instance + RDS
+        > high availability with load balancer
+            > great for production
+            > ELB + multiple (EC2 instance + RDS)

@@ -1,0 +1,37 @@
+Docker introduction
+    > is a platform to deploy apps
+    > the apps are packaged in a container and can be run by any OS
+    > app will run in the same environment regardless of
+        > any machine
+        > no compatibility issues
+        > predicted behavior
+        > less work
+        > easier to maintain and deploy
+        > works with any language, OS or technology
+    
+    > use cases
+        > microservice architecture
+        > lift and ship apps from on premises to AWS cloud
+
+    > How it works
+        > create a docker file (says how the image should look like)
+        > create an image from the docker file
+        > push image to docker repository
+        > you install docker on a machine
+        > you create a container from a docker image
+        > you run the container
+
+    > where docker images live
+        > in a docker repositories
+            > i.e.
+                > docker hub
+                > AWS ECR
+                    > Elastic container registry
+
+    > docker is a sort of a virtualization technology
+
+    > Docker container management
+        > Amazon Elastic Container Service (ECS)
+        > Amazon Elastic Kubernetes Service (EKS)
+        > AWS Fargate
+        > Amazon ECR

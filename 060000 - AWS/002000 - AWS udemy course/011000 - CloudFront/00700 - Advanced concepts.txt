@@ -1,2 +1,22 @@
 Advanced concepts
-    > 
+    > Price classes
+        > you can reduce the costs by reducing the number of edge locations
+    
+    > multiple origins
+        > use cache behavior to do so
+        > i.e.
+            > /api/*
+                > goes to EC2 instance
+            > /*
+                > goes to S3 bucket
+
+    > origin groups
+        > to increase availability and to do a failover
+        > consists of two origins, one is primary and the second is secondary
+        > if the primary fails, the secondary is used
+
+    > Field level encryption
+        > protects user sensitive information
+        > additional layer over HTTPs
+        > sensitive information is encrypted (asymmetric) at the edge location by the public key
+        > the origin is responsible for decrypting the field by the private key

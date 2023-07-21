@@ -1,0 +1,29 @@
+Beanstalk deployment mode
+    > deployment options for updates
+        > All at once
+            > deploy all in one go
+            > stop old services and run new services
+            > fastest option
+            > there is a bit of downtime
+        > Rolling
+            > update few instances at a time
+            > wait until they are healthy
+            > move to the next instance
+        > rolling with additional batches
+            > like rolling
+            > spins up new instances to move the batch (so that the old application is still running)
+        > immutable
+            > spins up a new instances in new ASG
+            > deploy versions to those instances
+            > swaps all instances when they are all healthy
+        > Blue Green
+            > create a new environment and switch over when ready
+        > Traffic splitting
+            > send a small traffic to the new deployment
+
+    > All at once   
+        > fastest deployment
+        > beanstalk stops all instances
+        > ships new version
+        > runs the instances again
+        > there is a downtime
