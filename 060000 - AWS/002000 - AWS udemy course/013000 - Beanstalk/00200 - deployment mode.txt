@@ -27,3 +27,44 @@ Beanstalk deployment mode
         > ships new version
         > runs the instances again
         > there is a downtime
+
+    > Rolling
+        > application will be running at lower capacity (original capacity - the bucket size)
+            > bucket means the number of services that are down to deploy the new version
+        > you can control the bucket size
+        > application will be running the two versions simultaneously
+        > no additional cost
+        > takes time depending on the bucket size and the total number of services
+
+    > rolling with additional batches
+        > a new services will be instantiated to make up for the bucket size
+        > at the end those new buckets will be terminated
+        > application capacity will be the same
+        > a additional cost will be added
+
+    > immutable
+        > zero downtime
+        > a new instances will be created (the same number as the old ones)
+        > the new version is deployed
+        > the old instances are terminated
+        > High cost, double capacity
+        > longest deployment
+        > quick rollback
+
+    > Blue Green
+        > not a direct feature
+        > zero downtime
+        > a new stage environment will be created
+            > can be validated an rollback if issues happened
+        > route 53 can be used to direct a small traffic to the new stage
+        > BeanStalk can swap urls after the testing period is done and terminate old environment
+
+    > Traffic splitting
+        > Canary testing
+        > new application version is deployed to a temp ASG with the same capacity
+        > a small % of traffic is sent to the temp ASG for a configurable amount of time
+        > deployment health is monitored
+        > An automated quick rollback is done if there is a deployment failure
+        > no application downtime
+        > new instances are migrated to the original ASG
+        > old application versions are terminated

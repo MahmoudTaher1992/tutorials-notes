@@ -1,0 +1,15 @@
+Beanstalk CLI & Deployment process
+    > an additional cli called "EB cli" which makes dealing with beanstalk easier
+    > you can do what you want from the cli
+    > helpful if you wan tot automate the task from the pipelines
+
+    > Deployment process
+        > package code as zip and describe dependencies
+            > Describe dependencies (package.json)
+        > aws console
+            > upload zip file (creates a new app version)
+            > deploy
+        > EB CLI
+            > creates a new app version using CLI (uploads zip)
+            > deploy
+        > Elastic bean will deploy the zip on each EC2 instance, resolve dependencies and start the app

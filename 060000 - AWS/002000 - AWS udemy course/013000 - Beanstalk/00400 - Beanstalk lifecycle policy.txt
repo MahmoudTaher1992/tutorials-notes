@@ -1,0 +1,8 @@
+Beanstalk lifecycle policy
+    > Beanstalk can store up to 1000 app versions
+    > if you don't remove the old versions, you won't be able to deploy anymore
+    > to phase out old applications, use a lifecycle policy
+        > based on time (old versions are removed)
+        > based on space (when you have too many versions)
+    > versions that are currently used won't be deleted
+    > there is an option to prevent the deletion of the source bundle in S3 to prevent data loss
