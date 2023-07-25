@@ -1,0 +1,49 @@
+AWS Lambda Overview
+    > AWS EC2
+        > virtual servers in the cloud
+        > limited by RAM and CPU
+        > continuously running
+        > scaling means adding/removing server/instances
+
+    > AWS Lambda
+        > virtual functions
+        > limited by the time of execution
+        > run on demand
+        > scaling is automated
+
+    > benefits
+        > pricing
+            > pay per request and compute time
+            > free tier of 1 million AWS lambda requests and 400k GB of compute time
+
+        > integrated with the whole suit of AWS services
+        > integrated with many programming languages
+        > easy monitoring through AWS CloudWatch
+        > easy to get more resources per functions (up to 10GB of RAM)
+        > increasing the RAM will also improve CPU and network
+
+    > Lambda main integrations
+        > API gateway
+            > to create a REST api
+            > invoke lambda functions
+        > Kniesis
+            > use lambda to do some data transformation on the flight
+        > DynamoDb
+            > some triggers may invoke Lambda functions
+        > S3
+            > some triggers may invoke Lambda functions
+        > CloudFront
+            > Lambda at edge
+        > CloudWatch Event EventBridge
+            > some triggers may invoke Lambda functions
+        > CloudWatch Logs
+            > stream logs wherever you want
+        > SNS
+        > SQS
+            > process messages from SQS queues
+        > Cognito
+            > 
+
+    > Examples
+        > Serverless thumbnail creation
+            > 

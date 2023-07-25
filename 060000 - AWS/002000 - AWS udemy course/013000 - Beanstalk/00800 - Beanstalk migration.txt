@@ -1,0 +1,17 @@
+Beanstalk migration
+    > Load Balancer
+        > you can not upgrade a load balancer within the beanstalk
+        > the solution is to create a new environment with the new load balancer's type
+        > after creation, deploy the application to it
+        > perform a CNAME swap or Route 53 update
+
+    > RDS
+        > the database is one of the resources that are critical and needs to be alive all the time, especially the production databases
+        > the best approach is to exclude the database from the environment and replace it with a variable (the connection string)
+        > to do so
+            > create a snapshot from the database
+            > protect the database from deletion
+            > create a new environment with the connection string instead of the database
+            > convert the traffic to the new environment
+            > delete the old environment
+                > you have to delete the cloudformation stack as it will fail the first time because the database is protected

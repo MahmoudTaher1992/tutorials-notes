@@ -1,2 +1,17 @@
 Beanstalk extensions
-    > 
+    > a zip file containing the code must be deployed to Elastic Beanstalk
+    > all the parameters of the deployment can be set using code in files
+    
+    > implementation
+        > all of them should be in the `.ebextensions/` directory in the root directory
+        > format should be YAML/JSON
+        > all files must have .config extension
+        > ability to modify some default settings
+            > option_settings
+        > ability to add resources
+            > RDS
+            > ElastiCache
+            > DynamoDB
+            > ...
+
+    > Resources managed by .ebextensions get deleted if the environment goes away

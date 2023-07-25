@@ -1,0 +1,5 @@
+Beanstalk cloning
+    > clone an environment with the exact same configuration
+    > can be used to deploy a test version of your application
+    > all resources and configurations are preserved
+    > you can change the settings after cloning

@@ -1,0 +1,4 @@
+Beanstalk & CloudFormation
+    > under the hood beanstalk uses cloudformation
+    > CloudFormation is used to provision other AWS resources
+    > you can configure everything from the `.ebextensions`

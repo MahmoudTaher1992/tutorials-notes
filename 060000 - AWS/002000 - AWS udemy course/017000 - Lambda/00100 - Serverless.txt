@@ -1,0 +1,4 @@
+Serverless
+    > it is a new paradigm in which the developers don't get to setup the servers, they just use a service
+    > just deploy the code
+    > serverless doesn't mean that there are no servers anymore, it means you don't have to manage/provision a server
