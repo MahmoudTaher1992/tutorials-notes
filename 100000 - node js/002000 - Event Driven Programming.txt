@@ -1,7 +1,6 @@
 Event Driven Programming
     > Node.js makes extensive use of events
-    > Once we start a Node.js server, it initializes the variables and 
-      functions and then listens for the occurrence of an event
+    > Once we start a Node.js server, it initializes the variables and functions and then listens for the occurrence of an event
     > Makes the program simple
     > Basic components of EDP
         > Callback functions (handles events when triggered)

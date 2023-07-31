@@ -1,6 +1,5 @@
 Profiler API
-    The Profiler measures how often a React application renders and what the 
-    “cost” of rendering is. 
+    The Profiler measures how often a React application renders and what the “cost” of rendering is. 
 
     Its purpose is to measure which parts of app is slow and try to optimize it
 

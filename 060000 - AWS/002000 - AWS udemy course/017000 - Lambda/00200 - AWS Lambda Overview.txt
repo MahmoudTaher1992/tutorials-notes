@@ -46,4 +46,23 @@ AWS Lambda Overview
 
     > Examples
         > Serverless thumbnail creation
-            > 
+            > you can create a lambda function that creates a thumbnail from a video, and stores it in another bucket
+            > setup an event trigger that triggers the lambda function once a new object is uploaded
+
+        > Serverless CRON job
+            > instead of creating an EC2 instance with a cron job that runs on intervals, which is a wasted resource when it is not running
+            > you can create an Automated event that fires each interval on (AWS CloudWatch Events EventBridge)
+                > which invokes the lambda function
+
+    > pricing
+        > pay per call  
+            > first 1m requests are for free
+            > after that you pay .2$/1m request
+        > pay per duration
+            > 400,000 GB-seconds for free each month
+                > which is
+                    > 400,000 seconds if the function is 10GB
+                    > 3.2m seconds if the function is 128MB
+                    > after that it will cost 1$ for 600k GB-seconds
+
+        > it is very cheap to run AWS lambda function, and that is why it is very popular

@@ -1,0 +1,26 @@
+Synchronous Invocations
+    > invoked from
+        > CLI
+        > SDK
+        > API gateway
+        > Application Load Balancer
+
+    > results are returned right away
+    > error handling must happen in the client side
+        > retries
+        > exponential back-off
+        > ...
+
+    > services that invoke lambda function synchronously
+        > user invoked services
+            > Elastic load balancer (Application load balancer)
+            > AWS API gateway
+            > AWS cloudfront (Lambda@edge)
+            > AWS S3 batch
+        > service invoked
+            > AWS Cognito
+            > AWS step functions 
+        > other services
+            > AWS Lex
+            > AWS Alexa
+            > AWS kinesis data firehose

@@ -1,0 +1,7 @@
+Lambda and ALB
+    > If you want to expose the lambda as an HTTP/s endpoint you can use
+        > ALB
+        > API gateway
+    > you will need to register the lambda function in a target group
+
+    > Lambda doesn't understand the HTTP requests, it just understands a lambda invocation

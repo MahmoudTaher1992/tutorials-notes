@@ -1,6 +1,5 @@
 Optimizing Performance
-    React uses several clever techniques to minimize the number of costly DOM operations 
-    required to update the UI.
+    React uses several clever techniques to minimize the number of costly DOM operations required to update the UI.
 
     but there are several other ways you can speed up your React application.
 
@@ -21,8 +20,7 @@ Optimizing Performance
         react-window and react-virtualized are popular windowing libraries
 
     Avoid Reconciliation
-        React builds and maintains React elements, when rerenders the react compares new 
-        elements with older elements
+        React builds and maintains React elements, when rerenders the react compares new elements with older elements
         if there are changes > Dom updates
 
         Even though this saved time but if you want more savings > go with shouldComponentUpdate
