@@ -1,0 +1,32 @@
+Performance issues guidelines
+    > to fix a performance issue you should do the following
+        > identify the problem
+            > the same way you did in the refactoring estimation
+        > Benchmark
+            > document the current performance of the code
+            > this will give you what you have reached after the refactoring
+            > i.e.
+                > page load time
+                > api response time
+                > database query times
+                > CPU/memory usage
+                > ...
+            > tools
+                > profiling tools
+        > Analyze
+            > once you identify the problem, analyze what is the causes of it
+            > it will involve examining the code base
+        > Plan a solution
+            > based on the solution, plan the solution
+            > i.e.
+                > rewriting parts of the code
+                > optimizing the database queries
+                > add some caching
+                > reduce the size of the network data
+                > upgrade the hardware
+                > ...
+        > Implementation
+        > Measurement
+            > measure the new measures and compare it to the benchmarks
+        > Monitor
+            > continue to monitor the performance over the time

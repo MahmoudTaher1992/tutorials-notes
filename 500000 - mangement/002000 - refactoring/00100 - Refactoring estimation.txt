@@ -1,0 +1,80 @@
+Refactoring estimation
+    > to estimate a refactoring task you should do the next steps
+        > Understand the scope
+        > Code analysis
+        > Task breakdown
+        > time estimation
+        > risk assessment
+        > include testing time
+        > Communication and Documentation
+        > Review and reassess
+            > update this guideline continuously
+        > create a roadmap
+        > Sell the estimate
+            > it is a political game
+
+
+    > Understand the scope 
+        > before you start you need to know what you are refactoring
+        > steps
+            > identify the problem
+                > clearly state the problem
+                > it will help in planning the refactoring
+                > i.e.
+                    > performance issue
+                    > code complexity
+                    > naming issues
+                    > technical debt
+                    > extendability is limited
+            > understand the code base
+                > have a deep look at
+                    > how it works
+                    > dependencies
+                    > how the target code affects other parts in the code base
+                    > how complex is the situation
+                    > the business logic
+                    > data flow
+                    > architecture
+            > review code quality
+                > complex code
+                > code duplications
+                > linting
+                > code formatting
+                > unit testing
+                > performance profiling
+                > dead code
+            > identify dependencies
+                > how the target code affects the rest of the codebase
+            > identify the boundaries of the target code
+            > identify the refactoring targets  
+                > i.e.
+                    > improve naming
+                    > folder structure
+                    > improve the context
+                    > increase unit tests
+            > consider increasing the tests
+
+    > Code analysis
+        > use some static code analysis tools to identify problem areas
+        > i.e.
+            > code duplications
+            > cyclomatic complexity
+            > dependencies between components
+
+    > Task breakdown
+        > decompose the task into smaller manageable sub tasks
+        > estimate sub tasks time and add them up
+        > this should be in 1 hour interval
+
+    > time estimation
+        > based on your experience you should be able to estimate the sub tasks
+        > you may discuss this with old devs in the team that have an experience with it
+
+    > risk assessment
+        > add a buffer time for potential unexpected issues
+        > after you finish the estimates double them and add 20%
+
+    > Communication and Documentation
+        > add a buffer time for 
+            > the meeting that you might conduct
+            > documenting the changes you made

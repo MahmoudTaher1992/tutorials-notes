@@ -1,0 +1,19 @@
+Asynchronous Invocations
+    > Lambda functions can be invocated in async from different services
+        > i.e.
+            > S3
+            > SNS
+            > CloudWatch events
+            > ...
+    
+    > it helps speed up the processing time
+        > i.e.
+            > processing 1000 files in sync
+            > ...
+
+    > the events are placed in event queue
+    > the lambda function picks the events from the event queue
+    > if the invocation fails it will retry 2 times
+        > one after 1 minute and the 2nd after 2 minutes
+        > you will see a duplicated logs in case of retries
+        > you can defined a DLQ (dead-letter queue) SNS or SQS for failed processing

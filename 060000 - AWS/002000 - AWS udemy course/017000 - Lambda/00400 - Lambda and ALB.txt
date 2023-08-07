@@ -5,3 +5,8 @@ Lambda and ALB
     > you will need to register the lambda function in a target group
 
     > Lambda doesn't understand the HTTP requests, it just understands a lambda invocation
+        > ALB and API gateway will change the HTTP request to JSON object which will be used in the lambda invocation
+        > the result will be converted from JSON into HTTP response
+
+    > ALB can support multi-header value
+        > HTTP headers and query strings that are sent with multiple values will be converted into arrays
