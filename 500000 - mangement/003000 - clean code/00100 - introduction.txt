@@ -1,0 +1,16 @@
+introduction
+    > the only measure to the code quality is WTF/minute
+    > to increase the code quality you have to learn the good code craftsmanship
+        > craftsmanship
+            > consists of 
+                > knowledge
+                    > principles and patterns
+                    > without it you won't know how to work
+                > work
+                    > without it the knowledge will be for nothing 
+
+    > Learning to write a clean code is a hard work
+        > you must learn
+        > you must practice it yourself
+        > you must see how others fail and help them to succeed
+        > you must see what is the real cost of a bad code

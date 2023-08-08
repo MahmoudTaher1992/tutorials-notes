@@ -1,0 +1,5 @@
+Clean code
+    > you will
+        > know the difference between a good code and a bad code
+        > know how to write a good code
+        > know how to transfer a bad code into a good code

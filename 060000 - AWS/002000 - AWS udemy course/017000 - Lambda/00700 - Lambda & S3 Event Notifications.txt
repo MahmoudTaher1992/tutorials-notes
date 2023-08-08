@@ -1,0 +1,20 @@
+Lambda & S3 Event Notifications
+    > you can setup S3 to start a lambda function on events
+        > events
+            > object created
+            > object removed
+            > object restore
+            > replication
+
+        > filtering
+            > you can filter by the extension or any part in the name
+            > the filetype
+            > ...
+
+    > use case
+        > generate thumbnails from a videos
+
+    > S3 typically deliver events in seconds but sometimes it can take minutes
+
+    > if two writes happened to the same non-versioned object in the same time, it is possible that only one event will be fired
+        > enabling versioning will overcome this problem

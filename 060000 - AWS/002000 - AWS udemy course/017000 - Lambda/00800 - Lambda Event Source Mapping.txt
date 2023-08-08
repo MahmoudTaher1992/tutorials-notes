@@ -1,0 +1,59 @@
+Lambda Event Source Mapping
+    > a service that polls data (records) from sources, filter them and invoke lambda functions with them
+        > Data sources examples
+            > Kinesis Data Streams
+            > SQS queue
+            > SQS FIFO queue
+            > DynamoDB streams
+
+    > the lambda function will be invoked synchronously with an event batch
+
+    > types
+        > streams
+            > Kinesis
+            > DynamoDB
+        > queue
+
+    > Streams Event Source Mapper
+        > the mapper creates an iterator for each shard and process items in order
+        > starts with new items, from the beginning or from timestamp
+        > processed items are not moved from the stream
+            > other consumers can read them
+        > low traffic
+            > use batch window to accumulate records before processing
+        > high traffic 
+            > process multiple batches in parallel
+            > up to 10 batches per shard
+            > in-order processing is still guaranteed for each partition key
+        > Error handling
+            > if the function returned an error, the entire batch is reprocessed until it succeeds or the items in the batch expires
+            > to ensure in-order processing processing of the affected shard is paused until the error is resolved
+            > it can be configured to 
+                > ignore old events
+                > restrict the number of retries
+                > split the batch on error
+            > discarded events can go to Destination
+
+    > Queues Event Source Mapper
+        > for
+            > SQS
+            > SQS FIFO
+        > you can configure the batch size (number of messages)
+
+        > lambda supports in-order processing for FIFO queues
+        > for standard queue, items aren't necessary processed in order
+        > lambda scales up to standard queues as quickly as possible
+        > Error handling
+            > batches are returned to the queue as individual items
+            > you can configure it to send failed items to DLQ
+        > occasionally the event source mapping may receive the same item twice, even if no function error occurred
+        > processed items are deleted from the queue
+
+    > Scaling
+        > kinesis and DynamoDB
+            > one lambda invocation per shard
+            > if you use parallelization, you can have 10 batches processed per shard simultaneously
+        > SQS
+            > lambda adds 60 more instances per minute to scale up
+            > up to 1000 batches of messages processed simultaneously
+        > SQS FIFO

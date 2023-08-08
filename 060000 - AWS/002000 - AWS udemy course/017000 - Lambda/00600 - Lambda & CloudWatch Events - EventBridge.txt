@@ -1,0 +1,2 @@
+Lambda & CloudWatch Events / EventBridge
+    > you can setup rules in the EventBridge that triggers lambda function
