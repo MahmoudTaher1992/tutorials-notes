@@ -1,0 +1,5 @@
+Lambda Environment Variables
+    > used to change the lambda behavior without changing the code
+    > key/value pair in string format
+    > will be available to your code
+    > helps to supply secrets to the lambda function

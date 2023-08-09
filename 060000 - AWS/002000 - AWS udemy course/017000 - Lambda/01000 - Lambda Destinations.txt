@@ -1,0 +1,16 @@
+Lambda Destinations
+    > new feature in Lambda in 2019
+    > async invocations
+        > can define destinations for both successful and failed events to
+            > SQS
+            > SNS
+            > Lambda
+            > EventBridge bus
+
+    > event source mapping
+        > can be done for discarded event batches
+        > for
+            > SQS
+            > SNS
+
+    > AWS recommends using destinations over DLQ

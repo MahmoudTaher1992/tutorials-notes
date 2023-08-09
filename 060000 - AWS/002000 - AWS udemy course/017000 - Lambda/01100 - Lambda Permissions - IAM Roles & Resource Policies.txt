@@ -1,0 +1,16 @@
+Lambda Permissions - IAM Roles & Resource Policies
+    > Lambda execution role (IAM role)
+        > grants lambda function permissions to AWS resources/services
+        > Sample managed Policies
+            > ready made policies to be used directly
+            
+        > when you use event source mapping, lambda use those polices to read data
+        > best practice
+            > create one lambda execution role per function
+
+    > Lambda resource based policies
+        > gives permissions to other services to use the lambda resources
+        > similar to S3 bucket policies for S3 bucket
+        > an IAM principle can access lambda if
+            > an IAM policy is attached to the IAM principle authorizes it
+            > if resource based policies authorizes it

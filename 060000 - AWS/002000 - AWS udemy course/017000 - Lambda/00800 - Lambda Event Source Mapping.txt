@@ -57,3 +57,5 @@ Lambda Event Source Mapping
             > lambda adds 60 more instances per minute to scale up
             > up to 1000 batches of messages processed simultaneously
         > SQS FIFO
+            > messages with the same group id will be processed in order
+            > the lambda function scales to the number of active message groups

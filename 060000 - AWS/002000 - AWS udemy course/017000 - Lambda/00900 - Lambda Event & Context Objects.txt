@@ -1,0 +1,8 @@
+Lambda Event & Context Objects
+    > lambda function gets invoked with two Objects
+        > event
+            > contains lots of info about the event itself
+            > contains data for the function to process
+            > contains the parameters
+        > context
+            > data around the function itself

@@ -1,0 +1,8 @@
+Lambda Monitoring & X-Ray Tracing
+    > Logging and Monitoring
+        > CloudWatch Logs
+            > AWS lambda execution logs are stored in AWS CloudWatch Logs
+            > make sure that AWS lambda has an execution role that authorizes the write to CloudWatch
+
+        > CloudWatch metrics
+            > 
