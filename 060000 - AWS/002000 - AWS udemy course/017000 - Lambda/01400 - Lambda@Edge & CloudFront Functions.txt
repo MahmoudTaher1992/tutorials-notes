@@ -1,0 +1,39 @@
+Lambda@Edge & CloudFront Functions
+    > many new apps execute some of the code at the edge
+        > Edge function
+            > a code that you write and attach to CloudFront distributions
+            > runs close to user to minimize latency
+
+    > CloudFront provides two kinds of Functions
+        > CloudFront Functions
+        > Lambda@Edge
+
+    > You don't have to manage any servers, deployed globally
+    > pay for what you use only
+    > fully serverless
+
+    > use case
+        > customize the CDN content
+        > Dynamic web page at edge
+        > SEO
+        > Authentication/Authorization
+        > ...
+
+    > CloudFront Functions
+        > light weight functions written in javascript
+        > high-scale, latency sensitive CDN customizations
+        > sub ms startup time, millions of requests per second
+        > used to change
+            > viewer request
+            > viewer response
+        > Native feature of CloudFront
+
+    > Lambda@Edge
+        > lambda functions written in NodeJs/Python
+        > scales up to 1000s requests/second
+        > used to change
+            > viewer request
+            > viewer response
+            > origin request
+            > origin response
+        > author the function in one region and it will be replicated globally

@@ -1,0 +1,15 @@
+Lambda in VPC
+    > Lambda by default
+        > by default Lambda is in the AWS VPC not your private VPC
+        > it can not access resources is your VPC such as
+            > RDS
+            > ElastiCache
+            > internal ELB
+            > ...
+
+    > To have access to internal resources
+        > connect it to the private subnet by Elastic Network Interface
+        > put the lambda function in the VPC
+            > to connect to public internet
+                > connect it to NAT gateway and internet gateway (IGW)
+            > you can use VPC endpoints to privately access AWS resources with out NAT

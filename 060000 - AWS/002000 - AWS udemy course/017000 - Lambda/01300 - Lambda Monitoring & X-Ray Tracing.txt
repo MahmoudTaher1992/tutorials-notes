@@ -5,4 +5,16 @@ Lambda Monitoring & X-Ray Tracing
             > make sure that AWS lambda has an execution role that authorizes the write to CloudWatch
 
         > CloudWatch metrics
-            > 
+            > all lambda metrics are displayed in CloudWatch metrics
+            > invocations, durations, concurrent executions
+            > error count, throttles, success rates
+            > async delivery failures
+            > iterator age 
+                > Kinesis
+                > DynamoDB streams
+
+    > Lambda tracing with X-Ray
+        > You have to enable it in lambda configuration
+        > runs the X-Ray daemon for you
+        > use AWS X-RAY SDK in the code
+        > ensure that the lambda function has the right IAM role
