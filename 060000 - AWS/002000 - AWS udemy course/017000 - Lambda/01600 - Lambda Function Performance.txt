@@ -1,0 +1,31 @@
+Lambda Function Performance
+    > RAM
+        > from 128MB to 10GB
+        > you can not control the vCPU, it just gets increased according to the memory size
+        > for each 1792MB there will be 1 vCPU
+        > after 1792MB you will have to optimize you app for multi threading to get full benefit from the CPUs
+        
+        > if your app is CPU intensive, the only way to increase the CPUs is through increasing the RAM
+
+    > the max timeout is 15 mins, the default is 3s
+        > if your execution takes more than 15 mins then you should consider some solutions other than lambda
+
+    > Execution Context
+        > is a temporary runtime environment that initializes any external dependencies for your lambda code
+        > great for db connections, HTTP clients, SDK clients, ...
+        > the execution is maintained for some time for another lambda invocations
+            > the next function invocation can reuse the context to save time in initializing connection objects
+        > the execution context includes the /tmp directory
+
+        > initializing the connections or sharable resources that take time to initialize should be outside the function
+            > so that it can be reused in the next invocations before the execution context is terminated
+
+    > /tmp space
+        > if you need to download a big file to work on
+        > if your lambda function needs space to perform operations
+        > you can use the /tmp directory
+        > max size is 10GB
+        > the directory content is maintained while the execution context is frozen
+            > it can be used as a cache for multiple invocations
+        > for permanent persistance of objects you should use S3
+        > to encrypt the content on /tmp, you must generate KMS Data Keys

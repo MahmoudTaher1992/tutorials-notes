@@ -1,0 +1,3 @@
+Lambda Layers
+    > Share reusable codes and assets and Lambda will make it available to your codebase
+    > this will help reducing the deployment time as it will reduce the package size
