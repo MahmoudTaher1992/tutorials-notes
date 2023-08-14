@@ -1,0 +1,16 @@
+Lambda and CloudFormation
+    > inline
+        > you can include the code as inline code
+        > in Code.ZipFile property
+        > you can not include function dependencies within the inline code
+
+    > through S3
+        > you must store the zip file in S3
+        > add the s3 object details to cloudFormation's code
+        > if you update the code in S3 but you didn't change the following, cloudFormation will not update the function
+            > S3Bucket
+            > S3Key
+            > S3ObjectVersion
+
+    > through S3 multiple accounts
+        > you just have to add Execution role to CloudFormation or a bucket policy to the S3 bucket

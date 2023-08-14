@@ -1,0 +1,21 @@
+Lambda Concurrency
+    > Concurrency and Throttling
+        > Concurrency limit = 1000 concurrent executions
+        > you can set a reserved concurrency limit
+            > if the concurrency exceeded the limit a throttle error will be thrown
+                > sync invocations will have the error as the return value
+                > async invocations will also have the error but it will retry until it succeeds or returned to DLQ
+                    > it may return the event to it's queue
+        > if you need a higher limit open a support ticket
+
+    > Cold start
+        > when lambda is initialized
+            > the code is loaded
+            > the code outside the handler will run
+        > if the initialization time is long, first request served by new instances will have a higher latency than the others
+
+        > Provisioned concurrency
+            > the solution for the cold start
+
+            > the number of pre-initialized environments you want to allocate to your function
+                > those environments are prepared to respond immediately to incoming requests

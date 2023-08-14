@@ -1,0 +1,17 @@
+Lambda External Dependencies
+    > if the lambda depends in external dependencies
+        > i.e.
+            > AWS X-RAY SDK
+            > Database clients
+            > ...
+        > you will have to install the packages alongside the code and zip it together
+            > node.js
+                > node_modules folder
+            > python
+                > pip --target options
+            > java
+                > relevant .jar files
+
+    > upload .zip directly to AWS if less than 50MB, otherwise use S3 first
+
+    > AWS SDK comes by default with each Lambda

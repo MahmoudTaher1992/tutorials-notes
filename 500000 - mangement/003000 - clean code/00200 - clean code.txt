@@ -3,3 +3,103 @@ Clean code
         > know the difference between a good code and a bad code
         > know how to write a good code
         > know how to transfer a bad code into a good code
+
+    > There will be code
+        > there will be always a code
+        > as long as there are requirements there will be a code to describe them
+        > the level of abstraction will increase but it can not reach to a moment that totally replaces the job of developers
+
+    > Bad code
+        > a story of a bad code that brought a company down
+            > one company in the late 80s wrote a killer app, was very popular and lots of professionals used it
+            > then the release cycles started to stretch, bugs were not repaired from one release to the next
+            > load times increased and crashes increased
+            > the company went out of business a short time later
+            > one employee said what happened internally
+                > they rushed the product into the market
+                > this made a huge mess in the code
+                > as they added more features, the code got worse and worse until they couldn't manage it anymore
+
+            > it was the bad code that brought the company down
+
+        > signs of a bad code
+            > it is very hard to navigate, understand, modify and add to it
+            > you see a senseless code
+            > no clues or hints to move through it
+            > it takes a very long time to make a change that looks soo simple
+
+        > reasons of a bad code
+            > if it is so bad then why did you write it ?
+            > trying to go fast
+            > no time for cleanup
+            > some developers just don't follow the rules and they don't cleanup their code
+            > delaying the cleanup to a later time that never comes
+
+    > The total cost of owning a mess
+        > decrease of productivity over the time
+        > no change is trivial
+    
+    > The grand redesign in the sky
+        > the technical team rebels and asks for a redesign
+        > a new team starts to build the new app with the new design
+        > they take years and by the time a new team takes over the project and says that the new app needs a rebuild because it is a mess
+        > then you will realize that maintaining the code is a matter of survival not just a cost effective approach
+
+    > Attitude
+        > why does that happen to the code ?
+        > why does the good rot so quickly
+        > reasons
+            > from the developers POV
+                > the requirements keep changing
+                > the schedule is too tight
+                > stupid managers
+                > angry customers
+            > the real reason is
+                > we are not professional
+
+        > Others 
+            > POV
+                > the managers want information and dead lines to make promises
+                > the users want to validate wither the requirement will fit in the system
+            > what they do
+                > managers defend the schedules
+                > users defend features
+
+        > developers must defend the code and this is their job
+        > it is unprofessional to bend to the managers and the users who don't understand the risk of making messes
+
+        > the only way to go fast is be keeping the code as clean as possible at all times
+    
+    > The art of clean code
+        > before you try to make the code clean, you have to understand what is a clean code first
+        > write a clean code is like painting a picture
+            > most of us can know the difference between a good code and a bad code
+            > if you can recognize a good code, it doesn't mean that you can write a clean code 
+        > a programmer that writes a clean code is an artist who can take a code and transform it into an elegant code
+
+    > What is a clean code ?
+        > there are lots of definitions
+
+        > Bjarne Stroustrup (inventor of C++)
+            > elegant
+                > pleasing to read
+                > reading it makes you smile
+            > efficient
+                > fast
+            > doesn't tempt the mess to grow
+                > tempt means attracts
+                > one broken window in a house will tempt others to break other windows
+                > one trash bag in the street will be a mountain in few days
+            > paying close attention to the details
+                > error handling
+                > memory leaks 
+                > race conditions
+                > ...
+            > does only one thing well
+                > bad code tries to do too much and has a vague purpose
+                > clean code is focused, each function, class and module has a single function that remains clean from it's surroundings
+        
+        > Grady Booch (author of Object Oriented Analysis and Design with Applications)
+            > 
+
+

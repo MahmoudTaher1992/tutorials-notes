@@ -1,2 +1,10 @@
 Lambda File Systems Mounting
-    > 
+    > Lambda functions can access EFS file system if they are running in a VPC
+    > you have to configure lambda to mount EFS file systems to local directory during initialization
+    > must use EFS access points
+    > watch out for EFS connections limit, each lambda will take one connection
+
+    > you shall compare it with other storage options
+        > S3
+        > tmp directory
+        > Lambda layers
