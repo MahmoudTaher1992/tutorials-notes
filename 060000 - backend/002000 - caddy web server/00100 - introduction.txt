@@ -1,0 +1,37 @@
+introduction
+    > Web server
+        > it is hardware or software or a combination of both
+            > hardware
+                > a computer that has the web server software and the data of the website
+                > connected to the web
+                > can interchange data with other connected devices on the web
+            > software  
+                > controls how users access web files
+                > it understands url and http
+                > it can be accessed by the domain names of the websites it stores
+                > it delivers the content to the requests
+        
+        > when a browser needs a file
+            > it will create a HTTP request and send it to the server
+            > when it reaches the server hardware, the web server software handles the request
+            > it will find the requested file and send it back to the browser in a HTTP response
+            > if the file is not found it will send a 404 error response
+
+        > static web server
+            > a server that only serves static content
+
+        > dynamic web server
+            > a server that can serve both static and dynamic content
+
+        > there are lots of configurable web servers created, pick one and use it
+
+
+    > Caddy
+        > a powerful platform that will serve your files, services and apps
+        > written in Go
+        > most people use caddy as a web server or proxy
+
+        > configuration is both dynamic and exportable using caddy api
+        > you can configure caddy in many ways
+            > people prefer caddyfile
+        > can work on any platform without runtime dependencies
