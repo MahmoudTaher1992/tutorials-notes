@@ -1,0 +1,19 @@
+Introduction
+    > when you have multiple applications, you will need them to communicate with each other
+    > there are 2 patterns of communications
+        > sync
+            > app to app directly
+        > async (event based communication)
+            > app to queue to app
+
+            > pros
+                > decouple the apps from each other
+                > scalability is easier for each component
+
+            > there are 3 models of async communication
+                > SQS
+                    > queue model
+                > SNS
+                    > pub sub model
+                > Kinesis
+                    > real time streaming model

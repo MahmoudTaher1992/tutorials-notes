@@ -1,0 +1,15 @@
+SQS message visibility timeout
+    > after a message is polled from the queue by the consumer, it becomes invisible to other consumers for a defined period of time
+    > this time is called the visibility timeout
+    > if the job was not deleted after the visibility timeout, it will become visible again and another consumer
+
+    > default value is 30 seconds
+
+    > the consumer can extend the visibility timeout for a message
+        > by calling ChangeMessageVisibility api 
+
+    > you can increase the visibility timeout
+        > as you increase
+            > you face the problem of delays if the consumer crashes
+        > as you decrease
+            > you will face a duplication problem if the consumer did't extend the time

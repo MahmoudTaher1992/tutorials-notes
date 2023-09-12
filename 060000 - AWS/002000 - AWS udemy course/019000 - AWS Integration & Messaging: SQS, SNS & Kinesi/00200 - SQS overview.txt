@@ -1,0 +1,51 @@
+SQS overview
+    > SQS is a queue service
+
+    > used to decouple apps
+
+    > attributes
+        > unlimited throughput, you can send messages as much as you want
+        > unlimited number of messages 
+        > default retention of the message is from 4 days to 14 days at max
+        > low latency (in less than 10 ms on publish and receive)
+        > max message size is 256 KB
+
+    > can have duplicate messages
+    > can have out of order messages
+
+    > producer
+        > producer send messages to the queue using SDK
+        > the message is persisted to the SQS until a consumer deletes it
+        > message retention: 4-14 days
+        > unlimited throughput
+
+    > consumer
+        > consumer poll messages from the queue (10 msgs at a time)
+        > process the message
+        > delete the message using the SDK
+
+        > multiple consumers
+            > consumers receive messages in parallel
+            > once the message is delivered to a consumer, it becomes invisible to other consumers for some time (visibility timeout)
+        
+            > auto scaling the consumers by ASG
+                > you can use the SQS metric to scale the ASG
+
+    > usage example
+        > decouple the components of an application
+        > take the logic of video conversion outside of the main application
+        > put it in a processing unit (EC2 instance, lambda, etc)
+        > setup ASG
+        > connect it to SQS
+        > the app will send a message and it will be handled automatically at any scale
+
+    > security
+        > encryption
+            > in-flight
+            > at rest
+
+        > access control
+            > IAM policies
+
+        > SQS access policies
+            > similar to S3 bucket policies

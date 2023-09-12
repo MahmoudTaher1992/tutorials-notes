@@ -1,0 +1,9 @@
+SQS - Dead Letter Queues
+    > if the consumer failed to process the message so many times, it should go to Dead Letter Queue
+    > you can setup a MaximumReceives threshold, when exceeded the message goes to DLQ
+    > useful for debugging
+    > make sure to process the messages in the DLQ before they expire
+        > you should increase the retention period to be the maximum
+
+    َ> Redrive to source
+        > after you debug the issue that let the SQS to send the message to DLQ, you can send it back to the source queue manually

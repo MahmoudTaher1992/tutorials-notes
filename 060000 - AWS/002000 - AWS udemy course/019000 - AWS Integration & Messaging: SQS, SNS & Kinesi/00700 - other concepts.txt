@@ -1,0 +1,29 @@
+Other concepts
+    > Long polling
+        > happens when you make a request to the queue to receive messages, and you keep the connection open for some time to receive more messages
+        > pros
+            > decreases the number of requests made to the queue
+            > increase the efficiency and latency
+
+        > the wait time can be from 1 to 20 seconds
+
+    > SQS extended client
+        > can be used to send messages larger than 256 KB 
+        > it uses s3 buckets under the hood to store the message and use a link in the queue message
+
+    > API methods
+        > CreateQueue
+        > DeleteQueue
+        > PurgeQueue (Delete all queue messages)
+       
+        > SendMessage
+        > ReceiveMessage
+        > DeleteMessage
+       
+        > ReceiveMessageWaitTimeSeconds (long polling)  
+        > ChangeMessageVisibility
+
+        > you can batch 
+            > SendMessage
+            > DeleteMessage
+            > ChangeMessageVisibility

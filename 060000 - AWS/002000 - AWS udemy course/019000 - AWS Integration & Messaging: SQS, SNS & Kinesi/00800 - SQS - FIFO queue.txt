@@ -1,0 +1,23 @@
+SQS - FIFO queue
+    > FIFO
+        > stands for First In First Out
+    > grantees the order of the messages 
+    > Limited throughput
+        > 300 msg/s without batching
+        > 3000 msg/s with batching
+    > exactly one message sent (by removing duplicates)
+    > messages are processed in order by the consumer
+
+    > Deduplication
+        > Deduplication interval is 5 minutes
+        > types
+            > content based Deduplication
+                > compares the hash of the message body and deletes duplicates
+            > message deduplication ID
+                > messages with the same deduplication ID are considered as duplicates
+
+    > Message grouping
+        > all messages with the same group ID will be delivered to the same consumer, in the same order
+        > you can have as many groups as you want
+        > each group will be delivered to a consumer
+        > ordering across groups is not guaranteed

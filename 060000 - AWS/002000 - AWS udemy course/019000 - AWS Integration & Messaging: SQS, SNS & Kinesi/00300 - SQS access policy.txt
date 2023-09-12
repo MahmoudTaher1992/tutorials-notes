@@ -1,0 +1,4 @@
+SQS access policy
+    > specifies the rules of accessing the queue
+    > you can set it up to allow different accounts to access it
+    > or different resource to access it
