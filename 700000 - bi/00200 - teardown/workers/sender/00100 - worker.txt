@@ -1,0 +1,3 @@
+Sender worker
+    > a listener for a named MessageQueue
+    > it writes the output to a specific DbCollection (targetDb)
