@@ -1,0 +1,128 @@
+Publications and Data Loading
+    > Publications and subscriptions
+        > in normal apps the FE communicates with BE through HTTP requests
+        > meteor uses Distributed Data Protocol (DDP), a websocket like protocol
+            > allows the data transfer in both directions
+            > there is no REST endpoints
+            > instead there are publications endpoints that can push data from BE to FE
+
+        > a publications
+            > named API on the server that prepares data and sends it to the client
+        
+        > subscription
+            > initiated by the client
+            > connect to the publication
+            > receives data
+            > a first data batch is sent after initialization, then incremental updates are sent as data changes
+            > can be thought as a set of data changes over time
+            > as a result of the subscription is that the minimongo database on the client is synced with the BE database
+
+    > defining a publication
+        > i.e.
+            Meteor.publish('publication-unique-key', function() {
+                return Collection.find();
+            }) 
+        > ensures that all subscribers will have identical set of data
+        > Every publication takes two types of parameters
+            > this context
+                > has info about current DDP connection
+                    > userId
+                > you have to use normal function not arrow functions to access this keyword
+            > the arguments to the publication
+                > passed on subscription
+        > the publication will run when the user logs out and login again
+        > a publication can return two results
+            > a cursor
+                > a set of data
+            > none
+                > by calling this.ready()
+            > otherwise the subscriber will be in loading state
+        > a publication function can have arguments
+
+    > Subscribing to data
+        > to subscribe to a publication you should call Meteor.subscribe('publication-unique-key')
+        > when you open a subscription the server will make sure that the FE collections are in sync with the publication data
+        > the subscription returns a handle with a property `ready` to give you an indicator about the subscription status
+
+        > Stopping Subscriptions
+            > call .stop to terminate the connection
+            > it clears the subscription data stored in the minimongo database
+            > if you forgot to stop the connection, you will waste resources in the FE and the BE
+
+        > Subscribe in UI components
+            > the best place to subscribe is as close as possible to it's usage
+
+        > Fetching data
+            > after publication subscription, that data will be delivered to minimongo db
+            > you can access the data from there
+            > important rules
+                > push as small data as possible to the subscribers
+                > other wise you will face data collisions if other publications push the same data to the same collection
+                > a common pattern is to fetch the data in a parent component and pass it to pure component
+
+        > Global subscriptions
+            > use it for the data that you want in all components all the time 
+                > i.e.
+                    > user info
+            > it is even better to wrap your component in layout component and subscribe on the layout component
+
+    > Patterns for data loading
+        > Subscription readiness
+            > Subscription will not instantly load the data
+            > it will take time to initialize the connection and load the data
+            > delay will vary from environment to another
+            > to find out, use handle.ready() to check the subscription status
+            
+        > Publication behavior when arguments change
+            > when subscription arguments change, the publication will prepare the new data
+            > the old data will remain until the new data is ready and sent
+            > then old data will be deleted and new data will be inserted
+
+        > Pagination subscription
+            > pagination types
+                > page by page
+                    > not simple in subscription
+                    > better use meteor methods
+                > infinite scroll
+                    > you will play with the number of items you want to load
+                    > each time you will load the whole list till the item you want !!
+
+    > Advanced publications
+        > Publishing relational data
+            > it is common that we need related data in the app
+            > you can do that by returning multiple cursors from the publication
+            > if the first cursor changes, the second cursor will not be updated
+                > the second cursor depends on the first one
+            
+            > a solution to that is to use reywood:publish-composite package
+
+        > Subscription lifecycle
+            > when user subscribes to a publication
+                > the client sends a sub message to the server via DDP
+                > the server runs the publication function
+                > the publication will determine if the return data is a cursor or not
+                > if it is a cursor
+                    > it will setup a query observer on the cursor
+                    > it will reuse existing matching observers if any
+                > the observer fetches the data and returns it to the publication handler via this.added() method
+                > the subscription passes the added data to the client's connection mergebox
+                    > mergebox
+                        > server side cache of the data sent to the client subscription
+                        > methods
+                            > added
+                            > changed
+                    > ddp message is sent to the client with the changes
+                > the publication calls .ready() call back which sends ready ddp message to the subscribers
+                > the observer will continue watch and on any change the cycle will be repeated
+            
+            > when user stops the subscription
+                > the client sends unsub ddp message to the server
+                > the server stops the subscription by
+                    > runs this.onStop() callbacks defined in the handler
+                    > the cursor query observer is stopped and cleaned
+                    > mergebox is cleaned
+                        > may or may not mean they are also removed from the client
+                    > nosub ddp message is sent to the client
+
+        > Working with REST APIs
+            > you can use publications as REST api

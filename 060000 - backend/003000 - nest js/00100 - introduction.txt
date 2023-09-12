@@ -1,0 +1,13 @@
+Introduction
+    > nest js is a framework for
+        > building efficient, scalable Node.js server-side applications.
+        > supports Typescript
+    
+    > under the hood nest js uses express js (HTTP server framework)
+        > nest provides a level of abstraction above it, but exposes their API directly to the users
+    
+    > nest provides a framework to create apps that are
+        > highly testable
+        > highly scalable
+        > loosely coupled
+        > easily maintainable

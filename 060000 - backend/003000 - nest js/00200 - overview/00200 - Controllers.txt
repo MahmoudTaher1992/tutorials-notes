@@ -1,0 +1,96 @@
+Controllers
+    > responsible for handling incoming requests and returning responses to the client.
+    > a routing mechanism controls which controller receives which request
+    > each controller consists of different routes
+    > to create a basic controller we use classes and decorators
+        > decorators hold metadata that is extracted by nest to create the functionality
+    > all the controllers form a routing map after initialization
+    
+    > routing
+        > @Controller('cats')
+            > used to define a controller
+            > cats is the routing path
+
+        > @Get('subpath)
+            > decorates methods
+            > nest uses it to create a handler for a specific endpoints
+            > nest routes all 'GET cats/subpath' requests to this method
+            > the method name is trivial and has no effect
+            > the method will return 
+                > 200 status code
+                > method output
+
+            > the subpath can be dynamic view regular expressions
+                > @Get(`regular expression`)
+
+            > others
+                > @Put()
+                > @Delete()
+                > @Patch()
+                > @Options()
+                > @Head()
+                > @All(): handles any HTTP method
+
+        > response manipulation in nest
+            > Standard (recommended)
+                > when request handler returns
+                    > js object or array
+                        > nest automatically serializes it to JSON and sends it back
+                    > primitive types
+                        > nest returns the value as is
+                > this makes it easy, just return the value and nest will create the response for you
+                    > the response status code will be 200 by default, except for the POST methods which will be 201
+                        > you can manipulate the HTTP code with @HttpCode() decorator
+
+            > Library specific
+                > you can ask for the response object and manipulate it directly
+                    > decorate one of the handler parameters with @Res() decorator
+                    > i.e.
+                        > express
+                            > response.status(200).send()
+                > when you ask for the response object, nest will disable the standard approach
+                    > you will be responsible for managing the response or the HTTP server will hang
+                    > if you want to manipulate the response object and still use the standard approach
+                        > use @Res({ passthrough: true }) decorator
+
+    > request object
+        > sometimes you need to access the request object
+        > inject the object to the request handler view @Req() decorator
+        > in most times you don't have to extract info from request object directly
+            > you can use specific decorators
+                > i.e. (@Body(), @Query(), ....)
+    
+    > Some decorators
+        > @Request(), @Req(): request object
+        > @Response(), @Res(): response object
+        > @Next()
+        > @Session(): req.Session
+        > @Param(key?: string): req.params / req.params[key]
+        > @Body(key?: string): req.body / req.body[key]
+        > @Query(key?: string): req.query / req.query[key]
+        > @Headers(name?: string): req.headers / req.headers[name]
+        > @Ip(): req.Ip
+        > @HostParam(): req.hosts
+
+    > Status code
+        > @HttpCode(204)
+            > to manipulate the response status code
+
+    > Headers
+        > to specify custom response header use @Header() decorator
+            > i.e. @Header('Cache-Control', 'none')
+
+    > Redirection
+        > to redirect a response to a specific url
+        > use @Redirect() decorator
+            > i.e. @Redirect('https://nestjs.com', 301)
+                > 1st param: url
+                > 2nd param: status code
+        > return HttpRedirectResponse object from the handler
+            > will override the @Redirect() decorator
+
+    > Route parameters
+        > to access the route parameters view @Param() decorator
+            > you have to specify the parameter name in the handler decorator
+            > i.e.
+                > @Get(':id') 

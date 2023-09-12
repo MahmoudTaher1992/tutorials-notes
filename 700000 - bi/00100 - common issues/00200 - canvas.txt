@@ -1,7 +1,0 @@
-Trying to run a test file
-    > I tried to run a test file and it gave me an error
-        > error
-            > dlopen(/Users/taher/Desktop/github/blink-it/app/app/node_modules/canvas/build/Release/canvas.node, 0x0001): tried: '/Users/taher/Desktop/github/blink-it/app/app/node_modules/canvas/build/Release/canvas.node' (mach-o file, but is an incompatible architecture (have 'x86_64', need 'arm64e'))
-
-        > possible solution
-            > https://stackoverflow.com/questions/70374395/node-canvas-throwing-error-when-running-project

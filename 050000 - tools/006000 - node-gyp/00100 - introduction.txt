@@ -1,0 +1,28 @@
+node-gyp
+    > cross-platform command-line tool
+        > works on Windows, Mac, Linux
+        > runs on command interpreter
+    > written in Node.js
+
+    > used to compile native addon modules for Node.js
+        > Native addon modules
+            > modules written in C/C++
+            > C++ is much more performant than JS
+            > you can integrate it in you node app and node-gyp will compile it
+            > node js is written in C++, hence you can use C++ addons
+
+            > pros
+                > efficiency
+                > OS operations access
+
+        > compile
+            > convert code from native code (C++) to node js compatible code
+
+    > not used to build Node js itself
+
+    > it doesn't work with some python versions
+        > you can change python versions using pyenv
+            > you might need this command to change python version
+                > pyenv global
+                > eval "$(pyenv init -)"
+

@@ -14,7 +14,7 @@ How to solve a problem
             > break it down
             > visualize the problem
             > consider edge cases
-            > related to known problems
+            > relate it to known problems
             > use analogies
             > discuss with others
             > write it down
@@ -25,15 +25,14 @@ How to solve a problem
 
     > set some goals to solve the problem
 
-    > identify the alternatives
-        > by
-            > thinking/brainstorming
-            > see other expertise
-                > in the same place/field
-                > in different place/field
-                > ask seniors in the team and in your relations 
-                > others who faced the same issue
-            > take a break and rethink again
+    > identify the alternatives by
+        > thinking/brainstorming
+        > see other expertise
+            > in the same place/field
+            > in different place/field
+            > ask seniors in the team and in your relations 
+            > others who faced the same issue
+        > take a break and rethink again
 
     > evaluate the alternatives
         > do this without favoring any alternative over the other
@@ -97,9 +96,11 @@ How to solve a problem
 
     > review the solution
 
-    > document the process
+    > save the the process documentation
         > to use it in the future
         > it is a good memory (like taking an image)
+
+    > update the `How to solve a problem` guide with your feedback
 
     > evaluate the solution
         > based on schedule

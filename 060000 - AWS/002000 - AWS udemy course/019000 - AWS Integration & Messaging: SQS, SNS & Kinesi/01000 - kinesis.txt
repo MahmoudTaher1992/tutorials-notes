@@ -1,0 +1,96 @@
+kinesis
+    > makes it easy to collect, process and analyze streaming data in real-time
+    > components
+        > Kinesis Data Streams
+            > capture, process and stores data
+        > Kinesis Data Firehose
+            > load data into AWS resources
+        > Kinesis Data Analytics
+            > analyze data with SQL or Apache Flink
+        > Kinesis Video Streams
+            > capture, process and stores videos
+
+    > Kinesis Data Streams
+        > stream big data into system
+        > divided into shards (from 1 to n)
+            > controls the throughput of data from producers to consumers
+
+        > receive data in form of records
+            > each record will have
+                > partition key
+                    > is hashed to determine which shard the data belongs to
+                > data blob
+
+        > producers
+            > put data into the stream
+            > Data records contains
+                > partition key
+                    > used to determine which shard the data belongs to
+                > sequence number
+                    > unique key for data in the shard
+                > Data blob (up to 1MB)
+            > producers can be
+                > AWS SDK
+                > Kinesis Producer Library
+                > Kinesis Agent
+            > Batching is applied using PutRecord API
+
+        > consumers
+            > query the stream using
+                > partition key
+                > sequence number  
+
+        > Limits
+            > producers
+                > 1 MB/s/shard
+                > 1000 messages/s/shard
+
+                > if you have 6 shards then
+                    > 6 MB/s
+                    > 6000 messages/s  
+
+                > ProvisionedThroughputExceeded error will be thrown if the limit is exceeded
+                    > to solve it
+                        > use more shards
+                        > retries with exponential backoff
+                        > scale shards by splitting them
+
+            > consumers
+                > shared mode
+                    > 2MB/s/shard for all consumers
+
+                > enhanced mode
+                    > 2MB/s/shard/consumer
+
+        > retention
+            > from 1 to 365 days
+
+        > ability to replay the data
+        > once the data is inserted into kinesis, it can not be deleted
+        > data that share the same hashed key will go into the same shard
+        
+        > Capacity modes
+            > provisioned mode
+                > you choose the number of shards provisioned
+                > follow the normal shard limits
+                > pay per shard provisioned per hour
+
+            > on-demand mode
+                > you don't need to manage the Capacity
+                > default Capacity
+                    > 4MB/s
+                    > 4000 messages/s
+                > scales automatically
+                
+        > security
+            > access/authorization
+                > IAM roles
+            > Encryption
+                > in-flight
+                > at rest
+                > client side
+            > VPC end points to access within VPC
+            > monitor API using CloudTrail
+
+
+https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/learn/lecture/26101788#overview

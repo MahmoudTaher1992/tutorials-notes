@@ -1,0 +1,123 @@
+methods
+    > What is a Method?
+        > are meteor remote procedure call (RPCs) system
+        > they are like POST request in HTTP
+        > they have some positive points over HTTP
+        > a method is an endpoint on the server that can be called by the client via Meteor.call()
+    
+    > Defining and calling Methods
+        > Basic Method
+            > Defining
+                > By calling Meteor.methods()
+                > should be defined in common code (for server and client) to enable Optimistic UI
+            > calling
+                > by using Meteor.call()
+
+        > Advanced Method boilerplate
+            > an ideal method would have
+                > validation code without running the method body
+                > override the method for testing
+                > call the method with custom user id for testing
+                > refer to the method with js module instead of magic string
+                > the method returns the inserted documents instead
+                > avoid calling the server if the client side validation failed, saving resources
+
+            > use this pattern to idealize you methods
+
+    > Error handling 
+        > Throwing errors from a Method
+            > Regular errors
+                > normal js errors
+                > use them when you don't want to send details about them to the client
+
+            > Meteor.Error  
+                > for general runtime errors
+                > returned to the client with details
+                > arguments
+                    > error
+                    > reason
+                    > details
+
+            > ValidationError
+                > like Meteor.Error, but with custom constructor that makes the error readable by different form and validation libraries
+        
+        > Handling errors
+            > handle it in the callback of Meteor.call()
+
+        > Errors in Method simulation
+            > usually when you call the method, it runs twice. One on the client and the second on server
+            > the one on the client is called simulation and you can identify it through this.isSimulation
+            > this is useful for optimistic UI, if the simulation fails on the client nothing will be send to the server
+
+    > Calling a Method from a form
+        > it can be integrated in the form to handle the validation errors
+
+    > Loading data with Methods
+        > methods can be used to load data from the server
+        > it is recommended to use publications in data Loading
+        > data will not be inserted into minimongo directly
+        > you will have to handle the client side cache yourself
+
+    > Advanced concepts
+        > Method call lifecycle
+            1. Method simulation runs on the client
+                > executed if it is defined in the client and the server
+                > the client starts tracking the changes made to the collections, to be rolled back when needed
+                > when the simulation is completed, the UI is updated but the BE has nothing yet
+                > if the simulation fails, it is ignored and move to step 2
+                    > in order to stop the step 2 on failure implement
+                        > ValidatedMethod
+                        > throwStubExceptions
+
+            2. A `method` DDP message is sent to the server
+                > the client constructs DDP message and send it to the server
+                    > includes
+                        > method name
+                        > arguments
+                        > generated method ID
+
+            3. Method runs on the server
+                > code is executed again on the server
+                > this is the real logic and changes will be persisted to the DB
+
+            4. Return value is sent to the client
+                > the result (return value) will be sent to the client
+                > the client stores the return value
+                > it runs the onResultReceived
+
+            5. Any DDP publications affected by the Method are updated
+                > all publications will be updated
+
+            6. `updated` message sent to the client, data replaced with server result, Method callback fires
+                > ddp message is sent to the client
+                > the client rollback any changes done in step 1 and replaces them with returned value from the server
+                > the callback passed to meteor.call() is called
+
+            > Error case
+                > if the server method throws an error, the client will get an error instead of the return value
+                > method callback will be called with the error instead of returned value
+
+    > Benefits of Methods over REST
+        > methods use sync style, but are not blocking
+            > meteor uses fibers to make the code looks sync
+            > it lets you avoid nested callbacks
+
+        > Methods always run and return in order
+            > REST api calls can return in any order, this is not the case in meteor
+            > on meteor server, the method doesn't start until the previous one is finished
+            > there are ways to disable this behavior
+                > this.unblock()
+
+        > Change tracking for Optimistic UI
+            > tracking changes makes it easy to implement optimistic UI
+
+    > Consistent ID generation and optimistic UI
+        > any id generated in the simulation is guaranteed to be the same on the server
+        > this is useful for optimistic UI, as there will be no flickering will happen when the server returns the result
+
+    > Method retries
+        > if the client runs a method and the internet connection was down, it will send it again when the connection is restored
+        > you have to write the method in a way that it handles multiple calls
+            > i.e.
+                > throw an error if the id is already exists (this will happen if you run the method twice) 
+            > you should take care of the methods that run $inc or $push

@@ -1,0 +1,59 @@
+application structure
+    > universal javascript
+        > meteor has all the code in one directory
+            > FE code
+            > BE code
+            > shared code between FE and BE
+        > meteor build tool lets you configure which code goes to which environment
+
+    > Meteor supports ES2015 modules
+        > it supports import and export
+        > you can also use require
+            > sometimes you will be forced to use it 
+                > i.e.
+                    > inside if statements
+
+    > File structure
+        > imports directory
+            > it is recommended to put all your code in this directory
+            > the build system will only bundle the code in this directory if it is imported somewhere
+            > meteor will load all the files outside this file directory according to default file load order rules
+                > eager loading
+
+        > it is recommended to have two entry points (client and server)
+            > client/main.js
+            > server/main.js
+
+            > the entry points (main.js)
+                > they are doing nothing by themselves
+                > they are just a combinations of
+                    > configurations
+                    > initializations
+                    > app code base
+
+        > any file in the server directory will only be loaded on the server, and the same for the client directory
+        > if you are in the client you can not import files from the server directory
+            > even if it is deeply imported in one of the imports directory
+            > same thing goes for server directory
+
+    > Special directories
+        > by default any js file in the meteor app directory will be loaded on both the client and the server
+        > some directories have other rules
+            > imports
+                > any file in the imports will not be loaded by default, only when it is explicitly imported
+            > node_modules
+                > same as imports
+            > client
+                > not loaded in the server
+                > similar to wrapping your code in Meteor.isClient
+                > all files in the FE are automatically minified in production mode
+                    > but not minified in development mode
+            > server
+                > not loaded in the client
+                > similar to wrapping your code in Meteor.isServer
+            > public
+                > all contents are served to the client requests
+            > private
+                > all files are available to server code through Assets API
+
+            

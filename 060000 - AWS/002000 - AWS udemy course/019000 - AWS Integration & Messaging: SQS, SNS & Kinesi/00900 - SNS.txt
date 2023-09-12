@@ -1,2 +1,78 @@
 SNS
-    > 
+    > stands for Simple Notification Service.
+    > it uses pub-sub pattern
+    > it lets you send the same message to infinite number of subscribers.
+    > it is like ASG in notifications
+
+    > the event producer will only send one notification to SNS topic
+    > SNS will send it to all subscribers
+    > you can setup a filter on each subscriber, to deliver them what you want
+
+    > 12.5M subscribers per topic
+    > 100k topics limit
+
+    > subscribers list
+        > SQS
+        > Lambda
+        > kinesis Data Firehose
+        > Email
+        > SMS
+        > mobile notifications
+        > HTTP endpoints
+
+    > event sources
+        > lots of AWS services
+
+    > How to publish
+        > Topic subscription (using the SDK)
+            > create a topic
+            > add a subscriber to a topic
+            > publish to a topic
+
+        > Direct publish (for mobile apps SDK)
+            > integrate with mobile platforms to send push notifications
+                > i.e.
+                    > Google GCM
+                    > Apple APNS
+                    > Amazon ADM
+
+    > Security
+        > Encryption
+            > inflight
+            > at rest
+            > client side
+
+        > Access Control
+            > IAM policies
+
+        > SNS access policies
+            > useful for cross account access
+            > useful for allowing other services to use SQS
+
+    > SNS + SQS fan out
+        > push once to SNS, all SQS will get the message
+        > fully decoupled
+        > no data loss
+        > data persistence
+        > delayed processing
+        > retry mechanism
+        > ability to add subscribers
+        
+        > applications
+            > S3 events to multiple queues
+                > S3 can have one event rule for a same combination
+                > you can overcome this issue by using SNS as one target and it will pass all messages to the subscribers
+
+            > SNS to S3
+                > SNS can not send to S3 directly
+                > you can use kinesis in between
+
+    > FIFO
+        > implements ordering and deduplication
+        > can only have SQS FIFO queues as subscribers
+        > Limited throughput
+
+    > Message filtering
+        > json policy used to filter messages going to subscribers
+        > it can be applied to each subscriber
+        > if no filter is applied, the subscriber will get all messages

@@ -1,0 +1,79 @@
+Collections and Schemas
+    > meteor stores app data in mongoDB
+    > Collections   
+        > a set of related data in mongodb
+        > is the entry point to data in meteor
+
+        > Server-side collections
+            > when you create a collection, you create a collection MongoDB
+            > and an interface to that collection on the server, with additional API methods on top of Node MongoDB collection methods
+
+        > Client-side collections
+            > there is no direct connection between client and MongoDB
+            > instead it is dealing with cache db, called Minimongo which is an in-memory db
+
+        > Local collections
+            > a collection without a connection to the database collection
+            > lets you use the full power of minimongo db without having to persist the data to the db
+
+    > Defining a schema
+        > MongoDB is schemaless db
+            > allows maximum flexibility in data structure
+
+        > it is better to have a schema to validate the data against
+        > having some data consistency is better than none
+        > if you didn't enforce a schema you will have to do a lot of work to shape the data after querying it
+        
+        > simpl-schema
+            > is used to create the validation schema
+
+        > just create the schema and attach it to the collection
+        > it will be checked when you try to write something to the db
+        > to implicitly run the validator, you can call
+            > schema.validate(object)
+    
+    > Designing your data schema
+        > enforce schema validation before insert/update/upsert
+        > use defaults
+        > clean the data before sending it to the db
+        > use hooks on insert/update/upsert
+            > to add some common logic before/after the db operation
+
+            > cons
+                > mutation can take long period
+                > it might be hard to write a general hook
+
+    > Migrating to a new schema
+        > at some point you will need to change the schema, so you will need migrations
+        > writing migrations
+            > it has up and down functions to migrate the data
+        > bulk changes
+            > pros
+                > single round trip to the db
+                > a lot faster
+            > cons
+                > complex to write the migration
+                > it will lock the collection until it is done
+        > Running migrations
+            > you can run it through the meteor shell
+            > you have to take a database backup before running the migration
+        
+        > Breaking schema changes
+            > you must be careful when you change the schema, because you might change it in a destructive way
+            > so maybe you change the db before the new UI is deployed
+            > it will be a destructive change if the new migration can not handle the old ui queries
+            
+            > solution
+                > deploy in multi-stages
+                > 1. migrate the schema without breaking the old UI
+                > 2. deploy the new UI
+                > 3. delete the data that is used by the old UI
+
+            > be always prepared to do a rollback, it is important !!!
+                > never skip the down function in the migration, as you may lose the rollback functionality
+
+    > Association between collections
+        > Collection helpers
+            > you can extend the collection with some functions through helpers function
+
+        

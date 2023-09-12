@@ -1,0 +1,13 @@
+introduction
+    > Meteor 
+        > is a full-stack JavaScript platform for developing modern web and mobile applications
+        > includes
+            > set of technologies for building connected-client reactive applications
+            > build tool
+            > set of packages from node.js and js community
+        > allows you to develop whole application using JavaScript
+        > uses data on the wire to communicate with client apps
+            > using websockets
+        
+    > Quick start
+        > npm comes with meteor but you can use you own npm

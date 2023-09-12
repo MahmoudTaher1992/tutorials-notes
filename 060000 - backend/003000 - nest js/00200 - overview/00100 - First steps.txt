@@ -1,0 +1,23 @@
+First steps
+    > you will lear the core fundamentals of nest js
+    
+    > main.js
+        > the entry point to the app
+        > NestFactory.create() is used to build a nest app that implements INestApplication
+        > INestApplication exposes multiple methods
+            > listen
+                > start up a HTTP listener, lets the app await inbound HTTP requests
+
+    > Nest is able to work with any HTTP framework, once an adapter is created
+        > there are 2 frameworks that are supported out of the box
+            > express
+                > via platform-express
+            > fastify 
+
+            > each frame work will export its own app interface
+                > express
+                    > NestExpressApplication
+                > fastify
+                    > NestFastifyApplication   
+
+                > you don't need to specify the type to NestFactory.create(), unless you want to access underlying platform API

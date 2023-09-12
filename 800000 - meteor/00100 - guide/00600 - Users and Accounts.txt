@@ -1,0 +1,37 @@
+Users and Accounts
+    > Features in core Meteor
+        > userId in DDP
+            > DDP is a websocket like protocol
+            > userId field is always there in the DDP connection
+            > this built-in feature will insure that there is a userId in the methods and publication, both on client and server
+
+        > accounts-base package
+            > core package used for user accounts functionality
+            > includes
+                > a user collection with a standard schema
+                    > accessed through
+                        > Meteor.users
+                        > client-side
+                            > Meteor.userId()
+                            > Meteor.user()
+                
+                > generic methods that tracks login state, log out, validate users, ...
+            > automatically added if you used `accounts-password`
+            
+    > password-login
+        > fully-featured password login system
+        > Requiring username or email
+            > Accounts.createUser
+                > allows you to create a user with email or username or both
+                > implement Accounts.validateNewUser to validate the user
+        
+        > Multiple emails
+            > it stores the email in an array field to allow for multiple emails
+
+        > Case sensitivity
+            > there is no way to ensure case sensitivity on MongoDb
+            > it is implemented in the package instead
+            > when you want ot query the user by email, use Accounts.findUserByUsername or Accounts.findUserByEmail
+
+        > Email flows
+            > 
