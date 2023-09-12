@@ -1,0 +1,4 @@
+The fist line
+    > in sh file tells the computer which interpreter to use
+        > i.e.
+            > #!/usr/bin/env sh
