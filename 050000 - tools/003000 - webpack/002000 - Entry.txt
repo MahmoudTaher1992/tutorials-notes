@@ -5,7 +5,7 @@ Entry
         > used to split app into multiple outputs
         > i.e.
             module.exports = {
-                //...
+                ...
                 entry: {
                     home: './home.js',
                     about: './about.js',
