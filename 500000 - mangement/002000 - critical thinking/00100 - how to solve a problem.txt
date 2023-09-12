@@ -1,0 +1,111 @@
+How to solve a problem
+    > try to write down the output as you follow the steps
+
+    > inspect the problem
+        > gather information about the problem (as much as you can)
+        > understand it by debugging
+            > read it multiple times
+                > the first time is always for the general idea
+                > the more you read the more you get a good grasp of the details
+            > paraphrase the problem
+                > try to explain the problem in your own words 
+            > identify inputs and outputs
+            > ask questions
+            > break it down
+            > visualize the problem
+            > consider edge cases
+            > related to known problems
+            > use analogies
+            > discuss with others
+            > write it down
+            > iterate until you reach a satisfying result
+
+    > describe the problem/decision
+        > state the root cause
+
+    > set some goals to solve the problem
+
+    > identify the alternatives
+        > by
+            > thinking/brainstorming
+            > see other expertise
+                > in the same place/field
+                > in different place/field
+                > ask seniors in the team and in your relations 
+                > others who faced the same issue
+            > take a break and rethink again
+
+    > evaluate the alternatives
+        > do this without favoring any alternative over the other
+        > evaluate it against guidelines
+            > i.e.
+                > rules
+                > programming rules
+                > country rules
+                > islamic rules
+        > set evaluation metrics
+            > i.e.
+                > execution time
+                > cost
+                > reusability
+                > performance
+                > ... 
+        > set a score for each metric in the alternative
+        > study/write the consequences of the alternative
+            > without underestimating any opinion
+        > be open to new alternatives
+            > even if they seem strange
+
+    > take a decision
+
+    > plan the solution
+        > decompose the problem
+            > into smaller and more manageable tasks
+            > it will be easier to handle
+        > choose the right
+            > data structures
+            > algorithms
+        > visualize the flow
+            > flow charts
+            > diagrams
+            > ...
+        > consider edge cases
+            > plan for error handling and input validation
+        > optimize iteratively
+        > seek some feedback
+            > seniors
+            > mentors
+        > test your plan
+        > document the plan
+        > iterate as necessary
+
+    > execute the decision/plan
+        > who is going to execute
+        > how he is going to do it
+        > how long will he take
+        > what are the milestones
+        > where he will execute it
+        > how much will it cost
+
+    > Test the solution
+        > it should pass all the tests
+            > unit tests
+            > ...
+
+    > optimize the solution
+        > revise the optimization guidelines
+
+    > review the solution
+
+    > document the process
+        > to use it in the future
+        > it is a good memory (like taking an image)
+
+    > evaluate the solution
+        > based on schedule
+            > i.e.
+                > after 1 day, 2 days, 3 days, one week, 2 weeks, ...
+                > after 100 users use it
+                > after the data exceeds 1GB
+        
+        > test against the edge cases
