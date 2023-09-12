@@ -1,0 +1,2 @@
+Folder structure
+    > is very important because it makes navigation easier and predictable
