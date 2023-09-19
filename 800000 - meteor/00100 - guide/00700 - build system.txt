@@ -1,0 +1,32 @@
+Build system
+    > it is a command line tool
+    > use it by typing meteor
+    > compiles, runs, deploys, and publishes all of your Meteor apps and packages
+
+    > Reloads app on file change
+        > after you start building the app using meteor build command, it will automatically rebuild and restart the app on file change
+
+    > Compiles files with build plugins
+        > the main function of the build tool is to run the build plugins
+        > build plugins define the app build process
+        
+        > the configuration of the build process is done through
+            > adding/removing packages
+            > adding/removing files in special directories
+
+        > controlling which files to build
+            > by default it is controlled by
+                > your application file structure
+                > default file load order rules
+
+            > you can override the behavior by adding .meteorignore file
+        
+        > Combines and minifies code 
+            > important feature of meteor build
+            > it automatically concatenates your application asset files
+            > in production it minifies the code
+            > you can add comments and spaces as you like
+            > you can split the files as you like
+
+        > Development vs. production
+            > 

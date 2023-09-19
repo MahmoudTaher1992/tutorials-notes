@@ -33,5 +33,34 @@ Users and Accounts
             > it is implemented in the package instead
             > when you want ot query the user by email, use Accounts.findUserByUsername or Accounts.findUserByEmail
 
-        > Email flows
-            > 
+    > Loading and displaying user data
+        > Currently logged in user
+            > client side
+                > use Meteor.userId() to get the userId
+                > Meteor.user() to get the user
+            > server side
+                > there is no global user
+                > use this.userId to get the userId in the method
+        > The Meteor.users collection
+            > there is a default users collection that is added by Meteor
+            > access it using Meteor.users
+            > important notes
+                > don't include the passwords and secrets when you query the collection and deliver it to the client
+                > when you try to query by email and username, you have to make sure it is case insensitive
+
+    > Custom data about users
+        > if you want to add more data about the user, just use the users collection
+        > ways
+            > Add top-level fields onto the user document
+            > adjust the user data in Accounts.onCreateUser
+            > Don't use profile field
+                > somehow the client can write to the profile field, hence they can override the data easily
+        > pushing custom data
+            > you have to be careful about pushing data from users collection as it may expose sensitive data
+        > Preventing unnecessary data retrieval
+            > avoid storing data that grows contentiously in the user document, because it gets queried when the user logs in or out
+            > there is a solution to prevent that from happening, see the docs
+
+    > Roles and permissions
+        > we implement our own rights system
+            
