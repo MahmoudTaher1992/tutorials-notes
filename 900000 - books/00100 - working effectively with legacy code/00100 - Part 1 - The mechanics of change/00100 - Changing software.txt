@@ -1,0 +1,73 @@
+Changing software
+    > why we change code ?
+        > add new feature
+        > fix a bug
+        > improving the design
+        > optimizing resource usage
+
+    > changing the code affects
+        > code structure
+        > behavior
+        > performance
+
+    > Adding features and fixing bugs
+
+    > Improving design
+        > the process of improving the design of existing code without changing its behavior
+        > in the process, it is very easy to drop a behavior (introduce new bugs)
+        > this is why devs avoid improving the design
+        > refactoring
+            > the process of increasing the maintainability of the code (improving design) without changing its behavior
+            > refactoring vs cleanup
+                > cleanup
+                    > rewriting code without tests
+                > refactoring
+                    > making a series of small structural modifications
+                    > supported with tests to make the code easier to change
+
+    > Optimization
+        > like refactoring
+        > improving the performance of the code (time or memory) without changing its behavior
+
+    > when we change the code
+        > we need to make sure that the change doesn't change the existing behaviors
+        > the amount of the behaviors that we need to preserve is very large
+        > Knowing what behaviors are at risk (because of our change) is very difficult
+        > UNDERSTANDING is the key to change the code safely
+        > preserving existing behavior is one of the largest challenges in software development
+        
+    > Risky change
+        > preserving existing behavior is a challenge, we we make a change
+        > in other words, when we make a change we will be at risk of breaking existing behaviors
+
+        > risk analysis
+            > what change do we have to make ?
+            > How will we know if it is done correctly ?
+            > How will we know that we didn't break anything ?
+
+        > good systems vs bad systems
+            > any large system requires time to learn the codebase and get familiar with it
+            > after learning
+                > good systems
+                    > well structured code
+                    > you are confident of the change you made
+                > bad systems
+                    > poorly structured code
+                    > making a change is like jumping off the cliff to avoid the tiger
+
+        > How to deal with this risk?
+            > avoid it
+                > minimize the number of changes (If it is not broken, don't fix it)
+                > move with cautions in the code, prefer safer choices over good ones
+
+                > cons
+                    > it is not applicable
+                    > there will always be a change to make
+                    > the number of changes will defeat this approach, and at the end you will have to make a change/s
+                    > the team performance will decline
+                        > it is a muscle that you grow and maintain
+                            > team muscle in refactoring and moving the code from legacy state to a well state
+                    > the fear from the change will increase and it will be harder for the team to work on it
+
+            > try harder and deal with it
+                > learn the tools and techniques to deal with the risk

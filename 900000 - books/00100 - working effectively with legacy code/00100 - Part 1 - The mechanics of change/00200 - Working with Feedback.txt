@@ -1,0 +1,44 @@
+Working with feedback
+    > pre requests
+        > regression testing
+            > a type of testing in which all the behaviors of the system didn't broke by new changes 
+
+            > types
+                > manual
+                    > delayed feedback
+                > automatic
+                    > instant feedback
+
+            > not all the tests can be automated because 
+                > some are too expensive to write
+                > some need human judgment
+            
+
+    > changes in the system can be done in 2 ways
+        > Edit & Pray
+        > Cover & Modify
+
+    > Edit & Pray
+        > steps
+            > plan the changes you want to make
+            > make sure you understand the code you are changing
+            > make the changes
+            > run the system
+            > check if the change is in effect
+            > poke around to see if anything else broke
+
+        > it is `work with care` approach
+        > the care increases as the task is more sensitive
+
+        > Safe change
+            > the care will not ensure safety of the change
+            > however, right tools and techniques will
+
+    > Cover & Modify
+        > idea
+            > work with a safety net when we add new changes in the code
+            > the net will catch all bad changes from leaking into the codebase
+            > the net is tests
+
+        > you still have to move carefully
+        > you will get a feedback about the changes you made
