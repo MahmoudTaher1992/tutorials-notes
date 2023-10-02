@@ -29,4 +29,32 @@ Build system
             > you can split the files as you like
 
         > Development vs. production
-            > 
+            > in development, the main goal is fast rebuilds
+                > use `meteor run`
+            > in production, the main goal is small downloads and fast startup
+                > to debug minified version locally, use `meteor --production`
+
+        > Javascript transpilation
+            > javascript is continuously evolving, but browsers are slow to adopt new features
+            > a transpilers are used to convert new javascript code to old javascript code compatible with browsers
+            > meteor use that as well
+
+            > examples
+                > ES2015+
+                    > ecmascript package
+                    > adds support for many ES2015 features
+
+                > Babel
+                    > configurable transpiler
+                    > let's you use the latest javascript features
+                    > will be used by meteor to transpile your code
+
+                > CoffeeScript
+                    > coffeescript package
+                    > transpile coffeescript to javascript
+
+                > Typescript
+                    > typescript package
+                    > transpile Typescript to javascript
+
+        > 
