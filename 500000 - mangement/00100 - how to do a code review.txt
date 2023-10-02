@@ -20,60 +20,72 @@ How to do a code review
         > typechecking
         > ...
 
+    > Be aware of
+        > Bike shedding
+            > give attention to trivial things and neglecting the big ones
+
+        > Be respectful
+            > approach the wrong code with polite questions rather than accusation
+
+        > Use DM over public comments
+        > Be specific and descriptive
+
     > steps
         > Figure out what is this code doing?
             > read more about the issue to understand the introduced change
-            > if you don't understand the issue, ask for clarification
-
-        > Review the design
-            > SOLID principles
-            > New design patterns are ok, if any
-            > does the code follow the current practices?
-            > is the code in the right place
-            > could the new code reused something that already exists?
-            > Does the new code duplicated?
-            > is the code over engineered?
-
-        > Readability and maintainability
-            > variables naming are clear
-            > is the code understandable?
-            > are error messages clear?
-            > are the confusing sections commented, documented, or tested descriptively?
-
-        > Functionality
-            > Does it work as expected?
-            > are all the requirements met?
+                > if you don't understand the issue, ask for clarification
+            > read the code line by line
 
         > Tests
-            > are there tests for the new code?
+            > Are there tests for the new code?
                 > If not, Why not ?!!
-            > you can use a test coverage tool to see if the new code is covered
-            > do tests cover all the requirements?
+            > Use a test coverage tool to see if the new code is covered
+            > Do tests cover all the requirements?
             > Are the tests easy to understand? (if not, it will be hard to understand the codebase and maintain it)
             > Do tests match tests criteria? 
                 > check against checklist/documentation
             > Think of important test cases that are not in the requirements
-            > Are the limitation/performance tests added ?
             > Are the tests exist in the right level?
                 > some tests should not run in CI, instead they run overnight
-            > Are there tests for security aspects ?
-            > You can write some tests (if it is allowed in the reviewing process)
+            > You (reviewer) can write some tests (if it is allowed in the reviewing process)
 
-        > performance   
+        > Functionality
+            > Do a real test (run it locally), does it work as expected?
+            > Are all the requirements met?
+            > Is the build process normal? (i.e. no errors, no warnings, not slowed down, ...)
+
+        > Readability and maintainability
+            > Namings are clear
+            > Is the code understandable?
+            > Are error messages clear?
+            > Are the confusing sections commented, documented, or tested descriptively?
+
+        > Review the design
+            > SOLID principles are not violated
+            > New design patterns are ok, if any
+            > Does the code follow the current practices?
+            > Is the code in the right place
+            > Could the new code reused something that already exists?
+            > Is the code over engineered?
+            > Folder structure
+            > Error handling
+
+        > Performance   
             > Does the code have any performance requirements?
                 > general performance requirements
                 > specific performance requirements
                     > related to the issue itself
                         > i.e.
                             > the issue is about a slow page, so the issue should contain a performance requirement (load time should not exceed 2s)
+            > Are the limitation/performance tests added ?
 
-            > note that, without performance tests you are relying on the users to notify you with it's issues
+            > Note that, without performance tests you are relying on the users to notify you with it's issues
             > Has the new code negatively affected the original performance tests ?
             > Calls outside the app are expensive
                 > database calls are optimized
                 > unnecessary calls are optimized/removed
             
-            > using resources efficiently
+            > Using resources efficiently
                 > check there are no memory leaks
                 > check there are no infinite growing objects
                 > check all connections/streams are closed
@@ -81,63 +93,28 @@ How to do a code review
             > Check race conditions
             > Check caching
     
-        > Data structures are used well
+        > Data structures are well used
             > Lists
                 > not used in too much searching
                 > not used in too much sorting
             > Maps
                 > no much iteration and reordering is used
 
-        > SOLID principles
-            > Single responsibility principle
-            > Open-Closed principle
-            > Liskov Substitution Principle
-            > Interface Segregation Principle
-            > Dependency Inversion Principle
-
-        > security
-            > new paths/routes have authentication
+        > Security
+            > Are there tests for security aspects ?
+            > Do new paths/routes have authentication?
             > Does the new data need to be encrypted?
             > Secretes are stored and used correctly
             > logging is done correctly
                 > CRUD operations are logged
-                > start and end time of performance critical operations are logged
-                > logging levels are right 
-
-        > Review the unit tests
-            > it helps you understand the code
-
-        > Test the code
-            > checkout the branch
-            > run it locally
-
-            > test the following
-                > Is the build process normal? (i.e. no errors, no warnings, not slowed down, ...)
-                > Does the code function as expected?
-
-        > Inspect the code
-            > follow the code line by line
-            > naming conventions
-            > Does it follow the principles?
-            > folder structure
-            > error handling
-            > style consistency with the rest of the codebase
+                > Start and end time of performance critical operations are logged
+                > Logging levels are right 
 
         > Compile your review
-            > add comments to the code
-            > put the feedback summary in the PR
+            > Add comments to the code
+            > Put the feedback summary in the PR
                 > List down the things you learned from the code review
 
         > Follow up on the code review 
             > it is not a one time thing
 
-    > Be aware of
-        > Bike shedding
-            > give attention to trivial things and making a big deal out of them
-
-        > be respectful
-            > approach the wrong code with polite questions rather than accusation
-
-        > be specific and descriptive
-        > favour DM over public comments
-        > you will be harder on others code than on yourself
