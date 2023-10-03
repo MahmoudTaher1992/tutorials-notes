@@ -59,6 +59,7 @@ How to do a code review
             > Is the code understandable?
             > Are error messages clear?
             > Are the confusing sections commented, documented, or tested descriptively?
+            > Are the documentations updated ?
 
         > Review the design
             > SOLID principles are not violated
