@@ -26,7 +26,7 @@ Clean code
             > it is very hard to navigate, understand, modify and add to it
             > you see a senseless code
             > no clues or hints to move through it
-            > it takes a very long time to make a change that looks soo simple
+            > it takes a very long time to make a change that looks so simple
 
         > reasons of a bad code
             > if it is so bad then why did you write it ?

@@ -2,9 +2,9 @@ How to understand a topic
     > try to write down the output as you follow the steps
 
     > Identify the main topic concepts
-        > the concepts
-        > the keywords
-        > the goals
+        > List down the concepts
+        > List down the keywords
+        > List down the goals
 
     > Material gathering
         > i.e.
@@ -12,10 +12,11 @@ How to understand a topic
             > websites
             > best authors
             > videos
+            > files
 
     > set a time box for the topic research
 
-    > organize the Materials
+    > Organize the materials
         > into
             > categories
             > subtopics
@@ -24,8 +25,8 @@ How to understand a topic
 
     > Analyze the information
         > Evaluate the information
-        > the connection between different pieces of information
-        > identify patterns
-
-        > take notes and summarize the information
+        > Identify the connection between different pieces of information
+        > Identify patterns
+        > Take notes 
+        > Summarize the information
         > create mind maps
