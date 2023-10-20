@@ -1,0 +1,17 @@
+Sensing and Separation
+    > there are 2 reasons to break the dependencies for testing
+        > Sensing
+            > to gain the ability to observe the results of the system under test
+            > you don't have control over the dependencies, so you don't know what is happening with it 
+        > Separation
+            > to make the code testable
+
+    > Faking collaborators
+        > putting another mock object in place of the real object
+            > the new mock will have less or no dependencies
+            > it will be easy to sense the changes through that object
+
+        > the two sides of fake objects
+            > the test will see the fake object as a real object
+            > the test will see the fake object as a fake object
+                > to access methods of the fake object

@@ -1,0 +1,50 @@
+The seam model
+    > introduction
+        > it is common that lots of existing codebase can not be tested easily
+        > the easiest way to make a testable app
+            > write tests as you develop
+            > spend time trying to design the codebase for testability
+
+    > seams
+        > when you start testing, you will have to pull out classes for testing
+        > to do that you will have to break dependencies
+        > no matter how good the code is designed, you will have to do that
+        
+        > seam
+            > a place where you can alter behavior in your program without editing in that place
+
+        > with the seam view, it helps you to see the opportunities in the codebase where you can selectively exclude the dependencies at test time
+
+        > Enabling points
+            > the places where you can make the decision to use one behavior or another
+            > every seam has an enabling point
+
+    > seam types
+        > preprocessing seams
+            > you can preprocessing conditional statements to change the behavior of dependencies
+                > i.e.
+                    > if (isTest) {
+                        db = new MockDatabase();
+                    } else {
+                        db = new Database();
+                    }
+                > the enabling point is the isTest variable
+
+            > learning more about the compilation process will reveal lots of seams to you
+
+        > Link Seams
+            > In most programming languages, a link is used to connect different parts of code together
+            > the compiler resolves the link and replace it with it's code
+            > you can configure the compiler to use a different link, and here is the link seams
+
+            > 
+                > seam
+                    > is the initialization of the imported code
+                > enabling point
+                    > is the import statement
+
+        > Object Seams
+            > use object oriented programming to create seams
+            > supply a mock object that share the same interface with the real one
+
+    > try not to use preprocessing seams and Link Seams, until you can not do it with object seam

@@ -1,0 +1,115 @@
+I don't have much time and I have to change it
+    > The legacy code work will take time
+        > but it is a long time investment
+        > the first changes will be costly
+        > then the next changes will be much more quicker because tests will
+            > save debugging time by locating the error place
+            > save lots of programming cycles
+                > catching the error
+                > reporting it
+                > estimating it
+                > putting it in a sprint
+                > debugging
+                > solving
+                > testing
+
+    > remember that it is a team muscle that needs to be trained to be strong
+
+    > Taking a decision (write tests or not)
+        > some times it will be hard because you may not be able to estimate the task
+            > it is a normal thing in a legacy code (estimation is hard and not accurate)
+            > there are some techniques (which will be explained through out the book) that will help
+
+        > if you can not estimate, then most likely it will take much more time than you have
+            > so to cut it down, you will give up testing (to get the feature out as quickly as possible)
+            > you will go back and test it later (so all devs say)
+
+        > before the team develop the muscle, they will tend to avoid testing
+            > they will favor the quick solution, in the name of time of course !!
+            > there is a technique for this as well
+
+        > Don't give up easily, give it a try
+            > you want to save time, save time by saving testing time not by eliminating it
+            
+            > You may be wrong !!
+                > it may not be that time consuming
+                > try to get the code that you are about to change in a test harnesses
+                > reevaluate the estimation
+
+            > if the code is really hard to test (break the dependencies)
+                > investigate the change you want to make
+                > can you write the change in a completely new code, that can be tested
+                > if you are not going to test the old code, at least test the new code
+                > use this chapter's techniques
+                    > techniques that will help you write a fresh tested code
+
+    > Techniques to write a fresh tested code change in a hard testable legacy code
+        > Sprout Method
+        > Sprout Class
+        > Wrap Method
+        > Wrap Class
+
+    > Sprout Method Technique
+        > algorithm
+            > write the new logic in a new method
+            > test the new method
+            > call the logic from places you need it
+
+        > you will have most of the new change tested (expect for the calling places)
+
+        > when to use it
+            > you new code is a distinct logic, it can be separated from the old code
+            > the old code is hard to test
+            > the new code calls will be in one/few line/s in the old code
+
+        > making the method static, will help you decrease the dependency on the instantiated class
+
+        > pros
+            > a clear separation between old code and new code
+            > the change is nearly fully tested
+            > cleaner code
+
+        > cons
+            > when you use it, you are giving up on testing the old code
+                > not a good approach, as it may be taken easily
+            > the new sprout method will not be understandable (if not commented), why there is a logic outside the code although it is not used anywhere else
+    
+
+    > Sprout Class Technique
+        > more powerful than the sprout method, against dependencies issues
+        > used when it is hard to instantiate the class in a test harnesses in a reasonable time, because of the dependencies or any other reason
+            > in that case, add the sprout method in a sprout class and use it in the original code
+        > it will break the pattern in the app
+            > you can try to make it fit in the app pattern
+                > some of the times you will not be able to do that
+            > it is an ongoing process
+
+        > pros
+            > move forward with the change and the tests
+
+        > cons
+            > the app will have a pattern break, lots of sprout classes that make no sense on why they are there (why they are not in the original class)
+
+
+    > Wrap Method Technique
+        > used when you want to add a new tested logic to an existing method
+        
+        > algorithm
+            > create a method that contains the new logic
+            > test it
+            > create a new big method that contains the old logic method and the new method logic
+                > old logic wrapped with the new logic
+        
+        > you now have access to the old logic and the old logic wrapped with a new method
+
+        > pros
+            > the old code will remain untouched
+                > sprout method will change the old code by adding one line or two
+            > there is a clear separation between the old code and the new code
+
+        > cons
+            > the new logic has to be separate from the old logic, it should be executed before or after the new code
+            > the naming will be strange, poor naming
+
+
+    > Wrap Class Technique

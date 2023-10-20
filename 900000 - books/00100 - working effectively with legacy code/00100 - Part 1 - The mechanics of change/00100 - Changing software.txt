@@ -37,7 +37,7 @@ Changing software
         > preserving existing behavior is one of the largest challenges in software development
         
     > Risky change
-        > preserving existing behavior is a challenge, we we make a change
+        > preserving existing behavior is a challenge, when we make a change
         > in other words, when we make a change we will be at risk of breaking existing behaviors
 
         > risk analysis

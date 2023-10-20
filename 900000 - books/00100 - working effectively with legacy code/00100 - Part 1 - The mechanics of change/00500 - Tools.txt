@@ -1,0 +1,51 @@
+tools
+    > in the legacy code work you will need
+        > IDE or editor
+        > testing framework
+        > refactoring tools
+
+    > Automated refactoring tools
+        > those tools are time saving machine, you have to use them
+        
+        > refactoring definition
+            > by martin Fowler
+            > A change made to the internal structure of software to make it easier to understand and cheaper to modify without changing its existing behavior.
+
+        > a change is refactoring only if it doesn't change the behavior
+        > good refactoring tools will verify that the behavior is not changed, if they don't check you are exposed to bugs
+        
+        > before choosing a refactoring tool
+            > you have to invest some time in checking 
+                > it's capabilities
+                > it's popularity
+                > it's safety
+                > does it catch errors
+                    > i.e.
+                        > renaming a method with already used name should trigger an error by the refactoring tool
+
+            > if the tool change the behavior of the code, don't use it. Instead, do the refactoring manually, it is much safer.
+
+        > Don't depend on the tool on not changing the behavior, cover the code with tests
+            > unless you are sure that the tool is safe
+                    
+    > Mock objects
+        > break the dependencies by using mock objects instead of real objects
+        > i.e.
+            > in FE usually they don't mock the api, the mock the service layer
+                > the service layer is the layer that calls the api
+                > the service layer is not covered by tests
+                > you should use an API mocking library to ensure that the service layer is covered with tests
+
+    > Unit testing harnesses
+        > the most effective testing tools are the free ones
+        > i.e.
+            > javascript testing tools
+                > mocha
+                > jest
+                > ...
+
+    > General test harnesses
+        > you can use unit testing tools to test integration testing but it is not the best way to do it
+        > use a specific tool instead
+            > i.e.
+                > cypress

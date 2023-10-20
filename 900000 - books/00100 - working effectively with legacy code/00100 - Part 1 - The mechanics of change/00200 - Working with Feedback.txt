@@ -1,7 +1,7 @@
 Working with feedback
     > pre requests
         > regression testing
-            > a type of testing in which all the behaviors of the system didn't broke by new changes 
+            > a type of testing in which all the behaviors of the system are ok and they didn't broke by new changes 
 
             > types
                 > manual
@@ -42,3 +42,89 @@ Working with feedback
 
         > you still have to move carefully
         > you will get a feedback about the changes you made
+
+    > feedback
+        > testing gives you a feedback about the changes you made (like clamps to the carpenter)
+
+        > delayed
+            > if the testing is done manually you may have to wait for weeks or even months to get the feedback
+            > this delay will slow down the work as collisions will happen a lot
+            > it is very costly
+        
+        > instant feedback
+            > through unit testing
+            > you can have the feedback in seconds
+            > it is very cheap to run
+            > Unit testing is one of the most important components in legacy code work.
+
+    > Unit testing
+        > unit
+            > atomic behaviors the build up the system
+        > tests that are done on the units of the system
+
+        > it is very hard to test the units in isolation as in most of the times there are dependencies
+
+        > Large tests
+            > tests that cover more units at the same time
+            > it is very important to keep the tests at the level of units instead of large tests because
+                > it is hard to find the place of the error
+                > they will take more time
+                > coverage reports will be miss leading
+
+        > pros
+            > it is very easy to locate the error
+            > it is very fast to run
+                > the faster the test the quicker the feedback is
+
+        > a test is considered not a unit test if
+            > it runs slowly
+            > it talks to the database
+            > it communicates across the network
+            > it touches the file system
+            > edit config files to run it
+
+    > Higher level testing
+        > integration testing
+        > tests the interaction between the units
+
+    > Test coverings
+        > it is always safer to have tests around the code we are about to change
+            > change will introduce new bugs, tests will catch them
+        
+        > Dependency problems
+            > it is one of the most criteria problems in software development
+            > the code we are about to change may have dependencies
+            > some of the dependencies may be hard to setup or mock
+            > a good step is to break those dependencies and make them easy to mock
+
+            > The legacy code dilemma
+                > a common fact
+                > to change the code we need to add tests
+                > to add the tests we need to change the code (break the dependencies)
+
+            > to break the dilemma
+                > break the dependencies carefully
+                    > some dependencies break cleanly, but others don't
+                    > you may need to pass some of the rules (the code might look uglier) just for some time
+                    > you can refactor the code later
+                > add tests
+                > make the change
+                > check that you broke nothing
+
+    > The Legacy Code Change Algorithm
+        > Identify change points
+            > identify where you want to make the change
+            > you may not know it, there are two chapters to guide you
+
+        > Find test points
+            > it might be tricky
+            > there are two chapters to guide you
+            
+        > Break dependencies
+            > the most obvious obstacle to testing because
+                > it is hard to instantiate the classes
+                > it is hard to run the methods in test suits
+        > Write tests
+        > Make changes and refactor
+
+       
