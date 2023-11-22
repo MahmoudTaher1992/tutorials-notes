@@ -1,0 +1,88 @@
+I can not get this class into test harness
+    > the hardest thing in testing
+    > problems in getting classes into test harnesses
+        > objects can not be created easily
+        > test harnesses can not build the object
+        > side effects while creating the object
+        > sensing the changes are difficult
+
+    > cases
+        > irritating parameter
+            > Inspection
+                > the best way to know the irritating parameters is to instantiate the object in a test harnesses directly, and let the compiler tell you what is wrong
+            > Solution
+                > create a fake object and pass it instead of the irritating one
+                    > use an interface and implement the fake object
+                    > the mocking code should not be perfect
+                        > you can have some flexibility in it
+                        > this code will not go to production
+                > use null instead
+                    > if your test doesn't use this parameter then passing null will be the best solution
+                    > if the language doesn't support null check avoid passing null in the production environments
+                > subclass and override method
+                    > the first 2 solutions depends on mocking every thing or deleting every thing
+                    > here you can partially delete/mock the object and use it
+
+        > hidden dependency
+            > Inspection
+                > it is an object that uses a dependency that is not passed as a parameter
+                > it is hidden
+            > Solution
+                > parameterize constructor
+                    > make the dependency a parameter in the constructor
+                    > if you don't want to pass the parameter in each use, wrap it in another class/object and use the new one instead
+
+        > Construction Blob
+            > Inspection
+                > a class that has a lot of dependencies
+                > it is hard to pass all the dependencies in the constructor
+                > in the same time, you just want to mock few of the dependencies
+            > Solution
+                > Supersede variable
+                    > let the constructor as it Is
+                    > create another method that replaces the variable that you want to mock with the mock one.
+
+        > irritating global dependency
+            > one of the hardest dependencies to deal with
+            > the global variable is used for many reasons
+                > the nature of the use
+                    > database collections should have only one instance throughout the system
+                    > hardware controllers should be singleton
+                > if more than one instance is created, you will have series problems
+                > Saving resources
+                    > database connections
+                > just to have a global variable
+                    > it is a bad idea
+                        > we don't know who is manipulating it other that the piece of code we are looking at
+                        > we don't know if a piece of code is manipulating it or not
+                        > makes it hard to understand the program
+                        > you have to have a list of them to deal with them before running tests
+
+            > Solution
+                > replace it during testing, use a singleton in production
+                    > find a way to hook a fake object instead of the global variable during testing
+                    > don't forget to revert it when tests are done
+                > Relax the global dependency
+                    > make it flexible so that it works for both production and testing purposes
+                        > i.e.
+                            > if it needs a raw data that it pulls from a database, make it accept the data from a method
+                            > stop the database call while testing, and pass the data directly to the method
+                        > Subclass and override method
+                            > you can inherit a testing class from it and override the method that pulls the data from the database, to make sure it will not be mess used
+
+            > ... Load more from the book !!
+                    
+        > Horrible include dependencies
+            > something related to c++            
+            > ... Load more from the book !!
+
+        > onion parameter
+            > a parameter that needs an object to be instantiated, that object needs another object, and so on
+            > Solution
+                > Pass null
+                    > if you don't need it in the test
+                > Fake the parameter at the wanted level and pass it
+                    > you may decide that you want to fake the parameter at the 3rd level
+
+        > Aliased parameter
+            > 

@@ -12,6 +12,6 @@ Sensing and Separation
             > it will be easy to sense the changes through that object
 
         > the two sides of fake objects
-            > the test will see the fake object as a real object
+            > the tested code will see the fake object as a real object
             > the test will see the fake object as a fake object
                 > to access methods of the fake object

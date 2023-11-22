@@ -59,7 +59,7 @@ Working with feedback
 
     > Unit testing
         > unit
-            > atomic behaviors the build up the system
+            > atomic behaviors that build up the system
         > tests that are done on the units of the system
 
         > it is very hard to test the units in isolation as in most of the times there are dependencies

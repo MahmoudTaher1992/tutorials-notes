@@ -1,0 +1,68 @@
+It takes forever to make a change
+    > the time of change depends on
+        > the clarity of the code
+            > some parts are clearer than other parts
+        > how well the developer understands the code
+            > new devs will take longer to make changes
+        > the build time for the project
+            > it affects
+                > test running time
+                > CI/CD time
+                > debugging time
+
+    > Reasons
+        > Understanding
+            > as the code increases, understanding takes more time
+            > the experience of the devs with the codebase increases with time
+                > high turnover rate is a killer point to big projects
+            > system maintenance
+                > well maintained system
+                    > takes less time to understand
+                > legacy system
+                    > takes more time to understand
+                    > some times it is not possible to understand it quickly, so some devs just do the change without understanding and pray it doesn't break anything
+            > code quality
+                > well written code, good and clear structure
+                    > takes less time to understand
+                > bad written code, vague structure
+                    > takes more time to understand
+
+        > Lag time
+            > is the time between the change is made and the feedback is returned
+            > after you make a change you have to wait until the change is rebuilt
+                > i.e.
+                    > the test will take time to run as it build the target code
+                    > the CI/CD will take time to run as it build the target code
+                    > to debug it manually you will have to wait until the change is rebuilt
+                    > ...
+            > the build time can be reduced to 5 seconds, if you managed to break the dependencies
+                > the class should be built in isolation from other classes
+                > if you did that, you will get a rapid feedback and the development will be faster
+
+    > Solution
+        > understanding
+            > increase the code quality
+            > maintain a low turnover rate
+
+        > Lag time
+            > break the dependencies
+                > reduce build dependencies
+                    > if you want the reduce the build time of a class, first thing you have to look at is the dependencies
+                    > once you try getting a class into a test harnesses, your main problem will be the dependencies
+                    > the dependencies will go under the build process each time you try to build the class
+                        > if the dependency is heavy, it will take time to build
+                    > minimizing the dependencies build time
+                        > make the code depend on interfaces
+                        > in test harnesses, replace the real dependencies with fake dependencies
+                        > fake dependencies will always be lighter than the real dependencies, thus saving testing time
+
+                    > IOC and DI benefits
+                        > not only it makes the code more testable
+                        > it reduces the build time
+
+            > when you introduce the new principles in the app
+                > the files will increase
+                > the total build time will increase
+                > the testing time will decrease
+                > the debugging time will decrease
+                > the rebuilding time will decrease

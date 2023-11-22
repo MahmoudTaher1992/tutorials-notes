@@ -1,0 +1,14 @@
+How do I add a feature
+    > There are some techniques that make the job easier
+
+    > Test Driven Development (TDD)
+        > algorithm
+            > write a failing test case
+            > Get it to compile
+            > Make it pass
+            > Remove duplication
+                > may be the new code is a duplication of existing code
+            > Repeat
+
+    > Programming by difference
+        >

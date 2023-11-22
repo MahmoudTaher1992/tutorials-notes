@@ -79,6 +79,7 @@ I don't have much time and I have to change it
         > more powerful than the sprout method, against dependencies issues
         > used when it is hard to instantiate the class in a test harnesses in a reasonable time, because of the dependencies or any other reason
             > in that case, add the sprout method in a sprout class and use it in the original code
+        > used also when you want the new behavior to be called when the old method is called
         > it will break the pattern in the app
             > you can try to make it fit in the app pattern
                 > some of the times you will not be able to do that
@@ -93,6 +94,7 @@ I don't have much time and I have to change it
 
     > Wrap Method Technique
         > used when you want to add a new tested logic to an existing method
+        > used also when you want the new behavior to be called with a new method
         
         > algorithm
             > create a method that contains the new logic
@@ -113,3 +115,18 @@ I don't have much time and I have to change it
 
 
     > Wrap Class Technique
+        > used when
+            > you want to add a new behavior to a class without changing the original class
+                > few calls
+                    > decorator wrapper
+                > many calls
+                    > normal wrapper
+
+            > the new logic is completely independent from the old logic
+            > the existing class is so big and you don't want to make it bigger
+
+
+    > Summary
+        > a set of techniques to make changes (tested changes) in the code without testing the original code
+        > lines will be drawn between the old code and the new code
+        > by the time the team will get familiar with the old code and will be able to test it
