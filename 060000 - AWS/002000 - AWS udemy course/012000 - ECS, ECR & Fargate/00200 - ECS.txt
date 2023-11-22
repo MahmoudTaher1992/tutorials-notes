@@ -1,0 +1,37 @@
+ECS
+    > AWS elastic container service
+
+    > ECS task
+        > a definition of application
+        > contains one or more containers
+
+    > ECS service
+        > allows you to run and maintain a specified number of tasks simultaneously in an ECS cluster
+        > if any of the tasks failed or stopped for any reason the schedular will launch another task for you to keep the desired amount of tasks running
+        > the schedular can be configured with many strategies
+        
+        > it is ideal to run a service for long running tasks
+            > i.e.
+                > web servers
+                > application servers
+
+    > ECS cluster
+        > a group of ECS tasks or services
+
+        > you can setup container insights on a cluster to monitor the cluster
+            > container insights is a feature of cloudwatch
+            > it will monitor the cluster and provide metrics and logs
+
+    > AWS Cloud Map
+        > a cloud resource discovery service
+        > in microservices a service needs to discover the location of other services 
+        > AWS cloud map helps in this by
+            > keeping track of all the services
+            > keeping metadata about the services
+            > keeping track of other info about the services
+                > i.e.
+                    > health status
+                    > location
+                    > ...
+
+        > when a service needs the location of another service, it can query the cloud map
