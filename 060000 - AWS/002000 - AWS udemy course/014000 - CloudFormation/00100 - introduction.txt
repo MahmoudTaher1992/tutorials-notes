@@ -1,0 +1,17 @@
+ CloudFormation
+    > is a service that helps you setup your Amazon Web Services
+    
+    > Simply
+        > you create a template that describes all the AWS resources you want
+        > submit the template
+        > AWS CloudFormation will create the resources for you
+
+    > Stack
+        > a collection of aws resources that you can manage as a single unit
+        > you can create, update, delete a collection of resources by creating, updating, deleting stacks
+            > CRUDing a stack is done through a template
+
+        > Stack output
+            > exported important value from the stack
+            > displayed in format of key and value
+            > you can export the values through the template file
