@@ -35,3 +35,21 @@ introduction
         > you can configure caddy in many ways
             > people prefer caddyfile
         > can work on any platform without runtime dependencies
+
+    > Reverse proxy
+        > a server that sits in front of one or more web servers
+        > it forwards client requests to those web servers
+        > it is called reverse proxy because it is the opposite of a forward proxy
+            > forward proxy
+                > sits in front of private network and internet
+                > uses
+                    > Anonymity
+                        > it hides the identity of the client request and sends the request on his behalf
+                    > Access controls
+                        > block some outgoing requests
+                    > caching
+                    > Bypassing geographical restrictions
+
+            > Reverse proxy
+                > redirects the incoming requests to the appropriate server
+                > sometimes it adds/removes some extra information to the request
