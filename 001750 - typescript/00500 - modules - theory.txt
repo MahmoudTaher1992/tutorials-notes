@@ -1,0 +1,50 @@
+Modules theory
+    > javascript Modules
+        > a mechanism used to split javascript code into separate files
+            > can be imported selectively
+        > old workarounds
+            > load multiple script tags
+            > but they will all share the same global scope, collisions and overwrites were high
+    
+    > Module system
+        > solves the problem
+        > break your code into separate files (each file is called a module)
+        > each file will have it's own scope
+        > you can access the global scope as well
+
+        > types (there are many module systems)
+            > CommonJS
+                > exports and require keywords
+            > ES2015 (ECMAScript 6)
+                > import and export keywords
+            > amd
+            > ...
+        
+    > TypeScript’s job concerning modules
+        > the ts compiler's main goal is to catch certain kind of errors during compilation
+        > for the compiler to do it's job, it needs to know
+            > the code runtime environment
+            > what global variables are used
+            > more questions when the modules are involved
+
+            > i.e.
+                > syntax
+                    import sayHello from "greetings";
+                    sayHello("world");
+
+                > the tsc will require answers to questions to do it's job
+                    > it needs to know the type of sayHello
+                        > Does it accept one argument?
+                        > what is the type of the argument?
+                        > ...
+
+                    > Will it load the ts file directly or another js file generated from this ts file ?
+                    > What type of module system the imported module should be ?
+                    > if the javascript output is emitted, what kind of module system should be used ?
+                    > How will it resolve the `greetings` module ?
+                    > will the two module types work together?
+
+                    > what is the host kind ? 
+                        > runtime (nodejs)
+                        > bundler (webpack)
+                        > ...
