@@ -1,0 +1,22 @@
+CloudWatch logs
+    > Log groups
+        > a name that represents a log group
+    > Log stream
+        > a sub division to the log groups
+    > Log expiration
+        > policies
+            > never expire
+            > 1 day
+            > up to 10 years
+
+    > CloudWatch Logs can send logs to
+        > AWS S3
+        > Kinesis Data Streams
+        > Kinesis Data Firehose
+        > AWS Lambda
+        > OpenSearch
+
+    > Logs are encrypted by default
+        > you can setup KMS-based encryption with your own keys
+
+    > https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/learn/lecture/11851352#overview

@@ -1,0 +1,24 @@
+AWS CloudWatch metrics
+    > CloudWatch provides metrics for every service in AWS
+    > Metric is a variable to monitor
+        > i.e.
+            > CPUUtilization
+            > NetworkIn
+            > ...
+    > Metrics belong to namespaces
+    > Dimension is an attribute of a metric
+        > i.e.
+            > InstanceId
+            > InstanceType
+            > AutoScalingGroupName
+    > Up to 30 dimensions per metric
+    > Metrics have timestamps
+    > Can create CloudWatch dashboards of metrics
+
+    > EC2 detailed monitoring
+        > EC2 instance metrics have metrics "every 5 minutes"
+        > With detailed monitoring (for a cost), you get data "every 1 minute"
+        > The free tier includes 10 detailed monitoring metrics
+        > Note
+            > EC2 memory usage is not pushed by default
+            > You need to push your own custom metrics

@@ -1,0 +1,32 @@
+Why monitoring is important
+    > Customers 
+        > don't care about our deployment method or our infrastructure
+        > care about 
+            > application latency
+            > application outage
+
+    > to keep your customers happy, you need
+        > monitor the health of your services
+        > prevent the outages and the latency from happening
+        > Troubleshooting and debugging
+    
+    > you can use monitoring to achieve the above goals
+
+    > monitoring in AWS
+        > AWS CloudWatch
+            > Metrics
+                > collect and track metrics
+            > logs  
+                > collect, monitor, analyze and store log files
+            > Events
+                > send notifications when certain events happen in your AWS
+            > Alarms
+                > react in real-time to metrics and events
+
+        > AWS X-Ray
+            > Troubleshooting application performance and errors
+            > Distributed tracing of microservices
+
+        > AWS CloudTrail
+            > Internal monitoring of API calls being made
+            > Audit changes to AWS Resources by your users
