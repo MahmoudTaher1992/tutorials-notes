@@ -1,0 +1,5 @@
+Elastic ip address
+    > static IPv4 address
+    > associated with your AWS account, not with the resource
+    > let you preserve the ip address even if the resource is destroyed
+    > you have like a permanent ip address, until you decide to destroy it

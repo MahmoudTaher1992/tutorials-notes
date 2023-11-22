@@ -8,6 +8,31 @@ VPC, Subnets, IGW and NAT
         > a place where the AWS resources are deployed
         > it is regional resource
 
+        > virtual network dedicated to your AWS account, like owning your own private network
+        > isolated from other VPCs
+        > used to contain AWS resources
+        > you have control on everything i.e.
+            > IP address range selection
+            > subnets creation
+            > route tables configurations
+            > network gateways configurations
+
+    > Ip address range
+        > here you specify a range from which all the instances' IP addresses will be assigned
+        > why do you specify it, not AWS?
+            > give you control
+            > organization and planning
+            > security
+                > helps you to allow/disallow specific ip ranges
+            > make sure no overlap will happen
+        > these ip addresses are private
+            > they are only used within the VPC itself
+            > they are used to communicate between the instances within the VPC
+            > public ip addresses are used to communicate from the internet
+                > you have to add IGW to your VPC to allow the communication from the internet
+                > you also have to setup the routing in the route table
+        > divided into subnets
+
     > Subnets
         > Building block of VPC
         > allows you to partition your network inside the VPC
@@ -16,10 +41,21 @@ VPC, Subnets, IGW and NAT
         > types
             > public subnets
                 > a subnet that is accessible from the internet
+                > have a route into the IGW
+                    > normally you have to set it up through the route tables
             > private subnets
                 > a subnet that is not accessible from the internet
+                > don't have a route to the IGW
+                > resources 
+
+        > also known as sub-networks
+            > a small network in the VPC
+            > improved security and performance
 
     > Route tables
+        > used to determine where the network traffic is directed
+        > each subnet must be associated with a route table
+            > the table controls the traffic routing for the subnet
         > defines the accessability between 
             > the subnets and each other
             > the subnets and the internet
@@ -30,3 +66,11 @@ VPC, Subnets, IGW and NAT
 
     > NAT Gateway & NAT instances 
         > allow private subnets to access the internet while remaining private
+
+    > Connecting 2 VPCs together
+        > achieved using a feature called VPC peering
+        > done by
+            > requesting and accepting a VPC peering connection
+            > updating the route tables
+        > does not support transitive peering relationships
+            > i.e. if A is peered with B and B is peered with C, A and C are not peered
