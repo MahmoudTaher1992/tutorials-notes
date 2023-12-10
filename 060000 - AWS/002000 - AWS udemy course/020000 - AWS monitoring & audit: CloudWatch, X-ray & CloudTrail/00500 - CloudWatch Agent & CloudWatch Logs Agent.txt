@@ -1,0 +1,23 @@
+CloudWatch Agent & CloudWatch Logs Agent
+    > By default, no logs from your EC2 machine will go to CloudWatch
+    > You need to install the CloudWatch Agent on EC2 machines to push logs to CloudWatch
+    > Make sure you setup IAM permissions
+    
+    > CloudWatch Logs Agent & Unified Agent
+        > Both are for virtual servers
+
+        > CloudWatch Logs Agent
+            > old version
+            > only sends logs to CloudWatch Logs
+
+        > CloudWatch unified Agent
+            > new version
+            > sends logs and metrics
+            > can be configures using SSM parameter store
+
+            > metrics
+                > i.e.
+                    > CPU
+                    > memory
+                    > disk
+                    > ...

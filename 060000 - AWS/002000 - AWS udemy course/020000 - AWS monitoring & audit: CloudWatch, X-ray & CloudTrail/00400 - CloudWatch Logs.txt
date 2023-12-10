@@ -19,4 +19,29 @@ CloudWatch logs
     > Logs are encrypted by default
         > you can setup KMS-based encryption with your own keys
 
-    > https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/learn/lecture/11851352#overview
+    > Logs Sources
+        > AWS SDK, CloudWatch Logs Agent, CloudWatch Unified Agent
+        > Elastic Beanstalk
+        > ECS, collection of containers
+        > AWS Lambda
+        > VPC Flow Logs
+        > API Gateway
+        > CloudTrail based on filter
+        > Route53
+
+    > CloudWatch Logs Insights
+        > Search and analyze logs stored in `CloudWatch Logs`
+        > Provides a query language
+        > queries can be saved and pinned to CloudWatch dashboard
+        > Can query multiple log groups in different AWS accounts
+        > it is a query engine, not a real time engine
+
+    > CloudWatch Logs Subscriptions
+        > get real-time log events 
+        > send them to
+            > Kinesis Data Streams
+            > Kinesis Data Firehose
+            > Lambda
+        > Subscription filter
+            > filter which logs are sent
+        > Logs can be sent to multiple destinations in different AWS accounts

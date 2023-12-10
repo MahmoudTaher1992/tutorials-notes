@@ -1,0 +1,10 @@
+CloudWatch Logs metric filter
+    > filters can be used to filter logs
+    > metric filters can be used to trigger alarms
+
+    > steps
+        > setup a filter
+        > setup a metric filter
+        > setup an alarm on the metric filter
+
+    > alarms will only fire on the new logs, not the old logs
