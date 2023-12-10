@@ -1,0 +1,215 @@
+introduction
+    > systems don't run themselves
+    
+    > the sysadmin approach to service management
+        > involves
+            > assembling software components
+            > deploying them to work together
+            > keep the system running
+            > respond to events
+
+        > as the system increase in complexity and traffic volume, the sysadmin team grows to absorb the new load
+
+        > there are 2 separate teams in this approach
+            > the development team
+            > the operations team
+
+            > they are different because each team requires different skills and knowledge
+
+        > sysadmin team will not reinvent the wheel
+
+        > pros
+            > easy approach to implement
+            > familiar approach 
+            > there are many examples to learn from
+            > relevant talent pool is available
+            > software tools available to work with
+            > integration companies available to help
+
+        > cons
+            > Direct costs
+                > the sysadmin team increase as the system grows
+            > Indirect costs
+                > more expensive than the direct costs
+                > the difference between the 2 teams is a source of friction
+                > the friction (conflicts) costs money
+                    > the dev team want to push more features to production
+                    > the sysadmin team want to keep the system running, as new features are the source of outages
+
+                    > the two teams start a war to push their agenda
+
+
+    > Google approach to service management: Site reliability engineering
+        > involves
+            > do the same work as sysadmins
+            > create systems to accomplish all the manual work
+
+        > the name changes from sysadmin to SRE (Site Reliability Engineer)
+
+        > SRE can be broken into 2 categories
+            > Google software engineers
+                > 50-60%
+            > Google software engineers with a background in systems administration
+                > 40-50%
+            
+        > Software engineers tend to solve their problems by developing software systems
+
+        > the result of this approach will end up with a team that
+            > quickly bored by manual tasks
+            > have the skill set to automate manual tasks
+
+        > the friction between the 2 teams decreases as both teams are software engineers
+
+        > Without constant engineering the operations team will grow linearly with the system
+            > to avoid this
+                > the SRE tickets have a 50% cap on the time spent on manual tasks
+                > the rest of the time goes to automating the process
+                    > some tasks are moved back to the development team
+
+        > pros
+            > the SRE team accepts the code change
+            > they are rapid innovators
+            > costs reduction, as SREs replace more sysadmins
+            > conflict reduction between the teams
+            > easy transfer between the 2 teams, cross training
+
+        > cons
+            > small hiring pool
+            > no much knowledge available in this approach
+            > needs strong management support in some decisions
+    
+    > Tenets of SRE (principles)
+        > rules and work practices that help SRE teams to focus on engineering work rather than operations work
+        > SRE team is responsible for 
+            > availability
+            > latency
+            > performance
+            > efficiency
+            > change management
+            > monitoring
+            > emergency response
+            > capacity planning
+
+        > Ensuring a durable focus on engineering
+            > Google caps SRE operational works at 50%
+            > the remaining 50% goes to engineering work
+            > this is accomplished by monitoring the SRE work
+                > some times some of the additional load is distributed to the development team, just to maintain the 50% cap for SREs
+                > the redirection stops when the load drops under the 50%
+                    > the redirection also helps in encouraging devs to build systems that are easily automated
+
+            > For the engineering work to be done, events must be in an acceptable level
+                > acceptable events count is 2 per 8-12 hours shift
+                > an on-call engineer can handle them correctly and efficiently
+                > good postmortem will be conducted
+                    > postmortem should be
+                        > written for all significant incidents
+                        > whether they are paged or not
+                        > un-paged postmortem points to clear monitoring gap (EI100)
+                        > detailed
+                            > what happened in details
+                            > all the root causes of the problem
+                            > assign actions to correct the problem
+                            
+                        > Google operates under blame-free postmortem culture
+                            > fix it rather than try to avoid it 
+
+        > Pursuing Maximum Change Velocity Without Violating a Service’s SLO
+            > product development and SRE teams can enjoy productive relationship by
+                > eliminating structural conflict between their goals
+                    > the conflict is the pace of innovation and product stability
+                > in SRE it is solved by error budget introduction
+
+            > Error budget
+                > 100% is a wrong reliability target
+                    > users can not tell the difference between 100% and 99.999%
+                    > the path between the user and the services are not 100% reliable. (i.e. routers, ISP, power grid, ...)
+                    > there is no justification to add the .001% because it will be lost in the noise of the path between the user and the service
+                > What is a right reliability target
+                    > depends on the product (the product owners should participate in the decision)
+                        > users' expectations 
+                        > product importance
+                            > ICU systems vs School system
+
+                    > once it is decided, error budget should be (1 - reliability target)
+
+                > we can spend the budget as we want as long as we don't overspend it
+                    > SRE and development teams will work together to use the budget
+                    > this will stop the conflicts between the teams as now they can be judge to some metric
+                        > usually SRE wants 0 downtime and dev don't care about the downtime, they want the features to be released
+
+        > monitoring
+            > the way by which the system's health and availability tracked
+            > should watch on metrics
+            > alarms should be setup
+                > effective alarms are those who only need human interaction
+            > monitoring output
+                > Alerts
+                    > signify that a human need to take an immediate action
+                > tickets
+                    > signify that a human need to take an action, but not immediately
+                > logging
+                    > recorded information
+                    > used only in diagnostics
+
+        > emergency response
+            > MTTR
+                > mean time to repair
+                > used in evaluating the effectiveness of emergency response
+                > how quickly the team brings the system back to health
+
+            > human add latency
+                > the system that can fix itself automatically without human interaction will have higher availability
+                > if human interaction is unavoidable, techniques can be used to reduce the human latency
+                    > playbook technique
+                        > proven to improve MTTR by 3x
+                        > contains guides and steps to follow for certain situations
+                        > decreases the dependency on the engineers abilities, and provides a way to improve the normal engineer performance
+
+        > Change management
+            > 70% of outages are due changes
+            > technique to avoid this problem
+                > implementing progressive rollouts
+                > detecting the problems quickly
+                > rolling back the changes safely when problems arises
+
+        > Demand forecasting and capacity planning
+            > ensures that there are sufficient capacity to serve future demand with the required availability
+            > capacity planning should take 2 situations into consideration
+                > organic growth
+                    > stems from natural product adoption and usage by customers
+                > inorganic growth
+                    > results from events like feature launches, marketing campaigns, or other business-driven changes
+
+            > capacity is critical to availability
+            > SRE should be responsible for the capacity planning
+                > an accurate organic demand forecast must be known
+                > a guess of inorganic forecast should also be known
+                > an infrastructure must be designed to handle the demand
+                > regular load testing should be conducted to ensure the readability of the infrastructure to handle the demand
+
+        > provisioning
+            > must be conducted quickly and only when necessary, as capacity is expensive
+            > it must be done correctly or the capacity will not be there when needed
+            > adding a new capacity is risky as it includes
+                > spinning up new instances
+                > making significant changes to the system
+                    > load balancers
+                    > configurations
+                    > networking
+                > validating the new capacity is working correctly
+
+        > Efficiency and performance
+            > Efficient use of a resource saves money
+            > SRE must be included in the utilization of the resource as he is responsible for provisioning
+                > utilization
+                    > is the how a service works and how it is provisioned
+                > it provides a very big effect in cost reduction
+
+            > resource usage is affected by
+                > the software efficiency
+                > the capacity
+                > the demand
+
+            > When the services is loaded, it's efficiency will decrease until it stops working, and losing the capacity.
+            > SRE will monitor the service's performance and improve it's efficiency by adding more capacity when needed

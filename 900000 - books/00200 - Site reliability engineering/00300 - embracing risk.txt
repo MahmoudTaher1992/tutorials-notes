@@ -1,0 +1,158 @@
+Embracing risk
+    > introduction
+        > google doesn't build a 100% reliable systems
+        > at a certain point increasing the reliability is worse for the service and the users
+            > limits the number of changes/new features delivered to the users
+            > increase the cost of the service
+            > users don't notice the difference between 99.99% and 99.9999% reliability
+        > SRE should balance the risk of unavailability with the goals of rapid innovations, to reach a customer satisfaction with the features, service and performance 
+
+    > managing risk
+        > we can not build 100% reliable systems because of the costs
+            > cost is not directly proportional to the reliability, one improvement in reliability can cost 100x more than the previous one
+            > the costs come from
+                > the unused machines/services
+                > the engineers cost, whom are working on a hidden stuff
+            > instead of eliminating the risk we should manage it
+
+        > SRE should manage the reliability by managing risks
+            > the risk is considered an on going pain
+            > it is important to identify the service's level of tolerance
+            > performing cost/benefit analysis will help in deciding the level of reliability
+            > a system should be reliable enough to meet the business goals
+                > it should not exceed the level at which the business goals are not met
+
+    > Measuring service risk
+        > At google, metrics are used to identify goals, track performance and apply improvements
+        > Unplanned downtime is the metric used to express a service risk
+        > it can also be represented by the availability
+            > availability = uptime / (uptime + unplanned downtime)
+            > it is also expressed by the number of nines
+                > 99.999% is 5 nines
+                > 99.99% is 4 nines
+                > ...
+
+            > it is used in a period of time to know the acceptable downtime
+                > i.e.
+                    > 99.99% availability in a year means that the service is down for 52.56 minutes in a year
+
+        > some services can use other metrics to measure the risk (if the downtime is not a good metric)
+            > the success rate
+            > availability = successful requests / all requests
+
+            > multiple metrics can be used, because not all of them have the same weight
+                > success rate of money transfer transactions is more important than the success rate of the search engine
+                > splitting both metrics may be a good solution
+
+        > a target is set for a specific period of time, and then the performance is judged against it
+            > the target is affected by 
+                > the business goals
+                > technical constraints
+                > ...
+
+            > appropriate actions is taken to match the metrics with the targets
+
+    > Risk tolerance
+        > how much risk is allowed for a metric in a service
+            > i.e.
+                > what should be the availability of a service ?
+                > which types of errors that are not acceptable ?
+                > How much should the latency be ?
+                > To which limit should we increase the availability (cost-wise) ?
+
+        > to identify it SRE must work with product owner to turn the business goals into a set of metrics
+
+        > Identifying the Risk Tolerance of Consumer Services
+            > many factors affect the risk tolerance of a service
+                > i.e.
+                    > target level of availability
+                    > Types of failures
+                    > cost
+                    > other service metrics
+
+                > target level of availability
+                    > depends on the function of the service
+                        > i.e.
+                            > google apps for work is very important for the users, so it should have a high availability
+                            > Youtube is not as important, so it can have a lower availability
+
+                > Types of failures
+                    > failure type is a very important factor
+                        > i.e.
+                            > exposing user financial data is worse than exposing user's search history
+                    > some times it is better to put down the service till you fix the issue than to keep it running and expose the data 
+                    > Risk tolerance may be increased to assure more safety
+
+                > cost
+                    > a key value in determining the availability of a service
+                    > i.e.
+                        > Ads service
+                            > each request is translated into a revenue gain/loss
+                    > it can be simply calculated
+                        > the cost of the additional 9 vs the revenue gained by it
+
+                > service latency
+                    > latency level is affected by the type of the service
+                        > i.e.
+                            > online hospital app can have a high latency
+                            > ICU monitoring app mast have a low latency
+
+                    > the latency level affect the engineering goals 
+                        > risk tolerance are one of the goals
+                    
+                    > taking advantage of the tolerance can save money
+
+
+    > Motivation for error budgets
+        > tension between developers and SREs
+            > development team tends to increase velocity by adding new features
+            > SREs tend to increase reliability by reducing the number of changes
+
+            > the tension results in different opinions about the level of effort to put in many thing, i.e.
+                > Software fault tolerance
+                    > How hard should be the software immune to errors ?
+                    > Too many means less features and a product that no one wants to use
+                    > Too little means a product that is brittle and unusable
+
+                > testing
+                    > Too little means lots of errors and outages
+                    > Too much means less features and the product will be away from it's competitors
+
+                > Push frequency
+                    > Every push is risky
+                    > How often should we push ?
+
+                > Canary duration and size
+                    > Canarying is a process of testing a new version of the software on a small number of users
+                    > How long should we canary ?
+                    > How many users should we canary ?
+
+            > teams tend to reach to an informal balance between themselves as an agreement
+                > it is not always optimal
+                > it is somehow a result of negotiation skills difference between the teams
+
+            > Objective metric
+                > should be used as a judge between the two teams
+
+        > Forming the error budget
+            > The error budget is a metric that determines how unreliable a service can be
+            > The two teams should jointly agree on an error budget that based on SLOs
+            > The metric reduces the conflicts between the team
+
+            > a proposed practice
+                > Product management defines an SLO, which sets an expectation on the uptime of the service in a given period of time
+                > The uptime is measured by a third party, the monitoring system
+                > The difference between the 2 numbers is the error budget
+                > As long as there is an error budget, the development team can release new features
+
+        > Benefits
+            > provides a common language between the teams
+            > conflict reduction
+            > can be used to control the velocity
+                > as long as SLOs are met, releases can continue
+                > if the SLOs violations happen frequently, releases will be reduced, and more effort will be directed to making the app more reliable by adding more tests or any other way.
+            > the teams will be self policing
+                > all the team is responsible for the SLOs
+                > even if there was an external troubles that caused the SLOs violations (i.e. infrastructure disasters), the teams will share the burden of maintaining the SLOs
+            > will also help in seeing the big picture and taking the right decisions
+                > SLOs can be loosen to allow more innovations and launch new features
