@@ -25,6 +25,8 @@ How to solve a problem
 
     > set some goals to solve the problem
 
+    > google how others solved the problem, you are not the first one to face it
+
     > identify the alternatives by
         > thinking/brainstorming
         > see other expertise
