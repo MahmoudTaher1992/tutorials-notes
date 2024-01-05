@@ -17,3 +17,108 @@ Postmortem Culture
             > ensure the incident is documented
             > all causes are understood
             > preventive actions are put to reduce a recurrence
+        > Postmortems 
+            > are expected after any significant undesirable event
+            > not punishment, it is a learning opportunity for the entire company.
+            > it is costly, so it must be done when required
+            > an opportunity to raise the reliability of the system and fix it's weaknesses
+
+            > Postmortems criteria (when to conduct one)
+                > depends on the team
+                > must be defined to reduce conflicts
+                > i.e.
+                    > user visible downtime
+                    > data loss
+                    > on call engineer intervention (rollback, ...)
+                    > monitoring failure (you will know it if an incident is discovered manually)
+                    > stakeholder request
+
+            > blameless tenet
+                > focus on the causes
+                > don't blame an individual/team
+                > assume everyone involved is well-intentioned
+                > if you blame someone, they will not be honest and they will the issues in fear of punishment
+                    > you will not learn from the incident
+
+                > every mistake is an opportunity to strength the system
+                > effective plans can be put in place
+
+                > this culture originated in industries where errors are fatal
+                    > i.e.
+                        > aviation
+                        > healthcare
+
+                > the postmortem should be written in a blameless format
+                    > i.e.
+                        > Do write "the system failed to handle the load"
+                        > Don't write "the engineer failed to handle the load"
+
+    > Collaborate and share knowledge
+        > postmortems includes collaboration and sharing at every stage
+        > the tool you use should have collaboration features
+            > real time collaboration
+            > open commenting/annotation system
+            > Notification system (i.e. email, ...)
+
+        > review 
+            > formal review is a requirement to postmortem process
+            > an un reviewed postmortem is not considered a postmortem
+            > first a draft is created
+            > a group of seniors review it
+                > review criteria   
+                    > was the incident data collected for posterity?
+                    > are the impact assessments complete?
+                    > was the root causes sufficiently deep?
+                    > is the action plan appropriate?
+                    > are the bug issues created with right priority?
+                    > did we share the outcome with the right people?
+
+        > publications
+            > after reviewing stage
+            > postmortems are shared on a wider scale via notification medium (email, ...)
+            > the goal is to share the knowledge and the lessons learned with the widest possible audience
+
+        > Archiving
+            > all postmortems should be saved for the future
+
+    > postmortem template
+        > please check it at the book appendix
+
+    > introducing postmortem culture
+        > easier said than done
+        > it requires continuous cultivation and reinforcement
+            > it can be reinforced by involving the management in the process
+        
+        > events that help 
+            > Postmortem of the month
+                > monthly
+                > well-written postmortem is shared with the entire organization
+
+            > slack group
+                > discussions on the postmortems
+
+            > postmortem reading club
+                > a group that discuss postmortems
+                > postmortems may be months/years old
+
+            > Wheel of Misfortune
+                > a simulation of the roles and their jobs in an incident
+
+            > you may come up with your own events
+                > postmortem summary meeting
+                    > although it is some kind of publication but it is a good way to raise the postmortem culture
+
+        > resistance
+            > one of the questions that may arise is that `is it worth the time?`
+
+            > how to face it
+                > imagine a company without postmortems ?!!!
+                > look at the old postmortems and see how they benefited the company
+                > encourage seniors to talk about it's importance
+                > encourage the team by rewarding effective postmortems and announce it to the team and the company
+
+        > pros of cultivating a postmortem culture
+            > increased reliability
+            > the team efficiency will increase
+            > ongoing improvements
+        

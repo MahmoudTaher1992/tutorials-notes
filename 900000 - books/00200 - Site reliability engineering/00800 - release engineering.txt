@@ -1,0 +1,130 @@
+release engineering 
+    > introduction
+        > release engineering is building and delivering software
+        > release engineers must have 
+            > an understanding of
+                > source code management
+                > compilers
+                > build configuration languages
+                > automated build tools
+                > package managers
+                > installers
+
+            > a knowledge of
+                > development
+                > configuration management
+                > test integration
+                > system administration
+                > customer support
+
+        > The build output need to be reproducible and automated
+            > to be able to reproduce it
+        > any change to release process should be intentional, not accidental
+
+        > release engineers work with SWEs and SREs to define all the steps required to release software
+            > from the git repo to the customer
+
+    > The Role of a Release Engineer
+        > tools
+            > Google has tools that report lots of metrics
+                > i.e.
+                    > release velocity: deploying time to production
+                    > other statistics
+                    > ...
+
+            > tools best practices
+                > release engineers define best practices for using the tools to make sure projects are released using consistent and repeatable processes
+                > best practices should cover all elements of the release process
+                > documenting best practices makes it easy on the team to focus on the features and the users, rather than spending time on reinventing the wheel
+
+        > release engineers and SREs work together to 
+            > safely deploy products while keeping the services up and running
+            > meet the business requirements
+            > by developing
+                > strategies for canarying changes
+                > pushing changes to production without interrupting services
+                > rolling back features that demonstrates problems
+
+
+    > Philosophy
+        > release engineering is guided by 4 principles
+        
+        > self service model
+            > to work at scale, teams should be self sufficient
+                > rely on themselves rather than on other teams
+
+            > release engineers at google have developed best practices and tools to help development team to control and run their own release process
+            > release engineers at other companies should do the same
+
+            > giving the development team the ability to control their own release process helps in increasing the release velocity
+
+            > it should be automated to the point that they need minimal involvement from release engineers
+
+        > High velocity
+            > frequent releases result in fewer changes, making testing and troubleshooting easier
+            > some teams perform hourly builds and select the version to actually deploy to production from the build pool
+                > depending on the test results and the features included
+            > other teams adopt `push on green` model that releases builds that passes all the tests
+
+        > Hermetic Builds
+            > build tools must ensure consistency and repeatability
+                > two people on two different machines should get the same build output
+            > Hermetic Builds means that they are not affected by other libraries and softwares installed on the machines
+            > builds should depend on
+                > build tools versions
+                    > i.e.
+                        > compilers
+                        > dependencies
+                        > libraries 
+            > build process should be self-contained and must not depend on services that lie outside the build environment
+
+            > rebuilding older releases
+                > is a hard task
+                > used to debug issues in old versions
+                > it is usually done by using the same build tools and dependencies used to build the original release, and also the same codebase
+                    > using a different version of the build tools or dependencies might result in different build output or even an error
+
+        > Enforcement of Policies and Procedures
+            > several layers of security and access control should be used control the process
+            > i.e.
+                > approving source code changes
+                > specifying the actions to be performed during the release process
+                > creating a new release
+                > deploying a new release
+                > making changes to project build configuration
+
+            > each change must be reviewed and approved
+            > automated reports should be generated and stored to track the changes in the releases, it helps in troubleshooting
+
+    > Continuous Build and Deployment
+        > this section describes the software lifecycle at google
+
+        > lifecycle
+            > building
+            > branching
+            > testing
+            > packaging
+            > deploying
+    
+    > Configuration management
+        > requires collaboration between release engineers and SREs
+        > potential source of instability, although it may seem simple
+        
+        > model
+            > mainline for configuration
+            > configuration files and binaries in the same MPM package
+            > configuration files into MPM “configuration packages.”
+            > Read configuration files from an external store
+
+        > all models involves storing configuration in the primary source code repository and enforcing a strict review process
+
+        > Mainline for configuration
+            > the changes are done in the main branch 
+            > then it is applied to the release branch
+
+    > Conclusion
+        > releases will be as simple as a button click when
+            > right tools are used
+            > proper automation is applied
+            > well defined policies are applied
+

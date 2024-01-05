@@ -1,0 +1,177 @@
+Being On-Call
+    > introduction
+        > a critical duty
+        > must be done to keep the service reliable and available
+
+        > some professions require an availability on 24/7 basis
+            > i.e.
+                > doctors
+                > firefighters
+                > police officers
+                > etc.
+            > in IT fields it is the ops team responsibility to be on-call to keep the service in a good health
+
+        > SREs are on-call for the services they own
+        > SRE team is different than Ops team in the sense that they solve their problems with software engineering
+        > to enforce this
+            > SRE are hired with diverse technical background
+            > SRE time is capped to 50%, the rest of the time is spent on software engineering
+
+    > Life of an On-Call Engineer
+        > the guardians of the production environments
+        > manage outages
+        > available to perform changes to the production environment in minutes (depending on the agreed response time)
+            > typical values are between 5 mins and 30 mins, depending on the importance/availability of the service
+        > the company provides the page receiving device which is typically a phone
+        > alerts should be fired over multiple channels and multiple devices
+
+        > as soon as the page is received, the on-call engineer should
+            > acknowledge/accept the page
+            > start investigating the issue
+            > if the issue is not resolved within the agreed response time, the on-call engineer should escalate the issue to the next level
+
+        > non paging/lower priority issues are also handled during the business hours
+            > it is less urgent than the paging issues
+    
+        > the page is the most important thing, all other tasks can wait
+        > most teams have primary and secondary on-call rotation
+            > varies from team to team
+            > some teams set the secondary to deal with pages that fall from the primary
+            > others set the primary for urgent pages/activities and the secondary for un-urgent pages/activities
+            > there are many ways to organize the on-call rotations, check the book for more details
+
+    > Balanced On-Call
+        > work should be balanced in terms of quantity and quality
+            > quantity is the number of hours
+            > quality is the number of pages
+
+            > SRE managers are responsible to keep the balance between the two
+
+        > balance in quantity
+            > SRE work is distributed
+                > 50% in engineering
+                > 25% on-call
+                > 25% other tasks
+
+            > using 25% rule will help in calculations
+                > 24/7 on-call rotation must be maintained
+                > each shift will be with 2 SREs (primary and secondary)
+                > the period will be 1 week each month
+                > the minimum # of SRE needed is 8
+                > dual team
+                    > one secondary SRE will serve in each shift instead of 2
+                    > the minimum # of SRE needed is 6 
+
+            > if the service is growing and the team needs to grow, multi-site team can be a great alternative
+                > multi-site teams
+                    > teams in different time zones
+                > pros
+                    > get rid of night shift
+                    > do not lose touch with production systems
+                > cons
+                    > communication overhead
+
+        > balance in quality
+            > on each shift an engineer should always have enough time to do page activities
+            > on average an incident takes 6 hours to deal with
+                > i.e.
+                    > root cause analysis
+                    > resolving
+                    > postmortem
+                    > follow up activities
+                    > fixing bugs
+                    > ...
+            > max # of pages per 12 hours shift is 2
+            > a corrective action should be taken if the number of pages exceeds 2 on average
+                > i.e.
+                    > adding more SREs
+                    > improving the service
+                    > ...
+
+        > compensation
+            > compensation should be considered for out-of-hours work
+                > i.e.
+                    > money bonus
+                    > time off
+                    > ...
+            > there should be a limit to the out-of-hours work, to avoid burnouts
+
+    > Feeling safe
+        > responsibilities
+            > SRE will be responsible for revenue critical services
+            > critical thinking is vital for operation of services
+
+        > a person when faced with challenges, will either act
+            > quickly and rapidly
+            > rationally and focused
+            
+            > the second is better in producing better results and a well-planned incidents handling
+
+        > to make the SRE in a appropriate mode, it is important to reduce the stress
+            > stress can lead to incorrect decisions
+                > the availability will be affected
+                > the importance of a service and the consequences of outages adds to the pressure
+
+        > on-call SREs can rely on several resources that make the on-call experience less painful
+            > i.e.
+                > clear escalation paths
+                > well-defined incident management procedures
+                > a blameless postmortem culture
+                > ...
+        
+        > SRE-supported systems usually participate in 24/7 shift rotation, it can be escalated to them if necessary
+        > incident management protocol
+            > useful to adopt in complex situations
+            > which offers an easy-to-follow and well-defined set of steps that aid an on-call engineer in incident resolution
+            > should be aided with software tools that allows incident mangers to concentrate on the incident itself
+
+        > after the incident
+            > evaluate what went wrong and what went right
+            > take actions to prevent the incident/errors from happening again 
+            > postmortems must be written for important incidents
+                > blame free culture
+                > postmortems provide high values
+            > recognizing automation opportunities is the best way to prevent human errors 
+
+    > Avoiding Inappropriate Operational Load
+        > Operational Overload
+            > SRE team and leadership should include solid objectives in quarterly planning to keep the operational load in acceptable levels
+            > loaning an experienced SRE to an overloaded team can help in reducing the operational load
+
+            > metrics should be used to measure the operational load
+                > i.e.
+                    > # of pages per shift
+                    > ...
+
+            > causes
+                > misconfigured monitoring
+                > paging alerts that are not actionable
+                > Low priority pages
+
+            > propagated alerts
+                > a single incident can cause multiple alerts
+                > it is important to reduce this propagation as it is a high source of distraction
+
+            > sometimes the source of the operational overload is from the developers, not the SREs. contacting them to reduce the noise by fixing the alerts sources can help
+                > i.e.
+                    > brittle pieces of code that always break and fire alerts
+                    > ...
+
+            > Extreme cases
+                > SRE can ask the developer team to be on-call until the system meets the standards
+                > it doesn't happen so often
+                > it helps reduce the operational load
+                > in complex/architectural changes, development team can help in reducing the operational loads till the load reduces to an acceptable level
+
+        > Operational Underload
+            > Treacherous enemy
+            > undesirable for the SRE team
+            > being out of touch with the production environment can lead to
+                > lack of knowledge
+                > lack of skills
+                > lack of confidence
+                > ...
+
+            > solution
+                > SRE team members should always be exposed to production (once or twice a quarter)
+                > exercises that helps in import troubleshooting skills and knowledge of the service

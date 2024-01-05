@@ -1,0 +1,164 @@
+Monitoring Distributed Systems
+    > Monitoring reasons
+        > analyzing long term trends
+            > how fast is my database growing ?
+            > how fast my daily-active users growing ?
+
+        > Experimental reasons (over time)
+            > you can not examine some of the new features without monitoring
+            > how a new component is affecting the speed of the system over a period of one week ?
+
+        > Alerting
+            > Alert when a system is down
+            > Alert when a system is slow
+            > without monitoring you can not alert, you will be blind
+
+            > tells us what is broken or what is about to break
+            > used when the system isn't able to fix itself and it needs help
+            > paging a human is very expensive and it should only be done when necessary
+            > if it happens too often, people will start ignoring the alerts and real page will be missed in the noise, error budgets may be wasted
+            > effective alerting system have good signal and very low noise
+
+        > Building dashboards
+            > the source of the data is monitoring
+        
+        > Debugging
+
+    > Setting reasonable expectation for monitoring
+        > nearly 10% of the SRE team is directed to monitoring (at least one person in SRE team)
+        > google tend to use fast and simple systems over complex ones
+        > rules that quickly detect errors
+        > google has experienced limited success with complex rules
+        > some times dependency reliant rules are used for obvious/stable situations
+            > i.e.
+                > don't send latency alerts if the data-center is drained
+        > everything should be simple, clear and understandable
+    
+    > Symptoms vs causes
+        > a good monitoring system should point out the symptoms and the causes
+            > symptoms are `What is broken?`
+            > causes are `Why it is broken?`
+        > it should do that
+            > with maximum signal
+            > with minimum noise
+
+    > Black-box vs White-box monitoring
+        > a combination should be used
+
+        > black-box monitoring
+            > monitors from outside
+            > most likely it detects the symptoms
+            > used for paging
+
+        > white-box monitoring
+            > monitors from inside
+            > it detects the causes
+            > used for debugging
+
+    > The four golden signals
+        > are
+            > latency
+            > traffic
+            > errors
+            > saturation
+        
+        > they are like the human body metrics in the ICU (HR, BP, Oxygen-level, ...)
+        > you will have a clearer monitoring at the system
+
+        > latency
+            > time it takes to service a request
+            > you have to distinguish between different latencies
+                > successful requests' latency
+                > failed requests' latency
+            
+        > traffic
+            > how much demand is being placed on the system
+            > units
+                > i.e.
+                    > Web service 
+                        > request per second
+                    > audio streaming
+                        > sessions count
+                        > I/O rate
+                    > database storage
+                        > transactions count
+                        > queries per second
+
+        > errors
+            > request failure rate
+                > may be broken down into total failure or partial failure
+            > you may have to do some setups to catch partial failures
+
+        > saturation
+            > how full your service is ?
+            > multiple metric should be used
+                > i.e.
+                    > ec2 instance will have multiple monitoring saturation metrics
+                        > memory usage
+                        > CPU
+                        > bandwidth 
+                        > ...
+            > i.e.
+                > memory services
+                    > show memory usage percentage
+                > i/o services
+                    > show i/o usage
+    
+    > Worrying about your tail
+        > building your monitoring system on a mean values are very harmful
+        > in most of the times the values will be in a normal states, however sometimes there will be a spikes
+        > in monitoring you have to know about the spikes and sometimes you have to deal with them
+
+    > Measurement resolutions
+        > difference parts of the system should have different measurement granularity
+            > i.e.
+                > CPU: seconds
+                > Hard drive usage: 1-2 mins
+                > ...
+
+        > collecting too much data is expensive, while too little data may be trivial. Balance is the key
+            > saving strategy 
+                > you can even collect the data locally in the server and send a sample to the monitoring system
+
+    > As Simple as Possible, No Simpler
+        > pilling the requirements may result into a complex system
+            > i.e.
+                > lots of alerts
+                > extra code
+                > lots of dashboards
+                > ...
+
+        > this might end up with
+            > fragile system
+            > less maintainable system
+            > hard to understand/change system
+
+        > the system should be as simple as possible, no simpler the level where it is not useful anymore
+
+        > guidelines
+            > the rules catching errors should be simple
+            > rarely used data collection, aggregation and alerting should be removed
+            > unused collected data should be removed
+
+        > simplicity works fine with google
+
+    > Tying These Principles Together
+        > monitoring and alerting philosophy
+            > a good starting point for writing/reviewing a new alert
+
+            > alarm questions
+                > does the condition catch an undetected condition that is urgent enough to page someone ?
+                > can the alert be ignored ?
+                > does the alert indicate that the end users are affected ?
+                > Can I take action in response to this alert ?
+                > Are other people getting paged for the same problem ?
+
+            > paging philosophy
+                > every page should be actionable
+                > Every page response should require human interaction, automate it if it is automate-able
+                > pages should be for an event that is not reported before
+                > page urgency should be accurate because an on-call engineer can be fatigued easily
+
+    > Monitoring for the Long Term
+        > I didn't understand it
+        > it is not easy to be a good writer

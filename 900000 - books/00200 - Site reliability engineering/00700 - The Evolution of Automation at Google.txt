@@ -1,0 +1,98 @@
+The Evolution of Automation at Google
+    > automation tools
+        > puppet
+        > Chef
+        > cfengine
+        > Perl
+        > ...
+
+    > The value of automation
+        > scale is not the only reason for automation
+        > at some point when the service grows, it reaches to a point where automation is not a option, it is the only way to keep the service running
+        
+        > Consistency
+            > humans can not be as consistent as machines
+            > inconsistency causes mistakes
+            > automation brings consistency
+
+        > A platform
+            > after some time of automation, you will have a platform
+            > can be used in another systems
+            > can be sold as a platform
+            > centralizes mistakes, if one mistake is fixed, it is fixed for all systems
+            > can be setup to be executed more times than the humans can do
+            > will run in times that humans are not available
+            > the logs/metrics will allow you to see what happened
+
+        > Faster repairs
+            > some repairs can be automated
+            > automates fix will reduce the MTTR
+            > will save SREs times in detecting, fixing, testing and cleaning
+            > lowers total costs, as errors in production are expensive
+
+        > Faster actions
+            > the machine is faster than humans
+            > in most cases the processes can be automated
+
+        > Time saving
+            > automation will not only save the time of experienced SREs in one way, the task (after automation) can be delegated to less experienced SREs, thus saving the time of the experienced SREs in 2 ways
+
+    > The Value for Google SRE
+        > google has a strong motive towards automation
+            > most of the services are planet-spanning with lots of users
+            > the production environments at google are very complex
+
+    > The Use Cases for Automation
+        > User account creation
+        > Cluster turnup and turndown for services
+        > Software or hardware installation preparation and decommissioning
+        > Rollouts of new software versions
+        > Runtime configuration changes
+        > ...
+
+    > A Hierarchy of Automation Classes
+        > a system should not need external automation/glue logic
+            > it is better not to have external glue logic because
+                > internalization is more efficient
+                > the system should be designed not to need external logic, everything should be done inside the system
+
+        > to accomplish this
+            > all the tasks that can be done within the system should be implemented in the system
+                > i.e.
+                    > account creation
+                    > system turnup and turndown
+                    > ...
+                
+                > the implementation can be gradual or instantaneous
+
+        > cons of external automation
+            > ends up being maintained separately from the original system, suffering from bit rot
+                > i.e.
+                    > the glue doesn't change when the underlying system changes
+
+        > automation paths/evolution
+            > 1. no automation
+                > db is failed over manually
+            > 2. externally maintained system-specific automation
+                > SRE has fail over script for a specific db
+            > 3. externally maintained generic automation
+                > SRE has fail over script for any db
+            > 4. internally maintained system-specific automation
+                > db is shipped with it's own fail over script
+            > 5. internally maintained generic automation
+                > db is shipped with a generic fail over script
+
+        > SREs try their best to avoid manual work, but in some cases it is not possible
+        > automation process should be evaluated before starting it, to see if it is worth it or a manual work will be more efficient
+
+    > Automate Yourself Out of a Job: Automate ALL the Things!
+        > a success story of automation at google
+
+    > Soothing the Pain: Applying Automation to Cluster Turnups
+        > a story of automation at google
+
+    > Borg: Birth of the Warehouse-Scale Computer
+        > a story of automation at google
+
+    > Reliability Is the Fundamental Feature
+        > ..
