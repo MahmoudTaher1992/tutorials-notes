@@ -1,0 +1,64 @@
+Simplicity
+    > a software can only be stable if no one is using it
+    
+    > System Stability Versus Agility
+        > Agility is the ability to change quickly and easily
+        > a balance mix between stability and agility is required in most of the systems
+        > SRE work to make the service more reliable, and they ensure that this work has a minimal impact on the developer's agility
+    
+    > the benefits of boring
+        > it is a good thing when it comes to software
+        > surprises are the main enemy of SREs
+
+        > here the writer talked about essential complexity and accidental complexity
+            > I don't know why, it is out of context
+
+            > Essential complexity
+                > can not be removed from the problem definition
+                
+            > Accidental complexity
+                > can be removed by engineering effort
+
+            > SRE should push back on the accidental complexity
+
+    > I won't give up my code
+        > dead and unused code is a liability and a complexity
+        > Engineers form an emotional attachment to their code, it is not easy to remove it, the developers will resist and push back towards keeping it
+            > source control systems make it easy to revert changes
+
+        > unused code creates confusion and complexity, it is a time bomb
+
+    > The “Negative Lines of Code” Metric
+        > software bloat
+            > a term used to describe the tendency of software to become slower and bigger over time as a result of adding more features
+        > every line of code changed or added creates a potential for new bugs
+        > smaller project is easier to understand, test and maintain
+        > the negative lines of code is a metric that measures the amount of code removed from the system, the more negative lines of code the better
+
+    > Minimal APIs
+        > a french poet wrote
+            > perfection is finally attained not when there is no longer more to add, but when there is no longer anything to take away
+                > this principle is applicable to the software design and construction
+        
+        > the fewer methods we provide to the API users, the easier it will be to understand
+        > in software, less is more
+
+    > Modularity
+        > many rules that apply to object oriented programming apply to the system design
+        > isolation is the key to maintainable system
+        > loose coupling between system components helps in system maintainability
+
+        > as system grows more complex, the separation between APIs and binaries become more important
+
+    > Release Simplicity
+        > simple releases are generally better than complicated releases
+            > easier to understand smaller releases rather than big ones
+        > related changes should be released together
+            > if a performance issue happened after such a release, it will be easier to identify the root cause
+            > we can move with confidence
+
+    > conclusion
+        > software simplicity is a prerequisite to reliability
+        > it is not being lazy, it is more of reaching the goal in the easiest way
+        > saying no to a feature is not limiting innovations, it is keeping the environment uncluttered of distractions and keep the focus on innovation
+

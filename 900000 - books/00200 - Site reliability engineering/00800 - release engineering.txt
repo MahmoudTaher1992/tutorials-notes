@@ -128,3 +128,15 @@ release engineering
             > proper automation is applied
             > well defined policies are applied
 
+        > most companies deal with the same release engineering problems
+            > i.e.
+                > how package versioning is handled
+                > continuous build and deploy model vs periodic releases
+                > release frequency
+                > configuration management model
+                > release metrics
+                > ...
+
+        > Start Release Engineering at the Beginning
+            > it is cheaper to start release engineering at the beginning of the project
+            > SREs, SWEs and release engineers should work together to define the release process
