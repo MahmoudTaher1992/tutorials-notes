@@ -62,3 +62,5 @@ Simplicity
         > it is not being lazy, it is more of reaching the goal in the easiest way
         > saying no to a feature is not limiting innovations, it is keeping the environment uncluttered of distractions and keep the focus on innovation
 
+DONE
+

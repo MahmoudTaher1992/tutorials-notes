@@ -162,3 +162,5 @@ Monitoring Distributed Systems
     > Monitoring for the Long Term
         > I didn't understand it
         > it is not easy to be a good writer
+
+DONE

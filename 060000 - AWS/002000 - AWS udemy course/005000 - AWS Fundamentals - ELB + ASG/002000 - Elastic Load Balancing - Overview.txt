@@ -25,7 +25,7 @@ Elastic Load Balancing - Overview
     
     > Health Checks
         > Are crucial for Load Balancers
-        > They enable the load balancer ti know if instances it forwards traffic to are available to reply to requests
+        > They enable the load balancer to know if instances it forwards traffic to are available to reply to requests
         > The health check is done on port and a route (/health is common)
         > If the response is not 200 (OK), then the instance is unhealthy
             > the load balancer will skip it
@@ -50,3 +50,28 @@ Elastic Load Balancing - Overview
         > a sg that defined the security around the load balancer
             > It should allow access from any where
         > the EC2 instances sq should allow access from the load balancer only
+
+    > Cross-zone load balancing
+        > if enabled each load balancer node distributes traffic across the registered targets in all enabled Availability Zones
+        > if disabled, each load balancer node distributes traffic only across the registered targets in its Availability Zone
+
+        > i.e.
+            > if we have 10 instances in 2 AZs, 8 on one zone and 2 on another
+                > if cross-zone is enabled, the load balancer will distribute traffic evenly across all 10 instances. each instance will receive 10% of the traffic
+                > if cross-zone is disabled, the load balancer will distribute traffic evenly across the 2 zones. 2 instances will receive 50% of the traffic and the other 8 will receive 50% of the traffic
+
+    > Scheme
+        > internet-facing load balancer
+            > publicly resolvable DNS name
+            > can route traffic from the internet to resources inside a VPC
+            > supports features like SSL termination, web application firewall rules etc.
+            > can route traffic to public subnets with public IP addresses or private subnets
+            > health checks use public IP addresses
+            > has a monthly cost for the public IP address
+
+        > internal load balancer
+            > does not have a public IP address and can only route traffic internally within a VPC
+            > no direct internet access so security measures may not be needed
+            > routes traffic to private subnets with private IP addresses only
+            > health checks use private IP addresses to check endpoint health
+            > cheaper than internet-facing load balancer

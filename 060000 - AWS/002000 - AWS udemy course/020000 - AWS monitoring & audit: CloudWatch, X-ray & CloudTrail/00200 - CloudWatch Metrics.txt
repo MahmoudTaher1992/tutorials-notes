@@ -1,17 +1,23 @@
 AWS CloudWatch metrics
     > CloudWatch provides metrics for every service in AWS
-    > Metric is a variable to monitor
+    > Metric is a variable/info to monitor
         > i.e.
             > CPUUtilization
             > NetworkIn
             > ...
-    > Metrics belong to namespaces
+        > the data is stored as statistics
+
+    > namespaces
+        > containers for metrics
+        > each metric should be in a namespace
+        > Metrics belong to namespaces
+
     > Dimension is an attribute of a metric
         > i.e.
             > InstanceId
             > InstanceType
             > AutoScalingGroupName
-    > Up to 30 dimensions per metric
+        > Up to 30 dimensions per metric
     > Metrics have timestamps
     > Can create CloudWatch dashboards of metrics
 
@@ -22,3 +28,13 @@ AWS CloudWatch metrics
         > Note
             > EC2 memory usage is not pushed by default
             > You need to push your own custom metrics
+
+    > Custom metrics
+        > you can collect any data you want from your applications by pushing them to CloudWatch using the SDK
+        > i.e.
+            > how many purchases have been made
+            > how many users logged in in a period of time
+            > ...
+
+    > Alarms based on metrics
+        > you can setup an alarm that will notify you when a metrics goes beyond a threshold

@@ -175,3 +175,5 @@ Being On-Call
             > solution
                 > SRE team members should always be exposed to production (once or twice a quarter)
                 > exercises that helps in import troubleshooting skills and knowledge of the service
+
+DONE

@@ -14,3 +14,6 @@ Network Load Balancer (NLB)
         > EC2 Instances
         > IP Addresses (must be private IPs)
         > Application load balancers
+
+    > Network mapping
+        > 

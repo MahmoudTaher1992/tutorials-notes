@@ -213,3 +213,5 @@ introduction
 
             > When the services is loaded, it's efficiency will decrease until it stops working, and losing the capacity.
             > SRE will monitor the service's performance and improve it's efficiency by adding more capacity when needed
+
+DONE

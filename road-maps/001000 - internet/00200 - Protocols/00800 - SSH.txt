@@ -27,3 +27,19 @@ SSH
         > Putty is used with older versions of windows
         > Putty-gen is used to create the keys on windows instead of ssh-keygen
         > you can also use git-bash on windowsx
+
+    > SSH tunneling
+        > direct secure connection between two computers
+        > let's you move data from one port to another securely
+        > happens between ssh client and ssh server
+
+        > Types
+            > local port forwarding
+                > ssh -L <local port>:<remote host>:<remote port> <ssh server>
+                > lets you connect to a remote server's port from your local machine's different port
+
+            > dynamic port forwarding
+
+            > reverse tunneling
+
+            > reverse port forwarding

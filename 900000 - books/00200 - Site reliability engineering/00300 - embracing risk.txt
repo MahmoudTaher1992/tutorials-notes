@@ -156,3 +156,6 @@ Embracing risk
                 > even if there was an external troubles that caused the SLOs violations (i.e. infrastructure disasters), the teams will share the burden of maintaining the SLOs
             > will also help in seeing the big picture and taking the right decisions
                 > SLOs can be loosen to allow more innovations and launch new features
+
+
+DONE
