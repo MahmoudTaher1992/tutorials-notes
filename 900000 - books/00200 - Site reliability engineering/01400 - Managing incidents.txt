@@ -1,0 +1,97 @@
+Managing incidents
+    > effective incident management is the key to limit the disruption caused by incidents and to restore normal service operation as quickly as possible. 
+    
+    > Unmanaged incidents
+    
+    > Anatomy of an Unmanaged Incident
+        > Sharp focus on the technical problem
+        > poor communication
+        > freelancing
+
+    > Elements of Incident Management Process
+        > Recursive Separation of Responsibilities
+            > it important that everyone in the incident knows his role and doesn't interfere with the others
+            > if a member is overloaded, he can ask planning for more staff to delegate work to
+            > distinct roles
+                > incident command
+                    > holds the high level state of the incident
+                    > assigns responsibilities according to needs and priorities
+                    > holds all un delegated positions 
+                    > resolve blockages
+
+                > operational work
+                    > works with the incident commander
+                    > works on the technical problem
+                    > operational team should be the only group modifying the system
+
+                > communication
+                    > the public face of incident management team
+                    > issues periodic updates to the stakeholders and the incident response team
+                    > keeps the incident commander informed of the situation
+                    > keeps the incident document accurate and up to date
+
+                > planning
+                    > deals with longer term issues
+                        > i.e.
+                            > filing bugs
+                            > ordering dinner
+                            > arranging handoffs
+                            > tracking the changes done through the incident to resolve it after
+
+        > A Recognized Command Post
+            > interested parties should know how to contact the incident commander
+            > some teams like to have the team at one place "war room", and others prefer to work in their offices and communicate via emails or IRC
+
+        > Live incident state document
+            > Keeping a living incident document is the most important responsibility of the incident commander
+            > should be editable by multiple people at the same time (google docs, ...)
+        
+        > Clear and live handoff
+            > the incident commander handoff should be clear
+            > the new incident commander should be briefed on the current state of the incident
+            > the handoff should be done explicitly
+                > i.e.
+                    > say "you are now the incident commander, okay ?"
+            > Prev incident commander should not leave until he gets a clear acknowledgment that the new incident commander is in charge
+            > the handoff should be communicated to the rest of the team
+        
+    > A managed incident
+    
+    > When to declare an incident
+        > it is better to declare an incident early and fix it quickly than to wait and let it grow
+        > set clear conditions for declaring an incident
+            > i.e.
+                > if you need to involve another team to help
+                > if the outage is visible to the customers
+                > if the issue is not solved in a certain time frame, even after deep investigation
+
+        > To keep the engineers's incident management skills up to date
+            > try to have a regular incident management training
+            > mock incidents
+            > use similar tools and procedures as in another procedures
+
+    > Summary
+        > incident management strategy helps in
+            > reduce the mean time to recovery
+            > provide staff a less stressful way to work in incidents/emergencies
+        
+        > it is done by 
+            > formulating an incident management strategy
+            > making a scalable plan
+            > regularly practicing the plan
+
+    > Best practices for incident management
+        > Prioritize
+            > Stop the bleeding, restore service, and preserve the evidence for root- causing.
+        > Prepare
+            > Develop and document your incident management procedures in advance
+        > Trust
+            > give permissions to all incident participants
+        > introspect
+            > if you feel overwhelmed, ask for help
+        > Consider alternatives
+            > periodically review and evaluate the alternatives
+        > practice
+            > practice incident management regularly
+        > Change it around
+            > make the team members play different roles in the incident management process each incident
