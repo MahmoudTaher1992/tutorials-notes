@@ -1,0 +1,139 @@
+Effective Troubleshooting
+    > Troubleshooting 
+        > is a critical skill for SRE
+        > is learnable and teachable
+
+    > Troubleshooting effectiveness depend on
+        > troubleshooting understanding
+        > solid knowledge of the system
+    
+    > Troubleshooting process theory
+        > is an application of hypothetical deductive method
+            > a problem is reported
+            > we observe a strange behavior (a failure)
+            > we look at the logs and try to reproduce the error
+            > then we hypothesize the potential failure causes 
+                > by our knowledge of the system
+            > then we test the hypothesis to see if it is right or wrong
+            > we find the root cause of the problem
+            > we fix the problem
+            > we take corrective action to prevent the problem from happening again
+
+    > In practice
+        > In practice troubleshooting is not easy as described
+        > there are some steps that can make the process less painful and more productive
+
+        > Problem reported
+            > Every problem starts with a problem report
+            > effective report
+                > should tell the
+                    > expected behavior
+                    > actual behavior
+                    > how to reproduce the behavior
+                > stored in a searchable location (i.e. ticketing system)
+        
+            > Google creates a bug for every issue, it creates a log of issues to be used in the future
+            > it is discouraged to report a problem to a single person because
+                > reports are not visible to the whole team
+                > concentrates the problem solving in a single person
+                > decreases the bus factor in bug solving
+
+        > Triage
+            > once you receive a problem report, you should figure out what to do with it
+            > you should determine it's severity and priority
+                > it requires good engineering judgment
+                > severe issues might require all developers to participate in it's solution
+                > the response should be proportional to the severity of the issue
+
+            > try to stop the bleeding and then solve the problem
+                > the first step is to stop the bleeding, not solving the problem
+                > this may require an exceptional action
+                    > i.e.
+                        > restarting a service
+                        > diverting traffic from a broken cluster to a healthy one
+                        > stop the service completely if a secure data is compromised
+
+                > this approach may strange to new SREes who come from a product development background
+
+        > Examine
+            > an understanding of each system component's function helps a lot in troubleshooting
+            > logs and metrics are a good place to start (each system is recording logs and metrics)
+            > time series graphs are very helpful in seeing the system's behavior before, during and after the problem
+            > use logs and distributed system tracing tools to help in examination
+            > expose the current state of the system
+                > i.e.
+                    > dashboards
+                    > monitoring systems
+                    > alerts
+                    > tracing tools
+            > test from the client side
+
+            > logging
+                > logs are very important in debugging
+                > tools can be added to the system to help in logs analysis
+                > it is helpful to have logs verbosity levels
+                > include a selection language in the logs to help in filtering
+
+        > Diagnose
+            > a good understanding of the system helps in coming up with plausible hypotheses on what is going wrong
+            > some practices will help
+
+                > simplify and reduce
+                    > each component in the system has well defined role and can be quickly tested to know if it is working or not
+                    > test each component to see where the problem is 
+                    > test the connections between them
+                    > test the data flowing between them
+                    > inject some test data to see how the system behaves
+                    > solid reproducible test cases makes debugging much faster
+                    > testing in a non-production environment is very important, as it can be destructive
+
+                    > divide and conquer is a very useful technique
+                    > in a multi layer system, start from one end to another
+                    > in large systems, use binary search technique to find the problem
+                        > split the system in half
+                        > test each half
+                        > repeat until you find the problem
+
+                > Ask “what,” “where,” and “why”
+                    > a malfunctioning system still does something
+                    > ask what is the system doing
+                    > ask why it is doing that
+                    > ask where it is taking the input and where it is producing the output
+
+                > What touched it last
+                    > systems have inertia, they tend to work until something changes it or stops it
+                    > last changes are one of the good places to start debugging
+                    > new deployments and configurations should be tracked and logged, to help in debugging
+                    > constructing a graphs that shows the system performance and other events in the system and environments can help in debugging
+                        > like what Tobbi did in AWS 
+
+                > Specific diagnoses
+                    > the generic tools will help you, but specialized tools might be of a greater help
+                    > try to build tools that help in diagnoses 
+                    > Google SRE build such tools to help in diagnoses
+
+        > Test and Treat
+            > after listing possible causes, you should test them to determine the real reason
+            > through experiments, you can ignore or confirm the hypothesis
+
+            > tests design considerations
+                > an ideal test should ignore or confirm a hypotheses
+                > start with the obvious tests first
+                > an experiment may provide misleading results
+                > Active tests may have side effects that change future test results
+                    > make sure to revert those side effects
+                > Some tests may not be definitive, only suggestive
+                    > it won't give you a clear answer
+                > Take clear notes of the tests and their results
+                    > in complex problems, this will help a lot in not repeating the steps over and over 
+                    > it will help you in returning the system to it's pre-test setup !!
+
+    > Negative results are magic
+        > a negative result is a result that is not expected
+        > negative results should not be ignored
+            > it might have a much more value
+        > Experiments with negative results are conclusive
+            > they tell us something certain about production or the performance limits of an existing system
+        > Tools and methods can outlive the experiment and inform future work
+            > building tools for repeatable experiments can have indirect benefits, in the future work it can be used
+        > 
