@@ -128,12 +128,40 @@ Effective Troubleshooting
                     > in complex problems, this will help a lot in not repeating the steps over and over 
                     > it will help you in returning the system to it's pre-test setup !!
 
-    > Negative results are magic
-        > a negative result is a result that is not expected
-        > negative results should not be ignored
-            > it might have a much more value
-        > Experiments with negative results are conclusive
-            > they tell us something certain about production or the performance limits of an existing system
-        > Tools and methods can outlive the experiment and inform future work
-            > building tools for repeatable experiments can have indirect benefits, in the future work it can be used
-        > 
+        > Negative results are magic
+            > a negative result is a result that is not expected
+            > negative results should not be ignored
+                > it might have a much more value
+            > Experiments with negative results are conclusive
+                > they tell us something certain about production or the performance limits of an existing system
+            > Tools and methods can outlive the experiment and inform future work
+                > building tools for repeatable experiments can have indirect benefits, in the future work it can be used
+            > Publish your results
+                > if your are interested in the results, others might be interested in it too
+                > publishing them will help others in the future
+                > report negative results as well as positive ones, they are very helpful in the future
+
+        > cure
+            > By now, you have narrowed down the problem to a single cause
+            > prove that it is the actual cause
+            > reproduce it in local/dev environment
+                > it can be difficult to reproduce it at production because
+                    > it may require a down time
+                    > it is hard to get it in a state where it can be reproduced
+                    > production systems are complex
+            > postmortem
+                > what went wrong
+                > how you tracked down the problem
+                > what you did to fix it
+                > what you did to prevent it from happening again
+
+    > Making Troubleshooting Easier
+        > Make each component in the system observable
+            > white box metrics
+            > structured logs
+        > having observable interfaces between components
+        > ensure that the info is consistent and easily accessible
+            > by having a unique id on the whole request cycle
+        > make the changes in the code or the configurations traceable, as most of the problems come after a change
+
+DONE
