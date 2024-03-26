@@ -1,0 +1,49 @@
+Emergency response
+    > introduction
+        > Things break; that’s life.
+        > How people respond to Emergency helps in 
+            > long term health of an organization
+            > makes an organization better than the other
+        > people defer
+            > some respond well to emergencies than others
+        > a proper response takes training and preparation
+        > Board and management support is needed in establishing and maintaining a proper training and testing process
+        > Careful attention of staff is also needed
+    
+    > What to Do When Systems Break
+        > Don't panic, you are not alone and the sky is not falling
+        > you are a professional and trained to handle this sort of situation
+        > no one is at physical danger
+        > at the worst situation, the service is down
+        > take a deep breath and carry on
+        > if you feel overwhelmed, pull in more people. some times you may page all the company
+        > follow the protocols and procedures of the company
+
+    > Test-Induced Emergency
+        > a proactive approach to disaster and emergency testing
+            > SRE break the system, and then make changes to improve reliability and prevent failures from recurring
+
+    > All problems have a solution
+        > systems will break in a way that you have not anticipated
+        > the solution always exists, even if it is not obvious
+            > if you can not find a solution
+                > ask for help
+                > think of an alternative
+                > do it quickly
+        > don't forget to clean up after the emergency
+
+    > Learn from the Past. Don’t Repeat It.
+        > Keep a History of Outages
+            > document the problem, the solution, and the follow-up for everyone in the future
+            > History is about learning from the past and from everyone's mistakes
+            > look for answers and solutions in the history
+            > document the follow-up tasks and the preventive actions taken
+
+        > Ask the Big, Even Improbable, Questions: What If...?
+        
+        > Encourage Proactive Testing
+
+    > Follow up
+        > always create follow-up tasks, to prevent the same problem from happening again
+
+DONE

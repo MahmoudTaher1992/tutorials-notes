@@ -1,0 +1,11 @@
+Tracking outages
+    > introduction to the problem
+        > tracking reliability progress improves it by the time
+        > tracking tools
+            > outalator
+            > splunk
+            > nagios
+            > zabbix
+            > ...
+        > 
+        

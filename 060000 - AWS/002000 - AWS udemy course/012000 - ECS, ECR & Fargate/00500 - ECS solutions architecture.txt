@@ -1,0 +1,18 @@
+ECS solutions architecture
+    > ECS tasks invoked by event bridge
+        > Event bridge can be used to trigger ECS tasks
+        > multiple AWS services can be user to trigger events in event bridge
+        > so multiple AWS services can be used to trigger ECS tasks
+
+    > ECS tasks invoked by AWS event bridge schedule
+        > a scheduled event can be used to trigger ECS tasks
+
+    > SQS queue example 
+        > ECS service auto scaling can poll messages from SQS queue
+
+    > you can also connect ECS tasks activities to other services by 
+        > triggering an event in event bridge, once a task is created or stopped
+        > from the event bridge you can do anything
+        
+    > by this you can run services that are written in a non cloud service way and integrate it into AWS echo system
+

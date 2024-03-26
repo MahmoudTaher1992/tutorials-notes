@@ -1,0 +1,52 @@
+ECS tasks placement
+    > When ECS task is launched, ECS must figure out where to put it
+        > constraints
+            > CPU
+            > RAM
+            > available ports
+    > when ECS scales in, it needs to figure out which tasks to terminate
+    > strategies
+        > task placement strategies
+        > task placement constraints
+
+    > this is only applicable with EC2 launch type not Fargate
+
+    > ECS steps to select an instance for the task
+        > identify the instances that satisfy the CPU, RAM, and port requirements
+        > identify the instances that satisfy the task placement constraints
+        > identify the instances that satisfy the task placement strategies
+        > select the instances for the task placement
+
+    > ECS task placement strategies
+        > binpack
+            > places tasks based on the least available amount of CPU or RAM
+            > reduces the number of instances in use
+            > useful for cost saving
+
+        > random
+            > places tasks randomly
+            > useful for testing
+
+        > spread
+            > places tasks evenly based on the specified value
+            > useful for availability
+
+            > i.e.
+                > spread across instances
+                > spread across AZs
+                > you can mix them together
+                > ...
+
+    > ECS task placement constraints
+        > distinctInstance
+            > places each task on a different container instance
+            > useful for availability
+
+        > memberOf
+            > places tasks on instances that satisfy an expression
+            > useful for compliance
+
+            > i.e.
+                > memberOf(attribute:ecs.availability-zone == us-east-1a)
+                > memberOf(attribute:ecs.instance-type == t2.micro)
+                > ...

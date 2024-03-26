@@ -1,0 +1,14 @@
+ECS rolling updates
+    > control how updates are deployed without downtime
+    > values
+        > min healthy percentage
+            > minimum number of tasks that must remain in running state during deployment
+        > max healthy percentage
+            > maximum number of tasks that can be in running state during deployment
+
+    > example
+        > min of 50% and max of 150%, 4 tasks are running
+            > shutdown 2 old tasks, 2 tasks are running
+            > start 2 new tasks, 4 tasks are running
+            > shutdown 2 old tasks, 2 new tasks are running
+            > start 2 new tasks, 4 tasks are running

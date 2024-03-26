@@ -1,0 +1,7 @@
+AWS copilot
+    > a cli tool that build, release and operate production ready containerized applications on AWS
+    > run apps on ECS, Fargate and app runner
+    > provision all the required AWS services 
+    > automate the deployment by CodePipeline
+    > deploy to multiple environments
+    > setups the troubleshooting, logs and health status

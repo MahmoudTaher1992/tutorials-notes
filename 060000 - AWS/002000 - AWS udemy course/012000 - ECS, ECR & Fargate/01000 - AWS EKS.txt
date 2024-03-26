@@ -1,0 +1,5 @@
+AWS AKS
+    > stands for Amazon Web Services Elastic Kubernetes Service
+    > a way to launch manged kubernetes clusters on AWS
+    > kubernetes is open source and similar to ECS
+    > supports EC2 and Fargate launch types

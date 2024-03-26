@@ -1,0 +1,35 @@
+ECS auto scaling
+    > automatically increase/decrease the desired number of ECS tasks
+    > ECS auto scaling uses AWS application auto scaling
+        > scaling based on
+            > CPU utilization
+            > memory utilization
+            > request count per application (from load balancer)
+    
+    > auto scaling types
+        > target tracking scaling
+            > scale based on target value for a specific cloudwatch metric
+                > metrics are the 3 metrics mentioned above
+        > step scaling 
+            > scale based on cloud watch alarms
+        > scheduled scaling
+            > scale based on a schedule
+
+    > ECS scaling is different than EC2 auto scaling
+        > ECS scaling is much easier
+
+    > Launch type auto scaling
+        > EC2 Launch type
+            > ECS will add EC2 instances to the ECS cluster
+                > Auto scaling group scaling
+                    > scale your ASG based on CPU utilization
+                    > add EC2 instances over time
+                > ECS cluster capacity provider
+                    > used to automatically provision and scale the infrastructure of the ECS task
+                    > Capacity provider paired with ASG
+                    > add EC2 instances when your are missing capacity
+
+    > auto scaling lifecycle
+        > when the value of the metric increases, it fires an alarm
+        > the alarm is picked up by the AWS application auto scaling
+        > it spins up a new ECS tasks or shuts down one

@@ -1,0 +1,47 @@
+ECS task definitions
+    > task definitions are metadata in JSON format that describe how a container should be run
+    > crucial information in the metadata
+        > image name    
+        > port binding for container and host
+        > memory and CPU requirements
+        > environment variables
+        > logging configuration
+        > IAM role
+        > networking information
+
+    > you can define up to 10 containers in a task definition
+    
+    > Port mappings
+        > EC2 launch type
+            > ports from the EC2 host will be dynamic
+            > Application load balancer is designed to know the dynamic ports and connect to them
+            > you must allow the ALB to connect to the EC2 instances on all ports (as the ports are dynamic)
+
+        > Fargate launch type
+            > each task will have it's own unique private IP address
+            > only define the container port
+            > the application load balancer will connect to the container port directly
+
+    > IAM role definition
+        > you will add the role definition in the task definition
+        > a new role will be created for each task definition
+
+    > Environment variables
+        > hardcoded
+        > SSM parameter store
+        > secrets manager
+
+        > you will define it in the task definition and it will be fetched and passed to the container
+
+    > Data volumes
+        > share data between containers in the same task
+        > works for both EC2 and Fargate launch types
+        > EC2 task
+            > using the host EC2 instance storage
+            > data are tied to the lifecycle of the EC2 instance
+        > Fargate task
+            > using any storage
+                > EBS
+                > EFS
+                > ephemeral storage (storage from fargate)
+        

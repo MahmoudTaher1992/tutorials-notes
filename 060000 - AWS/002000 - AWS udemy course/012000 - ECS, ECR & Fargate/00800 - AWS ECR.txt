@@ -1,0 +1,6 @@
+AWS ECR
+    > Elastic Container Registry
+    > Docker image storage
+    > Private and public Docker registry
+    > Fully integrated with ECS
+    > Access controlled with IAM

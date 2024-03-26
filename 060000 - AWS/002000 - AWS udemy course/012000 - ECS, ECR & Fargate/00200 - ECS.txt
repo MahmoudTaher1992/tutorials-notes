@@ -35,3 +35,43 @@ ECS
                     > ...
 
         > when a service needs the location of another service, it can query the cloud map
+
+
+    > ECS launch types
+        > EC2
+            > you must provision and maintain the infrastructure
+            > each ec2 instance must run the ECS agent
+            > ECS will take it from there, start and stop containers as needed on the EC2 instances
+
+        > Fargate
+            > ECS will take care of provisioning and maintaining the infrastructure
+            > it is serverless
+            > you configure it by creating the task definitions
+
+    > ECS task 
+        > IAM roles
+            > roles should be given to the ECS agent to deal with other AWS services
+                > i.e.
+                    > cloudwatch
+                    > ECS
+                    > ECR
+                    > secrets manager
+                    > SSM parameter store
+                    > ...
+            > roles should be given to
+                > ECS agent
+                > ECS task
+                    > each task should have it's own distinguished role
+
+        > load balancer integration
+            > you can integrate the ECS service with a load balancer
+                > application load balancer
+                > network load balancer
+            > the load balancer will distribute the traffic to the tasks
+            > you can make the public call the load balancer and then it will be directed to the tasks
+
+    > ECS data volumes
+        > you can use EFS to share data between tasks (across all zones)
+        > works with both launch types
+        > share storage between containers
+        > amazon s3 can not be mounted as a file system
