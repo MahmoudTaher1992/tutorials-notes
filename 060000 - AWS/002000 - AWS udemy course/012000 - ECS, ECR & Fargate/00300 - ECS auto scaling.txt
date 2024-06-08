@@ -33,3 +33,39 @@ ECS auto scaling
         > when the value of the metric increases, it fires an alarm
         > the alarm is picked up by the AWS application auto scaling
         > it spins up a new ECS tasks or shuts down one
+
+    > automatic scaling is the ability to automatically increase/decrease the tasks count
+    > ECS uses application auto scaling to scale the tasks
+        > application auto scaling is a service that lets you automatically scale your services
+
+    > ECS publishes metrics to cloudwatch
+        > i.e.
+            > CPU utilization
+            > memory utilization
+            > request count per target
+
+        > you can use those metrics to scale out/in your ECS tasks
+            > scale out to meet the demand
+            > scale in to save money
+
+    > ECS auto scaling supports the following automatic scaling types
+        > target metric value
+            > you select a metric and set a target value
+            > ECS auto scaling service will create an alarms to fire when the target is exceeded
+            > based on the alarm the ECS service will scale out/in
+
+        > predefined increments based on cloudwatch alarms
+            > you can setup the scaling yourself, based on cloudwatch alarms
+            > it is a manual way to do the target metric value
+
+        > schedule
+            > scaling done based on a schedule
+
+        > considerations
+            > metrics are sent in 1 minute intervals
+            > the services send the metrics to cloudwatch
+            > alarms can not be fired without the metrics
+
+            > cool down period is time waited for the activity to take effect
+
+            > 

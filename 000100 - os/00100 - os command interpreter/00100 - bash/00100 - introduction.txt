@@ -1,0 +1,8 @@
+Introduction
+    > bash is a shell
+        > a shell allows you to enter a command and presents the output
+    > commands
+        > which bash
+            > gets you the type of bash that you are using
+        > echo $SHELL
+            > gets you the type of shell that you are using

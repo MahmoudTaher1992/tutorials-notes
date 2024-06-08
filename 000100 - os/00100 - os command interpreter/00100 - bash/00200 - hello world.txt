@@ -1,0 +1,22 @@
+hello world
+    > script file
+        > a script is a file containing a sequence of commands
+            > helps you automate tasks
+
+        > an editor is a tool that lets you create and edit files
+            > nano is a simple editor
+            > vim is a more advanced editor
+
+        > you have to mark the file as executable to run it
+            > sudo chmod +x test.sh
+
+        > extension
+            > you can use .sh or nothing !!
+
+        > shebang
+            > is the first line of the script
+            > it tells the shell what interpreter to use
+                > #!/bin/bash
+                > #!/bin/sh
+                > #!/usr/zsh
+

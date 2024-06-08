@@ -1,0 +1,66 @@
+if statement
+
+    > example
+
+        >
+            x=200
+            if [ $x -eq 200 ] 
+            then
+                echo "x is 200"
+            else
+                echo "x is not 200"
+            fi
+
+        >
+            if [ ! $x -eq 200 ] 
+            then
+                echo "x is not 200"
+            else
+                echo "x is 200"
+            fi
+
+        >
+            if [ $x -ne 200 ] 
+            then
+                echo "x is not 200"
+            else
+                echo "x is 200"
+            fi
+
+        >
+            if [ -f /etc/passwd ]
+            then
+                echo "file exists"
+            else
+                echo "file does not exist"
+            fi
+
+            > -f : file exists
+            > -e : directory exists
+
+    > operators
+        > -gt : greater than
+        > -lt : less than
+
+    > commands
+        > which 
+            > which command is used to find the location of a command/program
+            > example
+                > which ls
+                > which date
+
+        > command -v $commandName
+            > checks for the existence of a command
+            > it returns the command path if it exists
+
+        > test  
+            > test command is used to check the condition
+            > example
+                > test 10 -gt 5
+                > echo $?
+
+            > you can use brackets instead
+
+        > man
+            > opens the manual page of a command
+            > press q to exit

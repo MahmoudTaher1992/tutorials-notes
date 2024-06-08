@@ -1,0 +1,24 @@
+Introduction
+    > web transactions are critical to businesses and individuals and they must be secured
+    > effective and widely used security protocols are SSL and TLS
+    
+    > web security and electronic commerce
+        > it is essential to know why ssl was created
+        > the original motivation behind ssl creation was the internet
+        > the messages/requests over the internet passes through many devices from the source to the destination
+            > the messages can be intercepted and read by anyone
+            > nor the client or the server have any control on the path the message takes
+
+        > security challenges
+            > eavesdropping
+                > the messages can be intercepted and read by anyone
+            > user's identity
+            > message integrity
+
+    > history of ssl and TLS
+        > 
+
+    > ssl limitations 
+        > fundamental protocol limitations
+        > tool limitations
+        > environmental limitations

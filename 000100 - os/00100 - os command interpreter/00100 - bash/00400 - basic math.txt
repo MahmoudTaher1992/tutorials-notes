@@ -1,0 +1,8 @@
+basic math
+    > expr 10 + 30
+    > expr 10 - 30
+    > expr 10 / 30
+    > expr 10 \* 30
+        > because * is a special character in shell, you need to escape it with a backslash
+        
+    > expr myAge + 10

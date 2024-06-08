@@ -1,0 +1,115 @@
+Basic cryptography
+    > securing the web relies on cryptography (the same way used for communication security for centuries)
+    > communications security is based on cryptography
+        > cryptography relies on mathematics
+
+    > using cryptography
+        > cryptography word is derived from the greek words secret writing
+        > it is the task of keeping the information secret
+        > cryptography is also used to
+            > keeping secrets
+                > by encrypting the message so that only the intended recipient can read it after decrypting it
+            > proving identity
+                > knowing that the message is from the intended sender
+            > verifying information
+                > making sure that the message has not been altered
+
+                > it is done by a cryptographic function called the hash function
+                    > it gives a summary of the message
+                    > if the message is altered the hash function result will change and the receiver will know that the message is altered
+
+    > types of cryptography
+        > one essential element of cryptography is using a secret codes (Keys) that only the sender and the receiver know
+        > cryptography falls into two categories
+            > secret key cryptography
+                > also known as symmetric key cryptography
+                > the same key is used for encryption and decryption
+
+            > public key cryptography
+                > overcome the limitations of secret key cryptography (the key exchange security problem)
+                > also known as asymmetric key cryptography
+                > there are 2 keys instead of one duplicated key
+                    > public key
+                        > used for encryption
+                        > can be shared with anyone, doesn't need to be kept secret
+                    > private key
+                        > used for decryption
+                        > must be kept secret
+
+                > analogy
+                    > the pocket calculator can be used to multiply two numbers, but it cannot be used to get all the factors of a number
+                
+                > reverse 
+                    > some algorithms allow the public key to decrypted the message encrypted by the private key
+                        > like rsa
+                    > this feature can be used to prove identity
+                        > if the client decrypts a well known message, then the server is the sender because he is the only one with the private key
+                    > this feature can be used to provide a digital signature 
+                        > we can know that the encrypted message is only from the server, thus it is a signature
+
+                    > some public keys algorithms are used for digital signing only
+                        > like dsa
+
+            > symmetric and asymmetric key cryptography
+                > symmetric key cryptography is faster than asymmetric key cryptography
+                > asymmetric key cryptography is used to exchange the symmetric key
+                    > the symmetric key is created by the client, encrypted by the public key and sent to the receiver
+                    > the receiver decrypts the symmetric key using the private key
+                    > the symmetric key is used to exchange the messages
+
+    > key management
+        > what happens if a stranger used the public key to encrypt a massage and sends it to the server
+            > public key certificates and certificate authorities are used to avoid this problem
+
+        > public key certificates
+            > makes sure that the public key is from the intended sender
+
+            > it is equivalent to a driving license 
+                > identify the subject by including the subject's name
+                > assert key information about the subject
+                > affirms the subject's public key 
+
+            > issued by certificate authorities (trusted parties)
+
+            > contents
+                > version
+                > serial number
+                > algorithm id
+                > issuer
+                    > the certificate authority
+                > validity period
+                    > after which it is invalid
+                > subject
+                > subject public key
+                > issuer unique identifier
+                > subject unique identifier
+                > extensions
+                > signature
+                    > a digital signature of the certificate content
+                    > signed with the issuer's private key
+                        > any one that has the issuer's public key can verify the signature and make sure that this certificate is issued by the issuer
+
+        > Certificate authority
+            > is the issuer of the public key certificates
+            > plays an important role in issuing trust between a community of users
+            > Certificate authority signs the certificate and asset the validity of the certificate contents
+            > Certificates for the CAs themselves are self signed
+            > Any party that receives a certificate can verify the signature using the CA's public key
+            > if the certificate is valid, the receiver can trust the public key
+        
+        > Certificate hierarchies
+            > a scalability solution to the public key certificates issuing and verification
+            > The CA doesn't have to sign all the certificates, instead it delegates the signing to an intermediate CA
+            > you can verify the intermediate CA certificate using the root CA certificate
+        
+        > Certificate revocation
+            > what happens if the private key is compromised
+                > the certificate should be revoked
+            > Certificate revocation list (CRL)
+                > a list of revoked certificates
+                > the client should check the CRL before using the certificate
+            > Online Certificate Status Protocol (OCSP)
+                > a protocol to check the certificate status
+                > the client sends the certificate to the OCSP server and the server responds with the certificate status
+
+

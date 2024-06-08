@@ -1,0 +1,4 @@
+apt
+    > sudo apt update
+        > updates the list of packages available for installation
+        

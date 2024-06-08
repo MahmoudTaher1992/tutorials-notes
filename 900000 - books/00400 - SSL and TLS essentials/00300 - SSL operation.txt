@@ -1,0 +1,178 @@
+SSL operation
+    > SSL roles
+        > client
+            > the system that initiates the SSL connection
+            > usually it is the browser
+            > it has to propose the set of ssl options to choose from
+        > server
+            > usually it is the web server
+            > selects from the proposed options
+
+    > SSL messages
+        > the communication method between the client and the server    
+        > messages types
+            > alert
+                > informs the other party about a security breach or a communication failure
+            > application data
+                > encrypted and authenticated data
+            > certificate
+                > contains the public key of the sender
+            > certificate request
+                > requests the certificate from the other party
+            > certificate verify
+                > a messages that confirms the hold of the corresponding private key
+            > Change cipher spec
+                > an indication to begin using the agreed-upon security services
+            > ClientHello
+                > the first message sent by the client
+                > contains the proposed options
+            > ClientKeyExchange
+                > the message that contains the symmetric key encrypted with the public key of the server
+            > Finished
+                > the message that confirms the end of the handshake
+            > HelloRequest
+                > a message that requests the other party to start the handshake
+            > ServerHello
+                > the message that contains the selected options
+            > ServerHelloDone
+                > a message that says that the server has all the data required from the client
+            > ServerKeyExchange
+                > the message that contains the public key of the server
+
+    > Establishing encrypted communications
+        > ClientHello
+            > the client starts the communication between two parties
+            > it contains the proposed options (security options)
+            > components
+                > version
+                    > the highest version of the SSL protocol that the client supports
+                    > the server can choose this version or a lower version
+                    > the client can abandon the communication attempt if the server chooses a lower version
+                > random number
+                    > needed for cryptographic operations
+                > session id
+                    > the id of the session
+                > cipher suites
+                    > the list of the proposed cryptographic services (cipher suites)
+                    > the server chooses one of them
+                > compression methods
+                    > the list of the proposed compression methods
+        
+        > ServerHello
+            > the final decision of the server (from the proposed options)
+            > components
+                > version
+                    > the version of the SSL protocol that the server has chosen
+                > random number
+                    > needed for cryptographic operations
+                > session id
+                    > the id of the session
+                > cipher suite
+                    > the chosen cryptographic service
+                > compression method
+                    > the chosen compression method
+
+        > ServerKeyExchange
+            > contains the public key of the server
+            > not encrypted
+
+        > ServerHelloDone
+            > a message that says that the server choose from the client options and is ready to proceed
+
+        > ClientKeyExchange
+            > the client sends the symmetric key encrypted with the public key of the server
+            > the encryption protects the symmetric key
+            > the preliminary ssl negotiation is complete
+
+        > ChangeCipherSpec
+            > more details about the security services are exchanged
+
+        > Finished
+            > sent by the client and the server to each other
+            > verifies that the connection is successful and the connection is not compromised
+            > it is encrypted and authenticated to make sure that it is not compromised
+
+    > Ending secure communications
+        > CloserAlert message is sent to each other to close the connection
+        > it helps against truncation attacks
+
+    > Authenticating the server's identity
+        > to authenticate the server, the client requests the server's certificate
+        > the server needs authentication because the client will send the sensitive data to the server
+        > messages added to the workflow
+            > Certificate instead of ServerKeyExchange
+                > contains the public key of the server within the certificate chain
+                > The chain starts with the server's certificate and ends with the root certificate
+                > the client has the responsibility to verify the certificate chain that includes
+                    > certificate signature
+                    > certificate expiration
+                    > certificate revocation
+                > the browser store a list of the public keys of the root certificates and uses them to verify the certificate chain
+
+                > the public key of the server included in the certificate is used to encrypt the symmetric key afterwards
+
+    > Separating encryption from authentication
+        > the public key sent in the certificate is used for authentication and for signing, but not for encryption
+        > even if the key is for both uses, we can not use it for encryption for legal purposes
+        > there is an additional step that is added after Certificate
+            > ServerKeyExchange
+                > contains the public key of the server
+                > the public key is used to encrypt the symmetric key not for signing purposes
+                > this public key is signed by the signing public key in the certificate
+
+    > Authenticating the client's identity
+        > additional steps
+            > CertificateRequest
+                > the server requests the client's certificate to authenticate the client
+                > must be after the Certificate message (server')
+                    > the client should authenticate the server first and then give his certificate
+
+                > fields
+                    > certificate types
+                        > the types of the certificates that the server accepts
+                    > distinguished names
+                        > the list of the certificate authorities that the server trusts
+
+            > Certificate (from the client)
+                > the client sends his certificate to the server
+                > the certificate contains the public key of the client
+                > the server can verify the certificate chain of the client
+
+                > if the client didn't send the certificate, the server can continue the communication or terminate it
+                > the server may respond with NoCertificateAlert
+
+                > the client's public key is used only for authentication and signatures, not for encryption
+
+            > CertificateVerify
+                > the client sends a message that contains the hash of the previous messages signed with the client's private key
+                    > it must follow the ClientKeyExchange message as it takes the hash from it
+                > the server can verify the signature with the client's public key
+
+    > the final steps are
+        > ClientHello (from client)
+        > ServerHello (from server)
+        > Certificate (from server)
+        > CertificateRequest (from server)
+        > ServerKeyExchange (from server)
+        > ServerHelloDone (from server)
+        > Certificate (from client)
+        > ClientKeyExchange (from client)
+        > CertificateVerify (from client)
+        > ChangeCipherSpec (from client)
+        > Finished (from client)
+        > ChangeCipherSpec (from server)
+        > Finished (from server)
+
+    > Resuming a previous session
+        > it is complex to establish ssl communication
+        > to minimize the overhead, the client can resume a previous session
+        > it is less secure than establishing new session, but it is faster. it should be used wisely
+        > messages
+            > ClientHello
+                > contains the session id of the previous session
+            > ServerHello
+                > the server can accept the session id and resume the session
+            > ChangeCipherSpec (from server)
+            > Finished (from server)
+            > ChangeCipherSpec (from client)
+            > Finished (from client)

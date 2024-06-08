@@ -1,0 +1,10 @@
+environment 
+    > change the scenery
+        > the environment is important to freshen up your mind
+        > changing the workspace will increase productivity
+            > i.e.
+                > go to a coffee shop
+                > ...
+
+    > work from home
+        > mixing it with work in an office may increase your productivity

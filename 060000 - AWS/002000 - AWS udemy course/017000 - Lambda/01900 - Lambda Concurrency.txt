@@ -19,3 +19,23 @@ Lambda Concurrency
 
             > the number of pre-initialized environments you want to allocate to your function
                 > those environments are prepared to respond immediately to incoming requests
+
+    > concurrency
+        > the number of in flight request that the lambda function is handling at the same time
+        > for each concurrent request, lambda function starts a new instance of the execution environment
+        > lambda function starts new environments until the account concurrency limit is reached
+        > the limit is 1000 concurrent executions across all functions in the region
+            > this limit can be increased by contacting AWS support
+        
+        > lambda invokes your function in secure and isolated execution environment
+            > lambda first initializes the execution environment (init phase)
+                > here the code is loaded and the code outside the handler is executed
+            > then it invokes the function (invoke phase)
+                > the code inside the handler is executed
+
+            > during the entire process, the execution environment is busy and cannot be reused
+            > when lambda function finishes the first execution, it will be ready to handle another request without initializing the environment again
+
+        > when a new request comes, lambda will check if there is an available pre initialized environment
+            > if there is, it will invoke the function
+            > if there is not, it will initialize a new environment and then invoke the function

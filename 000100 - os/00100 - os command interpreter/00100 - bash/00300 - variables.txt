@@ -1,0 +1,31 @@
+variables
+    > declaration
+        > myName="Mahmoud Taher"
+
+    > usage
+        > echo $myName
+        > echo "My name is $myName"
+        > echo 'My name is $myName' WILL NOT WORK
+            > single quotes will not allow variable expansion
+            > double quotes will allow variable expansion
+
+    > variables are tied to the shell session
+        > if you close the terminal, the variable will be lost
+
+    > store the output of a sub shell in a variable
+        > myName=$(whoami)
+        > myName=$(date)
+        > echo $myName
+
+    > default variables
+        > $USER
+            > name of the logged in user
+        > $HOME
+            > the home directory
+
+    > naming conventions
+        > environment variables are usually in uppercase
+        > user defined variables are usually in lowercase
+
+    > list all the variables
+        > env
