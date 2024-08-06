@@ -1,0 +1,81 @@
+working with files
+    > file permissions
+        > linux is a multi user system
+        > two factors affect the permissions of a file
+            > file ownership
+            > file permission
+
+        > file ownership in linux
+            > every file or directory in linux has 3 types of owners
+                > user owner
+                    > the user who created the file
+                > group owner
+                    > the group to which the user owner belongs
+                > other owner
+                    > all other users who are not the user owner or the group owner
+
+        > file permissions in linux
+            > there are 3 types of permissions in linux
+                > read
+                    > the permission to read the contents of the file
+                > write
+                    > the permission to write to the file
+                > execute
+                    > the permission to execute the file or enter a directory
+
+        > ls -l
+            > is the command to list the files in a directory with their permissions
+            > -rw-r--r--@  1 taher  staff     175817 Jun 29 23:16 Screenshot 2024-06-29 at 11.16.31 PM.png
+                > the first character is the file type
+                    > - for a file
+                    > d for a directory
+
+                > the next 9 characters are the permissions
+                    > the first 3 characters are the user owner's permissions
+                    > the next 3 characters are the group owner's permissions
+                    > the last 3 characters are the other owner's permissions
+
+                > the next column is the number of hard links to the file
+                > the next column is the user owner
+                > the next column is the group owner
+                > the next column is the size of the file
+                > the next column is the date and time the file was last modified
+                > the last column is the name of the file
+
+        > changing file permissions
+            > chmod
+                > change mode of access
+
+        > change file ownership
+            > chown <new_user_name> <filename>
+            > chown :<new_user_group> <filename>
+            > chown <new_user_name>:<new_user_group> <filename>
+            > chgrp <new_user_group> <filename
+
+    > archiving and compressing
+        > the process of combining multiple files and directories into a single file
+        > tools
+            > tar
+            > gzip
+            > bzip2
+        
+        > tools can be used to archive and unarchive files
+
+    > copying and renaming
+        > cp
+            > copy files and directories
+        > mv
+            > move files and directories
+            > rename files and directories
+
+    > soft and hard links
+        > soft links
+            > a pointer to a file
+            > if the original file is deleted, the soft link is broken
+
+        > hard links
+            > if the original file is deleted, the hard link is not broken and the data is still accessible
+
+        > commands
+            > ln source_file.txt hard_link.txt
+            > ln -s source_file.txt soft_link.txt

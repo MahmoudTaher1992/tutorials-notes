@@ -1,0 +1,52 @@
+Shell and other basics
+    > command path
+        > the variable contains a list of directories that contain the commands
+        > the paths are separated by semi colons
+        > when a command is entered, the shell will look in the directories in the path variable for the command
+            > linux commands are files stored in directories
+            > if you want to execute a command you have to enter the whole directory
+            > instead, you can add the directory in the $PATH variable and type only the name of the command
+            > the shell will search by the order of the paths in the $PATH variable
+
+    > environment variables
+        > dynamic named values
+        > exists in every shell session
+        > env
+            > command to show all the environment variables
+
+    > man <command>
+        > stands for manual
+        > shows the manual for the command
+
+    > redirects
+        > redirection is the mechanism of directing the output of a command to a file or another command
+        > in linux each process has
+            > standard input (stdin)
+                > where the process reads its input
+            > standard output (stdout)
+                > where the process writes its output
+                > goes to the terminal by default
+            > standard error (stderr)
+                > where the process writes its error messages
+                > goes to the terminal by default
+        > redirection allows you to change the default behavior of the standard input, output, and error
+            > to output the result of a command to a file
+                > command > file            
+            > to output the stderr of a command to a file
+                > command > file 2>errorFile
+
+
+    > sudo <command>
+        > stands for super user do
+        > executes the command as the super user
+        > also known as root user
+        > represents a user with the highest privileges and complete control over the system
+            > i.e.
+                > ability to modify system configurations
+                > change other user’s passwords
+                > install and remove software
+                > ...
+        > super user can cause a series damage
+
+    > su
+        > stands for switch user to root

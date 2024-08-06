@@ -1,0 +1,4 @@
+stores
+    > keystore
+    > truststore
+    > keychain access

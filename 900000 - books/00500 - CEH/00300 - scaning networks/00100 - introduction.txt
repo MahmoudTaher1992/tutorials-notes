@@ -1,0 +1,6 @@
+network scanning
+    > scanning network gives more information about the target
+    > this info will help in determining the attack strategy
+    
+    > overview
+        > it is the process of gathering detailed information about the target, using complex and aggressive reconnaissance techniques

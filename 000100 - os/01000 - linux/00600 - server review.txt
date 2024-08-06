@@ -1,0 +1,48 @@
+server review
+    > introduction
+        > check on the server status
+    
+    > uptime
+        > critical metric that gives an indicator about the performance of the server
+            > is it slow or fast
+        > uptime
+            > how long it is working without any restart or shutdown
+        > load average 
+            > determines the amount of computation work the computer is performing
+            > iti s displayed in 3 values: 1 minute, 5 minutes, 15 minutes
+
+    > tail /var/log/auth.log
+        > auth logs
+        > record all authentication-related events and activities which have occurred on the server
+            > i.e.
+                > system logins
+                > password changes
+                > sudo commands
+        > important for security purposes
+            > check for any unauthorized access
+            > check for any brute force attacks
+            > check for any failed login attempts
+
+    > services running
+        > AKA daemons
+        > they are programs that run in the background
+        > systemd
+            > service manager for controlling services
+            > commands
+                > systemctl status
+                > systemctl start
+                > systemctl stop
+                > systemctl restart
+                > systemctl enable
+                > systemctl disable
+                > systemctl --type=service
+        > there are many service management tools that you can use
+            > used to explore and troubleshoot services
+            > i.e 
+                > systemctl, service, netstat, ss and lsof.
+
+    > available memory and disk
+        > system health checker for memory and disk
+        > tools
+            > free, vmstat, and top
+

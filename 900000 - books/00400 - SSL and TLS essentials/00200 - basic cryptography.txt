@@ -92,7 +92,7 @@ Basic cryptography
         > Certificate authority
             > is the issuer of the public key certificates
             > plays an important role in issuing trust between a community of users
-            > Certificate authority signs the certificate and asset the validity of the certificate contents
+            > Certificate authority signs the certificate (with it's private key) and asset the validity of the certificate contents
             > Certificates for the CAs themselves are self signed
             > Any party that receives a certificate can verify the signature using the CA's public key
             > if the certificate is valid, the receiver can trust the public key

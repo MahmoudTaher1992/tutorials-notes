@@ -1,0 +1,76 @@
+text processing
+    > is an essential task in dealing with files in linux
+    
+    > cut
+        > allows you to cut out sections from each line of a file
+
+    > paste
+        > combine lines from two files by columns not by lines
+
+    > sort
+        > sort the contents of a file (using the ASCII values)
+        > takes the input as a file and outputs the sorted content to the stdout
+
+    > tr
+        > translate or substitutes characters
+        > i.e.
+            > echo 'hello' | tr 'a-z' 'A-Z'
+                > HELLO
+
+    > head
+        > allows the user to output the first part of a file (head)
+        > lets you examine the beginning of a file without loading the entire file into memory
+        
+    > tail
+        > allows the user to output the last part of a file (tail)
+        > lets you examine the end of a file without loading the entire file into memory
+
+    > join
+        > combine lines from two files by lines not by columns
+
+    > split
+        > splits a file into smaller files
+
+    > pipe
+        > connect 2 or more commands together
+        > the output of the first command is the input of the second command
+        > i.e.
+            > ls -l | grep 'txt'
+
+    > tee
+        > reads from standard input and writes to standard output and files
+
+    > nl
+        > number lines of a file
+        > takes the file as input and outputs the file with each line numbered
+
+    > wc
+        > word count
+        > counts the number of lines, words, and characters in a file
+        > i.e.
+            > wc test-001.txt
+                > 27     282    1647 test-001.txt
+
+    > expand
+        > convert tabs to spaces
+        > i.e.
+            > expand -t 4 test-001.txt
+
+    > unexpand
+        > opposite of expand
+
+    > uniq
+        > removes duplicate lines from a file or stdin
+
+    > grep
+        > stands for (Global Regular Expression Print)
+        > search for a pattern in a file, and print the lines that contain the pattern
+        > i.e.
+            > grep "pattern" fileName
+
+    > awk
+        > a powerful programming language for manipulating files
+        > the command is named after the authors Alfred Aho, Peter Weinberger, and Brian Kernighan
+        > i.e.
+            > awk '{print $1}' test-001.txt
+                > prints the first column of the file

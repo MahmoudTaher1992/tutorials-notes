@@ -1,0 +1,13 @@
+process management 
+    > background and foreground processes
+        > in linux the process in
+            > foreground is the process that is running and connected to the terminal
+            > background is otherwise
+                > if the process needs an input, it will stop until it is back in the foreground
+
+        > to send a process to the background
+            > ctrl+z to stop the process
+            > bg to send it to the background
+            > jobs to see the background processes
+            > fg to bring it back to the foreground
+            > command & to run the command in the background

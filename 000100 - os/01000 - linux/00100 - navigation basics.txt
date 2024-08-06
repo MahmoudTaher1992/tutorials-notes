@@ -1,0 +1,38 @@
+navigation basics
+    > cd
+        > stands for change directory
+        > changes the current directory
+
+    > man <command>
+        > stands for manual
+        > shows the manual for the command
+
+    > ~
+        > tilda sign
+        > $HOME is the same
+        > represents the home directory
+            > the home directory is the directory where the user starts in when he opens a terminal
+
+    > pwd
+        > stands for print working directory
+
+    > ls
+        > stands for list
+        > lists the files and directories in the current directory
+
+    > mv [OPTIONS] SOURCE DESTINATION
+        > moves files and directories
+
+    > touch 
+        > change file access and modification times
+        > if the file does not exist, it will be created
+
+    > cat 
+        > concatenate files and print on the standard output
+
+    > rm
+        > remove files or directories
+
+    > rmdir
+        > remove directories
+    
