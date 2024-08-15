@@ -4,3 +4,26 @@ network scanning
     
     > overview
         > it is the process of gathering detailed information about the target, using complex and aggressive reconnaissance techniques
+        > network scanning refers to a set of procedures used to identify
+            > hosts
+            > ports
+            > services
+            > vulnerabilities
+            > other characteristics of a network
+
+            > active machines in a network
+            > OS running on the machines
+
+        > important step (information gathering)
+            > used afterwards to build an attack strategy
+    
+    > types of network scanning
+        > Port scanning
+            > lists the open ports and services
+            > done by sending messages trying to break in
+            > involves connecting to TCP and UDP ports, to determine whether the services are running or in a listening state
+                > the listening state provides info about the OS and the application currently in use
+            > sometimes active services that are listening may allow unauthorized access to the system
+
+        > Network scanning
+            > 

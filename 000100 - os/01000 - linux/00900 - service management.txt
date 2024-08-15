@@ -1,0 +1,25 @@
+Service management
+    > a service is a process that runs in the background and provides some functionality
+    > services are often started during the booting and continue in the background
+
+    > checking service status
+        > systemctl status <service_name>
+        > service <service_name> status
+
+    > start a service
+        > systemctl start <service_name>
+        > service <service_name> start
+
+    > stop a service
+        > systemctl stop <service_name>
+        > service <service_name> stop
+
+    > restart a service        
+        > systemctl restart <service_name>
+        > service <service_name> restart
+
+    > checking logs
+        > journalctl -u <service_name>
+
+    > creating a service
+        > you can create a service by creating a file in /etc/systemd/system/ directory

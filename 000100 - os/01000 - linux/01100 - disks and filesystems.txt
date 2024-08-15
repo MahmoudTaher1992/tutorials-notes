@@ -1,0 +1,22 @@
+Disks and File systems
+    > Disks
+        > storage devices
+        > listing disks
+            > lsblk
+
+    > Inode
+        > index node
+        > a unique inode is assigned to each file and directory stores
+            > metadata
+                > file type
+                > owner
+                > group
+                > permissions
+                > timestamps
+                > size
+                > location of data blocks
+        > identified by an inode number
+        > helpful when dealing with advanced file operations, such as creating links or recovering deleted files
+
+    > File systems
+        > 

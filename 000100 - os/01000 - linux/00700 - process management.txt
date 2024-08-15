@@ -11,3 +11,38 @@ process management
             > jobs to see the background processes
             > fg to bring it back to the foreground
             > command & to run the command in the background
+
+    > Listing and Finding Processes
+        > process are the running instances of programs
+        > tools
+            > ps
+            > top
+            > htop
+
+    > process signals
+        > signals are messages sent to processes to announce events
+        > i.e.
+            > SIGKILL
+                > signal sent to a process to kill it at once
+            > SIGSTOP
+                > signal sent to a process to stop it and resume it later
+            > SIGINT
+                > signal sent to a process to interrupt it from the terminal
+            > ...
+
+    > killing processes
+        > kill
+            > kill -9 <pid>
+            > kill -SIGKILL <pid>
+
+    > process priorities
+        > each process has it's own priority
+        > it is adjustable with the nice command
+        > nice
+            > nice -n <priority> <command>
+            > nice -n 10 <command>
+            > nice -n -10 <command>
+
+    > process forking
+        > is a processing of creating a duplicate process from an existing one, and running it under the original one
+        > the forked child process returns a value that represents it's execution status

@@ -1,0 +1,29 @@
+package management
+    > a package is a collection of files and directories that are bundled together
+    > package management is the process of installing (with it's dependencies), updating, and removing packages
+    > i.e.
+        > apt
+        > apt-get
+        > ...
+
+    > repositories
+        > the storage place for packages
+        > it is remote server that contains a collection of software packages
+
+    > snap
+        > focuses on providing software as self-contained packages (known as ‘Snaps’) that include all of their dependencies
+        > repository
+            > Snapcraft store
+
+    > finding and installing packages
+        > sudo apt update
+        > sudo apt install <package-name>
+
+    > listing installed packages 
+        > sudo apt list --installed
+
+    > upgrading packages
+        > sudo apt upgrade
+
+    > removing packages
+        > sudo apt remove <package-name>

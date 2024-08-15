@@ -1,0 +1,25 @@
+User management
+    > users
+        > list system users 
+            > cat /etc/passwd
+
+        > add a user
+            > useradd <username>
+
+        > modify a user
+            > usermod <username>
+
+        > delete a user
+            > userdel <username>
+
+    > groups
+        > list groups for a user
+            > groups <username>
+        > list all groups
+            > cat /etc/group
+
+        > commands
+            > groupadd <groupname>
+            > groupmod <groupname>
+            > groupdel <groupname>
+            
