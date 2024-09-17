@@ -1,0 +1,11 @@
+kubernetes introduction
+    > platform designed for automating the deployment, scaling, and operation of application containers
+
+    > k8s features
+        > Automated Deployment
+        > Automated scaling
+        > Load balancing
+        > Self-Healing
+        > Storage Orchestration
+        > Automated Rollbacks and Rollouts
+        > Secret and Configuration Management

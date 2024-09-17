@@ -1,0 +1,33 @@
+Booting Linux
+    > refers to the process that the Linux operating system undergoes when a computer system is powered on
+    > when you press the power button
+        > the system boot loader is loaded into memory from a specific location
+        > starts the main OS
+        > the process includes several stages
+            > POST (Power-On Self Test)
+            > MBR (Master Boot Record)
+            > GRUB (GRand Unified Bootloader)
+            > Kernel, Init process
+            > the GUI or command line interface where users interact.
+
+        > during  this process
+            > the system checks for hardware components
+            > loads the necessary drivers
+            > mounts the file system
+            > necessary services and process are started
+            > the user is presented with a login screen
+
+    > Logs
+        > help admins to troubleshoot issues
+        > documents every thing
+        > boot time is logged in /var/log/boot.log
+        > Many Linux distributions use systemd logging system, journalctl
+
+    > Boot loader
+        > loads the kernal of the OS into memory
+            > the kernal then initializes the hardware and loads the drivers
+            > starts the schedular and the init process
+        > i.e.
+            > LILO
+            > GRUB
+        > Allows to change between different OSs installed on the same machine

@@ -1,0 +1,26 @@
+Networking
+    > TCP/IP
+        > a fundamental framework for computer networking
+        > stands for Transmission Control Protocol/Internet Protocol
+        > the core protocols of the Internet
+        > defines how data is transmitted over networks, ensuring reliable communication between devices
+
+        > consists of four layers
+            > Application
+            > Transport
+            > Internet
+            > Link
+
+        > designed and developed in the department of defense, USA
+        
+        > TCP/IP function
+            > transfer the data from one device to another
+            > ensuring the reliability and the integrity of the data
+            > it divides the data into packets at the source and reassembles them at the destination
+
+        > TCP and IP protocols
+            > TCP is responsible breaking, assembling the data and making sure it is delivered correctly
+            > IP is responsible for routing the data packets across the network to the correct destination
+
+    > Subnetting
+        > the proses of dividing a network into smaller networks, known as subnets 

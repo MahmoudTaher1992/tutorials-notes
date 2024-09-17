@@ -19,4 +19,73 @@ Disks and File systems
         > helpful when dealing with advanced file operations, such as creating links or recovering deleted files
 
     > File systems
-        > 
+        > a system that manages, stores, and retrieves your data efficiently
+        > Linux File System Structure (3 layers)
+            > Logical File System
+                > acts as the interface between the user applications and the file system itself
+                > does operations such as opening, reading, and closing files
+                > user-friendly front-end
+            > Virtual File System
+                > enables the concurrent operation of multiple instances of physical file systems
+                > provides a common interface for all file systems
+            > Physical File System
+                > responsible for the tangible management and storage of physical memory blocks on the disk
+                > handles the low-level details of storing and retrieving data
+                > interacts directly with the hardware components
+
+        > Characteristics of a File System
+            > Space Management
+                > how the data is stored on a storage device
+            > Filename restrictions
+                > name length
+                > character set
+                > case sensitivity
+            > Directory
+            > metadata
+                > info about the file
+            > utilities
+                > tools to manage the file system
+            
+        > file systems types
+            > ext2
+            > ext3
+            > ext4
+            > exFat
+            > NTFS
+            > FAT32
+            > ...
+    
+    > Mounts
+        > mounting in Linux refers to the process that allows the operating system to access data stored on underlying storage devices, such as hard drives or SSDs
+        > This process attaches a filesystem (available on some storage medium) to a specific directory (also known as a mount point) in the Linux directory tree
+
+        > mount command
+            > used for mounting filesystems
+            > When a specific filesystem is ‘mounted’ at a particular directory, the system can begin reading data from the device and interpreting it according to the filesystem’s rules.
+
+    > Adding disks
+        > when adding new disks to a Linux system, you need to prepare them first before you can use them:
+            > Partition the disk
+            > creating the filesystem on the partition
+            > mounting the filesystem
+
+        > commands
+            > lsblk
+                > list all block devices (disk and partitions)
+            > fdisk
+                > create a new partition on a disk
+            > mkfs.ext4
+                > create a new filesystem on a partition
+            > mount
+                > mount the filesystem to a directory
+
+    > swap
+        > a space on a disk that is used when the amount of physical RAM memory is full
+        > If the system needs more memory resources and the physical memory is full, inactive pages in memory are moved to the swap space.
+        > Swap space is a portion of a hard disk drive (HDD) that is used for virtual memory
+        > this will come with low performance as the disk is slower than the RAM
+        > swap can live in a partition or a file
+
+        > LVM
+            > Logical Volume Manager
+            > a framework of managing logical volumes, or filesystems, that is much more advanced than the traditional method of partitioning a disk into one or more segments
