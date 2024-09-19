@@ -2,10 +2,89 @@ kubernetes introduction
     > platform designed for automating the deployment, scaling, and operation of application containers
 
     > k8s features
-        > Automated Deployment
+        > Automated Deployment, Rollbacks and Rollouts
+            > automatically deploying changes to the application
+            > by
+                > Declarative Configuration
+                    > describes the desired state of the deployed application in a YAML file or JSON file
+                > Rolling updates
+                    > updating the application without downtime
+                    > by
+                        > creating a new instance of the application
+                        > and then destroying the old instance
+                > Automated Rollbacks
+                    > If something goes wrong during an update, Kubernetes can automatically roll back to a previous stable version.
         > Automated scaling
+            > automatically scaling the application based on the load
+            > by
+                > Horizontal Scaling
+                    > adding more pods
+                > Vertical Scaling
+                    > increasing the resources of the pod
+                > Cluster Scaling
+                    > adding more worker nodes
         > Load balancing
         > Self-Healing
         > Storage Orchestration
-        > Automated Rollbacks and Rollouts
         > Secret and Configuration Management
+        > portability
+            > the worker node can work on any cloud provider or system (windows, linux, ...)
+
+    > k8s components
+        > worker node
+            > provide the runtime environment for the containers to run in
+                > the app will run in a container, the container is in a pod, the pod is in a node
+            > Pod is the smallest unit in Kubernetes
+                > a pod can have one or more containers
+                > containers in a pod share the same network and storage
+
+            > worker node components
+                > container runtime
+                    > Container Runtime Interface (CRI)
+                    > the software that is responsible for running containers
+                    > i.e.
+                        > containerd (docker)
+                        > CRI-O
+                > kubelet (node agent)
+                    > a component that runs on each node in the cluster
+                    > maintain the desired state of the pods on its node
+                    > responsibilities
+                        > pods Management
+                            > receives specs from the API server
+                            > ensures that the containers described in those specs are running and healthy
+                            > spins up new containers in place of the failed ones (via Container Runtime Interface)
+                        > Node status reporting
+                            > reports the status of the node to the API server
+                > kube-proxy (Proxy)
+                    > a component that runs on each node in the cluster
+                    > maintains network rules on nodes
+                    > any network related operation is handled by kube-proxy
+                > Addons
+                    > adds additional features that are not part of the core Kubernetes features
+                    > i.e.
+                        > DNS
+                        > Web UI (Dashboard)
+                        > Container Resource Monitoring
+                        > Cluster-level Logging
+
+        > master node
+            > provides a runtime environment for the control plane that manages the worker nodes
+                > the control plane is the brain of the cluster
+                > you can communicates with the control plane to manage the cluster
+            > saves the state of the cluster on etcd database
+            > master node components
+                > kube-apiserver
+                    > the front end of the control plane
+                    > receives the requests from the users, validate and process them
+                    > stores the state of the cluster in etcd
+                    > the only component that communicates with etcd
+                > kube-scheduler
+                    > the scheduler is responsible for assigning pods to nodes based on the resource requirements of the pods
+                > kube-controller-manager
+                    > responsible for regulating the state of the cluster and changing it from the current state to the desired state
+                    > it also handles the node failures, by creating new pods on other nodes
+                > cloud-controller-manager
+                    > lets you link your cluster into your cloud provider's API
+                > etcd
+                    > a distributed key-value store that saves the state of the cluster
+                    > etcdctl is the command line tool to interact with etcd
