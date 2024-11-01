@@ -1,0 +1,12 @@
+Cloudformation resources
+    > required
+    > the core of cloudformation template
+    > represent the compoents that will be created and configured
+    > resources are declared and can reference each other
+    > Cloudformation handles the CRUD of the resources
+    > there are 700+ resource types
+    > identifiers are in form
+        > service-provider::service-name::data-type-names
+
+    > almost all AWS services are supported, but a few are not
+        > CloudFormation Custom Resources can be used to cover those few services

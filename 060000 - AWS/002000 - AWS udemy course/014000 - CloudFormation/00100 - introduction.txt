@@ -15,3 +15,71 @@
             > exported important value from the stack
             > displayed in format of key and value
             > you can export the values through the template file
+
+    > CDK benifits
+        > Infrastructure as code
+            > no manual resources creation 
+            > the infrastructure can be version controlled in git
+            > changes are reviewed before deplyment (in git by the team)
+
+        > Cost
+            > you can track the costs by tracking the ids of the resources
+            > you will have a better cost estimation from the template
+            > you can save the costs on dev environments by destroying them in off times and creating them in working times
+
+        > productivity
+            > create and destroy the environments on the fly
+            > create diagrams for the infrastructure from the template
+            > no need to figure the ordering and orchesteration (cloudformation will figure it out)
+
+        > seperation of concern
+            > create as many stacks as you want
+
+    > Don't reinvint the wheel
+        > use the templates and the guides on the internet
+        > use the documentations
+
+    > How cloudformation works ?
+        > templates must be uploaded to s3 and then referenced in the cloudformation
+        > templates can not be edited once they are uploaded, you have to upload a new version
+        > stacks are identified by a name
+        > deleting a stack deletes all the resources in the stack
+
+    > Deploying cloudformation template
+
+        > manual way
+            > edit the template by code editor or AWS infrastructure composer
+            > use the cloudformation console to input parameters and deploy the stack
+
+        > automated way
+            > editing templates in YAML file
+            > use the AWS CLI to deploy the stack
+            > integrate the cloudformation with the CI/CD pipeline
+
+    > Cloudformation components
+        > Template components
+            > AWSTemplateFormatVersion
+                > identifies the capabilities of the template
+
+            > Description
+                > comments about the template
+
+            > Resources (required)
+                > the resources that are defined in the template
+
+            > Parameters
+                > the values that are passed to the template at the time of creation
+                > dynamic values
+
+            > Mappings
+                > static values for the template
+
+            > Outputs
+                > the values that are exported from the stack (normally values from the created resources)
+
+            > Conditions
+                > list of conditions that are used to control the creation of resources
+
+        > Template helpers
+            > references
+            > functions

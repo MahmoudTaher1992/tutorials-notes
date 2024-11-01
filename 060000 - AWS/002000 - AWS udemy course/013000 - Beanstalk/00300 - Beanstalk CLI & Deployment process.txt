@@ -1,7 +1,7 @@
 Beanstalk CLI & Deployment process
     > an additional cli called "EB cli" which makes dealing with beanstalk easier
     > you can do what you want from the cli
-    > helpful if you wan tot automate the task from the pipelines
+    > helpful if you want to automate the task from the pipelines
 
     > Deployment process
         > package code as zip and describe dependencies

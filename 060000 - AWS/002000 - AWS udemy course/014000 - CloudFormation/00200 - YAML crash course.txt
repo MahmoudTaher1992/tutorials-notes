@@ -1,0 +1,25 @@
+YAML crash course
+    > YAML and JSON can be used in cloudformation
+    > JSON is very hard to use in cloudformation, YAML is great
+    
+    > features
+        > key pair values
+            > key: value
+        
+        > nested objects
+            > object:
+                key1: value1
+                key2: value2
+        
+        > supported array
+            > array:
+                - key1: value1
+                  key2: value2
+                  key3: value3
+
+        > multiline strings
+            > key: |
+                  multi line strings
+                  continuing multi line strings
+
+        > comments
