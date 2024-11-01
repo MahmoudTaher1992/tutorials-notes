@@ -1,0 +1,44 @@
+> k8s concepts
+    > pods
+        > smallest unit in kubernetes
+        > can contain one or more containers
+        > containers in a pod share the same network and storage, and can communicate with each other using localhost
+        > is a ephemeral unit, it can be created and destroyed at any time and is not designed to be persistent or accessible
+    
+    > nodes
+        > worker machines in the kubernetes cluster, can be physical or virtual
+        > managed by the master node's control plane
+        > can contain multiple pods
+        > the master node's control plane manages the worker nodes to ensure the desired state of the pods on the nodes
+        > can run on any cloud provider or system (windows, linux, ...)
+
+    > a cluster
+        > a set of nodes that run containerized applications
+        > managed by the master node's control plane
+    
+    > namespaces
+        > a way to tag a cluster
+
+    > service
+        > a way to expose an application running in a pod/pods to the outside world
+
+    > deployment
+        > used to tell kubernetes how to run the pods
+        > can be used to scale, rollout and rollback the pods
+    
+    > workload
+        > an application running in a pod/pods
+
+    > volume
+        > like a volume in docker
+        > a way to store data in kubernetes
+        > can be used to store data that needs to be persisted
+
+    > ReplicaSet
+        > a way to ensure that a specified number of pod replicas are running at any given time
+
+    > Ingress
+        > an API object that manages external access to the services in a cluster typically HTTP and HTTPS traffic
+
+    > orchestration
+        > the automation of much of the operations required to run a containerized application
