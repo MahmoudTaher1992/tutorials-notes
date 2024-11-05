@@ -1,0 +1,8 @@
+Service role
+    > CloudFormation needs a service role to create and manage resources on your behalf.
+    > Give the ability to users to CRUD resources even if they don't have the permission to do so.
+    > User must have iam:PassRole permission to pass the role to
+    
+    > Benifits
+        > achieve least privilege principle
+        > keeps the user with the least amount of permissions

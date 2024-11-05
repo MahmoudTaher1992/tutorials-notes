@@ -1,0 +1,15 @@
+Custom resources
+    > used to
+        > define resources that are not yet defined in cloudformation
+        > you will define custom provisioning logic for resources that are outside AWS
+        > have custom scripts running through lambda functions
+            > i.e.
+                > can be used to empty s3 buckets before template termination
+
+    > defined using 
+        > AWS::CloudFormation::CustomResource
+        > Custom::MyCustomResourceTypeName
+
+    > usually integrated using lambda function or SNS topics
+
+    > ServiceToken property is used to supply cloudformation with the end point that will be used to send requests

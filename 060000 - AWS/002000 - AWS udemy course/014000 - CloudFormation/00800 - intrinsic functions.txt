@@ -1,0 +1,53 @@
+Intrinsic functions
+    > examples
+        > Fn::Ref
+        > Fn::GetAtt
+        > Fn::FindInMap
+        > Fn::ImportValue
+        > Fn::Join
+        > Fn::Sub
+        > Fn::ForEach
+        > Fn::ToJsonString
+        > Condition functions
+            > Fn::If
+            > Fn::Not
+            > Fn::Equals
+            > Fn::And
+            > Fn::Or
+        > Fn::Base64
+        > Fn::Cidr
+        > Fn::GetAZs
+        > Fn::Select
+        > Fn::Split
+        > Fn::Transform
+        > Fn::Length
+    
+    > Fn::Ref
+        > can be used to reference a parameter or resource
+        > the shorthand for Ref is !Ref
+
+    > Fn::GetAtt
+        > attributes are attached to resources
+        > the shorthand for GetAtt is !GetAtt
+
+    > Fn::FindInMap
+        > used to find a value in a mapping
+        > the shorthand for FindInMap is !FindInMap
+            > i.e.
+                > !FindInMap [ MapName, TopLevelKey, SecondLevelKey ]
+
+    > Fn::ImportValue
+        > used to import values from other stacks
+        > the shorthand for ImportValue is !ImportValue
+
+    > Fn::Base64
+        > used to encode a string to base64
+        > the shorthand for Base64 is !Base64
+
+    > Conditional functions
+        > Fn::If
+            > used to conditionally create a resource
+            > the shorthand for If is !If
+                > i.e.
+                    > !If [ condition_name, value_if_true, value_if_false ]
+    

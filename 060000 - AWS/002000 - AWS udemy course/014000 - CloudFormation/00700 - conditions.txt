@@ -1,0 +1,18 @@
+Conditions
+    > used to control the creation of a resourse based on a condition
+    > common conditions are
+        > Environment (dev, test, prod)
+        > Region (us-east-1, us-west-2)
+        > any parameter value
+
+    > each condition can reference
+        > a parameter value
+        > a mapping value
+        > another condition
+
+    > intrinsic functions can be used to define conditions
+        > Fn::And
+        > Fn::Equals
+        > Fn::If
+        > Fn::Not
+        > Fn::Or

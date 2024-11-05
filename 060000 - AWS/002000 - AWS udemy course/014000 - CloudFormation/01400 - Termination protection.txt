@@ -1,0 +1,2 @@
+Termination protection
+    > Use termination protection if you want to protect the stack from accidental deletion actions

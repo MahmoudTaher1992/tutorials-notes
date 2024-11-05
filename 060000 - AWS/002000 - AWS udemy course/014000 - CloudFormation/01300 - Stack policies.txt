@@ -1,0 +1,5 @@
+Stack policies
+    > an extra layer of control/protection on the stack actions
+    > is a json document that defines the update actions that can be done by the stack
+    > the default policy is allow all updates on all resources
+    > all resources inside the stack are affected/protected by this policy

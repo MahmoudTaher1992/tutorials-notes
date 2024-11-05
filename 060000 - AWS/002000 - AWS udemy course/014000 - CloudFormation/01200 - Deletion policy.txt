@@ -1,0 +1,19 @@
+Deletion policy
+    > controls what happens to the resource if the template is deleted or some resources are removed from the template
+
+    > types
+        > DeletionPolicy=Delete
+            > the default value
+            > but it won't work with non empty s3 buckets
+
+        > DeletionPolicy=Retain
+            > preserves the resource from deletion
+
+        > DeletionPolicy=Snapshot   
+            > takes a snapshot before termination
+            > i.e.
+                > EBS Volume, ElastiCache Cluster, ElastiCache ReplicationGroup
+                > RDS DBInstance, RDS DBCluster, Redshift Cluster, Neptune DBCluster, DocumentDB DBCluster
+
+    > Works with any resource
+    > acts as an extra layer of protection

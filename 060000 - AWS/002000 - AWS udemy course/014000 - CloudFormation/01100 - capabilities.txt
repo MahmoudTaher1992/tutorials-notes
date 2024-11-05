@@ -1,0 +1,11 @@
+Capabilities
+    > For the cloudformation to CRUD some resources, a special permission is needed
+    
+    > IAM resources
+        > i.e. (IAM User, Role, Group, Policy, Access Keys, Instance Profile...)
+        > supply CAPABILITY_NAMED_IAM and CAPABILITY_IAM parameters
+
+    > Macros and NestedStacks
+        > supply CAPABILITY_AUTO_EXPAND parameter
+
+    > an exception will be thrown if the capabilities are not acknowledged while deploying a template

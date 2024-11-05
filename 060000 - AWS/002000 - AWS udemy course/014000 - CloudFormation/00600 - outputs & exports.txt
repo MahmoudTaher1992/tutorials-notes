@@ -1,0 +1,20 @@
+Outputs & exports
+    > declares optional outputs that can be imported by other stacks as inputs
+    > can be viewed in the AWS console or the CLI
+    > very useful in imporinting network info from network stacks
+        > i.e.
+            > VPC ID
+            > Subnet IDs
+    > the best way to allow collaboration between different stacks
+
+    > export by
+        > i.e.
+            > Export:
+                Name: "VPCID"
+
+    > import by
+        > i.e.
+            > Fn::ImportValue: "VPCID"
+
+    > you can not delete the underlaying stack until you delete all it's references
+        

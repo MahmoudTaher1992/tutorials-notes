@@ -1,0 +1,16 @@
+Rollbacks
+    > Stack creation fails
+        > default
+            > everything rolls back (gets deleted)
+        > another option
+            > disable rollback on failure
+                > resources are not deleted
+                > you can continue to troubleshoot
+
+    > Stack update fails
+        > everything rolls back to the previous known working state
+        > ability to see the logs to see what happened
+
+    > On rollback failure
+        > fix the resources manually
+        > issue ContinueUpdateRollback API from console or CLI
