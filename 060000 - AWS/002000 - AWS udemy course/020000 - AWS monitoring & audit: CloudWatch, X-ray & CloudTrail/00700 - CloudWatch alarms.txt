@@ -1,2 +1,32 @@
 CloudWatch alarms
-    > https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/learn/lecture/11851356#overview
+    > alarms are used to trigger notifications for any metric in CloudWatch
+    > options
+        > %
+        > min
+        > max
+        > sampling
+        > ...
+
+    > Alarm states
+        > OK
+        > ALARM
+        > INSUFFICIENT_DATA
+
+    > Period
+        > lenght of time in seconds to evaluate the metric
+
+    > targets
+        > EC2 instances actions
+        > Auto scaling actions
+        > SNS notifications
+
+    > composite alarms
+        > multiple alarms combined to trigger a single action
+        > can design the alarm composition with logical operators (AND / OR)
+        > helps reduce alarm noise by making more accurate alarms
+
+    > alarms can also be created on CloudWatch logs metric filters
+        > steps
+            > create a metric filter on the log group
+            > create an alarm on the metric filter
+            > set the alarm to trigger an SNS notification or any other action
