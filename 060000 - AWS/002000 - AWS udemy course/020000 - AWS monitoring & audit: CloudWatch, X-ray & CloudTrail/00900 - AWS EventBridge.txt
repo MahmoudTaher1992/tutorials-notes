@@ -1,0 +1,33 @@
+AWS EventBridge
+    > formerly CloudWatch Events
+    
+    > trigger type
+        > schedule
+            > CRON jobs
+            > scheduled scripts
+
+        > event pattern
+            > event source
+            > target
+
+            > once the event happens in the source, the target is triggered
+            > there are lots of events sources and targets
+
+    > Event bus
+        > a component that recieves events from sources and routes them to targets
+        > EventBridge evaluates the event against the rules in the event bus, and routes to the target if the event matches the rule
+
+        > you can archive/save the events sent to the bus
+        > you can replay the archived events
+
+    > schema registry
+        > EventBridge can analyze the events sent and create a schema for them
+        > The schema registry can be used to create a code for the schema, the code can be used in your application logic
+        > When you have a schema you can write code to handle the events
+
+    > Resource-based Policy
+        > manage permissions for the event bus
+        > i.e.
+            > allow/deny events from a specific account/region
+        > use case
+            > aggregate all the events from all the accounts in the organization to a single event bus

@@ -1,0 +1,44 @@
+AWS X-Ray
+    > benifits
+        > visual analysis of our applications
+        > performance troubleshooting (to see the bottlenecks)
+        > Understand dependencies in a microservice architecture
+        > review request behaviour
+        > Find errors and exceptions
+    
+    > compatability
+        > AWS lamnda
+        > Elastic Beanstalk
+        > ECS
+        > ELB
+        > API Gateway
+        > EC2 instances
+
+    > Tracing
+        > is an end to end way to following a request as it goes through your microservices
+        > each component dealing with the request adds its own "trace segment"
+        > Tracing is made of segments and subsegments
+        > Extra information can be added to a segment via annotations and metadata
+        > gives the ability to trace each request
+        
+    > Security
+        > IAM for authorization
+        > KMS for encryption at rest
+
+    > Enabling AWS X-ray
+        > import AWS X-Ray SDK in your code
+        > install AWS X-Ray daemon or enable X-Ray AWS integration
+            > the SDK will send the traces to the daemon and in turn it will send it to X-Ray
+        > IAM rights will be needed accordingly
+        > allows you to capture
+            > calls to AWS services
+            > HTTP / HTTPS requests
+            > Database calls
+            > Queue calls
+
+    > X-Ray magic
+        > X-Ray collects data from all different services
+        > service map is automatically created
+
+    > troubleshooting
+        > 
