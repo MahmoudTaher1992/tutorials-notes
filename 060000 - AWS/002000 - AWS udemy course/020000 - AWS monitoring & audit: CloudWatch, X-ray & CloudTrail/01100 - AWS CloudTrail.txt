@@ -1,0 +1,43 @@
+AWS CloudTrail
+    > provides audit history of your AWS account
+    > enabled by default
+    > provides a history of events/API calls made within your AWS account by:
+        - Console
+        - SDK
+        - CLI
+        - AWS Services
+
+    > Logs can be stored in S3 and CloudWatch Logs
+    > if a resource is deleted, you can see the history of API calls made on that resource
+
+    > events
+        > management events
+            > operations that are performed on resources in your account
+            > e.g. describeInstances, runInstances, createLoadBalancer
+            > By default, trails are configured to log management events
+            > Can separate read events from write events
+
+        > data events
+            > By default data events are not logged, because they can be very high volume
+        
+        > CloudTrail Insights events
+            > Detects unusual activity in your account
+            > CloudTrail analysis the normal events and come up with a baseline, then it can detect if there is an anomaly
+            
+    > retention
+        > Logs are stored for 90 days
+        > if more retention is needed, logs can be sent to S3 and analiesed by Athena
+
+    > CloudTrail vs CloudWatch vs X-Ray
+        > CloudTrail
+            > provides API call history
+            > can be used to detect unusual activity
+            > can be used to track changes to resources
+        > CloudWatch
+            > performance monitoring
+            > log aggregation
+            > can create alarms
+        > X-Ray
+            > helps debug applications
+            > provides request tracing
+            > provides a service map

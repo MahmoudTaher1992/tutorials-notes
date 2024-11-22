@@ -41,4 +41,81 @@ AWS X-Ray
         > service map is automatically created
 
     > troubleshooting
-        > 
+        > if it is not working check
+            > IAM roles
+            > X-Ray daemon
+            > SDK in code
+            > Lambda X-Ray Active Tracing
+
+    > X-Ray concepts
+        > segment
+            > trace building blocks
+        > subsegment
+            > segments can have subsegments
+            > carries more information 
+        > trace
+            > collection of segments
+        > sampling
+            > X-Ray can be set up to sample a subset of all incoming requests
+            > helps reduce costs
+            > configurable through
+                > reservoir
+                > rate
+        > Annotations
+            > key value pair
+            > used to index traces
+        > metadata
+            > key value pair
+            > not used to index traces, not used for searching
+
+        > can send traces across AWS accounts
+            > allows to have a centralised X-Ray account
+
+    > APIs
+        > PutTraceSegments
+        > PutTelemetryRecords
+        > GetSamplingRules
+        > GetSamplingTargets
+        > GetTraceSummaries
+        > GetTraceGraph
+        > BatchGetTraces
+        > GetServiceGraph
+
+    > Elastic Beanstalk
+        > Beanstalk includes X-Ray daemon
+        > X-Ray daemon can be configured in Elastic Beanstalk
+        > X-Ray daemon will be running on each EC2 instance
+        > X-Ray daemon will collect data and send it to X-Ray service
+        > make sure to give the correct IAM permissions
+        > make sure your app is instrumented with the X-Ray SDK
+        > X-Ray deamon is not contained in Multicontainer Docker
+
+    > ECS + X-Ray integration
+        > ECS cluster
+            > X-Ray Container as a Daemon
+            > X-Ray Container as a sidecar
+        > Fargate cluster
+            > X-Ray Container as a sidecar
+
+    > AWS Distro for OpenTelemetry
+        > AWS provides an open source distribution of OpenTelemetry
+            > secure
+            > production ready
+            > AWS services compatible
+
+        > provides a single set of
+            > APIs
+            > libraries
+            > agents
+            > collector services
+
+        > collects traces and metrics from your app
+        > collects metadata from you AWS resources and services
+
+        > there are auto instrumentation agents to collect traces without changing the code
+            > apps running on managed services and on premises
+        > send traces to various AWS services
+
+        > benifits
+            > Opensource APIs standardization
+            > Send traces to multiple destinations simultaneously
