@@ -1,0 +1,42 @@
+Introduction
+    > NoSQL databases
+        > non relational databases
+        > i.e
+            > MongoDB
+            > DynamoDb
+            > ...
+        > don't support query joins
+        > no aggregations (group by, sum, avg, ...)
+        > scale horizontly
+
+    > AWS DynamoDB
+        > Fully managed, highly available with replication in multiple AZs
+        > NoSQL database
+        > Scales to massive workloads
+        > Autoscalling is possible
+        > Fast and consistent in performance
+        > Integrated with IAM for security
+        > Enables event driven programming with DynamoDB streams
+        > Low costs
+        > Tables classes
+            > Standard
+            > Standard-Infrequent access
+                > lower cost
+
+    > DynamoDB Basics
+        > DynamoDB is madeup of tables
+        > Each table must have a primary key (must be decided at the creation time)
+        > Each table can have an infinite number of items (rows)
+        > each item has attributes (columns)
+        > max item size is 400KB
+    
+    > Primary keys
+        > types
+            > Partition key (hash key)
+                > unique for each item
+                > must be diverse
+                > user id can be a good partition key for a user table
+            > Partition key + Sort key
+                > combination must be unique
+                > data is grouped by partition key
+                > sort key is used to sort items with the same partition key

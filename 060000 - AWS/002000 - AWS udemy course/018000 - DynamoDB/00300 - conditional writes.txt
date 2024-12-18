@@ -1,0 +1,14 @@
+Conditional writes
+    > works with CRUD operations
+    > add a ConditionExpression to the request
+        > operators examples
+            > attribute_exists
+            > attribute_not_exists
+            > attribute_type
+            > contains
+            > size
+            > begins_with
+            > IN
+    
+    > FilterExpression is used for querying, while the ConditionExpression is used for conditional writes
+            

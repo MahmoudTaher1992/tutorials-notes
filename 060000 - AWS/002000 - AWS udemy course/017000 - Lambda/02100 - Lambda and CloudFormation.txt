@@ -14,3 +14,14 @@ Lambda and CloudFormation
 
     > through S3 multiple accounts
         > you just have to add Execution role to CloudFormation or a bucket policy to the S3 bucket
+
+    > container images
+        > used for large images (up to 10GB) through ECR
+        > Pack complex and large dependencies in the container
+        > Base images in
+            > Python
+            > Node.js
+            > Java
+            > Ruby
+            > Go
+            > .NET

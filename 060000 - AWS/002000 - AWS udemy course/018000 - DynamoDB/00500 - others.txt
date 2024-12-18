@@ -1,0 +1,54 @@
+Others
+    > Optimistic locking
+        > update/delete works only if the item version is the same as the one in the request
+        > if the version is different, the operation will fail
+        > this is to prevent overwriting changes that were made by another process
+        > the version is a number that gets incremented on each update and stored as an attribute in the item
+
+    > DynamoDb accelerator (DAX)
+        > utilizing in memory cache to speed up read requests
+        > does not require changes to the application
+        > solves the hot partition problem
+        > 5 mins TTL for cache
+        > DAX cluster contains 1 to 10 nodes that caches the data
+        > Secure
+        > Multi AZ
+
+        > ElastiCache
+            > stores the result of read requests, while DAX stores individual items that can be used later for another request
+
+    > Streams
+        > ordered streams of changes to a table
+        > streams van be sent to lambda, Kinesis data streams, Kinesis client library applications
+        > 24 hours of data retention
+        > uses
+            > react to changes in real time (Send welcome email to new users)
+            > insert into OpenSearch services
+            > replicate data to another region or another table
+        > ability to choose the information that is sent to the stream
+            > KEYS_ONLY
+            > NEW_IMAGE
+            > OLD_IMAGE
+            > NEW_AND_OLD_IMAGES
+        > made of shards just as Kinesis
+        > no provisioning required, it is automated
+        > after activation, no streams will be generated for old records
+
+        > AWS lambda
+            > you need to setup an event source mapping to read from the stream
+            > the lambda function will be invoked synchronously with the records from the stream
+
+    > Time to live (TTL)
+        > automatically delete items after an expiry timestamp
+        > Doesn't consume WCUs
+        > the attribute must be a number that represents the epoch time in seconds
+        > expired items are deleted within 48 hours
+        > non deleted expired items appears in the queries
+        > expired items are deleted from GSIs tables and LSIs tables
+        > deleted items are entered in the stream
+        > use cases
+            > deleted stale data
+            > adhere to regulatory obligations
+
+    > Transactions
+        > 

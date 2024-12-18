@@ -1,0 +1,30 @@
+Indexes
+    > Local secondary index (LSI)
+        > Alternative sort key for a table
+        > consists of one scalar attribute (String, Number, or Binary)
+        > You can have up to 5 LSI per table
+        > Must be defined at table creation time
+        > attribute projections
+            > KEYS_ONLY
+                > only the key attributes are projected into the index tables
+            > INCLUDE
+                > only the specified attributes are projected into the index tables
+            > ALL
+                > all attributes are projected into the index tables
+        > if the writes are throttled on the GSI, the main table is NOT throttled
+            > uses the main table RCU/WCU
+
+    > Global secondary index (GSI)
+        > An index with a partition key and a sort key that can be different from those on the table
+        > Speeds up queries on non-key attributes
+        > consists of one scalar attribute (String, Number, or Binary)
+        > attribute projections
+            > KEYS_ONLY
+            > INCLUDE
+            > ALL
+        > must provision the RCU and WCU for the GSI
+        > can be added/modified after the table creation
+
+        > if the writes are throttled on the GSI, the main table is throttled
+            > even if the main table has enough RCU/WCU
+            > choose it wisely

@@ -1,0 +1,126 @@
+RW capacity modes
+    > controls tables read and write throughput
+
+    > modes
+        > provisioned mode
+            > you specify the read and write capacity
+            > you pay for the capacity you provision
+            > you must plan it
+        > on-demand mode
+            > the capacity automatically scalles up and down based on the workload
+            > Pay what you use, but more expensive
+            > no need to plan
+
+    > you can switch between modes every 24 hours
+
+    > provisioned mode  
+        > table must be provisioned
+        > Read capacity units (RCU), reads throughput
+            > One (Strongly consistent) 4KB item per second
+            > Eventually consistent reads
+                > If you read an item immediately after writing, you might not get the latest write
+            > Strongly consistent reads
+                > you will get the latest write, but it costs 2x the eventually consistent reads
+
+        > Write capacity units (WCU), writes throughput
+            > One 1KB item per second
+        > There is an option to have auto-scaling
+        > Throughput can be exceeded temporarily using “Burst Capacity, after that you will get ProvisionedThroughputExceededException
+            > exponential backoff is recommended in this classes
+    
+        > Partitions internal
+            > Data is stored in Partitions
+            > Patition keys go into hasing function to determine the partition
+            > The more partitions, the less chance you get a hot partition exceptions
+        
+        > Throttling
+            > ProvisionedThroughputExceededException is thrown when you exceed the provisioned throughput
+                > reasons
+                    > Hot keys (Hot partitions)
+                        > one key is read/written too much
+                    > Very large items
+                > solutions
+                    > exponential backoff
+                    > Partition keys well distribution
+                    > use DynamoDB Accelerator (DAX)
+
+    > on-demand mode
+        > automatic scaling according to the workload
+        > No planning needed
+        > No R/W limits, but it is more expensive (2.5x more expensive than provisioned mode)
+        > units
+            > RRU
+            > RWU
+
+    > Operations
+        > Writing
+            > PutItem
+                > Create or fully replace an item
+            > UpdateItem
+                > Update an item or adds it if it doesn't exist
+            
+            > Conditional writes
+                > the operation is only performed if a condition is met
+                > otherwise it throws an error
+                > no performance impact
+
+        > Reading
+            > GetItem
+                > Return based on the primary key (HASH or HASH+RANGE)
+                > The default is eventually consistent read (configurable)
+                > ProjectionExpression
+                    > can be used to get only the attributes you need
+
+            > Query
+                > returns items based on
+                    > KeyConditionExpression
+                        > Partition key with = operator (required, to determine the partition)
+                        > Sort key with =, <, >, <=, >=, BETWEEN, BEGINS_WITH (optional)
+                    > FilterExpression
+                        > further filter the results
+                        > used only with non key attributes
+
+                > Query return the limit or up to 1MB of data
+                > Query is faster than scan
+                > ability to use pagination
+                > can query a table, global secondary index, or local secondary index
+
+            > Scan
+                > scan the entire table and then filter out the results (inefficient and consumes lots of RCUs)
+                > returns up to 1MB of data, pagination is used to load more data
+                > use limit to limit the number of items returned
+                > Paralle scan is possible
+                    > multiple scanners are used
+                    > more RCUs are consumed
+                > can use FilterExpression and ProjectionExpression
+
+        > Deleting
+            > DeleteItem
+                > Delete one item
+                > Conditional deletes are possible
+
+            > DeleteTable
+                > Delete the whole table
+                > much better than using DeleteItem for each item
+
+        > Batch operations
+            > Saves the latency in doing multiple operations
+            > Operations are done in parallel
+            > Failed items are returned in the response
+
+            > BatchGetItem
+                > get multiple items from multiple tables
+                > up to 100 items or 16MB of data
+                > UnprocessedKeys are returned for failed read operations
+
+            > BatchWriteItem
+                > 25 PutItem and/or DeleteItem operations in one call
+                > 16MBs of data, 400KB per item
+                > UnprocessedKeys are returned for failed write operations
+
+    > PartiQL
+        > SQL compatible language for DynamoDB
+        > Allows you to query, insert, update, and delete items in DynamoDB
+        > Can be used to query multiple tables at once
+        > can be used from the console, SDK, APIs, workbench or CLI
+
