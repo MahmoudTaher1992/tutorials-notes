@@ -51,4 +51,109 @@ Others
             > adhere to regulatory obligations
 
     > Transactions
-        > 
+        > Groups multiple operations together
+        > All or nothing operations
+        > Provides atomicity, consistency, isolation, and durability (ACID)
+        > Read modes
+            > Strongly consistent reads
+            > Eventually consistent reads
+        > Write modes
+            > Standard writes
+            > Transactional writes
+        > consumes 2x the WCU and RCU
+        > operations
+            > TransactGetItems
+            > TransactWriteItems (Put, Update, Delete)
+
+        > used when you need to write on multiple tables, and rollback if one failed
+        > i.e.
+            > ERP systems, when they need to update the balance and the account
+
+        > Capacity computations
+            > 3 Transactional writes per second, with item size 5 KB
+                > 5 * 1 (write takes 1 WCU for 1KB) * 3 * 2 (transactional cost) = 30 WCU
+            > 5 Transaction reads per second , with item size 5 KB
+                > 2 (1 for the first 4 KB and the other for the remaining 1KB) * 5 * 2 (transactional cost) = 20 RCU
+
+    > DynamoDB as a session state cache
+        > stores key-value pairs
+        > stores data in serverless (not in memory like ElastiCache), more persistent
+        > easy accessability, compared to EFS which must be mounted
+        > shared caching, compared to EBS which is local caching
+        > low latency, compared to S3 which is high latency
+
+    > Write sharding
+        > when you have a hot partition, you can shard the partition key to multiple keys
+        > Use the partition key as the partition key value + random/calculated suffix
+
+    > Write types
+        > concurrent writes
+            > multiple writes to the same item
+            > the last write wins
+        > conditional writes
+            > runs the condition before writing, if the condition is not met, the write fails
+            > write age = 10 if the age is 0, write age = 20 if the age is 0, the age will be 10 and the second write will fail
+        > Atomic writes
+            > increase value by 1, the value will be 1
+            > increase value by 1, the value will be 2
+            > both writes will be successful
+        > Batch writes
+            > multiple writes in a single request
+
+    > Large object pattern
+        > when you have large objects, you can store them in S3 and store the reference in DynamoDB
+        > S3 is cheaper for large objects
+        > DynamoDB is faster for small objects
+
+    > Indexing S3 object metadata
+        > store the metadata in DynamoDB
+        > store the object in S3
+        > use the metadata to search/summarize the objects
+
+    > Operations
+        > cleanup
+            > Scan + DeleteItem
+                > takes too long
+                > Consumes lots of RCUs/WCUs
+            > Drop table + recreate table
+                > faster
+                > cheaper
+
+        > Backup
+            > AWS data pipeline
+                > backup to S3
+                > restore from S3
+            > Backup and restore
+                > takes time
+            > Scan + PutItem
+                > takes time
+                > Consumes lots of RCUs/WCUs
+                > you have to write your own code and run it
+
+    > Others
+        > security
+            > VPC endpoints to access the DynamoDB, without exposing it to the internet
+            > IAM policies to control access 
+            > Encryption at rest and in-transit, using KMS
+
+        > backup and restore 
+            > Point-in-time recovery
+            > No performance impact
+
+        > global tables
+            > multi region
+            > multi-active
+            > fully replicated
+            > high performance
+        
+        > DynamoDB local
+            > can be setup locally for development
+        
+        > services/tools
+            > AWS DMS
+                > used to migrate data from multiple data sources to DynamoDB
+
+    > Fine grained access control
+        > Setup Cognito or Web identity federation
+        > control the actions that can be performed on DynamoDB
+        > control the access on partition key level, or attribute level
