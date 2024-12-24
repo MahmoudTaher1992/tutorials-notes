@@ -1,0 +1,51 @@
+introduction
+    > API gateway + lambda = serverless architecture
+    > Websocket protocol is supported
+    > handles API versioning
+    > handles multiple environments (dev, test, prod)
+    > handles security (authentication and authorization)
+    > handles throttling
+    > Swagger / Open API import
+    > API keys for third party developers
+    > transform and validate requests and responses
+    > cache responses
+    
+    > integrations
+        > lambda    
+            > pass request to lambda function
+        > AWS services
+            > expose any AWS APIs through the API gateway
+            > i.e.
+                > start AWS step functions
+                > post a message to an SNS topic
+                > ...
+        > HTTP
+            > pass request to an HTTP endpoint
+
+    > Endpoints types
+        > Edge optimized
+            > for global clients
+            > Requests will be routed from CloudFront edge locations to your API Gateway
+            > The API gateway will still live in the same region
+
+        > Regional
+            > for clients within the same region
+        
+        > Private
+            > for clients within your VPC, using an interface VPC endpoint
+
+    > security
+        > User authentication
+            > Cognito
+            > IAM
+            > Custom authorizers
+
+        > Custom Domain Name HTTPS
+            > integration with AWS Certificate Manager (ACM)
+            > Edge-Optimized
+                > the certificate must be in us-east-1
+            > Regional
+                > the certificate must be in the region of the API Gateway
+            > Must setup CNAME or A-alias record in Route 53
+        
+        

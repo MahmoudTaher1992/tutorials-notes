@@ -1,0 +1,7 @@
+Stages
+    > A deployment must be made after API gateway changes
+    > it is a common source of confusion
+    > changes are deployed to a selected stage
+    > deployments can be rolled back on a stage
+    > you can name the stage as you want
+    
