@@ -1,0 +1,43 @@
+Integration types
+    > types
+        > MOCK
+            > API Gateway responds with a response without sending the request to the backend
+
+        > HTTP/AWS
+            > for AWS lambda and AWS services
+            > integration requests and responses must be configured
+            > data mapping templates can be used for request/response transformation
+
+        > AWS_PROXY
+            > for AWS lambda
+            > no request/response transformation, the lambda must handle the request/response
+            > no mapping templates, headers, query strings, etc are passed to the lambda as arguments
+
+        > HTTP_PROXY
+            > for HTTP endpoints
+            > no request/response transformation, the endpoint must handle the request/response
+            > no mapping templates, headers, query strings, etc are passed to the endpoint as arguments
+            > possibility to add custom headers
+
+    > Mapping templates
+        > can be used to 
+            > modify the request/response
+            > rename/modify query string parameters
+            > add headers
+            > modify body content
+        
+        > use velocity template language (VTL)
+            > for loop
+            > if else
+            > ...
+
+        > filter output results
+            > remove unwanted data
+
+        > content type
+            > application/json
+            > application/xml
+
+        > examples
+            > exposing RESTful API for a SOAP service
+                > by transforming XML to JSON and vice versa

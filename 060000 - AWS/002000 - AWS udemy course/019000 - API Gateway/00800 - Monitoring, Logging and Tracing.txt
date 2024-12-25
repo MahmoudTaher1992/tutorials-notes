@@ -1,0 +1,11 @@
+Monitoring, Logging and Tracing
+    > Logging and Tracing
+        > CloudWatch logs
+            > logs contain information about the request/response body
+            > logs can be enabled at the stage level
+        
+        > X-Ray
+            > enables tracing
+            > X-RAY API gateway + Lambda give the full picture of what's happening
+
+    > CloudWatch Metrics

@@ -1,0 +1,9 @@
+Request validation
+    > API gateway can be configured to validate incoming requests before proceeding with the integration request
+    > if it fails, a 400 response will be sent
+    > this reduces unnecessary calls to the backend
+    > checks
+        > required parameters
+        > required query strings
+        > required headers
+        > the request payload compatibility

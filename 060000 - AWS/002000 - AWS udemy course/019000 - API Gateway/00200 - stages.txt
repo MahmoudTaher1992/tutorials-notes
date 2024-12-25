@@ -4,4 +4,13 @@ Stages
     > changes are deployed to a selected stage
     > deployments can be rolled back on a stage
     > you can name the stage as you want
-    
+
+    > Stage variables
+        > like environment variables for API Gateway
+        > it is passed to the context object of the lambda function
+        > format is ${stageVariables.variableName}
+        > uses
+            > change configuration between stages
+            > enable canary deployment for any stage (ability to choose the % of traffic that goes to a canary stage)
+            > separate metrics and logs
+

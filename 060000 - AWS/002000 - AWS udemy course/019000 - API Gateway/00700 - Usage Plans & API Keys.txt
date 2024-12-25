@@ -1,0 +1,23 @@
+Usage Plans & API Keys
+    > if you want to make the API available for a paying customers
+
+    > Usage Plans
+        > who can access methods on the stage level
+        > how much and how fast they can access them
+        > use API keys to know the identity of the caller and to measure his usage
+        > configure throttling limits and quota limits (overall number of maximum requests) and apply then on clients
+
+    > API Keys
+        > alphanumeric string values, distributed to clients
+        > i.e.
+            > WBjHxNtoAb4WPKBC7cGm64CBibIb24b4jt8jJHo9
+        > used with usage plans to control access to the API
+        
+        > Correct order of API keys
+            > usage plan configuration
+                > create one or more APIs
+                > configure methods to require an API key
+                > deploy the APIs
+                > generate API keys
+                > create usage plans
+                > associate API stages and keys with usage plans

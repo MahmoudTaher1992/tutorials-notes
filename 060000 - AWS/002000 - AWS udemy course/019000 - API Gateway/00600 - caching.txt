@@ -1,0 +1,14 @@
+Caching
+    > reduces the number of calls to the backend
+    > Default TTL is 300 seconds
+    > caches are defined per stage
+    > cache configuration is done per method
+    > cache can be encrypted
+    > can be between .5GB and 237GB
+    > use it carefully, it is be expensive
+
+    > invalidation
+        > ability to invalidate the cache entirely or just a part of it
+        > clients can invalidate the cache by passing a cache-control header
+        > Any client can invalidate the cache
+            > can be invalidated by enforcing an InvalidateCache policy
