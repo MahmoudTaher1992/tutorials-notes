@@ -1,0 +1,5 @@
+API gateway architecture
+    > create a single interface for all the microservices in the backend
+    > use API endpoints for various resources
+    > apply simple domain name and SSL certificates
+    > can apply forwarding rules

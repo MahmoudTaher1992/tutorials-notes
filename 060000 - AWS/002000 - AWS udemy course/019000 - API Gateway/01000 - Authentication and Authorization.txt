@@ -1,0 +1,33 @@
+Authentication and Authorization
+    > Security 
+        > IAM Permissions
+            > Authentication
+                > IAM
+            > Authorization
+                > IAM Policies
+
+            > attach IAM policies to user/role
+            > uses `Sig v4` where the IAM credentials are in headers
+            > Resource policies
+                > allows you to attach policies directly to API Gateway resources
+            > ability for Cross-Account access
+            > allow for a specific IP address to access the API
+            > allow for a specific VPC endpoint to access the API
+
+        > Cognito user pools
+            > Authentication
+                > Cognito
+            > Authorization
+                > Backend
+
+            > API gateway automatically verifies the credentials from cognito
+            > No implementation required (no code needed)
+        
+        > Lambda Authorizers (custom authorizers)
+            > Authentication
+                > external authorizer
+            > Authorization
+                > lambda function
+
+            > configure a lambda function to validate the credentials
+            > lambda must return user IAM policy

@@ -9,3 +9,32 @@ Monitoring, Logging and Tracing
             > X-RAY API gateway + Lambda give the full picture of what's happening
 
     > CloudWatch Metrics
+        > by stage
+        > ability to enable detailed metrics
+        > i.e.
+            > CacheHitCount, CacheMissCount
+                > efficiency of the cache
+            > Count
+                > API requests count in a givin period
+            > IntegrationLatency
+                > time taken to send the request and receive a response with the backend
+            > Latency
+                > time taken from receiving the request from a user and sending the response back
+            > 4XXError, 5XXError
+                > number of errors
+
+    > Throttling
+        > Account limit is 10,000 requests per second across all APIs
+            > limit can be increased by contacting AWS
+        > an error will be thrown 
+            > 429 - Too Many Requests
+        > Can configure stage limit, method limit to improve performance
+        > Can define usage plan to throttle per user
+
+        > if one API is throttled, all the other APIs will be throttled as well
+
+    > errors
+        > 4XX
+            > client errors
+        > 5XX
+            > server errors

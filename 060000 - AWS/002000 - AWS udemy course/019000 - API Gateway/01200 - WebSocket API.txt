@@ -1,0 +1,18 @@
+WebSocket API
+    > websocket is a 2 way interactive communication between the server and the client
+        > server can push information to the client
+        > stateful app
+    > often used in real time applications
+        > chat applications
+        > online gaming
+        > collaborative editing
+
+    > works with AWS services
+    
+    > routing
+        > messages are routed to backend
+        > the field is `request.body.action`
+        > if no routes, the message is sent to the default route `$default`
+        > route selection expression, selects the field to route from
+            > the result is then evaluated against the API routes
+            > the first match is selected

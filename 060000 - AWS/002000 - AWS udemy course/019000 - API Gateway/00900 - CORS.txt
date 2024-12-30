@@ -1,0 +1,7 @@
+CORS
+    > must be enabled when you receive a request from a different domain
+    > CORS can be enabled from the console
+    > OPTIONS pre-flight request must contain the following headers
+        > Access-Control-Allow-Origin
+        > Access-Control-Allow-Methods
+        > Access-Control-Allow-Headers
