@@ -1,0 +1,41 @@
+Code pipeline
+    > visual workflow to see the CI/CD process
+    
+    > source
+        > CodeCommit
+        > ECR
+        > S3
+        > GitHub
+        > Bitbucket
+        > ...
+
+    > build
+        > CodeBuild
+        > Jenkins
+        > ...
+
+    > test
+        > CodeBuild
+        > Jenkins
+        > ...
+
+    > deploy
+        > CodeDeploy
+        > Elastic Beanstalk
+        > ...
+
+    > invoke
+        > Lambda
+        > Step Functions
+        > ...
+
+
+    > Artifacts
+        > each stage can produce artifacts
+        > artifacts can be passed to the next stage via S3
+
+    > Troubleshooting
+        > CloudWatch events/Logs
+        > CodePipeline console
+        > IAM permissions may be the reason for failure
+        > AWS CloudTrail to monitor the API calls made

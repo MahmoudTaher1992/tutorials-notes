@@ -1,0 +1,37 @@
+Introduction
+    > CI CD is the process of transforming the code from the codebase to the production environment
+    > it is all about automation
+
+    > CI/CD Services
+        > AWS CodeCommit
+            > storing the code
+        > AWS CodePipeline
+            > automating the pipeline from code to Elastic Beanstalk
+        > AWS CodeBuild
+            > building and testing the code
+        > AWS CodeDeploy
+            > deploying the code to EC2 instances
+        > AWS CodeStar
+            > manage software activities in one place
+        > AWS CodeArtifact
+            > store and share software packages
+        > AWS CodeGuru
+            > automate code reviews using ML
+
+    > Continuous Integration (CI)
+        > continuous building and testing of the code
+        > steps
+            > the developer commits the code to the code repository
+            > the build server pulls the code, test it and build it
+            > a feedback is given to the developer
+
+        > helps in
+            > fixing the bug early
+            > deliver faster as the code is always ready to deploy
+            > deploy often
+    
+    > Continuous Deployment (CD)
+        > ensures the software can be released reliably whenever needed
+        > ensures the deployment happens often and are quick
+        > shift away from one release every 6 months to multiple releases in a day
+        > it means automated deployment

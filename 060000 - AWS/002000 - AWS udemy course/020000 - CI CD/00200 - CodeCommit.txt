@@ -1,0 +1,32 @@
+CodeCommit
+    > Version control
+        > ability to understand the changes made to the code
+    
+        > i.e.
+            > Git
+
+        > benefits of version control
+            > collaboration
+            > backup
+            > code is viewable and auditable
+
+    > CodeCommit benefits
+        > private Git repository
+        > no size limit for the projects
+        > secure
+        > integrated with jenkins, AWS CodeBuild and other CI/CD tools
+
+    > CodeCommit security
+        > interactions are done using Git
+        > Authentication
+            > SSH Keys
+            > HTTPS
+
+        > Authorization
+            > IAM policies
+
+        > Encryption
+            > repos are encrypted at rest
+            > data is encrypted in transit
+
+    > it is discontinued
