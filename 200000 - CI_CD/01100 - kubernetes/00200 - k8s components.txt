@@ -40,7 +40,7 @@
             > the control plane is the brain of the cluster
             > you can communicates with the control plane to manage the cluster
         > saves the state of the cluster on etcd database
-        > master node components
+        > control plane components
             > kube-apiserver
                 > the front end of the control plane
                 > receives the requests from the users, validate and process them

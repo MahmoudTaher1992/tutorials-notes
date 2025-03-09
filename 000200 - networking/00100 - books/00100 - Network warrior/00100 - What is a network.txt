@@ -1,0 +1,2 @@
+What is a network
+    > is one or more computers connected together using Ethernet cables

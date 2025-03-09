@@ -1,0 +1,5 @@
+Auto-negotiation
+    > a feature of ethernet devices 
+    > allows them to automatically exchange information about their speed and duplex capabilities to determine the operation setting
+    > this helps in optimizing the network performance
+        > if the ethernet card in the computer is of low speed and the switch port is of high speed, the switch port will automatically adjust its speed to match the computer's speed. Otherwise it will be a waste of resources.

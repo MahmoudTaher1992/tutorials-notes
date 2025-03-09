@@ -1,0 +1,34 @@
+Webserver introduction
+    > receive HTTP request and deliver a content to the client
+    > Static content serving
+    > Load balancing
+        > with health check
+    > Content caching
+    > reverse proxy
+        > a proxy server that sits in front of one or more web servers
+        > it forwards client requests to those web servers
+        > configured using a config file
+    > compressing and decompressing content to send it to the client
+    > API Gateway
+        > a reverse proxy that can be configured using an API or a UI
+    > SSL termination
+        > decrypts the encrypted traffic and sends the request to the web server
+    > authentication
+        > allow some ips to access the server
+        > block some ips
+        > username/password authentication
+        > JWT authentication
+    > rate limiting
+    > connections number limiting
+    > Bandwidth limiting
+    > restrict access
+        > by
+            > ips
+            > geographic location
+    > Logging
+
+
+    > Setup reverse proxy on the home server
+        > all the points up should be tested
+        > all apps
+            > 

@@ -1,0 +1,100 @@
+> securing the linux server
+    > linux distribution
+        > stable
+        > keep up to date with updates and security patches
+            > setup alerts for new updates
+            > using
+                > update manager
+                > terminal
+        > well supported
+
+
+    > Authentication
+        > SSH keys 
+            > use it instead of passwords
+            > passwords can be brute-forced
+            > SSH keys are more secure
+
+            > use 2FA/MFA for SSH
+
+        > Strong passwords
+            > force accounts to use strong passwords
+            > use a password manager to generate and store passwords
+
+        > monitor passwords brute force attacks
+            > using
+                > fail2ban
+                > denyhosts
+
+
+    > authorization
+        > limit the usage of
+            > sudo
+            > su
+
+        > disable the root account
+            > stop using the root account, use a privileged one instead
+                > root account can make mistakes that ruin the data
+
+        > correctly configure users permissions
+        
+
+    > run apps in a sandbox with FireJail
+
+
+    > Maintain the time
+        > use NTP to keep the time in sync
+        > time is used to many security protocols, if the time is missed up, the security protocols may not work correctly
+
+
+    > proc directory
+        > /proc directory contains information about the running processes
+        > restrict access to the /proc directory, as a unrestricted actions on it can break some processes
+            > i.e.
+                > systemd
+
+
+    > Panic/Secondary/Fake password Login Security System
+        > if used, the system will start a set of scripts
+            > i.e.
+                > delete all the data
+                > ...
+
+    > Packages
+        > reduce unnecessary services and programs
+
+        > use third parties packages with caution
+            > install necessary packages only
+            > use only trusted sources
+
+
+    > The network
+        > use a firewall
+            > ufw
+            > iptables
+
+        > iptables Intrusion Detection And Prevention
+            > PSAD
+
+        > Application Intrusion Detection And Prevention
+            > Fail2ban
+            > CrowdSec
+
+        > Directory integrity checker
+            > AIDE
+
+        > Setup an antivirus
+            > ClamAV
+
+        > Rootkit Detection
+            > rkhunter
+            > chkrootkit
+
+        > Monitor the logs with an analyzer and reporter
+            > Logwatch
+
+        > Ports investigation
+            > ss
+
+        > Host Intrusion Detection
+            > OSSEC-HIDS

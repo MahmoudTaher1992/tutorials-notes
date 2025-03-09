@@ -1,0 +1,6 @@
+VLAN
+    > stands for virtual local area network
+    > the network computers and devices are connected regardless of their physical location
+    > dividing the network into smaller networks, like subnets in AWS
+    > helps in network security
+    > a switch can be programmed to create multiple VLANs, each group of ports together

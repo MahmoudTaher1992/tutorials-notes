@@ -1,0 +1,21 @@
+Hub and switches
+    > hub
+        > multi port device
+        > dumb device
+        > sends data to all ports
+        > if computer sends data to another computer, hub sends the data to all ports
+
+        > types
+            > active
+                > has a power supply that strength the signal if it is received weak
+            > passive
+                > does not have a power supply
+
+    > switch
+        > device used to connect devices together
+        > receives the data and sends it to the correct port, not all ports
+        > 
+
+    > Router
+        > Network appliance device
+        > moves the data packets from one network to another

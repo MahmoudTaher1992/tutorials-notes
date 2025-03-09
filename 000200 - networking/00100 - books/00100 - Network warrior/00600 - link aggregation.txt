@@ -1,0 +1,8 @@
+Link aggregation
+    > method used in networking to combine multiple network connections in parallel to increase throughput and provide redundancy in case one of the links fails
+    > pros
+        > increased throughput
+        > redundancy
+            > if one link fails, the other links will continue to work
+        > load balancing
+    > this needs a setup in the network switch to support link aggregation

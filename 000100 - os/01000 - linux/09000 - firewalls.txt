@@ -1,0 +1,29 @@
+Firewalls
+    > examples
+        > iptables
+        > ufw
+        > firewalld
+
+    > an application that inspects and filters network traffic
+    
+    > features
+        > enable/disable the firewall itself
+        > allow or block traffic based on
+            > the target port
+                > deny all traffic to port 2323
+                > the port can be specified by the service name
+                    > i.e.
+                        > sudo ufw allow ssh
+            > the source IP
+                > allow/block traffic from one/many ips only
+
+    > all the ports will be open by default, if a service is listening on it
+        > i.e.
+            > port 22/tcp is closed by default, it refuses the connection because no service is listening on it
+            > port 22/tcp is open if ssh.service is running and listening on it
+            > port 22/tcp is closed if ssh.service is stopped
+            > port 22/tcp is open if ssh.service is running and listening on it
+            > port 22/tcp is closed if ufw is enabled and there is no rule to allow it
+            > port 22/tcp is open if ufw is enabled and there is a rule to allow it
+
+    > a port will accept connections if the firewall allow traffic to it and there is a service listening on it

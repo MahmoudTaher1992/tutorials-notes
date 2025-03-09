@@ -1,0 +1,4 @@
+trunking
+    > a method used to connect multiple VLANs across multiple switches
+    > a cable is used to connect the switches from the trunk port
+    > the switch directs the packets to the correct VLAN based on the VLAN tag
