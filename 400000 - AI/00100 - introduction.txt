@@ -1,0 +1,80 @@
+introduction
+    > What is an AI engineer?
+        > Role
+            > Software engineer specializing in developing, deploying, and maintaining AI systems.
+        > Goal
+            > Bridge the gap between AI research and real-world applications.
+        > Responsibilities
+            > Developing, training, and evaluating AI models.
+            > Building scalable AI infrastructure (data pipelines, cloud systems).
+            > Deploying AI models (model serving, API development).
+            > Monitoring and maintaining AI systems.
+            > Collaborating with data scientists, software engineers, and product managers.
+
+    > AI impact on product development
+        > enhances the process of product development by
+            > automating repetitive tasks
+            > More accurate decision-making
+            > faster time-to-market
+            > reducing costs
+            
+    > AGI
+        > stands for Artificial General Intelligence
+        > AGI aims to create software with intelligence comparable to humans, capable of self-teaching.
+        > AGI should handle tasks it wasn't specifically trained for
+            > current AI which operates within predefined parameters
+        > Capabilities
+            > self-understanding
+            > ability to learn new skills
+            > self-control
+
+        > it is still a theoretical concept and research goal
+            > tech used in AGI 
+                > Deep Learning
+                > Generative AI
+                > NLP
+                > Computer Vision
+                > Robotics
+
+        > AI vs AGI
+            > AI
+                > operates within predefined parameters
+                > can't handle tasks it wasn't specifically trained for
+            > AGI
+                > capable of self-teaching
+                > can handle tasks it wasn't specifically trained for
+
+    > LLMs
+        > stands for Large Language Models
+        > definition
+            > LLMs are AI programs that recognize and generate text 
+            > They are trained on massive datasets
+            > built on transformer models, a type of neural network
+                > use neural networks, specifically transformer models, to learn context and relationships within language
+                > Transformer models use self-attention to understand the nuances of language
+            > built on machine learning and use deep learning models to identify patterns and make distinctions without human intervention
+        > How They Learn
+            > LLMs use deep learning to understand relationships between words and sentences
+            > They are then fine-tuned for specific tasks
+        > uses
+            > Generative AI
+            > code generation
+            > chatbots
+            > language translation
+            > summarization
+            > DNA research
+            > customer service
+            > online search
+        > examples
+            > ChatGPT
+            > Bard
+            > Llama
+            > Bing Chat
+            > Github Copilot
+        > limitations
+            > Reliability depends on training data, which can be biased
+            > Can "hallucinate
+            > security breaches
+            > Risk of exposing confidential data
+        > Building LLMs
+            > need access to large datasets and infrastructure
