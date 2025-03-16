@@ -1,0 +1,3 @@
+ML Inference
+    > is the process of using a trained machine learning model to make predictions or decisions on new, unseen data
+    > Without inference, a trained model is just a static artifact

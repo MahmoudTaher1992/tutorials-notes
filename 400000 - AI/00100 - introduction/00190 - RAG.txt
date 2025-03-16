@@ -1,0 +1,32 @@
+RAG
+    > stands for Retrieval Augmented Generation
+    > a technique that enhances LLMs by integrating them with external data sources
+        > by combining LLM power with the ability to retrieve information from external sources
+
+    > LLM cons
+        > Lack of Specific Information
+        > Hallucinations
+        > Generic Responses
+
+    > How RAG helps
+        > closes the gap between LLMs knowledge and real-world information
+
+    > benefits
+        > generating more accurate and contextually relevant responses
+
+    > How RAG works ?
+        > Data collection
+            > gathers the data needed for the task
+        > Data chunking
+            > breaking your data down into smaller, more manageable pieces
+        > Document embeddings
+            > transforms data into embeddings
+        > Handling user queries
+            > the user query is transformed into an embedding
+            > the model retrieves the most relevant documents based on the query embeddings and the document embeddings
+        > Generating responses with an LLM
+            > the user query and related documents are fed into the LLM
+
+    > Challenges
+        > Integrating a retrieval system with an LLM can be difficult
+        > efficiency decreases with the size of the external data source and the user's query complexity

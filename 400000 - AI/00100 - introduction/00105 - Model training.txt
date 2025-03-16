@@ -1,0 +1,25 @@
+Model training
+    > is the process of teaching a machine learning model to make accurate predictions or decisions by feeding it large amounts of data
+    > learning types
+        > Supervised learning
+            > the model is trained on labeled data
+            > the output is known, like image recognition
+        > Unsupervised learning
+            > the model is trained on unlabeled data
+            > the output is unknown
+        > Reinforcement learning
+            > the model learns by interacting with an environment
+            > the model receives feedback in the form of rewards or penalties
+            > the model learns to maximize rewards and minimize penalties
+
+    > training steps
+        > Data collection
+        > Data preprocessing
+        > Model selection
+            > choose the appropriate machine learning algorithm for the task
+        > Model training
+            > Feeding the data into the model and adjusting the model's parameters to minimize errors
+        > Model evaluation
+            > Assessing the model's performance on a separate dataset
+        > Hyperparameter Tuning
+        > Testing

@@ -1,0 +1,19 @@
+Vector databases
+    > is a type of database specifically designed to store, manage, and search vector embeddings efficiently
+        > focus on storing data as vectors not as rows and columns
+    > concepts
+        > vector
+            > numerical representation of a variable
+        > Similarity Search
+            > finding the vectors that are most similar to a given query vector
+
+    > vector databases benefits
+        > Efficient Similarity Search
+        > Semantic Search
+            > search the data based on the meaning not just the keywords
+
+    > how it works
+        > indexing
+        > processing
+        > similarity calculation
+        > filtering

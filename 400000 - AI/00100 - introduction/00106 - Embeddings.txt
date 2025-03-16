@@ -1,0 +1,39 @@
+Embeddings
+    > embeddings are used to convert complex data into numerical form that models can process more easily
+    > in AI, embeddings are a way to represent discrete variables (i.e. words, items, ...) as continuous vectors in a high dimensional space
+        > variables
+            > discrete variables
+                > distinct
+                > separate
+                > i.e.
+                    > words in a vocabulary
+                    > product ids
+                    > ...
+            > continuous vectors
+                > continuous values
+                > i.e.
+                    > temperature
+                    > height
+                    > ...
+        > Vector Representation
+            > Embeddings map each discrete element to a vector (fixed length) of real numbers
+        > High-Dimensional Space
+            > The vectors exist in a high-dimensional space. (e.g., 100 dimensions, 300 dimensions)
+            > This allows for a rich representation of the relationships between the embedded elements
+            > i.e.
+                > car may have lots of dimensions (i.e. cc, color, wheels number, ...)
+        > Learned Representation
+            > the assignment of vectors are done based on previous training on huge data
+                > i.e.
+                    > king and queen are close in the vector space
+                    > king and car are far apart 
+            > the training process changes the values of the vectors
+
+    > benefits
+        > AI knows relationships between elements (it understands them)
+            > car is closer to vehicle than to fruit
+    
+    > how embeddings are created
+        > Neural Networks
+            > A neural network is a computing system inspired by the structure and function of the human brain
+            > uses interconnected nodes (artificial neurons) to solve problems.

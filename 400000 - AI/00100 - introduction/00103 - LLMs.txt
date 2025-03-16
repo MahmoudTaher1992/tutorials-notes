@@ -1,0 +1,34 @@
+LLMs
+    > stands for Large Language Models
+    > definition
+        > LLMs are AI programs that recognize and generate text 
+        > They are trained on massive datasets
+        > built on transformer models, a type of neural network
+            > use neural networks, specifically transformer models, to learn context and relationships within language
+            > Transformer models use self-attention to understand the nuances of language
+        > built on machine learning and use deep learning models to identify patterns and make distinctions without human intervention
+    > How They Learn
+        > LLMs use deep learning to understand relationships between words and sentences
+        > They are then fine-tuned for specific tasks
+    > uses
+        > Generative AI
+        > code generation
+        > chatbots
+        > language translation
+        > summarization
+        > DNA research
+        > customer service
+        > online search
+    > examples
+        > ChatGPT
+        > Bard
+        > Llama
+        > Bing Chat
+        > Github Copilot
+    > limitations
+        > Reliability depends on training data, which can be biased
+        > Can "hallucinate
+        > security breaches
+        > Risk of exposing confidential data
+    > Building LLMs
+        > need access to large datasets and infrastructure

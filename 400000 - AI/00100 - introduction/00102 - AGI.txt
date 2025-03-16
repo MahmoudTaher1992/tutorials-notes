@@ -1,0 +1,25 @@
+AGI
+    > stands for Artificial General Intelligence
+    > AGI aims to create software with intelligence comparable to humans, capable of self-teaching.
+    > AGI should handle tasks it wasn't specifically trained for
+        > current AI which operates within predefined parameters
+    > Capabilities
+        > self-understanding
+        > ability to learn new skills
+        > self-control
+
+    > it is still a theoretical concept and research goal
+        > tech used in AGI 
+            > Deep Learning
+            > Generative AI
+            > NLP
+            > Computer Vision
+            > Robotics
+
+    > AI vs AGI
+        > AI
+            > operates within predefined parameters
+            > can't handle tasks it wasn't specifically trained for
+        > AGI
+            > capable of self-teaching
+            > can handle tasks it wasn't specifically trained for

@@ -1,0 +1,24 @@
+Prompt Engineering
+    > Prompt Engineering
+        > The process of guiding AI to produce desired outputs, by crafting effective inputs.
+        > requires detailed instructions
+        > Involves choosing optimal formats, phrases, words, and symbols
+        > Prompt engineers use creativity plus trial and error to get the most accurate results
+
+    > Prompt
+        > Natural language text that requests AI to perform a specific task
+        > prompts guides the AI to generate desired outputs
+        > uses LLMs to generate text
+        > Because LLMs are open ended, prompts are necessary to guide the AI
+        > Generative AI requires context and detailed information to produce accurate and relevant responses
+
+    > prompt engineering techniques
+        > Chain-of-thought prompting
+            > technique that breaks down a complex question into smaller, logical parts
+        > Tree-of-thought prompting
+        > Maieutic prompting
+        > Complexity-based prompting
+        > Generated knowledge prompting
+        > Least-to-most prompting
+        > Self-refine prompting
+        > Directional-stimulus prompting

@@ -1,0 +1,47 @@
+AI agents
+    > a software program that can interact with its environment, collect data, and use the data to perform self-determined tasks
+    > you can build your own AI agent
+    
+    > benefits
+        > Increased Efficiency
+        > Improved Accuracy
+        > Enhanced Customer Experience
+        > Reduced Costs
+        > Scalability
+
+    > AI agent components
+        > Architecture
+            > The foundation on which the agent operates
+            > components
+                > physical structure
+                > software program
+                > combination of both
+
+        > Agent function
+            > Describes how data is translated into actions
+
+        > Agent Program
+            > The actual implementation of the agent function
+
+    > How it works
+        > Determine goals
+        > Acquire information
+        > Implement tasks
+
+    > use cases
+        > Customer Service:
+            > Providing automated support through chatbots
+        > Robotics
+            > Controlling robots in manufacturing, logistics, and healthcare
+        > Autonomous Vehicles
+            > Navigating self-driving cars and drones
+
+    > AI agents IDEs
+        > Botpress
+        > RASA
+        > LangGraph
+        > CrewAI
+        > LlamaIndex
+        > Agno
+        > OpenAI Swarm
+        > Autogen

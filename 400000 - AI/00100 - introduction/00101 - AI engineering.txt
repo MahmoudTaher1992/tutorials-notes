@@ -1,0 +1,19 @@
+AI engineering
+    > What is an AI engineer?
+        > Role
+            > Software engineer specializing in developing, deploying, and maintaining AI systems.
+        > Goal
+            > Bridge the gap between AI research and real-world applications.
+        > Responsibilities
+            > Developing, training, and evaluating AI models.
+            > Building scalable AI infrastructure (data pipelines, cloud systems).
+            > Deploying AI models (model serving, API development).
+            > Monitoring and maintaining AI systems.
+            > Collaborating with data scientists, software engineers, and product managers.
+
+    > AI impact on product development
+        > enhances the process of product development by
+            > automating repetitive tasks
+            > More accurate decision-making
+            > faster time-to-market
+            > reducing costs
