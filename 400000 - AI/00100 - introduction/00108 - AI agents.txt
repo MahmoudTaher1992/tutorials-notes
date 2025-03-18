@@ -39,7 +39,7 @@ AI agents
     > AI agents IDEs
         > Botpress
         > RASA
-        > LangGraph
+        > LangGraph, LangSmith
         > CrewAI
         > LlamaIndex
         > Agno

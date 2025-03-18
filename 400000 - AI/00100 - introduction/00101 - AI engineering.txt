@@ -17,3 +17,7 @@ AI engineering
             > More accurate decision-making
             > faster time-to-market
             > reducing costs
+
+    > AI vs ML engineers
+        > ML engineer makes the LLM
+        > AI engineer uses the LLM to build a product

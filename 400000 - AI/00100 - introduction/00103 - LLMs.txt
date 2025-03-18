@@ -27,8 +27,9 @@ LLMs
         > Github Copilot
     > limitations
         > Reliability depends on training data, which can be biased
-        > Can "hallucinate
+        > Can "hallucinate"
         > security breaches
         > Risk of exposing confidential data
     > Building LLMs
-        > need access to large datasets and infrastructure
+        > need access to large datasets 
+        > need access to great infrastructure

@@ -1,0 +1,62 @@
+Pre trained models
+    > models that are trained on large datasets
+    > benefits
+        > reducing development time
+        > reducing development cost (computational resources)
+        > can be fine tuned to specific tasks with less data
+        > improved accuracy
+
+    > limitations
+        > may be trained on biased data, which can lead to biased predictions
+        > they will need to be fine tuned hardly to niche tasks
+        > black box nature (we don't know what data they were trained on)
+
+    > models
+        > OpenAI
+            > an american AI research lab
+            > models
+                > GPT
+                    > text generation, 
+                    > conversation
+                    > translation
+                > Codex
+                    > code generation
+                    > code debugging
+                > DALL-E
+                    > image generation
+                > Whisper
+                    > speech recognition
+
+        > Context length
+            > each model has a context length
+            > the context length is the number of tokens the model can remember
+            > tokens are words, numbers, or punctuation (input and output)
+
+        > Cut-off Dates
+            > the date the model was last trained
+            > the model will not have knowledge of events that happened after the cut-off date
+
+        > popular models
+            > Claude
+            > Google gemini
+            > OpenAI GPT-3
+            > Deepseek
+
+        > communities
+            > Hugging Face
+                > a community of AI developers
+                > provides pre-trained models
+                > provides tools to develop AI models
+
+        > tool set
+            > Azure AI
+                > contains set of pre-trained models
+                > set of tools to 
+                    > develop AI models
+                    > deploy AI models
+                    > integrate AI into applications
+            > AWS SageMaker
+                > AI tools from AWS
+            > Mistral AI
+            > Cohere
+            > Replicate
