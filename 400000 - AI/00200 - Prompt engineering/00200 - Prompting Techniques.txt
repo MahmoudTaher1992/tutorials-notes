@@ -1,0 +1,14 @@
+Prompting Techniques
+    > Role prompting
+        > instructs the model to take on a specific role
+        > the model will generate text as if it were that role
+        > the role can be a character, a profession, etc.
+        
+    > Zero-Shot Prompting
+        > directly instructs the model to perform a task without any additional examples to steer it
+
+    > Few-Shot Prompting
+        > provides a few examples to the model to steer it in the right direction
+        > used for if the task is not easy
+        > 1 example will be 1 shot, 2 examples will be 2 shots, etc.
+        > the more examples, the better the model will perform

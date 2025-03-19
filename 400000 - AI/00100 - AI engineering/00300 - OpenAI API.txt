@@ -1,0 +1,20 @@
+OpenAI API
+    > Chat Completions API
+        > api that allows engineers to make chatbots
+        > it remembers the conversation and retrieves it
+        > it can generate responses
+    > Can write prompts as well
+    > tokens
+        > chunk of text
+        > maximum token
+            > each model has a token limit
+            > tokens are words, numbers, or punctuation, input and output
+        > token counting
+            > used for pricing
+            > used for limiting the number of tokens
+        > pricing consideration
+            > model type
+            > number of tokens
+            > usage volume
+    > OpenAI playground
+        > a place to test the models with different parameters

@@ -1,0 +1,78 @@
+introduction    
+    > prompting
+        > the process of giving an LLM, instructions to execute a task
+        > helps to understand the capabilities and the limitations of the model
+        > it requires a skill
+        > the quality of the output depends on the quality of the prompt
+
+    > LLM settings
+        > Temperature
+            > a parameter that controls the randomness and creativity of the generated text
+            > the higher the temperature, the more creative, randomness and less repetitive the text
+            > the lower the temperature, the more predictable, repetitive and less creative the text
+
+        > Top-p sampling
+            > AKA nucleus sampling
+            > Low p
+                > Results in more focused and predictable output
+            > High p
+                > Results in more diverse and creative output
+
+        > Max Length
+            > the maximum number of tokens the model can generate
+            > the model will stop generating tokens when it reaches the max length
+
+        > Stop Sequences
+            > a string that stops the model from generating more tokens
+            > it is used to control the length of the generated text
+
+        > Frequency Penalties
+            > a parameter that controls the repetition of tokens
+            > the higher the penalty, the less likely the model will repeat tokens
+            > the penalty is higher for each token that is repeated
+
+        > Presence Penalties
+            > a parameter that controls the repetition of tokens
+            > the higher the penalty, the less likely the model will repeat tokens
+            > the penalty is same for each token that is repeated
+
+    > Prompt elements
+        > role
+        > Instruction
+            > specify the task the model should perform
+        > examples
+        > Context
+            > provide the model with the necessary information to perform the task
+        > input data
+            > the data the model will use to generate the output
+        > output indicator
+            > the format of the output
+
+    > tips for designing prompts
+        > start simple
+            > it is an iterative process
+            > iteration is vital
+            > break down big tasks into small tasks
+            > build up complexity as you go
+
+        > instructions
+            > use commands to instruct the model
+            > experiments will guide you on how to instruct the model
+            > using relative context leads to better results
+            > place the instructions in the beginning of the prompt
+            > Use clear separators (e.g., "###") to separate instructions and context
+
+        > Specificity
+            > be specific with the instructions and the task
+            > more detailed instructions lead to better results
+            > Format and clear instructions are very important
+            > providing examples will improve the results
+            > avoid unnecessary information
+
+        > Avoid Impreciseness
+            > do
+                > write a 400 words essay on the topic "The impact of AI on society"
+            > don't
+                > write an essay on AI
+
+        > avoid saying what not to do but say what to do instead

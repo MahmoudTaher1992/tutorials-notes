@@ -5,6 +5,7 @@ Pre trained models
         > reducing development cost (computational resources)
         > can be fine tuned to specific tasks with less data
         > improved accuracy
+        > strong community support
 
     > limitations
         > may be trained on biased data, which can lead to biased predictions
@@ -47,6 +48,7 @@ Pre trained models
                 > a community of AI developers
                 > provides pre-trained models
                 > provides tools to develop AI models
+            > kaggle
 
         > tool set
             > Azure AI
