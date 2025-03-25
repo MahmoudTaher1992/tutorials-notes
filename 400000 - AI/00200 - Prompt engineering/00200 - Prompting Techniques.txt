@@ -1,9 +1,16 @@
 Prompting Techniques
+    > can be used alone or combined with multiple techniques
+
     > Role prompting
         > instructs the model to take on a specific role
-        > the model will generate text as if it were that role
+        > the model will generate text as if it was that role
         > the role can be a character, a profession, etc.
-        
+
+    > persona-based prompting
+        > instructs the model to take on a specific persona
+        > the model will generate text as if it was that persona
+        > the persona can be a character, a profession, etc.
+
     > Zero-Shot Prompting
         > directly instructs the model to perform a task without any additional examples to steer it
 
@@ -12,3 +19,226 @@ Prompting Techniques
         > used for if the task is not easy
         > 1 example will be 1 shot, 2 examples will be 2 shots, etc.
         > the more examples, the better the model will perform
+
+    > Chain of thoughts prompting (COT)
+        > enables complex reasoning capabilities through intermediate reasoning steps
+        > types
+            > zero shot COT
+                > the model is given a question and asked to answer it in multiple steps
+                > by "let's think it step by step"
+
+            > few shot COT
+                > the model is given a complex question and a few examples to help it answer the question
+                    > the example you give should be in steps
+
+            > Automatic COT 
+                > or self generated in context learning (SG-ICL)
+                > consists of 2 main stages
+                    > question clustering
+                        > partition the questions into clusters
+                    > demonstration sampling
+                        > for each cluster ask the LLM to "think it step by step"
+
+                > better than zero shot COT, as it provides more context
+                > better than few shot COT, as the LLM will help you writing the example
+
+                > the LLM will help you write the prompts !!!
+
+            > Active prompting
+                > it is a few shot COT, but it is done only for the hard questions
+                > better than few shot COT, as it is more efficient and cheaper to create
+
+            > contrastive COT
+                > if you included wrong steps in the COT and telling them so, the LLM will learn from it
+
+            > tabular COT
+                > if the COT is in a tabular format
+                > i.e.
+                    [Your Question, think it step by step]
+                    |step|subquestion|procedure|result|
+
+            > Analogical Prompting
+                > ask the LLM use it's expertise with similar problems to solve the current problem
+                > i.e.
+                    Your task is to tackle mathematical problems. When presented with a math problem, recall relevant problems as examples.
+                    Afterward, proceed to solve the initial problem.
+                    [Insert problem here]
+
+    > Chain of drafts
+        > it is COT, but with limiting the length of the thoughts
+        > i.e.
+            Think step by step, but only keep a minimum draft for each thinking step, with 5 words at most. Return the answer at the end of the response after a separator ####.
+            Guidelines:
+                Limit each step to 5 words
+                Focus on essential calculations/transformations
+                Maintain logical progression
+                Mark final answer with ####
+
+    > Least-to-Most Prompting (Prompt Chaining)
+        > break down the problem into smaller tasks
+        > ask LLM to solve them one by one, or create a prompt for each task
+
+    > Generated Knowledge (Dual Prompt Approach)
+        > ask the LLM to generate knowledge about a specific topic
+        > then ask the question
+        > LLM will use the generated knowledge to answer the question
+
+    > Chain of knowledge
+        > provide some knowledge to the LLM and ask it a question
+        > format
+            {question}
+            {Evidence Triples}
+            {Explanation}
+        > i.e.
+            Question: 
+                Determine if a plant can grow in a windowless room.
+
+            Evidence Triples:
+                (plants, require, photosynthesis)
+                (photosynthesis, requires, sunlight)
+                (windowless room, lacks, sunlight)
+
+            Explanation:
+                Plants require photosynthesis for growth, which needs sunlight. A windowless room lacks sunlight.
+
+    > Meta Prompting (Automatic prompt engineering)
+        > a technique that uses LLM to create and refine prompts
+        > high intelligent LLMs create prompts to lower intelligent LLMs
+        > ask the model to generate a prompt with the following specs
+            > break down the task into smaller tasks
+                > each task 
+                    > should be assigned to an expert
+                    > specific
+                    > detailed instructions
+        > ask the model to evaluate and refine the prompt
+
+    > Ensembling
+        > self consistency
+            > ask the LLM the same prompt multiple times and take the most common answer
+        > Mixture of Reasoning Experts (MoRE)
+            > ask the LLM to answer the question while changing the roles and take the best one
+        > Max Mutual Information (MMI) Method
+            > ask the LLM about an answer with a different prompt and take the best one
+            > you should use an algorithm to find the best prompt (or do it manually if no algorithm is available)
+        > Prompt Paraphrasing
+            > Paraphrase the prompt and use it
+            > you can use AI to help you paraphrase the prompt
+        > DiVeRSe (Diverse Verifier on Reasoning Step)
+            > make n prompts for the same question, to encourage the LLM to think in different ways
+            > ask the llm (COT)
+            > ask the llm to verify and evaluate each response 
+            > take the best response and do a (Step-Aware Verification) to verify the reasoning steps
+
+    > Tree of thoughts
+        > ask the LLM to generate a tree of thoughts
+            > the tree will contain n COTs
+        > ask llm to use the COTs to answer the question
+            > LLM should use the best ideas from the tree
+
+    > RAG
+        > explained in the introduction
+
+    > Automatic Reasoning and Tool-use
+        > a special type of prompting that requires the LLM to perform a task that involves reasoning and tool-use
+        > the LLM will have to use a tool to perform the task
+
+    > Directional Stimulus Prompting
+        > instructs the model to generate text in a specific direction
+        > give the model a direction (hints) to follow
+
+    > Program-Aided Language Models (PAL)
+        > COT + programming hints
+        > in each step in the COT, the model is given a programming hint or representation
+        > the model will respond with similar programming hints
+        > the response success rate increases
+
+    > Multimodal Prompting
+        > combines text and images to respond to a prompt
+        > put the images in the context
+
+    > Dealing With Long Form Content
+        > Preprocessing the Text
+            > remove unnecessary information
+            > summarize the necessary information
+        > Chunking and iterative approach
+            > break down the context into smaller parts
+            > deal with a chunk at a time, iterate over the chunks
+        > Post processing and refinement
+            > refine the output
+            > remove unnecessary information
+            > add necessary information
+        > use LLMs that support larger context
+        > use RAG
+
+    > Re reading (RE2)
+        > ask the LLM the question 2 times
+        > ask the LLM to read the prompt multiple times
+        > the LLM will generate a better response
+        > i.e.
+            > {input}. Read the question again: {input}
+
+    > Rephrase and Respond (RaR) Prompting
+        > it is like generative prompting
+        > the model is asked to rephrase the question and then answer it
+        > i.e.
+            > {input}. Rephrase and expand the question, and respond.
+
+    > System 2 Attention (S2A) 
+        > ask the LLM to focus on the task and remove the irrelevant information
+        > take the output and put it in another prompt
+
+    > Self-Ask Prompting
+        > it is a type of COT
+        > it may work in what COT fails
+        > i.e.
+            Question: {A complex question}
+            Are follow up questions needed here: Yes.
+            Follow up: {Sub-question 1} Intermediate answer: {Correct answer to sub-question 1}
+            Follow up: {Sub-question 2} Intermediate answer: {Correct answer to sub-question 2}
+            So the final answer is: {Correct answer to the complex question}
+            Question: {Your prompt with a complex question}
+            Are follow up questions needed here:
+
+    > Chain-of-Dictionary
+        > used in translations
+        > give the LLM some translations of some hard words and ask it to translate a sentence
+
+    > Step-Back Prompting
+        > ask the LLM to take a step back and recall the information it has on the topic, and use it to answer the question
+        > steps
+            > abstraction
+            > Reasoning
+        > i.e.
+            Original question (don't ask it):
+                What happens to the pressure of an ideal gas when temperature increases by a factor of 2, and volume increases by a factor of 8?
+
+            Abstraction step:
+                Recall the ideal gas law and the relationship between pressure, temperature, and volume. 
+
+            Reasoning Step:   
+                Use the Ideal Gas Law: PV = nRT to answer the question: What happens to the pressure of an ideal gas when temperature increases by a factor of 2, and volume increases by a factor of 8?
+
+    > Thread of thought (TOT)
+        > used in chaotic contexts
+        > simply ask LLM to summarize, prioritize and finally answer the question
+        > i.e.
+            > step 1
+                {CHAOTIC CONTEXT}
+                {question}
+                {TRIGGER SENTENCE} (i.e. Walk me through this context in manageable parts step by step, summarizing and analyzing as we go.)
+            > step 2
+                {CHAOTIC CONTEXT}
+                {question}
+                {TRIGGER SENTENCE}
+                {SUMMARIZATION}
+                {question again}
+
+    > I don't understand this
+        > Active prompting
+        > ReAct Prompting
+        > Reflexion
+        > Graph prompting
+        > Adversarial Prompting
+        > contrastive prompting
+        > SimToM
+        > Complexity-Based Prompting

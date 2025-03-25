@@ -37,6 +37,7 @@ introduction
             > the penalty is same for each token that is repeated
 
     > Prompt elements
+        > format
         > role
         > Instruction
             > specify the task the model should perform
@@ -49,6 +50,8 @@ introduction
             > the format of the output
 
     > tips for designing prompts
+        > format
+            > using a format helps the model to understand the task
         > start simple
             > it is an iterative process
             > iteration is vital
@@ -76,3 +79,13 @@ introduction
                 > write an essay on AI
 
         > avoid saying what not to do but say what to do instead
+
+        > clarity
+            > be clear with the instructions
+            > avoid ambiguity
+
+        > structured input and output
+            > helps LLM to understand the task
+
+        > Complexity
+            > break down complex tasks into smaller tasks
