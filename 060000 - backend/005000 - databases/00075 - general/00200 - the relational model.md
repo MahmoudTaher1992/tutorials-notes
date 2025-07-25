@@ -17,4 +17,4 @@
     * Foreign Keys
         * set of attributes in one table whose values must match the primary key values of a row in another table
     * Row constraints
-        * Aa cel must equal the multiple of 2
+        * A cell must equal the multiple of 2
