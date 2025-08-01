@@ -38,3 +38,15 @@
     * Recursion
     * Portability
         * triggers can significantly between different database systems, making migrating databases more challenging 
+
+* avoid triggers in
+    * simple data validation
+    * complex logic that can live in application layer
+    * sending email, making http requests or other external stuff
+
+* Best Practices
+    * Keep them Short and Simple
+    * Document Thoroughly
+    * Minimize further triggers
+    * Handle errors
+    * consider alternatives
