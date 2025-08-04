@@ -291,3 +291,71 @@
     * Number matters
         * if you have large forces, you can attack, defend in the same time
         * if you don't, you can do one thing at a time.
+
+# General Considerations for Tactics
+
+* Tactics are methods used to win a battle
+    * it is not about using more soldiers or bigger guns
+    * it is about using what you have in the smartest way possible
+
+* Tactics plan composition
+    * Any tactical plan can be broken down into 3 main activities
+        * employment
+            * using all your tools together at the right time
+            * sparing tools that can be used is a bad tactic
+        * Arrangement
+            * place your pieces at the best places
+            * i.e.
+                * hit the enemy where it is weak
+        * Directed Actions
+            * giving clear orders
+            * each unit should know
+                * what its specific job
+                * why it's important for the overall plan
+
+* The Warfighting Functions (The commander's toolbox)
+    * they must be used together to achieve the goal
+    * functions
+        * Command and Control (brian)
+        * Movement and Maneuver (force on ground)
+        * Intelligence
+        * Fires
+        * Sustainment
+        * Protection
+
+* Combat power
+    * the total fighting ability a unit can bring into a battle
+    * it is not about the weapons only
+    * you have to generate enough combat power to defeat the enemy
+    * combat power ingredients
+        * Leadership
+            * good leaders is a power to the army
+            * search for a strong leader
+        * Firepower
+        * Information
+        * Mobility
+            * the ability to move quickly
+        * Survivability
+            * The ability to take a hit and keep fighting.
+
+# Command and Control (C2) Warfighting Function
+
+* it is The Brain and Nervous System of the military operation
+    * it makes the other warfighting functions work together smoothly and effectively
+* C2 Goal
+    * use all parts effectively
+    * synchronized them
+    * make them all focused on the same goal 
+* C2 result
+    * derive the highest combat power
+* Commanders role
+    * state the mission (what to be done)
+    * state the intent (why and what a successful outcome should be)
+* Sub commanders' role
+    * translate the vision into detailed plans and orders
+    * make sure everyone has the right resources
+* Communication Challenges
+    * clear communications, can be intercepted by the enemy
+    * try to make the communications as low as possible
+    * enemy can locate you and target you because of communication exposure
+    * units need clear pre practiced SOP (Standard Operating Procedures) for how to operate when communications are difficult, ensuring they can still achieve their mission with minimal guidance
