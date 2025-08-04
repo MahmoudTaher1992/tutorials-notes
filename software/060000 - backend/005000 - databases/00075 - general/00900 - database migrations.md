@@ -18,4 +18,21 @@
     * Error Reduction
     * Collaboration
 
-    
+* Zero-Downtime Migrations
+    * a strategy used to change the schema without causing a downtime
+    * steps (to rename a column)
+        * Migration 1
+            * create a new column with the new name (nullable)
+        * modify the application code
+            * make it read from the new column and if it is null, read it from the original column
+            * make it write to both new, and old column
+        * Data migration
+            * set new_column = old_column
+        * Migration 2
+            * make the new column not null
+        * modify the application code
+            * make it read and write to the new column
+            * make it read only from the new column
+            * remove the references and usage of the old column
+        * migration 3
+            * drop the old column
