@@ -33,7 +33,7 @@
                         * deletes child rows or updates foreign keys
                     * SET NULL
                     * SET DEFAULT
-    * Assertion
+    * Assertion (CHECK)
         * checks that are done on the entire database or multiple tables or inside the table
 
 * Constraint's violations

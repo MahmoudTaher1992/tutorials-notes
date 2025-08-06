@@ -359,3 +359,130 @@
     * try to make the communications as low as possible
     * enemy can locate you and target you because of communication exposure
     * units need clear pre practiced SOP (Standard Operating Procedures) for how to operate when communications are difficult, ensuring they can still achieve their mission with minimal guidance
+
+# Hasty and Deliberate Operations
+
+* Hasty
+    * a surprise
+    * You see an opportunity
+    * You want to take advantage
+    * high risk
+    * minimal time for planning
+    * Speed is the key advantage
+
+* Deliberate
+    * Goal
+        * Achieve a complex objective
+    * Planning
+        * Slow and detailed
+    * Perfection and coordination are more important
+    * Lower risk during the action
+
+# Tactical Framework
+
+* four-step recipe for planning and executing almost any military operation
+* works with
+    * attacking
+    * defending
+* breaks down a complex operation into 4 logical phases
+* phases
+    * Find
+        * you can not fight what you can not find
+        * locate the enemy
+        * use what ever tools you have to pinpoint the enemy
+        * you have also to know every thing possible about them
+    * Fix
+        * you have to fix your enemy, pin them down
+        * you don't want them running away, maybe moving to a better position
+        * fixing them will allow you to set them up for the main blow
+    * Finish
+        * you apply your overwhelming combat power to break the enemy and finish the mission
+    * Follow Through
+        * Winning the fight is not the end !!
+        * hunt down any remaining enemy fighters
+        * reorganize your troops
+        * treat the wounded
+        * prepare for the next mission
+
+# Battle Drill
+
+* It is a set of simple, practiced steps to respond to a common battlefield event
+    * it requires lots of drills to train the troops
+* Allows soldiers to react correctly and instantly turning a chaotic moment into a controlled response
+    * in the chaos of combat, there will be no time to think and plan
+    * Speed is life
+* The trigger is called a cue
+    * i.e.
+        * enemy fire
+        * a leader's especial command
+* Goal
+    * take immediate, effective actions to keep the soldiers alive
+    * regain advantage over the enemy
+
+
+
+# Battle handover
+
+* a formal transfer of an active gunfight from one unit to another
+* used tom maintain momentum of the combat power
+    * done by bringing fresh units and allowing tired units to leave
+* Battle Handover Line
+    * a specific line drawn on the map
+    * when a fresh unit reaches it, the responsibility of the gunfight is transferred from the old unit to the new one
+* types
+    * Passage of Lines
+        * A fresh unit moves through a tired unit to continue an attack
+    * Relief in Place
+        * A fresh unit comes in to replace a tired unit in a defensive position
+    * Breakout of an Encirclement
+        * A rescue force breaks through to a trapped unit
+
+
+
+# Control Measures
+
+* it is like instruction manual in the battlefield
+* are rules that help in
+    * preventing chaos in the battlefield
+    * action coordination
+    * prevent friendly fire
+    * give freedom/restriction  where possible
+
+* types
+    * permission
+        * Permissive Measures
+            * Green Lights
+            * i.e.
+                * Behind a phase line, artillery can shoot freely
+        * Restrictive Measures
+            * Red Lights
+            * i.e.
+                * Don't pass the boundary line, otherwise you will be considered an enemy
+    * views
+        * graphical symbols on maps
+            * digital
+                * maps on screens
+                * updatable
+            * analog
+                * printed map in pockets
+                * can not be hacked
+        * rules in leaders mind
+
+
+
+# Terrain Management
+
+* the art of assigning specific pieces of ground to specific units
+    * to keep things organized and prevent friendly fire
+* assignment ways
+    * Area of operations
+        * a complete area given to a unit 
+        * it is responsible for everything inside it
+        * lots of power, lots of responsibilities
+    * Zone
+        * used in offense
+        * has a starting line, left and right boundaries, no end line
+    * sector
+        * used in defense
+        * a part of a terrain where a commander is responsible for it's defense
+        * a coordination must happen between the sectors to close the gap between them
