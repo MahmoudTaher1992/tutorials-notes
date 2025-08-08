@@ -35,9 +35,16 @@
 
 ### Maneuver
 
-* Maneuver is movement in conjunction with fires... The purpose of maneuver is to gain and exploit (derive benefit from) positions of relative advantage to accomplish the mission.
-* Maneuver isn't just "moving.", 
-* It's moving smartly to get an advantage or putting the enemy in a worse position, and you almost always do it with the help of shooting ("fires").
+* Movement
+    * act of displacing forces from point A to point B
+* Maneuver
+    * movement in conjunction with fires
+    * to gain and exploit (derive benefit from) positions of relative advantage to accomplish the mission.
+    * isn't just "moving."
+        * It's moving smartly 
+        * to get an advantage 
+        * or putting the enemy in a worse position
+    * you almost always do it with the help of shooting ("fires").
 * i.e.
     * in Seize the Bridge Tactic
         * you found a machine gun bunker defending the entrance
@@ -552,3 +559,69 @@
         * You're keeping their heads down so another unit can move
     * Fix
         * Pin an enemy in place with fire and/or obstacles so they cannot move from their location
+
+# Multinational Operations
+
+* when the military forces from two or more different countries team up to achieve a common goal
+    * i.e.
+        * part of an official alliance
+        * temporary coalition formed for a specific mission
+
+* Opportunities
+    * International Legitimacy
+        * you will be accepted by the world
+    * Different Authorities & Capabilities
+        * Every country has it's special military power
+        * combining them gives the commander more options to form a stronger combat power
+
+* Challenges
+    * communication issues
+        * due to language differences
+    * National caveats (Warnings)
+        * every country has it's own laws and restrictions
+        * this can limit the limits of the commander
+            * i.e.
+                * germans don't permit offensive attacks
+                * US permits it
+    * Interoperability concerns
+        * the ability of different forces to work effectively with each other 
+            * i.e.
+                * Does french air fighters transmit radio waves that can be heared by us tanks ?
+
+* Solutions to the challenges
+    * Liaison Officers
+        * officers that facilitates the communication between multinational units
+            * they should now military stuff, to be able to conduct and translate the communications
+    * Simple Orders
+    * Train Together
+
+
+
+# Local Security
+
+* A security system for a military unit in the field
+* formation of protective bubble 
+    * location
+        * around the military unit
+    * goal
+        * prevent the enemy from launching a surprise attack
+            * a surprise attack
+                * incredibly dangerous
+        * maintaining the initiative
+            * if you lost the initiative, you will no longer be in control
+            * ensures that you see the enemy first, allowing you to keep control of the situation
+    * how
+        * small activities near the unit
+            * Avoiding enemy detection
+                * If they can't see you, they can't attack you.
+            * actively looking for the enemy around you
+
+* Methods
+    * Active Measures (Proactively Looking for Danger)
+        * Observation Posts
+            * Placing a few soldiers in a hidden spot with a good view
+                * Their only job is to watch for enemy movement and report back
+        * Patrols
+        * Establishing Levels of Alert / SOPs
+    * Passive Measures 
+        * 
