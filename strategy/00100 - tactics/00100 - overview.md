@@ -716,5 +716,100 @@
 
 * Movement and protection
     * Reserves must be able to
-        * move quickly
-    * 
+        * move quickly to any crisis point
+    * Defensive Measures
+        * visual stealth (camouflage)
+        * electronic stealth (camouflage)
+
+* Reserves doesn't have a mission, they have a simple task
+    * reasons
+        * it is uncommitted force
+            * if it took a task, then it is committed and regular force
+        * Flexibility and Responsiveness
+            * if they had to put a plan then they are no longer flexible
+        * The commander is the decision maker
+            * this makes them executers only
+
+* Example
+    * Quick Reaction Force (QRF) 
+
+
+
+# Combat Operations: Daylight vs. Limited-Visibility
+
+## I. Daylight Operations
+*   **Definition**: [operations conducted during daytime]
+*   **Advantages**:
+    *   **Equipment Use**: [More equipments can be used]
+    *   **Control of Maneuver**: [Easy troops direction and coordination, because they see each other.]
+    *   **Stress Reduction**: [A lot more easier for soldiers to operate in the daylight]
+*   **Disadvantages**:
+    *   **Enemy Effectiveness**: [Enemy is more efficient]
+    *   **Loss of Technical Overmatch**: [You lose the advantage of your high tech equipments.]
+
+## II. Limited-Visibility Operations
+*   **Definition**: [operations conducted under reduced visibility conditions, such as at night, fog, ...]
+*   **Categories of Limited-Visibility Conditions**:
+    *   **Technology-Overcomable**: [night => night vision googles]
+    *   **Technology-Unovercomable**: [dust, smoke, heavy rain, snow, fog, thick vegetation, ...]
+*   **General Characteristics**:
+    *   **Deliberate Nature**: [Operations in limited visibility usually require more careful planning and slower execution compared to daylight operations due to the increased challenges. Imagine trying to set up a complex tent in the dark; you'd take more time and be more cautious.]
+    *   **Exceptions**: [Attacks that are part of a rapid follow-up to a daylight attack, an exploitation (taking advantage of a shattered enemy), or a pursuit (chasing a retreating enemy) might proceed quickly even in limited visibility.]
+*   **Complications (Disadvantages) of Limited Visibility**:
+    *   **Control Issues**: [It's much harder to manage and direct your units, individual soldiers, and their firepower (like artillery or machine guns) when you can't see them clearly or their targets. A commander might struggle to ensure all his platoons are advancing in the correct direction and coordinating their attacks if radio communication is intermittent and visual cues are absent.]
+    *   **Targeting Difficulties**: [Identifying and accurately hitting enemy targets becomes challenging. A soldier might mistake a bush for an enemy soldier or be unable to distinguish between friendly and enemy vehicles.]
+    *   **Navigation and Movement**: [Moving without being detected is harder, and soldiers can easily get lost or stumble into unexpected enemy positions. A patrol trying to sneak past enemy lines at night might accidentally walk into a concealed ambush position.]
+    *   **Casualty Management**: [Locating, providing first aid to, and evacuating injured soldiers is significantly more difficult and time-consuming in the dark or poor weather. A medic might struggle to find a wounded soldier amidst the chaos and darkness.]
+    *   **Obstacle Handling**: [Finding, going around, or breaking through enemy obstacles (like minefields or barbed wire) is a major challenge. Units might waste critical time trying to find a safe path through a wired fence they can barely see.]
+*   **Advantages (When Trained & Equipped)**:
+    *   **Superiority over Unprepared Enemy**: [Forces specifically trained and equipped for limited-visibility operations gain a major advantage over enemies who lack such capabilities. If your soldiers have advanced night-vision goggles and the enemy doesn't, your forces can move and fight effectively while the enemy is essentially blind.]
+    *   **Concealment**: [Darkness or bad weather can hide the movement and positions of large military forces, both when attacking and defending.]
+    *   **Psychological Impact**: [Attackers can create more shock, confusion, and isolation among the enemy. Imagine waking up to an attack in the middle of the night by an enemy you can't see; it's far more disorienting than a daylight assault.]
+    *   **Air Support**: [Airplanes and helicopters can operate more easily in contested airspace because enemy air defenders relying on optical sights struggle to acquire targets at night.]
+    *   **Increased Surprise**: [The element of surprise is greatly enhanced, and military deception tactics (like using fake lights or noise to trick the enemy) become more effective. A unit might use decoy vehicle lights to make the enemy think they are attacking from one direction, while the real attack comes from another unseen flank.]
+*   **Organization and Planning Considerations**:
+    *   **Task Organization**: [The way forces are organized for a limited-visibility operation is generally the same as for daylight, but changing that organization (rearranging teams or roles) takes more time and effort during low visibility.]
+    *   **Noise and Light Discipline**: [It's crucial to minimize noise and light to avoid detection. For example, leaving a laser sight on a weapon could give away a soldier's position, eliminating the surprise advantage.]
+    *   **Illumination**:
+        *   **Non-illuminated attacks** [Attacks conducted without using artificial lights] offer the **highest chance of achieving surprise**.
+        *   However, units **always plan for illumination to be available** [They prepare flares or spotlights], even if they intend to start in darkness. This allows them to quickly light up the area if needed, for example, once they make contact with the enemy.
+        *   Leaders must **clearly understand** *when*, *under what conditions*, and *who has the authority* to use illumination.
+    *   **Planning Emphasis (Key Points)**:
+        *   **Simplicity**: [Keep the battle plan straightforward to avoid confusion in a low-visibility environment.]
+        *   **Reconnaissance**: [Spend extra time scouting the area to understand the terrain and enemy positions, especially how they appear in the dark.]
+        *   **Control Measures**: [Use easy-to-spot terrain features, like roads or railroad tracks, to establish clear boundaries and directions for units.]
+        *   **Intermediate Objectives**: [Set smaller, achievable goals along the path of attack to help units stay on course and maintain direction.]
+        *   **Concealment**: [Hide all preparations for the operation from enemy observation.]
+        *   **Rehearsals**: [Conduct initial practice drills in daylight, and the final, most important rehearsal at night to simulate actual conditions.]
+        *   **Security Elements**: [Position units specifically to protect the main force.]
+*   **Assumption of Enemy Capabilities**:
+    *   **Assume Equality**: [Always assume the enemy has similar night-fighting capabilities unless you have solid information proving otherwise. This prevents complacency.]
+    *   **Terrain Masking Remains Key**: [Using features like hills, forests, or buildings to hide your movement and positions is still vital, even if it feels like the darkness offers enough protection.]
+    *   **Close Movement**: [When moving, reduce the distance between soldiers or vehicles so they can keep track of each other more easily and react faster if they encounter the enemy. This is like holding hands with a friend in a dark, unfamiliar room so you don't get separated.]
+
+## III. Summary of Advantages and Disadvantages (Table 1-1 Explained)
+
+### A. Advantages of Limited-Visibility Operations
+*   **Infiltration**: [It's easier to sneak past enemy defenses because they can't see your forces approaching clearly. Think of trying to sneak into a backyard at night versus during the day; you're much harder to spot in the dark.]
+*   **Concealment**: [Darkness hides the movement of large groups of soldiers or vehicles, both when attacking and defending, allowing for surprise movements.]
+*   **Psychological Edge**: [Attackers benefit from the shock, confusion, and feeling of isolation they can create in the enemy. Imagine being attacked by unseen forces in the middle of the night; it's terrifying and disorienting.]
+*   **Air Operations**: [Aircraft can fly more safely in contested areas because enemy anti-aircraft defenses have a harder time spotting them with just optical sights.]
+*   **Surprise**: [The element of surprise is significantly increased, and tricks to deceive the enemy (like making fake noise or showing false lights) are more effective.]
+
+### B. Disadvantages of Limited-Visibility Operations
+*   **Reserve Deployment**: [It's harder and slower for backup forces (reserves) to move into position and join the fight at night compared to daylight.]
+*   **Control Issues**: [Directing and coordinating your troops becomes much more difficult without good visibility, especially if you don't have advanced night-vision technology.]
+*   **Static vs. Moving Forces**: [Defending forces who are waiting in fixed positions can react more easily than attacking forces who are constantly moving and trying to navigate the darkness.]
+*   **Weather Impact**: [Extreme weather (like blizzards or sandstorms) can prevent critical air support, including drones.]
+*   **Obstacle Detection**: [Attacking forces struggle to fully understand the extent and layout of enemy obstacles (like minefields or trenches) in low visibility.]
+*   **Terrain Navigation**: [Difficult terrain, like dense forests or rocky hills, becomes even harder and slower to cross in the dark.]
+*   **Deception by Environment**: [The very conditions of low light, smoke, or noise can accidentally mislead *both* friendly and enemy forces.]
+*   **Loss of Momentum**: [Attacking forces have to slow down to maintain cohesion and avoid getting separated, which reduces their attack speed and impact.]
+*   **Land Navigation**: [Getting lost is a much higher risk at night; units can separate, lose their way, and support elements might end up in the wrong places.]
+*   **Enemy Obstacle Emplacement**: [Defending forces can secretly set up new obstacles or move existing ones without being seen by your scouting teams.]
+*   **Increased Ambush Risk**: [Attacking units are more vulnerable to ambushes at night because the enemy can hide and strike without being seen.]
+*   **Indirect Fire Adjustment**: [Directing artillery or mortar fire accurately is tough, even with night-vision devices, as it's hard to see exactly where the shells are landing.]
+*   **Ammunition Needs**: [Units need a lot more special signal ammunition, like tracer bullets (which glow so you can see where you're shooting), flares, and illumination rounds (to light up targets).]
+*   **Casualty Management**: [Finding and getting injured soldiers to safety is significantly harder.]
+*   **Fratricide Risk**: [The chance of accidentally harming or killing your own soldiers (friendly fire) increases dramatically due to poor visibility and confusion.]
+*   **Reduced Weapon Range**: [The effective distance at which direct-fire weapons (like rifles and machine guns) can hit targets accurately decreases because of poor visibility, making it hard to spot and identify targets clearly.]
