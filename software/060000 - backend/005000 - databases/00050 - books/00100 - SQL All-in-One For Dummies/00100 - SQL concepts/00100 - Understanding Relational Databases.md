@@ -1,3 +1,0 @@
-# Understanding Relational Databases
-
-* 
