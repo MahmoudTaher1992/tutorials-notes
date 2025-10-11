@@ -1,3 +1,5 @@
+Can you please check the table of content, I want you to explain to me in details the following part
+
 Formal Relational Query Languages
 4.1. Relational Algebra
 4.1.1. Core Unary Operations (SELECT/Restriction σ, PROJECT/Projection π, RENAME ρ)
