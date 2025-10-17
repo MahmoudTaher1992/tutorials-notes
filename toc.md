@@ -1,27 +1,11 @@
 I have a detailed TOC for studying REST apis (look at the level of details), I want a simillar one for 
 
 
-Building For Scale
-
+Node js 
 
 (
 
-Observability
-
-Core Concepts
-Instrumentation
-Monitoring
-Telemetry
-
-
-Mitigation Strategies
-Graceful Degradation
-Throttling
-Backpressure
-Loadshifting
-Circuit Breaker
-
-
+    
 )
 
 ```markdown
