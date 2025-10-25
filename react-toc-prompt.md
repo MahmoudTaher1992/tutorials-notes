@@ -1,9 +1,10 @@
 I have a detailed TOC for studying React (look at the level of details), I want a simillar one for 
 
 
-Angular
+Web server => tomcat
 
 (
+
 
 
 )
