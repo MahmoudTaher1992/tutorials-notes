@@ -1,11 +1,9 @@
 I have a detailed TOC for studying REST apis (look at the level of details), I want a simillar one for 
 
-
-Node js 
+Frontend => Web components => Shadow DOMs
 
 (
 
-    
 )
 
 ```markdown
