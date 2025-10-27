@@ -1,7 +1,7 @@
 I have a detailed TOC for studying React (look at the level of details), I want a simillar one for 
 
 
-Web server => tomcat
+Terraform
 
 (
 
@@ -249,9 +249,3 @@ Web server => tomcat
 ### D. CI/CD, Deployment
 - Popular Deployment Targets (Vercel, Netlify, AWS Amplify, etc.)
 - Testing and Automation
-
----
-
-**Appendices**
-- References and Further Reading
-- Glossary of Common React Terms
