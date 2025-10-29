@@ -1,6 +1,6 @@
 I have a detailed TOC for studying REST apis (look at the level of details), I want a simillar one for 
 
-Frontend => Web components => Shadow DOMs
+React Native
 
 (
 
