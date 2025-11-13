@@ -1,3 +1,4 @@
+
 Of course. Here is a comprehensive Table of Contents for studying to become a Software Architect, structured with the same level of detail and logical progression as your React example.
 
 It moves from the foundational role and principles to specific architectural styles, deep dives into critical domains (data, security, cloud), and covers the essential "soft skills" of documentation, leadership, and strategy.
