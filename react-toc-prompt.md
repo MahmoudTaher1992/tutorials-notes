@@ -1,11 +1,11 @@
 I have a detailed TOC for studying React (look at the level of details), I want a simillar one for 
 
 
-Terraform
+Software Design & Architecture
 
 (
 
-
+software design and architecture
 
 )
 
