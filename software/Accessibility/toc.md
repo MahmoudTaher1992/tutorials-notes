@@ -1,6 +1,5 @@
 Of course. Here is a similarly detailed and structured Table of Contents for studying Frontend Accessibility, following the logical progression from fundamentals to advanced topics, inspired by your REST API example.
 
-```markdown
 *   **Part I: Fundamentals of Digital Accessibility (A11y)**
     *   **A. Introduction to Accessibility and Inclusive Design**
         *   The "Why": The Moral, Business, and Legal Case for Accessibility
@@ -140,4 +139,3 @@ Of course. Here is a similarly detailed and structured Table of Contents for stu
         *   WebXR (VR/AR) Accessibility
         *   AI and its role in automated captioning and image descriptions
         *   The upcoming WCAG 3.0 ("Silver")
-```
