@@ -1,13 +1,8 @@
 I have a detailed TOC for studying React (look at the level of details), I want a simillar one for 
 
 
-Software Design & Architecture
+canon r6 mark II 
 
-(
-
-software design and architecture
-
-)
 
 
 # React: Comprehensive Study Table of Contents
