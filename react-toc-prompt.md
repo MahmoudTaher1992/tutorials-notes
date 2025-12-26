@@ -1,8 +1,7 @@
-I have a detailed TOC for studying React (look at the level of details), I want a simillar one for 
+I have a detailed TOC for studying React (look at the level of details), I want a similar one for 
 
 
-canon r6 mark II 
-
+Open telemetry
 
 
 # React: Comprehensive Study Table of Contents
