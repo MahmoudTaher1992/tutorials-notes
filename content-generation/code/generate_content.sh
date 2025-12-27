@@ -22,8 +22,8 @@ find "$DESC_PATH" -type f | while read -r file; do
     line_count=$(wc -l < "$file")
     echo "[DEBUG] Line count for $file = $line_count"
 
-    # --- Skip files with more than 3 lines ---
-    if [ "$line_count" -gt 3 ]; then
+    # --- Skip files with more than 20 lines ---
+    if [ "$line_count" -gt 20 ]; then
         echo "[INFO] Skipping $file (already has content)"
         continue
     fi

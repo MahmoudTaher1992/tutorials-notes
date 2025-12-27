@@ -1,7 +1,7 @@
 I have a detailed TOC for studying React (look at the level of details), I want a similar one for 
 
 
-Prometheus
+Jaeger
 
 
 # React: Comprehensive Study Table of Contents

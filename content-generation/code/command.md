@@ -1,1 +1,1 @@
-./generate_content.sh /Users/taher/Desktop/github/tutorials-notes/software/Prometheus/toc.md /Users/taher/Desktop/github/tutorials-notes/software/Prometheus/Prometheus-Study
+./generate_content.sh /Users/taher/Desktop/github/tutorials-notes/software/Jaeger/toc.md /Users/taher/Desktop/github/tutorials-notes/software/Jaeger/Jaeger-Comprehensive-Study
