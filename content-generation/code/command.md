@@ -1,1 +1,1 @@
-./generate_content.sh /Users/taher/Desktop/github/tutorials-notes/software/New-Relic/toc.md  /Users/taher/Desktop/github/tutorials-notes/software/New-Relic/NewRelic-Study
+./generate_content.sh /Users/taher/Desktop/github/tutorials-notes/software/Dynatrace/toc.md  /Users/taher/Desktop/github/tutorials-notes/software/Dynatrace/Dynatrace-Study
