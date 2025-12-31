@@ -1,1 +1,1 @@
-./generate_content.sh /Users/taher/Desktop/github/tutorials-notes/software/Dynatrace/toc.md  /Users/taher/Desktop/github/tutorials-notes/software/Dynatrace/Dynatrace-Study
+./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/node-js/toc.md  /home/mahmoud-taher/git-repos/tutorials-notes/software/node-js/Nodejs-Study

@@ -48,7 +48,7 @@ find "$DESC_PATH" -type f | while read -r file; do
         model: $model,
         messages: [{role: "user", content: $prompt}]
       }' | \
-      curl -s http://my-home-dell-server:5839/v1/chat/completions \
+      curl -s http://localhost:5839/v1/chat/completions \
         -H "Content-Type: application/json" \
         -H "Authorization: Bearer sk-5GGsADJtfvKKY38sRmCHvg" \
         -d @- | jq -r '.choices[0].message.content')
