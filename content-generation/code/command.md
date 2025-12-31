@@ -1,6 +1,3 @@
-./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/Networking/Networking-protocols-toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/Networking/Networking-Protocols-Study
+./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/cloud-design-patterns/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/cloud-design-patterns/Cloud-Design-Patterns-Study
 
-/home/mahmoud-taher/git-repos/tutorials-notes/software/node-js/toc.md  
-
-
-/home/mahmoud-taher/git-repos/tutorials-notes/software/node-js/Nodejs-Study
+./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/Configuration-Management/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/Configuration-Management/Configuration-Management-Study
