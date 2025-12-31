@@ -23,7 +23,7 @@ fi
 PROMPT_CONTENT=$(cat "$PROMPT_FILE")
 
 # --- Find ALL TOC files ---
-TOC_FILES=$(find "$SEARCH_DIR" -type f -iname "*toc*.md")
+TOC_FILES=$(find "$SEARCH_DIR" -type f -iname "*toc.md")
 
 if [ -z "$TOC_FILES" ]; then
     echo "[ERROR] No TOC files found in $SEARCH_DIR"
