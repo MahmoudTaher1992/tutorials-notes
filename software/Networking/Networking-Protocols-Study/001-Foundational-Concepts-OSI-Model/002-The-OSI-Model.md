@@ -1,0 +1,12 @@
+# The OSI Model: A Layered Framework
+- Purpose and Benefits of a Layered Architecture
+- The 7 Layers of the OSI Model
+  - Layer 7: Application Layer — User-facing services (HTTP, FTP, SMTP)
+  - Layer 6: Presentation Layer — Data translation, encryption, compression
+  - Layer 5: Session Layer — Manages sessions between applications
+  - Layer 4: Transport Layer — End-to-end communication (TCP, UDP)
+  - Layer 3: Network Layer — Logical addressing and routing (IP)
+  - Layer 2: Data Link Layer — Node-to-node transfer, error correction
+  - Layer 1: Physical Layer — Physical connection between devices
+- Data Encapsulation and Decapsulation Process
+- TCP/IP Model vs. OSI Model

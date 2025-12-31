@@ -1,0 +1,13 @@
+# Secure Communication Protocols
+- HTTPS (HTTP Secure): HTTP with SSL/TLS Encryption
+- SSL & TLS
+  - Purpose: Encryption, Authentication, Integrity
+  - TLS Handshake Process
+  - SSL vs. TLS: History and Deprecation
+  - Digital Certificates and Certificate Authorities (CAs)
+- SSH (Secure Shell)
+  - Secure Remote Administration
+  - Client-Server Model, Port 22
+  - Encryption Techniques: Symmetrical, Asymmetrical, Hashing
+  - Authentication: Password vs. Public Key
+  - SSH Tunneling and Port Forwarding
