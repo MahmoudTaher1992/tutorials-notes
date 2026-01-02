@@ -1,7 +1,3 @@
-Here is a detailed deep dive into **Part XIV.C: CI/CD Integration** from your study plan.
-
----
-
 # XIV.C. CI/CD Integration: Observability in Pipelines
 
 ## 1. The Concept: "Pipelines as Distributed Systems"

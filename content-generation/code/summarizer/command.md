@@ -1,0 +1,1 @@
+./summarizer.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/opentelemetry/opentelemetry-study

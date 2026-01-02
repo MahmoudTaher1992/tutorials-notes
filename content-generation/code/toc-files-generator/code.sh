@@ -8,7 +8,7 @@
 # ============================================================
 
 SEARCH_DIR="$1"
-PROMPT_FILE="/home/mahmoud-taher/git-repos/tutorials-notes/content-generation/file-structure-prompt.md"
+PROMPT_FILE="/home/mahmoud-taher/git-repos/tutorials-notes/content-generation/prompts/file-structure-prompt.md"
 
 if [ -z "$SEARCH_DIR" ]; then
     echo "[ERROR] Usage: $0 /path/to/search-directory"
