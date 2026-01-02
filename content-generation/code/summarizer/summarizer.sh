@@ -33,7 +33,7 @@ PROMPT_CONTENT_2=$(cat "$PROMPT_FILE_2")
 PROMPT_CONTENT_3=$(cat "$PROMPT_FILE_3")
 
 # --- Find ALL markdown files ---
-FILES=$(find "$SEARCH_DIR" -type f -iname "*.md")
+FILES=$(find "$SEARCH_DIR" -type f -iname "*.md" ! -iname "*.summary.md")
 
 if [ -z "$FILES" ]; then
     echo "[ERROR] No markdown files found in $SEARCH_DIR"
