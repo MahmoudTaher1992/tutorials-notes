@@ -31,7 +31,7 @@ Jaeger is composed of several distinct components that work together as a pipeli
 *   **Function:** It batches the spans and sends them to the Collector. It abstracts the routing logic away from the application.
 
 ### III. Jaeger Collector (The Processor)
-*   **Role:** The centralized component that receives traces from Agents.
+*   **Role:** The centralized component that receives traces from Agents. 
 *   **Function:**
     *   **Validation:** Checks if the data is malformed.
     *   **Transformation:** Prepares data for storage.
