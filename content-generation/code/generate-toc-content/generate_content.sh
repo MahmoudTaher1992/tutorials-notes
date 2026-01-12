@@ -42,7 +42,7 @@ find "$DESC_PATH" -type f | while read -r file; do
     # --- Send request to LiteLLM server on localhost using Gemini 3 Pro ---
     echo "[DEBUG] Sending request at $(date)"
     RESPONSE=$(jq -n \
-      --arg model "gemini/gemini-3-pro-preview" \
+      --arg model "openrouter/google/gemini-3-pro-preview" \
       --arg prompt "$PROMPT" \
       '{
         model: $model,

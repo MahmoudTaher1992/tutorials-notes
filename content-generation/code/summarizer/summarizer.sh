@@ -67,7 +67,7 @@ for FILE in $FILES; do
 
     echo "[DEBUG] Sending request for $FILE at $(date)"
     RESPONSE=$(jq -n \
-      --arg model "gemini/gemini-3-pro-preview" \
+      --arg model "openrouter/google/gemini-3-pro-preview" \
       --arg prompt "$FINAL_PROMPT" \
       '{
         model: $model,
