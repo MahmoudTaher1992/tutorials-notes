@@ -1,0 +1,82 @@
+## Part IV: CPU & Memory Resources
+
+### A. CPU Performance (Chapter 6)
+- **Terminology & Models**
+    - **CPU Architecture**: The physical design (Cores, Packages/Sockets)
+    - **CPU Memory Caches**: The hierarchy (L1, L2, L3) and their impact on speed
+    - **Run Queues**: Where threads wait for their turn on the CPU
+- **Key CPU Concepts**
+    - **Clock Rate & Cycle Time**: Frequency vs. actual work done
+    - **Instructions**:
+        - **IPC** (Instructions Per Cycle) and **CPI** (Cycles Per Instruction)
+        - Instruction Pipeline and Width
+    - **Hyper-threading (SMT)**: Simultaneous Multithreading and its performance implications
+    - **Utilization vs. Saturation**: Busy time vs. Wait time
+    - **User Time vs. Kernel Time**: Where the CPU is spending effort
+    - **Priority Inversion**: When low-priority tasks block high-priority ones
+- **CPU Architecture Deep Dive**
+    - **Hardware**: Interconnects, Word Size, and Compiler Optimizations
+    - **Software**: The OS Scheduler (CFS - Completely Fair Scheduler), Preemption
+- **Analysis Methodology**
+    - **Tools Method**: Iterating through available CPU tools
+    - **USE Method for CPUs**: Checking Utilization, Saturation (Run Queue latency), and Errors
+    - **Workload Characterization**: Is it CPU-bound or I/O-bound?
+    - **Profiling**: Building Flame Graphs
+    - **Cycle Analysis**: Investigating stall cycles (memory bound vs. frontend bound)
+- **CPU Observability Tools**
+    - **Load Averages**: `uptime` (and why they are misleading)
+    - **Standard Metrics**: `vmstat`, `mpstat`, `top`, `sar`, `pidstat`
+    - **Time Measurement**: `time`, `ptime`
+    - **Hardware details**: `turbostat`, `pmcarch`, `tlbstat`
+    - **Advanced Tracing**:
+        - `perf` (The heavy hitter)
+        - `runqlat` (Run queue latency histogram)
+        - `runqlen` (Run queue length)
+        - `softirqs` & `hardirqs` (Interrupt analysis)
+        - `cpudist` (On-CPU time distributions)
+- **Visualizations**
+    - **Heat Maps**: CPU Utilization and Subsecond-Offset (finding patterns)
+    - **Flame Graphs**: Visualizing stack traces
+    - **FlameScope**: Analyzing sub-second variance in profiles
+- **CPU Tuning**
+    - **Scheduler Options**: `nice`, `chrt` (Real-time priorities)
+    - **Scaling Governors**: Power vs. Performance modes
+    - **CPU Binding**: `taskset` (Affinity) and `cgroups` (CPU Sets)
+    - **BIOS Tuning**: Disabling C-states, enabling Turbo Boost
+
+### B. Memory Performance (Chapter 7)
+- **Terminology & Concepts**
+    - **Virtual Memory**: The illusion of infinite memory
+    - **Paging**:
+        - **Demand Paging**: Allocating physical RAM only when accessed
+        - **Major Faults** (Disk I/O required) vs. **Minor Faults** (Memory re-mapping)
+    - **Swapping**: Moving pages to disk (the performance killer)
+    - **Overcommit**: Promising more memory than exists
+    - **OOM Killer** (Out of Memory): When the kernel kills processes to survive
+    - **File System Cache**: Using "Unused" RAM to cache disk I/O
+    - **Shared Memory**: IPC efficiency
+- **Memory Architecture**
+    - **Hardware**:
+        - **MMU** (Memory Management Unit) & **TLB** (Translation Lookaside Buffer)
+        - **NUMA** (Non-Uniform Memory Access): Local vs. Remote memory costs
+    - **Software**:
+        - **Allocators**: `malloc`, `free`, `brk`, `mmap`
+        - **Page Replacement**: LRU (Least Recently Used) algorithms
+- **Analysis Methodology**
+    - **USE Method for Memory**: Utilization (Free RAM), Saturation (Scan/Reclaim rate, OOMs), Errors (Failed allocs)
+    - **Leak Detection**: Identifying processes with ever-growing RSS
+    - **Working Set Size (WSS)**: Determining how much RAM a process *actually* needs actively
+- **Memory Observability Tools**
+    - **Standard Metrics**: `free`, `vmstat`, `top`, `ps`
+    - **Pressure Stall Information**: `PSI` (Quantifying memory contention)
+    - **Kernel Slab**: `slabtop` (Kernel memory usage)
+    - **Process Details**: `pmap` (Memory map analysis)
+    - **Advanced Tracing**:
+        - `drsnoop` (Direct Reclaim snoop)
+        - `wss` (Working Set Size estimation tools)
+        - `pfaults` (Page fault analysis)
+- **Memory Tuning**
+    - **Page Sizes**: Using **Huge Pages** / Transparent Huge Pages (THP) to reduce TLB misses
+    - **Tunable Parameters**: `vm.swappiness`, `overcommit_memory`
+    - **NUMA Binding**: `numactl` to keep memory local to the CPU
+    - **Memory Shrinking**: Releasing caches manually (dropping caches)

@@ -1,0 +1,92 @@
+## Part V: Storage Systems (File Systems & Disks)
+
+### A. File Systems (Chapter 8)
+- **Terminology & Models**
+    - **VFS (Virtual File System)**: The kernel abstraction layer allowing different file systems to coexist
+    - **Logical I/O**: Application requests to the file system
+    - **Physical I/O**: File system requests to the disk (Block I/O)
+    - **Metadata**: Data describing the data (Inodes, dentries, superblocks)
+- **Core Concepts**
+    - **File System Caches**:
+        - **Page Cache**: Caching file content in RAM (The single biggest performance factor)
+        - **Dentry/Inode Cache**: Caching file paths and attributes
+    - **I/O Access Patterns**:
+        - **Sequential vs. Random**: The impact of seek times (HDD) and read-ahead
+        - **Read vs. Write**: The cost of modifying data
+    - **Write Strategies**:
+        - **Write-Back**: Fast, asynchronous (risk of data loss)
+        - **Write-Through/Synchronous**: Slow, safe (commits to disk immediately)
+    - **Features**: Prefetching, Read-ahead, Memory-mapped files (`mmap`)
+- **File System Architecture**
+    - **The I/O Stack**: Application -> VFS -> File System -> Block Device
+    - **File System Types**:
+        - **Ext4**: The Linux standard
+        - **XFS**: High performance, parallel I/O
+        - **ZFS**: Integrated Volume Manager + FS, COW (Copy-On-Write), ARC (Adaptive Replacement Cache)
+        - **Btrfs**: Modern COW file system
+    - **COW (Copy-On-Write)**: Implications for fragmentation and write amplification
+- **Analysis Methodology**
+    - **Latency Analysis**: Measuring time spent in VFS calls
+    - **Cache Hit Ratio**: Determining if physical I/O is necessary
+    - **Workload Characterization**: Operation mix (Read/Write ratio, Getattrs, Opens)
+- **File System Observability Tools**
+    - **Basic Info**: `mount` (options), `df` (capacity), `free` (cache size)
+    - **VFS Tracing**:
+        - `strace`: Tracing syscalls (`open`, `read`, `write`, `stat`)
+        - `opensnoop`: Tracing file open events (finding short-lived files)
+        - `filetop`: Top files by reads/writes
+        - `latencytop`: Visualizing latency sources
+    - **Slow I/O Detection**:
+        - `ext4slower`, `xfsslower`, `zfsslower`, `nfsslower`: Tracing operations slower than a threshold
+    - **Cache Analysis**: `cachestat` (Hit ratios)
+- **Tuning**
+    - **Mount Options**: `noatime` (disabling access time updates), `barrier=0`, `data=writeback`
+    - **Journaling**: External journals, journal commit intervals
+    - **Application Calls**: Choosing efficient buffer sizes
+
+### B. Disks & Block Devices (Chapter 9)
+- **Terminology & Models**
+    - **Block Interface**: The simple "read/write block X" contract
+    - **Rotational Media (HDD)**: Platters, Spindles, Actuator Arms
+    - **Solid State Drives (SSD/NVMe)**: Flash memory, Wear leveling, Garbage collection
+- **Core Concepts**
+    - **Time Scales**: The massive gap between CPU cycles and Disk I/O (The "Grand Canyon" of performance)
+    - **IOPS** (Input/Output Operations Per Second): The standard throughput metric
+    - **I/O Size**: How 4KB I/O differs from 1MB I/O in throughput calculation
+    - **Seek Time & Rotational Latency**: The physics of HDDs
+    - **Utilization**: Time the device is busy
+    - **Saturation**: Wait queues forming
+    - **I/O Wait**: CPU time spent waiting on disk (idle but blocked)
+- **Disk Architecture**
+    - **Interfaces**:
+        - SATA/SAS (Legacy queues)
+        - NVMe (Modern, massive parallelism, deep queues)
+    - **RAID**: Striping (0), Mirroring (1), Parity (5/6) and their write penalties
+    - **The Block Layer**: The OS layer dealing with queues and merging requests
+- **Analysis Methodology**
+    - **The USE Method**:
+        - Utilization: % busy
+        - Saturation: Average Queue Length / Wait time
+        - Errors: SCSI/device errors
+    - **Bi-Modal Latency**: Identifying the difference between Cache hits (on-disk buffer) and Physics (mechanical movement)
+- **Disk Observability Tools**
+    - **The Standard**: `iostat` (The most critical tool for disks)
+        - Understanding `%util`, `avgqu-sz`, `await`, `svctm`
+    - **Latency Analysis**:
+        - `biolatency`: Histogram of block I/O latency (eBPF)
+        - `biosnoop`: Per-request latency logging
+    - **Workload Analysis**:
+        - `biotop`: Top processes by disk I/O
+        - `blktrace`: The ultimate low-level event tracer for the block layer
+    - **Hardware Info**: `smartctl` (SMART stats), `megacli` (RAID controller stats)
+- **Visualizations**
+    - **Latency Heat Maps**: The best way to see outliers and multimodal distributions
+    - **Offset Heat Maps**: Visualizing access patterns (Sequential bands vs. Random clouds)
+- **Tuning**
+    - **I/O Schedulers**:
+        - `mq-deadline`: Simple, good for fast storage
+        - `bfq`: Complex, focuses on interactive desktop responsiveness
+        - `kyber`: Designed for fast NVMe devices
+        - `none`: Letting the device handle it (common for high-end NVMe)
+    - **Queue Depths**: Tuning hardware queues
+    - **Read-Ahead**: Tuning `read_ahead_kb` at the block level
