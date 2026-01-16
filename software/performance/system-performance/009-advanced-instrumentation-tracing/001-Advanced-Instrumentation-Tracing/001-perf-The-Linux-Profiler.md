@@ -1,0 +1,25 @@
+# perf: The Linux Profiler (Chapter 13)
+
+- **Overview**: The official Linux profiler tool, integrated into the kernel source.
+- **Event Sources**:
+    - **Hardware Events**: CPU counters (Cycles, Instructions, Cache misses) via PMU.
+    - **Software Events**: Kernel counters (Context switches, Page faults).
+    - **Tracepoints**: Static kernel instrumentation.
+    - **Dynamic Probes**: kprobes (kernel) and uprobes (user).
+- **Core Subcommands**:
+    - **perf list**: listing available events.
+    - **perf stat**: Counting events (Global or per-process).
+        - Interval statistics.
+        - Per-CPU balance and shadow statistics.
+    - **perf record**: Sampling and recording data to `perf.data`.
+        - Frequency sampling (-F) vs. Count sampling (-c).
+        - Call graph (stack) recording (`-g`, `--call-graph dwarf`).
+    - **perf report**: Analyzing `perf.data`.
+        - TUI (Text User Interface) vs. Stdio output.
+        - Navigating the "Hot path".
+    - **perf script**: Dumping raw events for custom post-processing.
+        - Generating **Flame Graphs** from perf script output.
+    - **perf trace**: A low-overhead alternative to `strace`.
+- **Advanced Features**:
+    - **Probe Events**: Adding dynamic probes (`perf probe`) to running kernels or binaries.
+    - **Stack Walking**: Frame pointers vs. DWARF vs. LBR (Last Branch Record).

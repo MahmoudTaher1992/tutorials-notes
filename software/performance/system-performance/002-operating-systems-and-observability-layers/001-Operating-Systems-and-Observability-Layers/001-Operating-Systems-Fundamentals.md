@@ -1,0 +1,21 @@
+# Operating Systems Fundamentals
+
+- **Kernel Architecture**
+    - The Kernel's Role: Abstraction and Resource Management
+    - **Kernel Mode vs. User Mode**: Protection rings (Ring 0 vs. Ring 3)
+    - **System Calls (syscalls)**: The interface between User and Kernel (context switching)
+    - **Interrupts**: Hardware vs. Software interrupts and handlers
+- **Core Subsystems**
+    - **Process Management**:
+        - Processes vs. Threads
+        - The Lifecycle (Fork, Exec, Exit, Wait)
+        - Stacks (User stack vs. Kernel stack)
+    - **Schedulers**: CPU time slicing, Preemption, and Load Balancing
+    - **Virtual Memory**: Abstraction of physical RAM, Swap, and MMU
+    - **File Systems (VFS)**: The Virtual File System abstraction layer
+    - **Caching**: Page Cache, Inode Cache, Directory Entry Cache (Dentry)
+    - **Networking**: Protocol stacks and sockets
+    - **Device Drivers**: Interfacing with hardware
+- **Hardware Interaction**
+    - The Clock and Idle loops
+    - Multiprocessor handling (SMP)

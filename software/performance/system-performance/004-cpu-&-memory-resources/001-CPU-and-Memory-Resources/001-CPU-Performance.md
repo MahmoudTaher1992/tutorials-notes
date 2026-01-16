@@ -1,0 +1,44 @@
+# A. CPU Performance (Chapter 6)
+
+- **Terminology & Models**
+    - **CPU Architecture**: The physical design (Cores, Packages/Sockets)
+    - **CPU Memory Caches**: The hierarchy (L1, L2, L3) and their impact on speed
+    - **Run Queues**: Where threads wait for their turn on the CPU
+- **Key CPU Concepts**
+    - **Clock Rate & Cycle Time**: Frequency vs. actual work done
+    - **Instructions**:
+        - **IPC** (Instructions Per Cycle) and **CPI** (Cycles Per Instruction)
+        - Instruction Pipeline and Width
+    - **Hyper-threading (SMT)**: Simultaneous Multithreading and its performance implications
+    - **Utilization vs. Saturation**: Busy time vs. Wait time
+    - **User Time vs. Kernel Time**: Where the CPU is spending effort
+    - **Priority Inversion**: When low-priority tasks block high-priority ones
+- **CPU Architecture Deep Dive**
+    - **Hardware**: Interconnects, Word Size, and Compiler Optimizations
+    - **Software**: The OS Scheduler (CFS - Completely Fair Scheduler), Preemption
+- **Analysis Methodology**
+    - **Tools Method**: Iterating through available CPU tools
+    - **USE Method for CPUs**: Checking Utilization, Saturation (Run Queue latency), and Errors
+    - **Workload Characterization**: Is it CPU-bound or I/O-bound?
+    - **Profiling**: Building Flame Graphs
+    - **Cycle Analysis**: Investigating stall cycles (memory bound vs. frontend bound)
+- **CPU Observability Tools**
+    - **Load Averages**: `uptime` (and why they are misleading)
+    - **Standard Metrics**: `vmstat`, `mpstat`, `top`, `sar`, `pidstat`
+    - **Time Measurement**: `time`, `ptime`
+    - **Hardware details**: `turbostat`, `pmcarch`, `tlbstat`
+    - **Advanced Tracing**:
+        - `perf` (The heavy hitter)
+        - `runqlat` (Run queue latency histogram)
+        - `runqlen` (Run queue length)
+        - `softirqs` & `hardirqs` (Interrupt analysis)
+        - `cpudist` (On-CPU time distributions)
+- **Visualizations**
+    - **Heat Maps**: CPU Utilization and Subsecond-Offset (finding patterns)
+    - **Flame Graphs**: Visualizing stack traces
+    - **FlameScope**: Analyzing sub-second variance in profiles
+- **CPU Tuning**
+    - **Scheduler Options**: `nice`, `chrt` (Real-time priorities)
+    - **Scaling Governors**: Power vs. Performance modes
+    - **CPU Binding**: `taskset` (Affinity) and `cgroups` (CPU Sets)
+    - **BIOS Tuning**: Disabling C-states, enabling Turbo Boost

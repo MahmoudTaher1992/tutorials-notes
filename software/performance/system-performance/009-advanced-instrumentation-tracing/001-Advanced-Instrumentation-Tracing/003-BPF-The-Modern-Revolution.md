@@ -1,0 +1,22 @@
+# BPF: The Modern Revolution (Chapter 15)
+
+- **Overview**: Extended BPF (eBPF) – Running sandboxed, high-performance programs in the kernel.
+- **BCC (BPF Compiler Collection)**:
+    - **Language**: Python/Lua frontends for C BPF code.
+    - **Tool Coverage**: The "BCC Tools" suite (`biolatency`, `execsnoop`, `tcplife`, etc.).
+    - **Use Case**: Complex tools requiring Python data processing.
+- **bpftrace**:
+    - **Language**: High-level, awk-like scripting language for BPF.
+    - **Capabilities**: One-liners for instant analysis.
+    - **Probes**:
+        - `kprobe:` / `kretprobe:` (Kernel dynamic)
+        - `uprobe:` / `uretprobe:` (User dynamic)
+        - `tracepoint:` (Static)
+        - `software:` / `hardware:` (Counters)
+        - `profile:` (Timed sampling)
+    - **Maps**: Associative arrays for counting and aggregation (`@map[key] = count()`).
+    - **Aggregations**: `hist()`, `lhist()`, `avg()`, `sum()`, `min()`, `max()`.
+- **Comparison**:
+    - **perf**: Standard CPU profiling.
+    - **Ftrace**: Standard built-in function tracing.
+    - **BCC/bpftrace**: Programmable, deep visibility, custom metrics.

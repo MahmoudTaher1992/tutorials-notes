@@ -1,0 +1,44 @@
+# File Systems (Chapter 8)
+
+- **Terminology & Models**
+    - **VFS (Virtual File System)**: The kernel abstraction layer allowing different file systems to coexist
+    - **Logical I/O**: Application requests to the file system
+    - **Physical I/O**: File system requests to the disk (Block I/O)
+    - **Metadata**: Data describing the data (Inodes, dentries, superblocks)
+- **Core Concepts**
+    - **File System Caches**:
+        - **Page Cache**: Caching file content in RAM (The single biggest performance factor)
+        - **Dentry/Inode Cache**: Caching file paths and attributes
+    - **I/O Access Patterns**:
+        - **Sequential vs. Random**: The impact of seek times (HDD) and read-ahead
+        - **Read vs. Write**: The cost of modifying data
+    - **Write Strategies**:
+        - **Write-Back**: Fast, asynchronous (risk of data loss)
+        - **Write-Through/Synchronous**: Slow, safe (commits to disk immediately)
+    - **Features**: Prefetching, Read-ahead, Memory-mapped files (`mmap`)
+- **File System Architecture**
+    - **The I/O Stack**: Application -> VFS -> File System -> Block Device
+    - **File System Types**:
+        - **Ext4**: The Linux standard
+        - **XFS**: High performance, parallel I/O
+        - **ZFS**: Integrated Volume Manager + FS, COW (Copy-On-Write), ARC (Adaptive Replacement Cache)
+        - **Btrfs**: Modern COW file system
+    - **COW (Copy-On-Write)**: Implications for fragmentation and write amplification
+- **Analysis Methodology**
+    - **Latency Analysis**: Measuring time spent in VFS calls
+    - **Cache Hit Ratio**: Determining if physical I/O is necessary
+    - **Workload Characterization**: Operation mix (Read/Write ratio, Getattrs, Opens)
+- **File System Observability Tools**
+    - **Basic Info**: `mount` (options), `df` (capacity), `free` (cache size)
+    - **VFS Tracing**:
+        - `strace`: Tracing syscalls (`open`, `read`, `write`, `stat`)
+        - `opensnoop`: Tracing file open events (finding short-lived files)
+        - `filetop`: Top files by reads/writes
+        - `latencytop`: Visualizing latency sources
+    - **Slow I/O Detection**:
+        - `ext4slower`, `xfsslower`, `zfsslower`, `nfsslower`: Tracing operations slower than a threshold
+    - **Cache Analysis**: `cachestat` (Hit ratios)
+- **Tuning**
+    - **Mount Options**: `noatime` (disabling access time updates), `barrier=0`, `data=writeback`
+    - **Journaling**: External journals, journal commit intervals
+    - **Application Calls**: Choosing efficient buffer sizes

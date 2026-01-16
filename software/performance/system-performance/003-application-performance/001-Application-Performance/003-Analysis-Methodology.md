@@ -1,0 +1,21 @@
+# Analysis Methodology
+
+- **CPU Profiling**
+    - Sampling instruction pointers (IP)
+    - Identifying "hot" code paths (functions consuming the most CPU cycles)
+- **Off-CPU Analysis**
+    - Analyzing time spent *waiting* (blocked on I/O, locks, timers, or paging)
+    - The counterpart to CPU profiling
+- **Syscall Analysis**
+    - Tracing the boundary between application and kernel
+    - Identifying inefficient API usage
+- **Thread State Analysis**
+    - Categorizing time: On-CPU, waiting for I/O, waiting for run-queue, sleeping
+- **Lock Analysis**
+    - Identifying contention (mutexes, spinlocks)
+    - The "Convoy Effect"
+- **Static Performance Tuning**
+    - Reviewing compilation flags (-O2, -O3)
+    - Checking library versions and configurations
+- **Distributed Tracing**
+    - Tracking requests across microservices (Span IDs, Trace IDs)

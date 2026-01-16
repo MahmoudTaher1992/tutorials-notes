@@ -1,0 +1,25 @@
+# Analytical Methodologies (The Frameworks)
+
+- **The Anti-Methods** (What to avoid)
+    - The "Streetlight" Anti-Method (Looking only where it's easy)
+    - The "Random Change" Anti-Method (Tuning by guessing)
+    - The "Blame-Someone-Else" Anti-Method
+- **The Scientific Method**
+    - Question -> Hypothesis -> Prediction -> Test -> Analysis
+- **The Diagnosis Cycle**
+    - Hypothesis generation and data collection loops
+- **The USE Method** (For Resources)
+    - **U**tilization, **S**aturation, **E**rrors
+    - Iterating through every hardware resource
+- **The RED Method** (For Services/Microservices)
+    - **R**ate (Requests per second)
+    - **E**rrors (Failed requests)
+    - **D**uration (Latency distributions)
+- **Drill-Down Analysis**
+    - Starting high-level and narrowing scope (5 whys)
+- **Workload Characterization**
+    - Who is calling the system? Why? How often?
+- **Latency Analysis**
+    - Breaking down response time into components (Method R)
+- **Linux Performance Analysis in 60 Seconds**
+    - The essential checklist for immediate diagnosis
