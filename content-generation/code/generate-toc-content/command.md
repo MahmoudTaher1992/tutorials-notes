@@ -4,16 +4,16 @@
 
 ./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/003-application-performance/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/003-application-performance/001-Application-Performance
 
-./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/004-cpu-&-memory-resources/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/004-cpu-&-memory-resources/001-CPU-and-Memory-Resources
+./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/004-cpu-and-memory-resources/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/004-cpu-and-memory-resources/001-CPU-and-Memory-Resources
 
-./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/005-storage-systems-file-systems-&-disks/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/005-storage-systems-file-systems-&-disks/001-Storage-Systems
+./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/005-storage-systems-file-systems-and-disks/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/005-storage-systems-file-systems-and-disks/001-Storage-Systems
 
 ./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/006-networking/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/006-networking/006-Networking
 
-./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/007-cloud-&-virtualization/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/007-cloud-&-virtualization/001-Cloud-and-Virtualization
+./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/007-cloud-and-virtualization/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/007-cloud-and-virtualization/001-Cloud-and-Virtualization
 
 ./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/008-benchmarking/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/008-benchmarking/001-Benchmarking
 
 ./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/009-advanced-instrumentation-tracing/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/009-advanced-instrumentation-tracing/001-Advanced-Instrumentation-Tracing
 
-./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/010-synthesis-&-reference/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/010-synthesis-&-reference/001-Synthesis-and-Reference
+./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/010-synthesis-and-reference/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance/010-synthesis-and-reference/001-Synthesis-and-Reference
