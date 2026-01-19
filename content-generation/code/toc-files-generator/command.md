@@ -1,1 +1,1 @@
-./code.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/performance/system-performance
+./code.sh /home/mahmoud-taher/git-repos/tutorials-notes/protocols/atlas-mongo-db/debugging
