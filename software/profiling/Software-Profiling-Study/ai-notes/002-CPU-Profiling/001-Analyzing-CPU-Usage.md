@@ -3,7 +3,7 @@ Here is a detailed breakdown of **Part II: CPU Profiling — A. Analyzing CPU Us
 This section moves beyond simply looking at "how much" CPU is being used (e.g., "My CPU is at 90%") and looks at "how" the CPU is being used. To optimize software, you must understand the state the processor is in while executing your code.
 
 ***
-
+-
 ### 1. User Mode vs. Kernel Mode
 
 Modern Operating Systems (Linux, Windows, macOS) segregate memory and permissions into two distinct spaces to prevent applications from crashing the entire computer.

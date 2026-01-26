@@ -1,7 +1,3 @@
-Of course. Here is a comprehensive Table of Contents for studying SQL, modeled after the detailed structure and depth of your React roadmap. It covers not just the language syntax, but also database theory, design, performance, security, and the surrounding ecosystem.
-
-***
-
 # SQL: Comprehensive Study Table of Contents
 
 ## Part I: Relational Database Fundamentals & Core Concepts

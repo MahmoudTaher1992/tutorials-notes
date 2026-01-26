@@ -1,419 +1,615 @@
-Here is the bash script. I have organized it to create a root directory called `Redis-Study-Guide` and populate it with the hierarchy and note content based on the detailed TOC you provided.
+Here is the bash script to generate the folder and file structure for your Redis study guide.
 
-To use this:
+### Instructions:
 1. Copy the code block below.
-2. Save it as a file (e.g., `setup_redis_notes.sh`).
-3. Make it executable: `chmod +x setup_redis_notes.sh`.
-4. Run it: `./setup_redis_notes.sh`.
+2. Open your terminal in Ubuntu.
+3. Create a new file: `nano create_redis_course.sh`
+4. Paste the code into the file.
+5. Save and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
+6. Make the script executable: `chmod +x create_redis_course.sh`
+7. Run the script: `./create_redis_course.sh`
 
 ```bash
 #!/bin/bash
 
-# Define the root directory name
-ROOT_DIR="Redis-Study-Guide"
+# Root Directory Name
+ROOT_DIR="Redis-Comprehensive-Study"
 
-# Create root directory and enter it
+# Create Root Directory
 mkdir -p "$ROOT_DIR"
-cd "$ROOT_DIR" || exit
+cd "$ROOT_DIR"
 
-echo "Creating directory structure in $ROOT_DIR..."
+echo "Creating Redis Study Roadmap structure in '$ROOT_DIR'..."
 
 # ==========================================
-# PART I: Fundamentals of Redis & In-Memory Data Stores
+# PART I: Introduction to Redis & Core Concepts
 # ==========================================
-DIR_001="001-Fundamentals-of-Redis"
-mkdir -p "$DIR_001"
+DIR="001-Introduction-to-Redis-and-Core-Concepts"
+mkdir -p "$DIR"
 
-# A. Introduction
-cat <<'EOF' > "$DIR_001/001-Introduction-to-In-Memory-Computing.md"
-# Introduction to In-Memory Computing
+# A. What is Redis?
+cat <<EOF > "$DIR/001-What-is-Redis.md"
+# What is Redis?
 
-* **Disk-Based vs. In-Memory Databases: The Speed Advantage**
-    * Disk-Based Databases: Traditional (MySQL/PostgreSQL), mechanical/slow reads.
-    * In-Memory Databases: RAM-based (Redis), electronic/fast access.
-    * Analogy: Walking to a library shelf vs. having the book open on your desk.
-* **The CAP Theorem in the Context of Redis (CP/AP)**
-    * Consistency vs Availability vs Partition Tolerance.
-    * Redis Default (AP): Prioritizes Availability.
-    * High-Availability (CP): Sentinel/Cluster can prioritize Consistency.
-* **Primary Use Cases**
-    * Caching, Session Management, Real-time Analytics, Message Brokering, Leaderboards.
+- Definition: Remote Dictionary Server
+- In-memory Data Structure Store (Key-Value)
+- Beyond a simple Cache: Use as a Database and Message Broker
+- Core Characteristics: Single-threaded nature, Event loop
+- Redis Ecosystem and Community
 EOF
 
-# B. Defining Redis
-cat <<'EOF' > "$DIR_001/002-Defining-Redis.md"
-# Defining Redis (REmote DIctionary Server)
+# B. Core Use Cases
+cat <<EOF > "$DIR/002-Core-Use-Cases.md"
+# Core Use Cases
 
-* **History, Philosophy, and Motivation**
-    * Designed for simplicity and extreme performance.
-* **The "Swiss Army Knife" of Data Stores**
-    * Versatile tool solving many different problems via different structures.
-* **Redis as a Data Structure Server**
-    * Not just Key-Value; provides server-side manipulation of Lists, Sets, Hashes, etc.
+- **Caching**: Object Caching, Full Page Caching, Query Caching
+  - Invalidation strategies
+  - Cache-aside, read-through, write-through patterns
+- **Session Management**: Storing user sessions and authentication tokens
+- **Real-time Analytics**: High-speed data ingestion and aggregation
+- **Pub/Sub Messaging**: Decoupling services, real-time communication
+- **Leaderboards and Counters**: Atomic increment/decrement operations
+- Real-time Stream Processing
+- Geospatial applications
+- Rate limiting
 EOF
 
-# C. Core Architecture
-cat <<'EOF' > "$DIR_001/003-Core-Architectural-Concepts.md"
-# Core Architectural Concepts
+# C. Key Features
+cat <<EOF > "$DIR/003-Key-Features.md"
+# Key Features
 
-* **The Client-Server Model**
-    * Central server process manages data; clients connect via network.
-* **Single-Threaded, Event-Loop Architecture & Non-Blocking I/O**
-    * Uses a single thread and event loop to handle requests efficiently without context switching overhead.
-* **In-Memory First Design with Optional Persistence**
-    * Data lives in RAM; persistence (disk saving) is optional.
-* **The Redis Protocol (RESP - REdis Serialization Protocol)**
-    * Human-readable, simple text-based communication protocol.
+- **Data Persistence Options**: RDB, AOF, No Persistence
+- **Rich Data Structures**: Beyond simple key-value pairs
+- **High Performance and Scalability**: In-memory operations, optimized network protocols
+- Atomicity of operations
+- Client-side caching (tracking keys)
+- Transactions and Lua Scripting
+- Modules API
 EOF
 
-# D. Installation & Interaction
-cat <<'EOF' > "$DIR_001/004-Installation-and-Basic-Interaction.md"
-# Installation & Basic Interaction
-
-* **Installation**
-    * Package managers (apt/yum), Docker, or Source.
-* **The Redis CLI (`redis-cli`)**
-    * Essential tool for talking directly to the server.
-* **Executing Basic Commands**
-    * `PING`, `SET key value`, `GET key`, `DEL key`, `EXISTS key`.
-* **Inspecting the Server**
-    * `INFO` (server status), `CONFIG GET *` (settings).
-EOF
-
-# E. Database Landscape
-cat <<'EOF' > "$DIR_001/005-Redis-in-the-Database-Landscape.md"
+# D. Redis in the Database Landscape
+cat <<EOF > "$DIR/004-Redis-in-Database-Landscape.md"
 # Redis in the Database Landscape
 
-* **Redis vs. Memcached**: Redis is a superset (structures + persistence).
-* **Redis vs. Relational Databases**: Redis is for speed/simplicity, often used alongside RDBMS.
-* **Redis vs. NoSQL (MongoDB)**: Redis is lower latency, simpler structures vs. complex documents.
-* **Redis vs. Message Brokers (Kafka/RabbitMQ)**: Redis Streams/PubSub are lightweight alternatives.
+- **Redis vs. Traditional SQL Databases**: Relational vs. Key-Value, ACID properties
+- **Redis vs. NoSQL Databases**: Document (MongoDB), Column-family, Graph DBs
+- **Redis vs. Other In-memory Caches**: Memcached, Caffeine
+- When to Choose Redis: Performance-critical applications, real-time data needs, flexible data structures
+- Anti-patterns: When NOT to use Redis as the primary database
 EOF
 
-# ==========================================
-# PART II: Core Data Structures & Modeling
-# ==========================================
-DIR_002="002-Core-Data-Structures-and-Modeling"
-mkdir -p "$DIR_002"
 
-# A. Key Management
-cat <<'EOF' > "$DIR_002/001-Key-Management-and-Philosophy.md"
-# Key Management & Data Modeling Philosophy
+# ==========================================
+# PART II: Getting Started with Redis
+# ==========================================
+DIR="002-Getting-Started-with-Redis"
+mkdir -p "$DIR"
 
-* **Key Naming Conventions & Best Practices**
-    * Pattern: `object-type:id:field` (e.g., `user:1000:profile`).
-* **Atomicity of Single Commands**
-    * Commands either complete fully or not at all.
-* **Universal Key Commands**
-    * `EXISTS`, `DEL`, `UNLINK` (async delete), `RENAME`, `TYPE`.
-* **Scanning the Keyspace Safely with `SCAN`**
-    * Use `SCAN` instead of `KEYS *` to avoid blocking the server.
+# A. Installing Redis Locally
+cat <<EOF > "$DIR/001-Installing-Redis-Locally.md"
+# Installing Redis Locally
+
+- Using Package Managers (APT, Homebrew, etc.)
+- Pre-compiled Binaries (Downloading and manual installation)
+- Building from Source
+- Verifying Installation
 EOF
 
-# B. Strings
-cat <<'EOF' > "$DIR_002/002-Strings.md"
+# B. Running Redis
+cat <<EOF > "$DIR/002-Running-Redis.md"
+# Running Redis
+
+- Starting the Redis Server ('redis-server')
+- Basic Configuration (default 'redis.conf')
+- Connecting using Redis CLI ('redis-cli')
+- Basic Ping/Pong command
+- Shutting down the server (SAFE SHUTDOWN, SHUTDOWN NOSAVE)
+EOF
+
+# C. Basic Data Operations & Key Management
+cat <<EOF > "$DIR/003-Basic-Data-Operations.md"
+# Basic Data Operations & Key Management
+
+- **Basic Commands**:
+  - 'SET key value': Storing a string value
+  - 'GET key': Retrieving a string value
+  - 'DEL key [key ...]': Deleting keys
+  - 'EXISTS key [key ...]': Checking if a key exists
+  - 'TYPE key': Getting the data type of a key
+  - 'KEYS pattern': Finding keys by pattern (caution in production)
+  - 'RANDOMKEY': Get a random key
+  - 'RENAME oldkey newkey': Rename a key
+  - 'DBSIZE': Get the number of keys in the database
+EOF
+
+# D. Key Expiration
+cat <<EOF > "$DIR/004-Key-Expiration.md"
+# Key Expiration
+
+- 'EXPIRE key seconds': Setting a time-to-live (TTL) for a key
+- 'TTL key': Checking remaining TTL
+- 'PERSIST key': Removing expiration from a key
+- 'EXPIREAT key timestamp': Setting expiration to a specific Unix timestamp
+- Use cases for key expiration (caches, temporary data)
+EOF
+
+
+# ==========================================
+# PART III: Redis Core Data Structures Deep Dive
+# ==========================================
+DIR="003-Redis-Core-Data-Structures-Deep-Dive"
+mkdir -p "$DIR"
+
+# A. Strings
+cat <<EOF > "$DIR/001-Strings.md"
 # Strings
 
-* **Concept**: Simplest type. Binary safe (text, numbers, images).
-* **Core Commands**: `SET`, `GET`, `MSET`, `MGET`.
-* **Atomic Operations**: `INCR`, `DECR` (Counters).
-* **Use Cases**: Caching, counters, locks, feature flags.
+- **Overview**: Binary-safe, can store text, numbers, binary data up to 512MB
+- **Basic Operations**:
+  - 'SET', 'GET', 'SETEX', 'PSETEX', 'SETNX'
+  - 'MSET', 'MGET': Batch operations
+- **Numeric Operations**:
+  - 'INCR', 'DECR', 'INCRBY', 'DECRBY', 'INCRBYFLOAT': Atomic increments
+- **Partial String Operations**:
+  - 'APPEND value': Appending to a string
+  - 'STRLEN key': Getting string length
+  - 'GETRANGE key start end': Retrieving a substring
+  - 'SETRANGE key offset value': Overwriting part of a string
+- **Use Cases**: Caching HTML fragments, counters, session tokens, rate limiting.
 EOF
 
-# C. Hashes
-cat <<'EOF' > "$DIR_002/003-Hashes.md"
-# Hashes
-
-* **Concept**: Object storage. Key -> Field-Value pairs.
-* **Core Commands**: `HSET`, `HGET`, `HGETALL`.
-* **Atomic Operations**: `HINCRBY`.
-* **Use Cases**: User profiles, product catalogs.
-EOF
-
-# D. Lists
-cat <<'EOF' > "$DIR_002/004-Lists.md"
+# B. Lists
+cat <<EOF > "$DIR/002-Lists.md"
 # Lists
 
-* **Concept**: Linked lists (sequences of strings). Fast add to head/tail.
-* **Core Commands**: `LPUSH`, `RPUSH`, `LPOP`, `RPOP`.
-* **Blocking Operations**: `BLPOP`, `BRPOP` (Wait for data).
-* **Capped Collections**: `LTRIM`.
-* **Use Cases**: Job queues, activity feeds, timelines.
+- **Overview**: Ordered collections of strings, implemented as linked lists. Fast 'LPUSH'/'RPUSH' and 'LPOP'/'RPOP'.
+- **Basic Operations**:
+  - 'LPUSH key value [value ...]': Pushing to the left (head)
+  - 'RPUSH key value [value ...]': Pushing to the right (tail)
+  - 'LPOP key [count]': Popping from the left
+  - 'RPOP key [count]': Popping from the right
+- **Retrieval & Manipulation**:
+  - 'LRANGE key start stop': Getting a range of elements
+  - 'LINDEX key index': Getting an element by index
+  - 'LLEN key': Getting list length
+  - 'LINSERT key BEFORE|AFTER pivot value': Inserting an element
+  - 'LREM key count value': Removing elements
+  - 'LTRIM key start stop': Trimming a list
+  - 'RPOPLPUSH source destination': Atomically moving elements between lists
+  - 'BLPOP key [key ...] timeout', 'BRPOP key [key ...] timeout': Blocking list operations
+- **Use Cases**: Queues, Stacks, Feeds, History lists.
 EOF
 
-# E. Sets
-cat <<'EOF' > "$DIR_002/005-Sets.md"
+# C. Sets
+cat <<EOF > "$DIR/003-Sets.md"
 # Sets
 
-* **Concept**: Unordered collection of unique strings.
-* **Core Commands**: `SADD`, `SREM`, `SMEMBERS`, `SISMEMBER`.
-* **Set Operations**: `SINTER` (Intersection), `SUNION`, `SDIFF`.
-* **Use Cases**: Tagging systems, unique visitors, relationships.
+- **Overview**: Unordered collections of unique strings.
+- **Basic Operations**:
+  - 'SADD key member [member ...]': Adding members
+  - 'SMEMBERS key': Getting all members
+  - 'SREM key member [member ...]': Removing members
+  - 'SISMEMBER key member': Checking membership
+  - 'SCARD key': Getting the number of members (cardinality)
+  - 'SRANDMEMBER key [count]': Getting random members
+  - 'SPOP key [count]': Removing and returning random members
+- **Set Operations**:
+  - 'SINTER key [key ...]': Intersection of sets
+  - 'SUNION key [key ...]': Union of sets
+  - 'SDIFF key [key ...]': Difference of sets
+  - 'SINTERSTORE', 'SUNIONSTORE', 'SDIFFSTORE': Storing results of set operations
+- **Use Cases**: Unique tag lists, friends/followers, access control, collaborative filtering.
 EOF
 
-# F. Sorted Sets
-cat <<'EOF' > "$DIR_002/006-Sorted-Sets.md"
-# Sorted Sets (ZSETs)
+# D. Hashes
+cat <<EOF > "$DIR/004-Hashes.md"
+# Hashes
 
-* **Concept**: Unique strings ordered by a score.
-* **Core Commands**: `ZADD`, `ZRANGE` (by rank), `ZRANGEBYSCORE`.
-* **Use Cases**: Leaderboards, priority queues, rate limiting.
+- **Overview**: Maps string fields to string values, ideal for representing objects.
+- **Basic Operations**:
+  - 'HSET key field value [field value ...]': Setting a field's value
+  - 'HGET key field': Getting a field's value
+  - 'HMSET' (Deprecated), 'HMGET': Getting multiple field values
+  - 'HGETALL key': Getting all fields and values
+  - 'HDEL key field [field ...]': Deleting fields
+  - 'HEXISTS key field': Checking if a field exists
+  - 'HLEN key': Getting the number of fields
+  - 'HKEYS key', 'HVALS key': Getting all field names/values
+  - 'HINCRBY', 'HINCRBYFLOAT': Incrementing field values
+- **Use Cases**: Storing user profiles, object properties, structured data.
 EOF
 
-# G. Advanced Structures
-cat <<'EOF' > "$DIR_002/007-Advanced-Data-Structures.md"
-# Advanced & Specialized Data Structures
+# E. Sorted Sets
+cat <<EOF > "$DIR/005-Sorted-Sets.md"
+# Sorted Sets
 
-* **Bitmaps & Bitfields**: Bit-level operations on strings.
-* **HyperLogLogs**: Probabilistic unique counting (low memory).
-* **Geospatial Indexes**: Lat/Long storage and radius queries.
-* **Streams**: Append-only logs, consumer groups (Kafka-like).
+- **Overview**: Collections of unique members, each associated with a score, ordered by score.
+- **Basic Operations**:
+  - 'ZADD': Adding members with scores
+  - 'ZRANGE', 'ZREVRANGE': Getting members by rank
+  - 'ZRANGEBYSCORE', 'ZREVRANGEBYSCORE': Getting members by score range
+  - 'ZREM': Removing members
+  - 'ZINCRBY': Incrementing a member's score
+  - 'ZRANK', 'ZREVRANK': Getting a member's rank
+  - 'ZCOUNT', 'ZCARD': Counting members
+  - 'ZSCORE': Getting a member's score
+  - 'ZDIFFSTORE', 'ZINTERSTORE', 'ZUNIONSTORE': Set operations
+- **Use Cases**: Leaderboards, priority queues, range-based lookups, time-series data.
 EOF
+
 
 # ==========================================
-# PART III: Advanced Features & Interaction Patterns
+# PART IV: Advanced Redis Features & Data Structures
 # ==========================================
-DIR_003="003-Advanced-Features-and-Interaction"
-mkdir -p "$DIR_003"
+DIR="004-Advanced-Redis-Features"
+mkdir -p "$DIR"
 
-# A. Expiration
-cat <<'EOF' > "$DIR_003/001-Data-Expiration-and-Eviction.md"
-# Data Expiration & Eviction Policies
+# A. Atomicity & Transactions
+cat <<EOF > "$DIR/001-Atomicity-and-Transactions.md"
+# Atomicity & Transactions
 
-* **Setting Time-To-Live (TTL)**
-    * `EXPIRE` (seconds), `PEXPIRE` (ms), `SETEX`.
-* **Checking and Removing Expiration**
-    * `TTL`, `PTTL`, `PERSIST`.
-* **Memory Management**
-    * `maxmemory` directive.
-    * **Eviction Policies**: `noeviction`, `volatile-lru`, `allkeys-lru`, `allkeys-lfu`.
+- **Atomicity in Redis**: Single-threaded nature guarantees atomic execution of single commands.
+- **Transactions (MULTI/EXEC)**:
+  - 'MULTI': Starting a transaction block
+  - 'EXEC': Executing all queued commands atomically
+  - 'DISCARD': Cancelling a transaction
+  - 'WATCH key [key ...]': Optimistic Locking mechanism (monitoring keys for changes)
+- **Use Cases**: Maintaining data integrity across multiple operations, avoiding race conditions.
 EOF
 
-# B. Transactions
-cat <<'EOF' > "$DIR_003/002-Transactions.md"
-# Transactions
-
-* **Atomic Execution**: `MULTI` (start), `EXEC` (execute).
-* **Optimistic Locking**: `WATCH` (abort if key changes), `UNWATCH`.
-* **No Rollbacks**: Redis transactions do not support rollbacks on errors.
-* **Failure Handling**: `DISCARD`.
-EOF
-
-# C. Scripting
-cat <<'EOF' > "$DIR_003/003-Server-Side-Scripting-Lua.md"
-# Server-Side Scripting with Lua
-
-* **Why Use Lua?**: Atomicity, Logic Encapsulation, Performance (fewer network hops).
-* **Executing Scripts**:
-    * `EVAL` (raw script).
-    * `EVALSHA` (cached hash of script).
-* **Calling Redis**: `redis.call()` and `redis.pcall()`.
-EOF
-
-# D. Messaging
-cat <<'EOF' > "$DIR_003/004-Messaging-Paradigms.md"
-# Messaging Paradigms
-
-* **Publish/Subscribe (Pub/Sub)**
-    * Fire-and-forget. `PUBLISH`, `SUBSCRIBE`. No persistence.
-* **Streams as a Robust Alternative**
-    * Persistence, Consumer Groups, Acknowledgment.
-EOF
-
-# E. Pipelining
-cat <<'EOF' > "$DIR_003/005-Pipelining.md"
+# B. Pipelining
+cat <<EOF > "$DIR/002-Pipelining.md"
 # Pipelining
 
-* **Concept**: Sending a batch of commands without waiting for individual replies.
-* **Benefit**: Drastically reduces Network Round Trip Time (RTT).
-* **Note**: Not atomic (unless wrapped in MULTI/EXEC or Lua), but fast.
+- **Concept**: Sending multiple commands to Redis in a single round-trip without waiting for each response.
+- **Benefits**: Significantly reduces network latency, improves throughput.
+- When to use and when not to (e.g., when responses are needed immediately).
 EOF
+
+# C. Bitmaps
+cat <<EOF > "$DIR/003-Bitmaps.md"
+# Bitmaps
+
+- **Overview**: Treating String values as a sequence of bits.
+- **Commands**:
+  - 'SETBIT', 'GETBIT'
+  - 'BITCOUNT key [start end]'
+  - 'BITOP operation destkey key [key ...]'
+  - 'BITPOS key bit [start] [end]'
+- **Use Cases**: User activity tracking (e.g., daily active users), compact boolean arrays, feature flags.
+EOF
+
+# D. HyperLogLog
+cat <<EOF > "$DIR/004-HyperLogLog.md"
+# HyperLogLog
+
+- **Overview**: Probabilistic data structure to estimate the cardinality (number of unique elements) of a set with very low memory usage.
+- **Commands**:
+  - 'PFADD key element [element ...]'
+  - 'PFCOUNT key [key ...]'
+  - 'PFMERGE destkey sourcekey [sourcekey ...]'
+- **Use Cases**: Counting unique visitors, unique search queries, without storing all items.
+EOF
+
+# E. Streams
+cat <<EOF > "$DIR/005-Streams.md"
+# Streams
+
+- **Overview**: Append-only log data structure, ideal for time-series, event logging, and message queues.
+- **Concepts**: Consumers, Consumer Groups, Message IDs.
+- **Commands**:
+  - 'XADD', 'XRANGE', 'XREAD'
+  - 'XLEN', 'XGROUP CREATE'
+  - 'XREADGROUP', 'XACK', 'XPENDING'
+- **Use Cases**: Event sourcing, IoT data, message queues with persistent history.
+EOF
+
+# F. Geospatial Indexes
+cat <<EOF > "$DIR/006-Geospatial-Indexes.md"
+# Geospatial Indexes
+
+- **Overview**: Storing latitude and longitude information to perform proximity searches. Implemented using sorted sets.
+- **Commands**:
+  - 'GEOADD'
+  - 'GEODIST'
+  - 'GEOHASH', 'GEOPOS'
+  - 'GEORADIUS' (deprecated in favor of GEOSEARCH)
+  - 'GEOSEARCH'
+- **Use Cases**: Location-based services, finding nearby places, ride-sharing apps.
+EOF
+
+# G. Publish/Subscribe (Pub/Sub)
+cat <<EOF > "$DIR/007-Pub-Sub.md"
+# Publish/Subscribe (Pub/Sub)
+
+- **Overview**: Real-time messaging paradigm where publishers send messages to channels and subscribers receive them.
+- **Commands**:
+  - 'PUBLISH channel message'
+  - 'SUBSCRIBE channel [channel ...]'
+  - 'UNSUBSCRIBE', 'PSUBSCRIBE', 'PUNSUBSCRIBE'
+- **Use Cases**: Chat applications, real-time notifications, event feeds, inter-service communication.
+EOF
+
+# H. Lua Scripting
+cat <<EOF > "$DIR/008-Lua-Scripting.md"
+# Lua Scripting
+
+- **Overview**: Executing server-side scripts for complex, atomic operations.
+- **Commands**:
+  - 'EVAL script numkeys key [key ...] arg [arg ...]'
+  - 'EVALSHA', 'SCRIPT LOAD', 'SCRIPT EXISTS', 'SCRIPT FLUSH'
+- **Benefits**: Atomicity, reduced network latency, custom commands.
+- **Use Cases**: Custom data types, complex conditional updates, advanced locking mechanisms.
+EOF
+
 
 # ==========================================
-# PART IV: Persistence & Data Durability
+# PART V: Persistence, Replication, and High Availability
 # ==========================================
-DIR_004="004-Persistence-and-Data-Durability"
-mkdir -p "$DIR_004"
+DIR="005-Persistence-Replication-and-HA"
+mkdir -p "$DIR"
 
-# A. Concepts
-cat <<'EOF' > "$DIR_004/001-Core-Concepts-of-Persistence.md"
-# Core Concepts of Persistence
+# A. Persistence Options
+cat <<EOF > "$DIR/001-Persistence-Options.md"
+# Persistence Options
 
-* **The Trade-off**: Performance (Speed) vs. Durability (Safety).
-* **Persistence Options**: RDB, AOF, or Disabled (Pure Cache).
+- **No Persistence**: Pure in-memory usage, fastest but data loss on restart.
+- **Snapshotting (RDB)**:
+  - How it Works: Point-in-time snapshots of the dataset.
+  - Configuration: 'save' directives.
+  - 'BGSAVE' command.
+  - Pros: Compact, fast startup. Cons: Potential data loss between snapshots.
+- **Append-Only File (AOF)**:
+  - How it Works: Logs every write operation.
+  - 'appendonly yes', 'appendfsync' options.
+  - AOF rewrite & compaction ('BGREWRITEAOF').
+  - Pros: High durability. Cons: Larger file size.
+- **RDB vs. AOF Tradeoffs**
+- **Hybrid Persistence (RDB + AOF)**
+- **Choosing the Right Strategy**
 EOF
 
-# B. RDB
-cat <<'EOF' > "$DIR_004/002-RDB-Snapshots.md"
-# RDB (Redis Database) Snapshots
+# B. Replication
+cat <<EOF > "$DIR/002-Replication.md"
+# Replication
 
-* **How it Works**: Point-in-time snapshots (e.g., every 15 mins).
-* **Pros**: Compact files, fast restores/backups.
-* **Cons**: Potential data loss between snapshots.
-* **Config**: `save` directive.
+- **Replication Basics (Master-Replica)**:
+  - 'REPLICAOF master_ip master_port'
+  - Asynchronous replication.
+- **How Replication Works**: PSYNC, RDB transfer, AOF synchronization.
+- **Benefits**: High availability, read scalability, data backup.
 EOF
 
-# C. AOF
-cat <<'EOF' > "$DIR_004/003-AOF-Append-Only-File.md"
-# AOF (Append-Only File)
+# C. High Availability
+cat <<EOF > "$DIR/003-High-Availability.md"
+# High Availability
 
-* **How it Works**: Logs every write operation. Replayed on restart.
-* **Sync Policies**: `always`, `everysec` (default), `no`.
-* **AOF Rewriting**: Background compaction of the log file.
-* **Pros**: Higher durability (usually 1 sec loss max).
-* **Cons**: Larger files, slower restores.
+- **Redis Sentinel**:
+  - Architecture: Sentinel processes monitoring Redis instances.
+  - Failover Process: Detection, voting, leader election, promotion.
+  - Use Cases: Automatic failover for Master-Replica setups.
+- **Redis Cluster**:
+  - Overview: Distributed implementation for automatic sharding and HA.
+  - Sharding: Data distribution using hash slots (16384 slots).
+  - Node Communication: Gossip protocol.
+  - Client Redirection: MOVED and ASK responses.
+  - Use Cases: Large datasets, high write throughput.
 EOF
 
-# D. Strategy
-cat <<'EOF' > "$DIR_004/004-Choosing-a-Strategy.md"
-# Choosing a Strategy
-
-* **RDB-only**: Tolerable data loss, need backups.
-* **AOF-only**: High durability needed.
-* **RDB + AOF**: Recommended for production. Uses AOF for recovery, RDB for snapshots.
-EOF
-
-# ==========================================
-# PART V: Scalability & High Availability
-# ==========================================
-DIR_005="005-Scalability-and-High-Availability"
-mkdir -p "$DIR_005"
-
-# A. Replication
-cat <<'EOF' > "$DIR_005/001-Replication-Primary-Replica.md"
-# Replication (Primary-Replica)
-
-* **Architecture**: One Primary (Writes), Multiple Replicas (Reads).
-* **Process**: Asynchronous replication.
-* **Use Cases**: Read scaling, Data redundancy, Foundation for HA.
-EOF
-
-# B. Sentinel
-cat <<'EOF' > "$DIR_005/002-Redis-Sentinel.md"
-# Redis Sentinel (for High Availability)
-
-* **Purpose**: Automatic failover management.
-* **Core Functions**: Monitoring, Notification, Automatic Failover, Config Provider.
-* **Quorum**: Requires multiple Sentinels to agree on failures to avoid split-brain.
-EOF
-
-# C. Cluster
-cat <<'EOF' > "$DIR_005/003-Redis-Cluster.md"
-# Redis Cluster (for Horizontal Scaling)
-
-* **Purpose**: Sharding (splitting data across nodes).
-* **Hash Slots**: 16,384 slots distributed among primaries.
-* **Gossip Protocol**: Nodes talk to share state.
-* **Pros**: Linear scalability of memory and writes.
-* **Cons**: Complexity, multi-key limitations.
-EOF
-
-# D. Comparison
-cat <<'EOF' > "$DIR_005/004-Comparing-Architectures.md"
-# Comparing Architectures
-
-* **Standalone**: Simple, Dev/Test.
-* **Replication**: Read scaling, manual failover.
-* **Sentinel**: High Availability (Auto failover).
-* **Cluster**: Massive scale (Sharding + HA).
-EOF
 
 # ==========================================
-# PART VI: Operations, Management & Security
+# PART VI: Security, Monitoring & Optimization
 # ==========================================
-DIR_006="006-Operations-Management-and-Security"
-mkdir -p "$DIR_006"
+DIR="006-Security-Monitoring-and-Optimization"
+mkdir -p "$DIR"
 
-# A. Configuration
-cat <<'EOF' > "$DIR_006/001-Configuration-and-Administration.md"
-# Configuration & Administration
+# A. Security
+cat <<EOF > "$DIR/001-Security.md"
+# Security
 
-* **redis.conf**: Main static config file.
-* **Runtime**: `CONFIG GET`, `CONFIG SET`.
-* **Monitoring Tools**: `INFO`, `MONITOR` (heavy load), `SLOWLOG`, `LATENCY`.
+- **Authentication**:
+  - 'requirepass', 'AUTH'
+  - ACL (Access Control List): Users, roles, permissions (Redis 6+).
+- **Network Security**:
+  - 'bind' directive, Firewall configuration.
+- **SSL/TLS Encryption**:
+  - Native TLS support in Redis (Redis 6+).
+- Command Renaming / Disabling: Protecting sensitive commands ('CONFIG', 'FLUSHALL').
 EOF
 
-# B. Security
-cat <<'EOF' > "$DIR_006/002-Security-Best-Practices.md"
-# Security Best Practices
+# B. Monitoring
+cat <<EOF > "$DIR/002-Monitoring.md"
+# Monitoring
 
-* **Network**: Bind to trusted IPs, use Firewalls.
-* **Authentication**: `requirepass`, ACLs (Redis 6+ for users/permissions).
-* **Attack Surface**: `RENAME-COMMAND` for dangerous commands.
-* **Encryption**: TLS/SSL for transit security.
+- **Built-in Tools**:
+  - 'INFO': Server statistics.
+  - 'MONITOR': Real-time command stream.
+  - 'CLIENT LIST'
+- **Slow Log Analysis**:
+  - 'slowlog-log-slower-than', 'slowlog-max-len'
+  - 'SLOWLOG GET'
+- 'redis-benchmark'
+- **Third-Party Tools**: RedisInsight, RedisCommander, Prometheus + Grafana, Datadog.
 EOF
 
-# C. Observability
-cat <<'EOF' > "$DIR_006/003-Observability-and-Performance.md"
-# Observability & Performance Tuning
+# C. Performance Optimization
+cat <<EOF > "$DIR/003-Performance-Optimization.md"
+# Performance Optimization
 
-* **Key Metrics**: Memory usage, fragmentation, Ops/sec, Cache hit ratio.
-* **Bottlenecks**: Analysis via Slow Log.
-* **Tools**: Prometheus, Grafana.
+- **Memory Management**:
+  - 'maxmemory', 'maxmemory-policy' (Eviction policies).
+  - 'MEMORY USAGE', 'MEMORY STATS'.
+- **Efficient Key Design**
+- **Avoiding Unnecessary Data Transfer**: Using 'MGET', 'HGETALL' cautiously.
+- **Latency Reduction**: Pipelining.
+- **Avoiding Big O(N) commands**: Avoiding 'KEYS' in production, using 'SCAN'.
+- Proper use of 'CONFIG REWRITE'.
 EOF
 
-# D. Client-Side
-cat <<'EOF' > "$DIR_006/004-Client-Side-Considerations.md"
-# Client-Side Considerations
-
-* **Libraries**: Choose mature libraries (redis-py, StackExchange.Redis, etc).
-* **Connection Pooling**: Critical for performance; reuses connections.
-* **Error Handling**: Retries, timeouts, network issues.
-EOF
 
 # ==========================================
-# PART VII: Advanced Architectural Patterns & Ecosystem
+# PART VII: Managing Redis in Production
 # ==========================================
-DIR_007="007-Advanced-Patterns-and-Ecosystem"
-mkdir -p "$DIR_007"
+DIR="007-Managing-Redis-in-Production"
+mkdir -p "$DIR"
 
-# A. Caching Strategies
-cat <<'EOF' > "$DIR_007/001-Caching-Strategies-and-Patterns.md"
-# Caching Strategies & Patterns
+# A. redis.conf: Important Configurations
+cat <<EOF > "$DIR/001-Redis-Conf.md"
+# redis.conf: Important Configurations
 
-* **Cache-Aside (Lazy Loading)**: App checks cache -> DB -> updates Cache.
-* **Read-Through**: Cache fetches from DB on miss.
-* **Write-Through**: App writes to Cache -> Cache writes to DB (sync).
-* **Write-Back (Write-Behind)**: App writes to Cache -> Cache writes to DB later (async).
+- 'daemonize yes'
+- 'port', 'bind'
+- 'logfile', 'dir'
+- 'pidfile'
+- 'loglevel'
+- Persistence options
+- 'maxmemory', 'maxmemory-policy'
+- 'timeout', 'tcp-keepalive'
 EOF
 
-# B. Common Solutions
-cat <<'EOF' > "$DIR_007/002-Common-Redis-Powered-Solutions.md"
-# Common Redis-Powered Solutions
+# B. Backup and Recovery
+cat <<EOF > "$DIR/002-Backup-and-Recovery.md"
+# Backup and Recovery
 
-* **Session Store**: Fast, distributed user sessions.
-* **Rate Limiting**: Controlling API usage (`INCR`, `EXPIRE`).
-* **Distributed Locks**: `SETNX` for coordinating servers.
-* **Job Queues**: Lists or Streams.
+- RDB and AOF Files: Locating and understanding their role in backups.
+- Regular Backup Strategy: Copying RDB/AOF files to offsite storage.
+- Recovery Procedures: Restoring data from backups.
 EOF
 
-# C. Modules
-cat <<'EOF' > "$DIR_007/003-Redis-Modules.md"
-# Redis Modules: Extending Core Functionality
+# C. Upgrading Redis
+cat <<EOF > "$DIR/003-Upgrading-Redis.md"
+# Upgrading Redis
 
-* **RediSearch**: Full-text search engine.
-* **RedisJSON**: Native JSON storage and manipulation.
-* **RedisGraph**: Graph database capabilities.
-* **RedisTimeSeries**: Time-series data.
-* **RedisBloom**: Probabilistic structures.
+- Minimizing Downtimes: Rolling upgrades with replication, graceful restarts.
+- Compatibility considerations between versions.
 EOF
 
-# D. Modern Stack
-cat <<'EOF' > "$DIR_007/004-Redis-in-the-Modern-Stack.md"
-# Redis in the Modern Stack
+# D. Disaster Recovery
+cat <<EOF > "$DIR/004-Disaster-Recovery.md"
+# Disaster Recovery
 
-* **Managed Services**: AWS ElastiCache, Azure Redis, etc.
-* **Containerization**: Docker & Kubernetes.
-* **Microservices**: Caching layer, Message bus, State manager.
+- Planning for node failures, data center outages.
+- Role of Sentinel and Cluster in DR.
+- Multi-region deployments.
 EOF
 
-# E. Future
-cat <<'EOF' > "$DIR_007/005-Future-and-Emerging-Topics.md"
-# Future & Emerging Topics
+# E. Client Libraries
+cat <<EOF > "$DIR/005-Client-Libraries.md"
+# Client Libraries
 
-* **Redis 7+**: Redis Functions (Server-side libraries), Sharded Pub/Sub.
-* **Redis as Primary DB**: Increasing viability due to AOF and Modules.
+- Connecting to Redis from various programming languages (Python, Node.js, Java).
+- Connection pooling, error handling, retry mechanisms.
 EOF
 
-echo "Done! Directory hierarchy created in $ROOT_DIR."
+
+# ==========================================
+# PART VIII: Redis Modules & Ecosystem
+# ==========================================
+DIR="008-Redis-Modules-and-Ecosystem"
+mkdir -p "$DIR"
+
+# A. Introduction to Redis Modules
+cat <<EOF > "$DIR/001-Introduction-to-Redis-Modules.md"
+# Introduction to Redis Modules
+
+- Extending Redis functionality with C modules.
+- Loading and configuring modules.
+EOF
+
+# B. RedisJSON
+cat <<EOF > "$DIR/002-RedisJSON.md"
+# RedisJSON
+
+- **Overview**: Native JSON data type for Redis.
+- **Commands**: 'JSON.SET', 'JSON.GET', 'JSON.DEL', etc.
+- **Use Cases**: Document storage, complex object caching.
+EOF
+
+# C. RediSearch
+cat <<EOF > "$DIR/003-RediSearch.md"
+# RediSearch
+
+- **Overview**: Full-text search engine for Redis.
+- **Commands**: 'FT.CREATE', 'FT.ADD', 'FT.SEARCH', 'FT.AGGREGATE'.
+- **Use Cases**: Real-time search, faceted search, auto-completion.
+EOF
+
+# D. RedisTimeSeries
+cat <<EOF > "$DIR/004-RedisTimeSeries.md"
+# RedisTimeSeries
+
+- **Overview**: Time series data structure for Redis.
+- **Commands**: 'TS.CREATE', 'TS.ADD', 'TS.GET', 'TS.RANGE'.
+- **Use Cases**: Metrics collection, IoT data, real-time analytics.
+EOF
+
+# E. RedisBloom
+cat <<EOF > "$DIR/005-RedisBloom.md"
+# RedisBloom
+
+- **Overview**: Probabilistic data structures (Bloom filters, Cuckoo filters, Count-Min Sketch).
+- **Commands**: 'BF.ADD', 'BF.EXISTS', 'CF.ADD', 'CMS.INCRBY'.
+- **Use Cases**: Approximate membership testing, counting frequencies.
+EOF
+
+# F. Redis Stack (Overview)
+cat <<EOF > "$DIR/006-Redis-Stack.md"
+# Redis Stack (Overview)
+
+- Bundling popular modules for enhanced functionality.
+EOF
+
+
+# ==========================================
+# PART IX: Redis Enterprise (Optional/Advanced)
+# ==========================================
+DIR="009-Redis-Enterprise"
+mkdir -p "$DIR"
+
+# A. Enterprise Features
+cat <<EOF > "$DIR/001-Enterprise-Features.md"
+# Enterprise Features
+
+- **Overview**: Commercial distribution with advanced features.
+- **Active-Active Geo-Distribution (CRDTs)**: Multi-master setups.
+- **Redis on Flash (RoF)**: Extending memory capacity with SSDs.
+- **Security and Compliance**
+- **Operational Efficiency**
+- **When to consider enterprise**: High availability, strict SLAs, global distribution.
+EOF
+
+
+# ==========================================
+# PART X: Continue Learning with Relevant Tracks
+# ==========================================
+DIR="010-Continue-Learning"
+mkdir -p "$DIR"
+
+# A. Related Database Technologies
+cat <<EOF > "$DIR/001-Related-Database-Technologies.md"
+# Related Database Technologies
+
+- **MongoDB**: For document-oriented NoSQL persistence.
+- **PostgreSQL**: For relational data storage and complex queries.
+- **SQL**: Understanding relational database concepts for comparison and integration.
+EOF
+
+# B. Cloud Providers
+cat <<EOF > "$DIR/002-Cloud-Providers.md"
+# Cloud Providers
+
+- AWS ElastiCache for Redis
+- Google Cloud Memorystore for Redis
+- Azure Cache for Redis
+EOF
+
+# C. Distributed Systems Concepts
+cat <<EOF > "$DIR/003-Distributed-Systems-Concepts.md"
+# Distributed Systems Concepts
+
+- Understanding CAP theorem, consistency models, consensus algorithms.
+- Message queuing and event-driven architectures.
+EOF
+
+echo "Directory structure created successfully in '$ROOT_DIR'!"
 ```
