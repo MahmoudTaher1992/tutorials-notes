@@ -1,7 +1,3 @@
-Of course! As your teacher for Real-Time Web Communication, I will break down these concepts for you. We'll start from the basics of why we need real-time communication and then dive into the specific technologies and patterns that make it happen.
-
-Let's begin.
-
 # Foundations of Real-Time Web Communication
 
 ## Part I: Foundations of Real-Time Web Communication

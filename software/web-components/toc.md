@@ -1,6 +1,3 @@
-Of course. Here is a similarly detailed and structured Table of Contents for studying Web Components, mirroring the depth and progression of the REST API example.
-
-```markdown
 *   **Part I: Fundamentals of Component-Based Architecture**
     *   **A. Introduction to Web Components & Encapsulation**
         *   The Problem: The "Div Soup" and Global Namespace Pollution
@@ -139,4 +136,3 @@ Of course. Here is a similarly detailed and structured Table of Contents for stu
         *   Web Components in Micro-Frontends
         *   CSS Module Scripts and Import Assertions
         *   Integration with emerging browser APIs (Container Queries, etc.)
-```

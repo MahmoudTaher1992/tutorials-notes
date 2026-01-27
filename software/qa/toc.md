@@ -1,9 +1,3 @@
-Of course. Here is a comprehensive Table of Contents for studying to become a QA Engineer, designed with the same level of detail and logical progression as the React TOC you provided.
-
-This roadmap covers the foundational mindset, manual testing discipline, technical prerequisites, various automation specializations (Web, API, Mobile), non-functional testing, and integration into the modern DevOps lifecycle.
-
-***
-
 # QA Engineer: Comprehensive Study Table of Contents
 
 ## Part I: The Foundations of Quality Assurance

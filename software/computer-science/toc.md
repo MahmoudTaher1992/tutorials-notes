@@ -1,10 +1,3 @@
-Absolutely! You want a **detailed, deeply-structured Table of Contents (TOC) roadmap for Computer Science**—in the same granular style as your REST and Web APIs example. This will allow you (or your readers) to study Computer Science comprehensively, from first principles to advanced topics.
-
-Below is a comprehensive, multi-part roadmap. This covers foundational theory, core programming, software engineering, algorithms, architecture, networking, security, and specialized areas.
-
----
-
-```markdown
 # Computer Science – Detailed Roadmap
 
 * **Part I: Foundations of Computer Science**
@@ -272,13 +265,3 @@ Below is a comprehensive, multi-part roadmap. This covers foundational theory, c
     * **C. Technical Communication & Career**
         * Effective Technical Writing & Presentations
         * Interview Preparation & Coding Challenges
-```
----
-
-**Tip:**  
-For even deeper study, interleave hands-on projects, code challenges, and mini-theses after each section.
-
-**Shortcuts/Alternatives:**  
-- For quick computer science roadmaps, see [roadmap.sh](https://roadmap.sh) or "Coding Interview University" on GitHub, but the above provides maximal granularity and completeness for systematic study.
-
-Let me know if you'd like **even more detail on any particular part**—I can break down, for example, the entire "Theory of Computation" or "Distributed Systems" into subtopics in similar detail.

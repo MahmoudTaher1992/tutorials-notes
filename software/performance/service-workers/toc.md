@@ -1,6 +1,3 @@
-Of course. Here is a detailed Table of Contents for studying Service Workers, mirroring the structure and depth of your REST API example.
-
-```markdown
 *   **Part I: Fundamentals of the Modern Web Platform**
     *   **A. Introduction to the Service Worker**
         *   The Problem: The Limitations of the Connection-Dependent Web
@@ -123,4 +120,3 @@ Of course. Here is a detailed Table of Contents for studying Service Workers, mi
         *   **Background Fetch API:** For reliably downloading large files (movies, podcasts).
         *   Streaming Responses: Constructing `Response` objects from streams for memory efficiency.
         *   Service Workers for Browser Extensions (Manifest V3)
-```
