@@ -1,12 +1,3 @@
-Here is the bash script to generate your Azure study notes structure.
-
-To use this:
-1.  Copy the code block below.
-2.  Save it as a file on your Ubuntu machine (e.g., `create_azure_structure.sh`).
-3.  Make it executable: `chmod +x create_azure_structure.sh`.
-4.  Run it: `./create_azure_structure.sh`.
-
-```bash
 #!/bin/bash
 
 # Define the root directory name
@@ -298,4 +289,3 @@ EOF
 
 
 echo "Success! Directory structure created at ./$ROOT_DIR"
-```

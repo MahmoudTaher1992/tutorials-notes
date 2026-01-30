@@ -1,18 +1,3 @@
-Here is the bash script to generate the directory structure and files based on your "Backend Authentication & Authorization Study Plan" TOC.
-
-I have combined the details from both TOCs provided to ensure the content inside the markdown files is comprehensive.
-
-### Instructions:
-1.  Open your terminal in Ubuntu.
-2.  Create a new script file: `nano create_auth_study.sh`
-3.  Paste the code below into the file.
-4.  Save and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
-5.  Make the script executable: `chmod +x create_auth_study.sh`
-6.  Run the script: `./create_auth_study.sh`
-
-### The Bash Script
-
-```bash
 #!/bin/bash
 
 # Define the root directory name
@@ -181,4 +166,3 @@ cat <<EOF > "$DIR_04/003-The-Future-is-Passwordless.md"
 EOF
 
 echo "Done! Structure created in '$ROOT_DIR'."
-```

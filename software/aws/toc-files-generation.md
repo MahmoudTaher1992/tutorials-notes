@@ -1,8 +1,4 @@
-Here is the bash script to generate the folder structure and Markdown files based on your AWS Table of Contents.
 
-You can copy the code block below, save it as a file (e.g., `setup_aws_study.sh`), give it execution permissions (`chmod +x setup_aws_study.sh`), and run it.
-
-```bash
 #!/bin/bash
 
 # Define Root Directory Name
@@ -278,4 +274,3 @@ cat <<EOF > "$DIR_08/001-Glossary-and-Reference.md"
 EOF
 
 echo "Directory structure created successfully in $ROOT_DIR"
-```
