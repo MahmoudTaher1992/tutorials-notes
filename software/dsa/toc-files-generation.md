@@ -1,16 +1,3 @@
-Here is the bash script to generate your Data Structures & Algorithms study structure.
-
-### How to use this script:
-1.  Open your terminal in Ubuntu.
-2.  Create a new file, for example: `nano create_dsa_guide.sh`
-3.  Copy and paste the code block below into the file.
-4.  Save and exit (Ctrl+O, Enter, Ctrl+X).
-5.  Make the script executable: `chmod +x create_dsa_guide.sh`
-6.  Run the script: `./create_dsa_guide.sh`
-
-It will create a folder named **`DSA-Comprehensive-Study`** containing the entire structure.
-
-```bash
 #!/bin/bash
 
 # Root Directory
@@ -465,4 +452,3 @@ cat << 'EOF' > "$DIR_NAME/004-Real-World-Applications-of-DSA.md"
 EOF
 
 echo "Complete! DSA Study directory structure created."
-```

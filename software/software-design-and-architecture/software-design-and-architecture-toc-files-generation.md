@@ -1,16 +1,3 @@
-Here is the bash script to generate your study guide structure.
-
-This script creates a root directory named `Software-Design-Architecture-Study`, creates the numbered subdirectories for each Part, and creates the numbered Markdown files for each Section, pre-filled with the specific bullet points from your TOC.
-
-### Instructions:
-1.  Copy the code block below.
-2.  Open a terminal in Ubuntu.
-3.  Create a file named `setup_architecture_notes.sh` (e.g., `nano setup_architecture_notes.sh`).
-4.  Paste the code into the file and save it (`Ctrl+O`, `Enter`, `Ctrl+X`).
-5.  Make the script executable: `chmod +x setup_architecture_notes.sh`.
-6.  Run the script: `./setup_architecture_notes.sh`.
-
-```bash
 #!/bin/bash
 
 # Define the root directory name
@@ -271,4 +258,3 @@ create_file "$DIR_10" "003-Modeling-and-Diagramming-Tools.md" "Modeling & Diagra
 "- diagrams.net (draw.io), PlantUML, Structurizr, Miro"
 
 echo "Directory structure created successfully in $(pwd)"
-```

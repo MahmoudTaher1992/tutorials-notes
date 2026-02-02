@@ -1,8 +1,4 @@
-Here is the bash script to generate your Spring Boot study structure.
 
-You can save this code into a file (e.g., `setup-spring-boot-study.sh`), give it execution permissions (`chmod +x setup-spring-boot-study.sh`), and run it.
-
-```bash
 #!/bin/bash
 
 # Define Root Directory
@@ -473,4 +469,3 @@ cat <<EOF > "$PART_DIR/004-Reference-Books.md"
 EOF
 
 echo "Done! Hierarchy created in '$ROOT_DIR'"
-```

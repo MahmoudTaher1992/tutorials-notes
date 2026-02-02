@@ -1,12 +1,4 @@
-Here is the bash script to generate the folder and file structure based on your Table of Contents.
 
-### Instructions:
-1.  Copy the code block below.
-2.  Save it as a file named `create_architecture_guide.sh`.
-3.  Open your terminal and make the script executable: `chmod +x create_architecture_guide.sh`.
-4.  Run the script: `./create_architecture_guide.sh`.
-
-```bash
 #!/bin/bash
 
 # Define the root directory name
@@ -370,4 +362,3 @@ cat <<EOF > "$DIR_NAME/002-Career-Path-and-Professional-Development.md"
 EOF
 
 echo "Directory structure and study files created successfully in ./$ROOT_DIR"
-```

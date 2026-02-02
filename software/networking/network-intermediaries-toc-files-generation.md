@@ -1,8 +1,3 @@
-Here is the bash script. I have mapped the provided Table of Contents into a directory structure, converted titles to "kebab-case" (hyphenated), and pre-filled the Markdown files with the specific content from your guide.
-
-Save this code into a file (e.g., `setup_network_guide.sh`), give it execution permissions, and run it.
-
-```bash
 #!/bin/bash
 
 # Define the root directory name
@@ -289,24 +284,3 @@ cat << 'EOF' > "$FILE"
 EOF
 
 echo "Finished creating structure in '$ROOT_DIR'."
-```
-
-### How to use this:
-
-1.  Open your terminal in Ubuntu.
-2.  Create a file named `generate_toc.sh`:
-    ```bash
-    nano generate_toc.sh
-    ```
-3.  Paste the code above into the file.
-4.  Save and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
-5.  Make the script executable:
-    ```bash
-    chmod +x generate_toc.sh
-    ```
-6.  Run the script:
-    ```bash
-    ./generate_toc.sh
-    ```
-
-You will find a new folder named **Network-Intermediaries-Guide** containing all the folders and markdown files populated with the text from your TOC.

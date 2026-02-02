@@ -1,0 +1,21 @@
+# Working with Files
+
+- **Creating and Deleting Files & Directories**
+  - `touch`: Creating empty files or updating timestamps
+  - `mkdir`: Creating directories (`-p` for parent directories)
+  - `rm`: Removing files (`-i` for interactive, `-f` for force)
+  - `rmdir`: Removing empty directories
+- **Copying, Moving, and Renaming**
+  - `cp`: Copying files and directories (`-r` for recursive)
+  - `mv`: Moving and renaming files and directories
+- **Links: Soft Links vs. Hard Links**
+  - `ln`: Creating links
+  - Conceptual Differences (Inodes, Cross-filesystem)
+  - Use cases for each type of link
+- **Archiving and Compressing**
+  - `tar`: The Tape Archive utility
+    - Creating archives (`-c`)
+    - Listing contents (`-t`)
+    - Extracting archives (`-x`)
+  - Compression Utilities: `gzip`, `bzip2`, `xz`
+  - Combining `tar` with compression (e.g., `.tar.gz`, `.tar.bz2`)

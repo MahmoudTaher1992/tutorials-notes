@@ -1,17 +1,4 @@
-Here is the bash script to generate your study structure.
 
-I have formatted the filenames to be URL-friendly (using dashes instead of spaces) and ensured that special characters inside the Markdown content (like `$`, `` ` ``, etc.) are preserved exactly as they appear in your TOC by using quoted Heredocs (`<< 'EOF'`).
-
-### How to use this:
-1. Copy the code block below.
-2. Open your terminal in Ubuntu.
-3. Create a file, e.g., `nano setup_shell_study.sh`.
-4. Paste the code.
-5. Save and exit (`Ctrl+O`, `Enter`, `Ctrl+X`).
-6. Make it executable: `chmod +x setup_shell_study.sh`.
-7. Run it: `./setup_shell_study.sh`.
-
-```bash
 #!/bin/bash
 
 # Define the root directory name
@@ -527,4 +514,3 @@ cat << 'EOF' > "$PART_DIR/003-Related-Roadmaps.md"
 EOF
 
 echo "Done! Study hierarchy created in $ROOT_DIR."
-```

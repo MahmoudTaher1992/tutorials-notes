@@ -1,12 +1,4 @@
-Here is the bash script to generate the directory and file structure based on your Terraform Table of Contents.
 
-### Instructions:
-1.  Copy the code block below.
-2.  Save it as a file (e.g., `setup_terraform_study.sh`).
-3.  Make it executable: `chmod +x setup_terraform_study.sh`.
-4.  Run it: `./setup_terraform_study.sh`.
-
-```bash
 #!/bin/bash
 
 # Define the root directory name
@@ -396,4 +388,4 @@ cat <<'EOF' > "$DIR_NAME/003-Performance-and-Optimization.md"
 EOF
 
 echo "Done! Directory structure created in $ROOT_DIR"
-```
+
