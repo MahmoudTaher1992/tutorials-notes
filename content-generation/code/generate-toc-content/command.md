@@ -1,1 +1,1 @@
-./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/backend/authentication/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/backend/authentication/Backend-Auth-Master-Plan
+./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/backend/authentication/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/backend/authentication/SCIM-2.0-Automated-User-Provisioning
