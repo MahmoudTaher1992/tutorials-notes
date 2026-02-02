@@ -1,1 +1,1 @@
-./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/backend/authentication/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/backend/authentication/SCIM-2.0-Automated-User-Provisioning
+./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/aws/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/aws/AWS-Identity-Architecture-Study

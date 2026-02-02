@@ -1,3 +1,14 @@
+Here is the bash script based on your requirements.
+
+This script uses the "Here Doc" (`cat <<EOF`) pattern to safely write title headings and bullet point content into the Markdown files without worrying about escaping most special characters.
+
+To use this:
+1. Copy the code block below.
+2. Save it as a file (e.g., `setup_scim_study.sh`).
+3. Make it executable: `chmod +x setup_scim_study.sh`.
+4. Run it: `./setup_scim_study.sh`.
+
+```bash
 #!/bin/bash
 
 # Define the root directory name
@@ -120,3 +131,4 @@ cat <<EOF > "$DIR_4/002-Security.md"
 EOF
 
 echo "Done! Structure created in '$ROOT_DIR'."
+```

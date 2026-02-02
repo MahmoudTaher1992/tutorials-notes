@@ -1,276 +1,148 @@
-
 #!/bin/bash
 
-# Define Root Directory Name
-ROOT_DIR="AWS-Comprehensive-Study"
+# Define the root directory name
+ROOT_DIR="AWS-Identity-Architecture-Study"
 
-# Create Root Directory
+# Create the root directory
 echo "Creating root directory: $ROOT_DIR"
 mkdir -p "$ROOT_DIR"
 cd "$ROOT_DIR" || exit
 
 # ==============================================================================
-# Part I: AWS Fundamentals & Core Principles
+# PART 1: The Environment Scope: AWS Organizations
 # ==============================================================================
-DIR_01="001-AWS-Fundamentals-Core-Principles"
-mkdir -p "$DIR_01"
+PART_DIR="001-The-Environment-Scope-AWS-Organizations"
+mkdir -p "$PART_DIR"
 
-# A. Introduction to Cloud Computing & AWS
-cat <<EOF > "$DIR_01/001-Introduction-to-Cloud-Computing-AWS.md"
-# Introduction to Cloud Computing & AWS
+# -- Section A: The Management Account --
+FILE_NAME="001-The-Management-Account.md"
+FILE_PATH="$PART_DIR/$FILE_NAME"
+echo "Creating $FILE_PATH..."
+cat <<EOF > "$FILE_PATH"
+# The Management Account
 
-* What is Cloud Computing?
-    * On-Premise vs. Cloud
-    * The Six Advantages of Cloud Computing
-* Cloud Service Models: IaaS, PaaS, SaaS
-* Cloud Deployment Models: Public, Private, Hybrid
-* Introduction to Amazon Web Services (AWS)
-* Overview of the AWS Global Infrastructure (Regions, Availability Zones, Edge Locations)
-* Navigating the AWS Management Console, CLI, and SDKs
+*   **Root of Trust:** Why Identity Center must be enabled in the Management Account (or a Delegated Administrator account).
+*   **Service Control Policies (SCPs):** The difference between Organization-level guardrails and Identity Center permissions.
 EOF
 
-# B. Foundational AWS Concepts
-cat <<EOF > "$DIR_01/002-Foundational-AWS-Concepts.md"
-# Foundational AWS Concepts
+# -- Section B: Multi-Account Strategy --
+FILE_NAME="002-Multi-Account-Strategy.md"
+FILE_PATH="$PART_DIR/$FILE_NAME"
+echo "Creating $FILE_PATH..."
+cat <<EOF > "$FILE_PATH"
+# Multi-Account Strategy
 
-* The AWS Shared Responsibility Model
-* The AWS Well-Architected Framework
-    * Operational Excellence Pillar
-    * Security Pillar
-    * Reliability Pillar
-    * Performance Efficiency Pillar
-    * Cost Optimization Pillar
-* Understanding AWS Pricing and Billing
-    * Core Pricing Principles (Pay-as-you-go, Save when you commit, Pay less as you use more)
-    * AWS Free Tier
-    * AWS Budgets and Cost Explorer
+*   **The Hierarchy:** Applying access to Dev, Staging, and Prod accounts centrally from one place.
+*   **Member Accounts:** How Identity Center pushes roles into downstream accounts automatically.
 EOF
 
 # ==============================================================================
-# Part II: Identity, Access, and Network Foundation
+# PART 2: AWS IAM Identity Center (The Engine)
 # ==============================================================================
-DIR_02="002-Identity-Access-Network-Foundation"
-mkdir -p "$DIR_02"
+PART_DIR="002-AWS-IAM-Identity-Center"
+mkdir -p "$PART_DIR"
 
-# A. AWS Identity and Access Management (IAM)
-cat <<EOF > "$DIR_02/001-AWS-IAM.md"
-# AWS Identity and Access Management (IAM)
+# -- Section A: Service Evolution --
+FILE_NAME="001-Service-Evolution.md"
+FILE_PATH="$PART_DIR/$FILE_NAME"
+echo "Creating $FILE_PATH..."
+cat <<EOF > "$FILE_PATH"
+# Service Evolution
 
-* Core IAM Concepts: Principals, Policies, and Resources
-* IAM Users and User Groups.
-* IAM Policies:
-    * JSON Policy Documents
-    * Identity-based vs. Resource-based Policies.
-    * AWS Managed vs. Customer Managed vs. Inline Policies
-    * The Principle of Least Privilege.
-* IAM Roles for AWS Services and Cross-Account Access.
-* Securing AWS Access:
-    * Multi-Factor Authentication (MFA).
-    * Access Keys and Programmatic Access.
-    * IAM Best Practices.
+*   **SSO vs. Identity Center:** Understanding that "AWS SSO" was renamed; the underlying technology remains the same.
 EOF
 
-# B. Virtual Private Cloud (VPC)
-cat <<EOF > "$DIR_02/002-Virtual-Private-Cloud.md"
-# Virtual Private Cloud (VPC) - Your Private Network in the Cloud
+# -- Section B: Identity Source Configuration --
+FILE_NAME="002-Identity-Source-Configuration.md"
+FILE_PATH="$PART_DIR/$FILE_NAME"
+echo "Creating $FILE_PATH..."
+cat <<EOF > "$FILE_PATH"
+# Identity Source Configuration
 
-* Introduction to VPCs and IP Addressing (CIDR notation)
-* Core VPC Components:
-    * Subnets: Public vs. Private
-    * Route Tables and Routing
-    * Internet Gateways (IGW)
-    * NAT Gateways for Private Subnet Outbound Access
-* Network Security:
-    * Security Groups (Stateful Firewalls)
-    * Network Access Control Lists (NACLs) (Stateless Firewalls)
-* VPC Peering and VPC Endpoints
+*   **Changing the Source:** Switching from "Identity Center Directory" to "External Identity Provider" (SAML 2.0).
+*   **The Metadata Exchange:**
+    *   Importing the IdP Metadata (from Google/Okta).
+    *   Exporting the SP Metadata (ACS URL & Entity ID) to give to the IdP.
 EOF
 
-# ==============================================================================
-# Part III: Core Compute Services
-# ==============================================================================
-DIR_03="003-Core-Compute-Services"
-mkdir -p "$DIR_03"
+# -- Section C: Provisioning Settings --
+FILE_NAME="003-Provisioning-Settings.md"
+FILE_PATH="$PART_DIR/$FILE_NAME"
+echo "Creating $FILE_PATH..."
+cat <<EOF > "$FILE_PATH"
+# Provisioning Settings
 
-# A. Amazon Elastic Compute Cloud (EC2)
-cat <<EOF > "$DIR_03/001-Amazon-EC2.md"
-# Amazon Elastic Compute Cloud (EC2) - Virtual Servers
-
-* EC2 Fundamentals:
-    * Amazon Machine Images (AMIs).
-    * Instance Types (General Purpose, Compute Optimized, Memory Optimized, etc.).
-    * EC2 Pricing Models (On-Demand, Reserved Instances, Spot Instances, Savings Plans)
-* Launching and Connecting to EC2 Instances:
-    * Key Pairs for Secure SSH/RDP Access.
-    * User Data for Bootstrapping.
-* EC2 Storage:
-    * Elastic Block Store (EBS) Volumes and Snapshots
-    * Instance Store
-* Networking:
-    * Elastic IP Addresses.
-    * Placement Groups
-* Scalability and High Availability:
-    * Elastic Load Balancing (ELB)
-    * Auto Scaling Groups
+*   **Manual vs. SCIM:** Deciding whether to manually create users in AWS to match the IdP or enable automatic SCIM provisioning (recommended).
 EOF
 
 # ==============================================================================
-# Part IV: Storage and Content Delivery
+# PART 3: Authorization Strategy: Permission Sets
 # ==============================================================================
-DIR_04="004-Storage-Content-Delivery"
-mkdir -p "$DIR_04"
+PART_DIR="003-Authorization-Strategy-Permission-Sets"
+mkdir -p "$PART_DIR"
 
-# A. Amazon Simple Storage Service (S3)
-cat <<EOF > "$DIR_04/001-Amazon-S3.md"
-# Amazon Simple Storage Service (S3) - Object Storage
+# -- Section A: Permission Sets vs IAM Roles --
+FILE_NAME="001-Permission-Sets-vs-IAM-Roles.md"
+FILE_PATH="$PART_DIR/$FILE_NAME"
+echo "Creating $FILE_PATH..."
+cat <<EOF > "$FILE_PATH"
+# Permission Sets vs IAM Roles
 
-* S3 Core Concepts: Buckets and Objects.
-* S3 Storage Classes for Different Use Cases (Standard, Intelligent-Tiering, Glacier).
-* Managing S3 Buckets and Objects:
-    * Versioning and Lifecycle Policies.
-    * S3 Replication
-* S3 Security and Access Control:
-    * Bucket Policies and Access Control Lists (ACLs)
-    * Server-Side Encryption.
-    * Presigned URLs
-* Static Website Hosting with S3.
+*   **The Concept:** A Permission Set is a *template* that AWS uses to deploy standard IAM Roles into specific accounts.
+*   **Abstraction:** You manage the *Set*, AWS manages the *Trust Policy* and *Role creation*.
 EOF
 
-# B. Amazon CloudFront
-cat <<EOF > "$DIR_04/002-Amazon-CloudFront.md"
-# Amazon CloudFront - Content Delivery Network (CDN)
+# -- Section B: Defining Policies --
+FILE_NAME="002-Defining-Policies.md"
+FILE_PATH="$PART_DIR/$FILE_NAME"
+echo "Creating $FILE_PATH..."
+cat <<EOF > "$FILE_PATH"
+# Defining Policies
 
-* How CloudFront Improves Performance with Edge Locations.
-* Distributions: Web vs. RTMP
-* Origins and Behaviors (Caching Rules)
-* Securing Content with HTTPS and Signed URLs/Cookies
-* CloudFront with S3 for Accelerated Content Delivery
+*   **Managed Policies:** Attaching AWS Pre-defined policies (e.g., \`AdministratorAccess\`, \`ViewOnlyAccess\`).
+*   **Inline Policies:** Writing custom JSON for granular access requirements.
 EOF
 
-# ==============================================================================
-# Part V: Databases and Data Stores
-# ==============================================================================
-DIR_05="005-Databases-Data-Stores"
-mkdir -p "$DIR_05"
+# -- Section C: The Mapping Logic (The Core Task) --
+FILE_NAME="003-The-Mapping-Logic.md"
+FILE_PATH="$PART_DIR/$FILE_NAME"
+echo "Creating $FILE_PATH..."
+cat <<EOF > "$FILE_PATH"
+# The Mapping Logic (The Core Task)
 
-# A. Amazon Relational Database Service (RDS)
-cat <<EOF > "$DIR_05/001-Amazon-RDS.md"
-# Amazon Relational Database Service (RDS) - Managed SQL Databases
-
-* Introduction to Managed Database Services
-* Supported Database Engines (MySQL, PostgreSQL, MariaDB, Oracle, SQL Server)
-* RDS Key Features:
-    * Multi-AZ Deployments for High Availability
-    * Read Replicas for Scalability
-    * Automated Backups and Snapshots
-* Security and Networking for RDS
-EOF
-
-# B. Amazon DynamoDB
-cat <<EOF > "$DIR_05/002-Amazon-DynamoDB.md"
-# Amazon DynamoDB - Managed NoSQL Database
-
-* Core Concepts: Tables, Items, and Attributes
-* Primary Keys: Partition Key and Sort Key
-* Data Modeling in DynamoDB
-* Read/Write Capacity Modes: Provisioned vs. On-Demand
-* Secondary Indexes: Global and Local
-* DynamoDB Streams for Change Data Capture
-EOF
-
-# C. Amazon ElastiCache
-cat <<EOF > "$DIR_05/003-Amazon-ElastiCache.md"
-# Amazon ElastiCache - In-Memory Caching
-
-* Introduction to Caching and its Benefits
-* ElastiCache Engines: Redis vs. Memcached.
-* Common Caching Strategies (Lazy Loading, Write-Through)
-* Use Cases for ElastiCache (Database Caching, Session Storage)
+*   **Group-Based Assignment:** Assigning the "GCP-Dev-Group" to the "Developer Permission Set" on the "AWS-Dev-Account."
+*   **Least Privilege:** Strategies for creating different Permission Sets for different environments (e.g., ReadOnly in Prod, Admin in Dev).
 EOF
 
 # ==============================================================================
-# Part VI: Application Integration and Monitoring
+# PART 4: The End-User Experience & Verification
 # ==============================================================================
-DIR_06="006-Application-Integration-Monitoring"
-mkdir -p "$DIR_06"
+PART_DIR="004-The-End-User-Experience-and-Verification"
+mkdir -p "$PART_DIR"
 
-# A. Amazon Simple Email Service (SES)
-cat <<EOF > "$DIR_06/001-Amazon-SES.md"
-# Amazon Simple Email Service (SES)
+# -- Section A: The AWS Access Portal --
+FILE_NAME="001-The-AWS-Access-Portal.md"
+FILE_PATH="$PART_DIR/$FILE_NAME"
+echo "Creating $FILE_PATH..."
+cat <<EOF > "$FILE_PATH"
+# The AWS Access Portal
 
-* Sending Emails with SES
-* Identity Management: Verifying Domains and Email Addresses
-* Handling Bounces and Complaints
-* Sender Reputation Management
+*   **The Start URL:** The specific endpoint (e.g., \`https://<your-id>.awsapps.com/start\`) where the flow begins.
+*   **IdP Redirection:** Verifying the browser redirects to the External IdP (Google) for authentication.
 EOF
 
-# B. Amazon Route 53
-cat <<EOF > "$DIR_06/002-Amazon-Route53.md"
-# Amazon Route 53 - Scalable DNS
+# -- Section B: Acceptance Criteria (Verification) --
+FILE_NAME="002-Acceptance-Criteria.md"
+FILE_PATH="$PART_DIR/$FILE_NAME"
+echo "Creating $FILE_PATH..."
+cat <<EOF > "$FILE_PATH"
+# Acceptance Criteria (Verification)
 
-* Hosted Zones and DNS Record Types
-* Routing Policies (Simple, Weighted, Latency, Failover, Geolocation).
-* Health Checks and DNS Failover.
-* Domain Registration with Route 53.
+*   **Successful Login:** User lands on the AWS Portal dashboard after authenticating with the IdP.
+*   **Account Visibility:** User sees *only* the AWS accounts they are assigned to.
+*   **Role Assumption:** Clicking an account successfully opens the AWS Console with the correct Federated Role active.
 EOF
 
-# C. Amazon CloudWatch
-cat <<EOF > "$DIR_06/003-Amazon-CloudWatch.md"
-# Amazon CloudWatch - Monitoring and Observability
-
-* CloudWatch Metrics: Monitoring AWS Resource Performance.
-* CloudWatch Alarms for Automated Notifications and Actions.
-* CloudWatch Logs: Centralized Log Management.
-* CloudWatch Events for Responding to State Changes in AWS Resources.
-* Custom Dashboards for Visualizing Metrics.
-EOF
-
-# ==============================================================================
-# Part VII: Containers and Serverless Computing
-# ==============================================================================
-DIR_07="007-Containers-Serverless-Computing"
-mkdir -p "$DIR_07"
-
-# A. Container Services on AWS
-cat <<EOF > "$DIR_07/001-Container-Services.md"
-# Container Services on AWS
-
-* Introduction to Containers (Docker)
-* Amazon Elastic Container Registry (ECR) for Storing Container Images
-* Amazon Elastic Container Service (ECS):
-    * ECS Core Components: Clusters, Task Definitions, Tasks, and Services.
-    * Launch Types: EC2 vs. AWS Fargate.
-* Amazon Elastic Kubernetes Service (EKS):
-    * Managed Kubernetes Control Plane.
-    * Worker Nodes and Node Groups
-    * Integrating EKS with other AWS services
-EOF
-
-# B. AWS Lambda
-cat <<EOF > "$DIR_07/002-AWS-Lambda.md"
-# AWS Lambda - Serverless Functions
-
-* Introduction to Serverless Computing.
-* Lambda Functions: Triggers, Code, and Configuration
-* Supported Runtimes and Programming Models.
-* Integrating Lambda with other AWS Services (API Gateway, S3, DynamoDB).
-* Lambda Execution Roles and Permissions
-* Understanding Lambda Concurrency and Scaling.
-* Lambda Layers for Code Sharing
-EOF
-
-# ==============================================================================
-# Appendices
-# ==============================================================================
-DIR_08="008-Appendices"
-mkdir -p "$DIR_08"
-
-cat <<EOF > "$DIR_08/001-Glossary-and-Reference.md"
-# Appendices
-
-* Glossary of Common AWS Terms
-* AWS CLI and SDK Configuration Guide
-* Practical Project Ideas for Applying AWS Knowledge
-EOF
-
-echo "Directory structure created successfully in $ROOT_DIR"
+echo "=========================================="
+echo "Structure created successfully inside: $(pwd)"
+echo "=========================================="
