@@ -1,9 +1,3 @@
-Based on the "Engineering Master Plan," **Transport Security** is the absolute starting point because no matter how strong your password hashing or token strategy is, if the "pipe" transmitting that data is transparent, your security is null and void.
-
-Here is a detailed breakdown of **Phase 1, Section 1-A: Transport Security**.
-
----
-
 ### Concept Overview: The "Glass Envelope" vs. The "Armored Truck"
 To understand Transport Security, imagine sending a letter.
 *   **HTTP** is like sending a letter in a clear, glass envelope. Anyone handling the letter (ISP, WiFi router, Government, Hacker) can read the contents without opening it.
