@@ -1,291 +1,190 @@
+
 #!/bin/bash
 
-# Define the root directory name
-ROOT_DIR="Azure-Comprehensive-Study"
+# Define Root Directory Name
+ROOT_DIR="Microsoft-Entra-ID-Study"
 
-# Create the root directory
+# Create Root Directory
+echo "Creating root directory: $ROOT_DIR"
 mkdir -p "$ROOT_DIR"
 cd "$ROOT_DIR" || exit
 
-echo "Creating directory structure for: $ROOT_DIR"
+# ==============================================================================
+# PART 1: Directory Structure & Governance
+# ==============================================================================
+DIR_NAME="001-Directory-Structure-Governance"
+echo "Creating $DIR_NAME..."
+mkdir -p "$DIR_NAME"
 
-# ==========================================
-# PART I: Azure Fundamentals & Core Principles
-# ==========================================
-PART_DIR="001-Azure-Fundamentals-Core-Principles"
-mkdir -p "$PART_DIR"
+# File 1.A
+cat <<EOF > "$DIR_NAME/001-The-Identity-Store.md"
+# The Identity Store (Entra ID)
 
-# Section A
-cat << 'EOF' > "$PART_DIR/001-Introduction-to-Cloud-Computing-Azure.md"
-# Introduction to Cloud Computing & Azure
+*Goal: Organizing the "Source of Truth" users and groups for external mapping.*
 
-* What is Cloud Computing?
-    * Benefits of Cloud Computing (High Availability, Scalability, Elasticity, etc.).
-    * Consumption-based model.
-* Cloud Service Models: IaaS, PaaS, SaaS.
-* Cloud Deployment Models: Public, Private, Hybrid.
-* Introduction to Microsoft Azure
-    * Overview of Azure's global infrastructure: Regions, Availability Zones, and Datacenters.
-    * Tour of the Azure Portal, Azure CLI, and PowerShell.
+## Key Concepts
+*   **i. Users:** The atomic units. Understanding Hybrid identities (synced from on-prem AD via Azure AD Connect) vs. Cloud-only users.
+*   **ii. Security Groups:** The crucial mechanism for Role Mapping. Strategy: Create specific groups (e.g., \`AWS-Production-Admins\`, \`AWS-Dev-ViewOnly\`) to map 1:1 with downstream permissions.
+*   **iii. [NEW] Dynamic Memberships:** Automating group entry based on attributes (e.g., \`user.department -eq "Engineering"\` automatically adds user to \`AWS-Dev-Group\`).
 EOF
 
-# Section B
-cat << 'EOF' > "$PART_DIR/002-Foundational-Azure-Concepts.md"
-# Foundational Azure Concepts
+# File 1.B
+cat <<EOF > "$DIR_NAME/002-Enterprise-Applications.md"
+# Enterprise Applications
 
-* The Shared Responsibility Model in the cloud.
-* Azure Architectural Components:
-    * Resources and Resource Groups.
-    * Subscriptions and Management Groups.
-* Azure Governance and Compliance:
-    * Azure Policy for enforcing organizational standards.
-    * Role-Based Access Control (RBAC)
-    * Resource Locks to prevent accidental deletion.
-* Understanding Azure Pricing and Support:
-    * Factors affecting costs in Azure.
-    * Pricing Calculator and Total Cost of Ownership (TCO) Calculator
-    * Azure Cost Management and Billing tools
+## Key Concepts
+*   **i. The Concept:** Represents the external Service Provider within the Microsoft tenant.
+*   **ii. The Gallery:** Using the pre-built "AWS IAM Identity Center" Gallery App (recommended) vs. creating a "Non-Gallery" custom application.
+*   **iii. [NEW] App Registration vs. Service Principal:** Understanding that the "Enterprise App" is just a local instance (Service Principal) of a global application definition.
 EOF
 
+# File 1.C
+cat <<EOF > "$DIR_NAME/003-Administrative-Roles.md"
+# Administrative Roles (RBAC)
 
-# ==========================================
-# PART II: Identity, Access, and Governance
-# ==========================================
-PART_DIR="002-Identity-Access-Governance"
-mkdir -p "$PART_DIR"
-
-# Section A
-cat << 'EOF' > "$PART_DIR/001-Microsoft-Entra-ID.md"
-# Microsoft Entra ID (Formerly Azure Active Directory)
-
-* Core Concepts: Identities, Accounts, and Tenants
-* Users and Groups management
-* Authentication Methods: Password Hash Sync, Pass-through Authentication, Federation
-* Multi-Factor Authentication (MFA) for enhanced security
-* Conditional Access policies
-* Role-Based Access Control (RBAC) in detail
+## Key Concepts
+*   **i. Least Privilege:** Assigning "Cloud Application Administrator" to the engineer setting this up, rather than full "Global Administrator."
 EOF
 
-# Section B
-cat << 'EOF' > "$PART_DIR/002-Azure-Governance.md"
-# Azure Governance
+# ==============================================================================
+# PART 2: SSO Configuration (SAML 2.0)
+# ==============================================================================
+DIR_NAME="002-SSO-Configuration-SAML"
+echo "Creating $DIR_NAME..."
+mkdir -p "$DIR_NAME"
 
-* Azure Policy and Initiatives for compliance
-* Azure Blueprints for standardized environment creation
-* Resource Tagging for cost management and organization.
-* Microsoft Purview for unified data governance.
+# File 2.A
+cat <<EOF > "$DIR_NAME/001-Basic-SAML-Configuration.md"
+# Basic SAML Configuration
+
+*Goal: Establishing the Trust Relationship.*
+
+## Key Concepts
+*   **i. Identifier (Entity ID):** The unique URL provided by the SP (AWS).
+*   **ii. Reply URL (Assertion Consumer Service URL):** Where Entra ID sends the authentication token.
+*   **iii. [NEW] Metadata Exchange:** Utilizing the Federation Metadata XML file to auto-configure the Service Provider rather than manual entry.
 EOF
 
+# File 2.B
+cat <<EOF > "$DIR_NAME/002-Attributes-and-Claims.md"
+# Attributes & Claims (The Payload)
 
-# ==========================================
-# PART III: Core Compute Services
-# ==========================================
-PART_DIR="003-Core-Compute-Services"
-mkdir -p "$PART_DIR"
-
-# Section A
-cat << 'EOF' > "$PART_DIR/001-Azure-Virtual-Machines.md"
-# Azure Virtual Machines (VMs)
-
-* VM Planning: Sizing, Pricing, and Operating Systems
-* Creating and managing Windows and Linux VMs in Azure.
-* VM Storage: Managed Disks and Storage Tiers
-* VM Networking and Security
-* High Availability: Availability Sets and Availability Zones
-* Virtual Machine Scale Sets for automatic scaling.
+## Key Concepts
+*   **i. User Identifier (NameID):** Deciding what to send as the unique key (usually \`user.userPrincipalName\` or email).
+*   **ii. Group Claims:** The critical configuration to send Group Membership data inside the SAML token so the SP knows what permissions to grant.
+*   **iii. Custom Claims:** Mapping specific IdP attributes (e.g., Department, Cost Center) to SAML attributes expected by the SP.
+*   **iv. [NEW] Claims Transformations:** Using the "Join" or "Extract" functions to format data (e.g., stripping \`@domain.com\` from a username before sending).
 EOF
 
-# Section B
-cat << 'EOF' > "$PART_DIR/002-Azure-App-Service.md"
-# Azure App Service
+# File 2.C
+cat <<EOF > "$DIR_NAME/003-Signing-Certificates.md"
+# Signing Certificates
 
-* Web Apps for hosting web applications and APIs.
-* Deployment Slots for staging and production environments
-* Scaling App Service Plans (Scale up vs. Scale out)
-* App Service Security and Networking features
+## Key Concepts
+*   **i. Certificate Management:** Generating, downloading (Base64), and rotating the Token Signing Certificate.
+*   **ii. [NEW] Notification Email:** Configuring alerts for when the certificate is about to expire to prevent outages.
 EOF
 
-# Section C
-cat << 'EOF' > "$PART_DIR/003-Azure-Container-Apps-AKS.md"
-# Azure Container Apps & Azure Kubernetes Service (AKS)
+# ==============================================================================
+# PART 3: Provisioning Configuration (SCIM Client)
+# ==============================================================================
+DIR_NAME="003-Provisioning-Configuration-SCIM"
+echo "Creating $DIR_NAME..."
+mkdir -p "$DIR_NAME"
 
-* Introduction to Containers and Orchestration
-* Azure Container Instances (ACI) for simple container workloads
-* Azure Kubernetes Service (AKS) for managing containerized applications
-    * AKS Cluster Architecture
-    * Deploying and scaling applications in AKS
+# File 3.A
+cat <<EOF > "$DIR_NAME/001-Admin-Credentials.md"
+# Admin Credentials
+
+*Goal: Automating the user lifecycle (Pushing data to the SP).*
+
+## Key Concepts
+*   **i. The Handshake:** Inputting the SCIM Endpoint URL and Secret Token generated by the Service Provider.
 EOF
 
-# Section D
-cat << 'EOF' > "$PART_DIR/004-Serverless-Computing.md"
-# Serverless Computing
+# File 3.B
+cat <<EOF > "$DIR_NAME/002-Mappings-Data-Transformation.md"
+# Mappings (Data Transformation)
 
-* Azure Functions for event-driven serverless code.
-    * Triggers and Bindings
-    * Durable Functions for stateful workflows
-* Azure Logic Apps for building automated workflows
+## Key Concepts
+*   **i. Attribute Mapping:** Connecting Entra ID fields (\`Run on premises extensionAttribute1\`) to SCIM fields (\`externalId\`).
+*   **ii. Matching Precedence:** Defining which field links a Microsoft user to an existing AWS user (usually Email).
 EOF
 
+# File 3.C
+cat <<EOF > "$DIR_NAME/003-Scoping.md"
+# Scoping
 
-# ==========================================
-# PART IV: Storage Solutions
-# ==========================================
-PART_DIR="004-Storage-Solutions"
-mkdir -p "$PART_DIR"
-
-# Section A
-cat << 'EOF' > "$PART_DIR/001-Azure-Storage-Accounts.md"
-# Azure Storage Accounts
-
-* Core Storage Services:
-    * Blob Storage for unstructured object data.
-    * File Storage for cloud-based file shares
-    * Table Storage for NoSQL key-value data.
-    * Queue Storage for messaging between application components
-* Storage Tiers (Hot, Cool, Archive)
-* Storage account redundancy options (LRS, GRS, ZRS)
-* Securing Storage Accounts: Access keys, Shared Access Signatures (SAS), and network security.
+## Key Concepts
+*   **i. Sync Scope:** Configuring the app to only sync "Assigned Users and Groups" (preventing the accidental syncing of the entire corporate directory).
 EOF
 
+# File 3.D
+cat <<EOF > "$DIR_NAME/004-Troubleshooting-Lifecycle.md"
+# Troubleshooting & Lifecycle
 
-# ==========================================
-# PART V: Databases
-# ==========================================
-PART_DIR="005-Databases"
-mkdir -p "$PART_DIR"
-
-# Section A
-cat << 'EOF' > "$PART_DIR/001-Relational-Databases.md"
-# Relational Databases
-
-* Azure SQL Database: a managed relational database service.
-* Azure Database for MySQL, PostgreSQL, and MariaDB
-* Elastic Pools for managing multiple databases
+## Key Concepts
+*   **i. Provisioning Logs:** The first place to look when a user fails to appear in AWS.
+*   **ii. Quarantine State:** Handling scenarios where too many errors pause the sync engine.
+*   **iii. On-Demand Provisioning:** Testing a single user immediately without waiting for the 40-minute sync cycle.
 EOF
 
-# Section B
-cat << 'EOF' > "$PART_DIR/002-NoSQL-and-Other-Database-Services.md"
-# NoSQL and Other Database Services
+# ==============================================================================
+# PART 4: Security & Access Control
+# ==============================================================================
+DIR_NAME="004-Security-Access-Control"
+echo "Creating $DIR_NAME..."
+mkdir -p "$DIR_NAME"
 
-* Azure Cosmos DB: a globally distributed, multi-model database.
-* Azure Cache for Redis for high-performance caching
+# File 4.A
+cat <<EOF > "$DIR_NAME/001-Assignment.md"
+# Assignment
+
+*Goal: Enforcing "Who" gets to log in and "How".*
+
+## Key Concepts
+*   **i. User/Group Assignment:** Explicitly adding the Security Groups defined in Section 1 to the Enterprise App.
+*   **ii. [NEW] Self-Service Access:** Configuring the "My Apps" portal to allow users to *request* access to the AWS app, requiring manager approval workflow.
 EOF
 
+# File 4.B
+cat <<EOF > "$DIR_NAME/002-Conditional-Access-Policies.md"
+# Conditional Access Policies (CAP)
 
-# ==========================================
-# PART VI: Networking and Content Delivery
-# ==========================================
-PART_DIR="006-Networking-Content-Delivery"
-mkdir -p "$PART_DIR"
-
-# Section A
-cat << 'EOF' > "$PART_DIR/001-Azure-Virtual-Networks.md"
-# Azure Virtual Networks (VNets)
-
-* VNet fundamentals: Address spaces, subnets, and routing
-* Network Security Groups (NSGs) for filtering network traffic.
-* Azure Firewall for centralized network protection
-* Connecting VNets: VNet Peering and VPN Gateways.
-* Hybrid Connectivity: Connecting on-premises networks to Azure
+## Key Concepts
+*   **i. The Perimeter:** Applying security rules specifically to this Enterprise App.
+*   **ii. MFA Enforcement:** Requiring a 2nd factor (Authenticator App) specifically when accessing this application.
+*   **iii. Device Compliance:** Blocking access if the request comes from an unmanaged or non-compliant device.
+*   **iv. [NEW] Session Controls:** Limiting session frequency (forcing re-auth every X hours).
 EOF
 
-# Section B
-cat << 'EOF' > "$PART_DIR/002-Azure-Load-Balancing.md"
-# Azure Load Balancing
+# ==============================================================================
+# PART 5: Advanced Governance (Identity Governance)
+# ==============================================================================
+DIR_NAME="005-Advanced-Governance"
+echo "Creating $DIR_NAME..."
+mkdir -p "$DIR_NAME"
 
-* Azure Load Balancer for distributing traffic within a VNet.
-* Azure Application Gateway for application-level load balancing.
-* Azure Front Door for global traffic management
+# File 5.A
+cat <<EOF > "$DIR_NAME/001-Privileged-Identity-Management.md"
+# Privileged Identity Management (PIM)
+
+*Goal: Auditing and Temporary Access.*
+
+## Key Concepts
+*   **i. Just-in-Time (JIT) Access:** Users are eligible members of the "AWS-Admin-Group" but must "activate" their membership for a 4-hour window to gain access.
 EOF
 
-# Section C
-cat << 'EOF' > "$PART_DIR/003-Content-Delivery.md"
-# Content Delivery
+# File 5.B
+cat <<EOF > "$DIR_NAME/002-Access-Reviews.md"
+# Access Reviews
 
-* Azure Content Delivery Network (CDN) for caching content closer to users.
+## Key Concepts
+*   **i. Recertification:** Automated quarterly emails asking managers, "Does User X still need access to AWS?"
+*   **ii. Auto-Remediation:** Automatically removing users who deny the review.
 EOF
 
+echo "----------------------------------------------------------------"
+echo "Success! Structure created at: $(pwd)"
+echo "----------------------------------------------------------------"
 
-# ==========================================
-# PART VII: Monitoring and Management
-# ==========================================
-PART_DIR="007-Monitoring-Management"
-mkdir -p "$PART_DIR"
-
-# Section A
-cat << 'EOF' > "$PART_DIR/001-Azure-Monitor.md"
-# Azure Monitor
-
-* Collecting and analyzing telemetry data from Azure resources.
-* Log Analytics for querying log data.
-* Alerts and Action Groups for proactive notifications.
-* Application Insights for application performance monitoring.
-EOF
-
-# Section B
-cat << 'EOF' > "$PART_DIR/002-Management-and-Automation.md"
-# Management and Automation
-
-* Azure Resource Manager (ARM) templates for Infrastructure as Code.
-* Azure Automation for process automation
-* Azure Advisor for personalized recommendations and best practices.
-EOF
-
-
-# ==========================================
-# PART VIII: Security and Compliance
-# ==========================================
-PART_DIR="008-Security-Compliance"
-mkdir -p "$PART_DIR"
-
-# Section A
-cat << 'EOF' > "$PART_DIR/001-Security-Posture-Management.md"
-# Security Posture Management
-
-* Microsoft Defender for Cloud for unified security management.
-* Azure Key Vault for secure storage of secrets and keys
-EOF
-
-# Section B
-cat << 'EOF' > "$PART_DIR/002-Identity-and-Access-Security.md"
-# Identity and Access Security
-
-* Advanced Microsoft Entra ID features
-* Azure Bastion for secure RDP/SSH access to VMs.
-EOF
-
-# Section C
-cat << 'EOF' > "$PART_DIR/003-Network-Security.md"
-# Network Security
-
-* Advanced Network Security Groups and Application Security Groups.
-* Distributed Denial of Service (DDoS) Protection
-EOF
-
-
-# ==========================================
-# Appendices
-# ==========================================
-PART_DIR="009-Appendices"
-mkdir -p "$PART_DIR"
-
-cat << 'EOF' > "$PART_DIR/001-Glossary.md"
-# Glossary of Common Azure Terms
-
-* (Add definitions here)
-EOF
-
-cat << 'EOF' > "$PART_DIR/002-CLI-PowerShell-Reference.md"
-# Azure CLI and PowerShell Quick Reference
-
-* (Add cheat sheet here)
-EOF
-
-cat << 'EOF' > "$PART_DIR/003-Practical-Project-Scenarios.md"
-# Practical Project Scenarios
-
-* (Add project ideas here)
-EOF
-
-
-echo "Success! Directory structure created at ./$ROOT_DIR"

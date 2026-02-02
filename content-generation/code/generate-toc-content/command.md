@@ -1,1 +1,1 @@
-./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/aws/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/aws/AWS-Identity-Architecture-Study
+./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/azure/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/azure/Microsoft-Entra-ID-Study
