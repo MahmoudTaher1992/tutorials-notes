@@ -1,1 +1,1 @@
-./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/azure/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/azure/Microsoft-Entra-ID-Study
+./generate_content.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/backend/authentication/OAuth/toc.md /home/mahmoud-taher/git-repos/tutorials-notes/software/backend/authentication/OAuth/OAuth-Study-Guide

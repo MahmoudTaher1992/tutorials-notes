@@ -1,1 +1,1 @@
-./code.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/azure/toc.md
+./code.sh /home/mahmoud-taher/git-repos/tutorials-notes/software/backend/authentication/OAuth/toc.md
