@@ -89,10 +89,9 @@
     *   Example: `openid`, `profile`, `email`, `read:orders`, `write:database`
 
 * **Grant (Grant Type):**
-    *   The method (flow) the Client uses to get the Access Token
+    *   The method/process (flow) the Client uses to get the Access Token
     *   Different scenarios need different grants:
 
 * **Token:**
     *   **Access Token:** The key used to access the API. Usually short-lived (e.g., 1 hour).
     *   **Refresh Token:** A long-lived credential used to get a *new* Access Token without prompting the user to log in again.
-    
