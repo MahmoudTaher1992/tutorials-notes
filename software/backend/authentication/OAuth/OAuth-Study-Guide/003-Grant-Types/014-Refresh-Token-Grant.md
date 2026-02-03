@@ -1,7 +1,112 @@
+Based on item **14. Refresh Token Grant** from your Table of Contents, here is a detailed explanation of how this flow works, why it is critical for user experience and security, and the modern best practices surrounding it.
+
+---
+
 # 14. Refresh Token Grant
 
-- Flow Diagram & Steps
-- Refresh Token Rotation
-- Refresh Token Expiration Strategies
-- Binding Refresh Tokens to Clients
-- Revocation Considerations
+The **Refresh Token Grant** is a mechanism used by an application (Client) to obtain a new Access Token without requiring the End-User to interact or re-enter their credentials.
+
+### The Problem It Solves
+**Access Tokens** are designed to be short-lived (e.g., typically 5 minutes to 1 hour) to limit security risks. If an attacker steals an Access Token, they only have a brief window to use it.
+
+However, asking the user to log in every 15 minutes is a terrible user experience. **Refresh Tokens** solve this by being long-lived references that can be exchanged for new, short-lived Access Tokens.
+
+---
+
+## 1. Flow Diagram & Steps
+
+Unlike other grants (like Authorization Code), the Refresh Token Grant happens strictly between the **Client** and the **Authorization Server**. The User (Resource Owner) is not involved at all because they have already provided consent in the past.
+
+### The Steps:
+
+1.  **Initial Authorization:** The Client authenticates the user (via Authorization Code Grant) and receives both an `access_token` and a `refresh_token`.
+2.  **Access Token Expiry:** The Client uses the Access Token to fetch data. Eventually, the API responds with a `401 Unauthorized` (or the Client checks the local expiration time and sees it has passed).
+3.  **Token Request:** The Client sends a POST request to the Authorization Server's **Token Endpoint**.
+4.  **Validation:** The Authorization Server verifies the Refresh Token and the Client’s credentials (if available).
+5.  **Token Response:** If valid, the Server responds with a **new** Access Token (and optionally a new Refresh Token).
+
+### Example HTTP Request (Step 3)
+
+```http
+POST /token HTTP/1.1
+Host: auth-server.com
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic czZCaGRSa3F0... (Client Credentials, if required)
+
+grant_type=refresh_token
+&refresh_token=MBzE7w... (The actual long-lived token)
+&scope=read (Optional: Requesting same or fewer scopes)
+```
+
+### Example HTTP Response (Step 5)
+
+```json
+{
+  "access_token": "AyM1SysPpby...",
+  "token_type": "Bearer",
+  "expires_in": 3600,
+  "refresh_token": "R8Sv12...", // A new refresh token (if rotation is on)
+  "scope": "read"
+}
+```
+
+---
+
+## 2. Refresh Token Rotation
+
+This is a critical security pattern, essentially mandatory in **OAuth 2.1** for public clients (like Single Page Apps or Mobile Apps) that cannot store secrets securely.
+
+### How it works:
+Every time a Client uses a Refresh Token to get a new Access Token, the Authorization Server:
+1.  Issues a new Access Token.
+2.  Issues a **New** Refresh Token.
+3.  **Invalidates (Deletes)** the Old Refresh Token.
+
+### Security Benefit (Reuse Detection):
+If a Refresh Token is stolen:
+1.  **Attacker** uses the stolen refresh token to get an access token. The server issues a *new* refresh token to the attacker and invalidates the stolen one.
+2.  **Legitimate Client** tries to use the (now old/invalid) refresh token.
+3.  **The Trap:** The Authorization Server notices that an **already used/invalidated** token is being presented.
+4.  **Reaction:** The Server concludes a theft has occurred and immediately **revokes the entire token chain**. Both the attacker's new token and the legitimate client's tokens stop working. The user is forced to log in again, re-securing the account.
+
+---
+
+## 3. Refresh Token Expiration Strategies
+
+Authorization Servers need to decide how long a user stays "logged in."
+
+### 1. Absolute Expiration
+The Refresh Token dies at a fixed time (e.g., 30 days after initial login). Even if the user is active every day, on Day 30, they are forced to log in again.
+*   **Pros:** High security.
+*   **Cons:** Inconvenient for frequently used apps.
+
+### 2. Sliding Window Expiration
+Whenever the Refresh Token is used (or rotated), the expiration timer resets.
+*   **Example:** Expiry is 7 days. If the user opens the app on Day 6, they get a new token valid for another 7 days.
+*   **Result:** As long as the user uses the app regularly, they never have to log in. If they stop using it for >7 days, they are logged out.
+
+---
+
+## 4. Binding Refresh Tokens to Clients
+
+A Refresh Token must be strictly bound to the Client that requested it.
+
+1.  **Client Authentication:** For Confidential Clients (server-side apps), the Authorization Server validates the `client_id` and `client_secret` during the refresh request. A Refresh Token issued to Client A cannot be used by Client B.
+2.  **Sender Constraining (Advanced):**
+    *   **mTLS (Mutual TLS):** The Refresh Token is bound to the specific X.509 certificate of the client.
+    *   **DPoP (Demonstrating Proof-of-Possession):** The token is bound to a private/public key pair generated by the client.
+    *   If the token is stolen, the thief cannot use it because they don't possess the corresponding private key or certificate.
+
+---
+
+## 5. Revocation Considerations
+
+Because Refresh Tokens are long-lived, we need a way to kill them before they expire naturally.
+
+*   **Logout:** When a user clicks "Logout," the client should send the Refresh Token to the **Revocation Endpoint** (RFC 7009) to invalidate it immediately.
+*   **Password Change:** If a user changes their password, good security practice dictates revoking all outstanding Refresh Tokens for that user across all devices to force re-authentication.
+*   **Admin Action:** An administrator (or the user via a dashboard) should be able to see active sessions and "Revoke" them remotely (e.g., "Sign out all devices").
+
+### Summary of Differences (OAuth 2.0 vs 2.1)
+*   **OAuth 2.0:** Refresh Tokens were optional. Rotation was optional (often static tokens were used).
+*   **OAuth 2.1:** Refresh Tokens are standard. **Refresh Token Rotation** is strongly recommended (and practically required for Single Page Apps and Mobile Apps) to mitigate the risk of token theft in browser/mobile environments.
