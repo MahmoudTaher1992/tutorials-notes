@@ -1,6 +1,110 @@
-# Client Registration
+Based on Part 5, Section 17 of the Table of Contents you provided, here is a detailed explanation of **Client Registration**.
 
-- Static Registration
-- Dynamic Client Registration (RFC 7591)
-- Registration Metadata
-- Client ID & Client Secret Management
+---
+
+# Deep Dive: Client Registration
+
+Before any OpenID Connect (OIDC) authentication flow can begin, the **Relying Party (Client App)** and the **OpenID Provider (IdP)** must enduce themselves to each other. This process is called **Client Registration**.
+
+Think of this like getting a passport. Before you can travel (authenticate users), you must go to the government office (the IdP), provide your details, tell them where you live, and receive a document with a unique ID number.
+
+Here is the breakdown of the concepts listed in Section 17.
+
+---
+
+## 1. Static Registration (Manual)
+
+This is the most common method for internal enterprise applications or standard B2C applications.
+
+*   **The Process:** A developer logs into the administration console of the OpenID Provider (e.g., Auth0 Dashboard, Google Cloud Console, Keycloak Admin).
+*   **The Action:** The developer manually creates a new "Application" or "Client."
+*   **The Input:** The developer types in the application name and the allowed **Redirect URIs**.
+*   **The Output:** The portal generates a **Client ID** and (for confidential clients) a **Client Secret**, which the developer copies and pastes into their application's configuration files/environment variables.
+
+**When to use it:**
+*   You control both the application and the Identity Provider.
+*   You have a fixed number of applications.
+
+---
+
+## 2. Dynamic Client Registration (RFC 7591)
+
+In some ecosystems, it is impossible to manually register every client. For example, if you are building a standard API that thousands of third-party developers will use, you can't manually approve every single one.
+
+OIDC supports **Dynamic Registration** based on **RFC 7591**.
+
+*   **The Process:** Instead of a human logging into a console, the Client Application communicates directly with the IdP via an API.
+*   **The Flow:**
+    1.  **Discovery:** The Client checks the IdP's metadata (Discovery endpoint) to find the `registration_endpoint`.
+    2.  **Request:** The Client sends an HTTP POST request to that endpoint containing a JSON object describing itself (Metadata).
+    3.  **Response:** The IdP automatically registers the client and responds with a JSON object containing the new `client_id` and `client_secret`.
+
+**Example Request:**
+```json
+POST /connect/register HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+{
+    "client_name": "My Cool Mobile App",
+    "redirect_uris": [ "com.example.app://callback" ],
+    "grant_types": [ "authorization_code", "refresh_token" ],
+    "token_endpoint_auth_method": "client_secret_basic"
+}
+```
+
+**When to use it:**
+*   Open Banking / Open Finance APIs.
+*   Mobile apps where every installation might need a unique instance secret.
+*   Single Sign-On (SSO) Federations.
+
+---
+
+## 3. Registration Metadata
+
+Whether you register statically (via a UI) or dynamically (via JSON), you must provide specific **Metadata** to configure how the IdP interacts with your app.
+
+Here are the most critical metadata fields:
+
+### A. `redirect_uris` (Crucial for Security)
+This is a whitelist of URLs where the IdP is allowed to return the user after login.
+*   The IdP will **reject** any authentication request if the callback URL doesn't match one of these pre-registered URIs exactly.
+*   *Example:* `https://myapp.com/callback`
+
+### B. `grant_types`
+This defines which OIDC flows the client is allowed to use.
+*   *Examples:* `authorization_code`, `refresh_token`, `client_credentials`, `implicit`.
+*   *Security Note:* If a client is a Single Page App (SPA), you should generally verify strictly that it *cannot* use the Client Credentials flow.
+
+### C. `token_endpoint_auth_method`
+This tells the IdP how the Client will authenticate itself when exchanging the code for a token.
+*   `client_secret_basic`: Send ID/Secret in the HTTP Header (Base64 encoded).
+*   `client_secret_post`: Send ID/Secret in the body of the POST request.
+*   `private_key_jwt`: Use a signed JWT instead of a static password (higher security).
+*   `none`: Used for Public Clients (SPAs/Mobile) that don't have a secret.
+
+### D. UX Fields
+*   `client_name`: The name displayed to the user on the consent screen (e.g., "Allow **MyApp** to access your generic info?").
+*   `logo_uri`: URL to the app's icon.
+
+---
+
+## 4. Client ID & Client Secret Management
+
+This is the output of the registration process.
+
+### Client ID
+*   **Definition:** A public identifier for the application.
+*   **Visibility:** It is **Public**. It is included in the URL during the login redirect. Anyone can see it. It is like a Username.
+
+### Client Secret
+*   **Definition:** A confidential string used to authenticate the application identity to the IdP.
+*   **Visibility:** It is **Private**. It acts like a Password.
+*   **Lifecycle Management:**
+    *   **Generation:** Should be generated by the IdP as a cryptographically strong random string.
+    *   **Expiration:** Many IdPs allow secrets to have an expiration date (`client_secret_expires_at`).
+    *   **Rotation:** You should have a process to rotate secrets (generate a new one, update the app, invalidate the old one) to minimize damage if a secret is leaked.
+
+### Important Distinction: Public vs. Confidential Clients
+*   **Confidential Clients (Web Servers):** Must have a Client Secret. They can store it safely on the server side.
+*   **Public Clients (SPAs / Mobile):** **Cannot** store a Client Secret safely because their code is viewable by the user/browser. During registration, you must configure these clients **not** to require a secret (Auth method: `none`) and rely on **PKCE** (Proof Key for Code Exchange) instead.
