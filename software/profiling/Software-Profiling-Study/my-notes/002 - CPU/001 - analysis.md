@@ -48,6 +48,7 @@
 *   100% utilization is a good thing until it is saturated.
 
 ### 🚫 Saturation
+*   The degree to which extra work is queued (waiting) because the resource is busy
 *   It is a state the [that] describes if there are tasks waiting in a queue to be executed by the CPU because it is 100% utilized.
 
 ### ⚖️ Load Averages
