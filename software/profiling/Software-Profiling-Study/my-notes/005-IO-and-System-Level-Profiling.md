@@ -43,4 +43,46 @@
 *   Software Network Profiling is about answering: "Is my application slow because the network is slow, or because my application is using the network inefficiently?"
 
 #### Socket Buffers and Queue Depths
-*   
+*   answers the question, who is slow, your app or the network 3rd party on the other side
+*   while networking the communications is saved some where called **Socket Buffers**
+*   **Socket Buffers** contains 2 queues
+    *   **Send-Q**
+        *   the app writes the out going data here
+    *   **Recv-Q**
+        *   the app writes the incoming data here
+*   if the **Send-Q** is high, then the network is busy, and can not consume the outbound data well, the 3rd party app is slow
+*   if the **Recv-Q** is high, then the network is fast, and the app/CPU can not consume the inbound data well, the app is slow
+*   you can use tools like `ss` or `netstat` to get such information
+
+#### TCP Retransmissions and Window Sizes
+*   **TCP Retransmissions:**
+    *   TCP is designed to be relieable
+    *   if the packet is lost then, it will be resent again
+    *   the losses reasons are alot
+        *   bad hardware
+        *   congestion
+        *   strict firewall
+        *   ...
+    *   this process costs time and resources
+        *   a request that takes 1ms might take 300ms because of Retransmissions
+    *   use `netstat -s` to get more info about the `TCP Retransmissions`
+*   **Window Sizes (Flow Control):**
+    *   TCP window is the max amount of data that can be sent before getting a message from the receiver that it is full and needs time to clear it's **Recv-Q**
+    *   when receiver's buffer (Recv-Q) is full, it sends a "Zero Window" packet
+    *   if you see "Zero Window" packet, it means that there is a bottleneck at the receiver's side
+
+#### DNS Resolution Latency
+*   gives you the time needed to resolve a DNS
+*   it is a part of the latency, you may want to look at
+*   use `dig` command for inspection
+
+#### Packet Capture Analysis
+*   if you need to have a look at the packets moving in and out of the machine
+*   you sometimes need to see for analysis
+*   use `tcpdump` and `Wireshark`
+*   what can you see/profile
+    *   **The 3-Way Handshake (SYN, SYN-ACK, ACK)**
+    *   **TLS Handshake**
+    *   **Application Chatter**
+    *   **Keep-Alive**
+*   looking at the numbers in packets trips, gives you indications

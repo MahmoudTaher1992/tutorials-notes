@@ -14,6 +14,7 @@ Requirements:
 3. Inside each file:
    - The first line should be a Markdown H1 heading (`#`) with the section title.
    - Optionally, include the bullet points from the TOC under that heading as starter content.
+   -  don't add any descriptions please
 
 4. The script should:
    - Create a root directory (e.g., "OpenTelemetry-Study").
