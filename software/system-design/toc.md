@@ -1,8 +1,3 @@
-Certainly! Here is a **detailed Table of Contents (TOC) for System Design**, modeled after the structure and granularity of your REST API TOC. I've organized it in modular parts, progressing from fundamentals and principles to practical patterns, scalability, and modern topics.
-
----
-
-```markdown
 *   **Part I: Foundations of System Design**
     *   **A. Introduction to System Design**
         *   What is System Design? Why is it Important?
@@ -169,14 +164,3 @@ Certainly! Here is a **detailed Table of Contents (TOC) for System Design**, mod
     *   **B. IoT Architectures**
     *   **C. Blockchain, Decentralized Applications**
     *   **D. Sustainability and Green Computing
-
-```
-
----
-
-**Notes:**
-- Each bulleted point can be expanded into lessons/chapters/sub-points for further study or teaching.
-- The structure parallels your REST roadmap in modularity and depth, but tailored for system design (both high-level and low-level mechanisms).
-- Adjust as per your interests (case studies, cloud, interview focus, etc).
-
-Let me know if you want a more concise or more detailed breakdown for any section!

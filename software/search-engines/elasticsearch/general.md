@@ -208,8 +208,8 @@ Of course! Let's continue our journey through the Elasticsearch study guide.
     *   **`terms`**: [Creates a bucket for each unique value in a field (e.g., group by product category).]
     *   **`range`**: [Creates buckets for user-defined numeric ranges (e.g., group by price ranges: $0-50, $51-100).]
     *   **`date_histogram`**: [Creates buckets for time intervals (e.g., group by day, month, or year). This is the foundation of most time-series charts.]
-    *   **`filter`**: [Creates a single bucket containing all documents that match a specific filter.]
-*   **Metric Aggregations**: [These calculate values based on the documents within each bucket.]
+    *   **`filter`**: [Creates a single bucket containing all documents that match a specific filter.]`
+*   **Metric Aggregations**: [These calculate values based on the documents within each `just a callout box within the Elasticsearch section bucket.]◊
     *   **`sum`**, **`avg`**, **`min`**, **`max`**: [Standard mathematical calculations.]
     *   **`cardinality`**: [Calculates the approximate count of unique values in a field.]
 *   **Pipeline Aggregations**: [These perform calculations on the *output* of other aggregations, not on the documents themselves.]
