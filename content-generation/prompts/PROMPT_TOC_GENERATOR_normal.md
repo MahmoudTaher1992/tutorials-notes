@@ -51,7 +51,7 @@ Think hard about what might be missing. Consider the topic from these angles:
 [LIST THE SPECIFIC FRAMEWORKS/TOOLS/LIBRARIES YOU WANT COVERED]
 
 ## Output Location
-Write files to: [DIRECTORY PATH]
+Write files to: [DIRECTORY PATH]/toc-anthropic
 ```
 
 ---
@@ -73,5 +73,5 @@ I want you to create a detailed Table of Contents (study guide) for: Message Que
 - Azure Service Bus
 
 ## Output Location
-Write files to: /path/to/tutorials-notes/software/messaging/
+Write files to: /path/to/tutorials-notes/software/messaging/toc-anthropic
 ```

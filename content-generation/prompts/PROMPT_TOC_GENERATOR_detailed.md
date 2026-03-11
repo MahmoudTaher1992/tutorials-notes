@@ -44,4 +44,4 @@ Think aggressively about what might be missing to achieve Level 5 depth. View th
 [LIST THE SPECIFIC FRAMEWORKS/TOOLS/LIBRARIES YOU WANT COVERED]
 
 ## Output Location
-Write files to: [DIRECTORY PATH]
+Write files to: [DIRECTORY PATH]/toc-anthropic
