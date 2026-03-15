@@ -80,16 +80,16 @@ Sentence types to use:
 
 After generating the script, perform the following file operations:
 
-1. **Create a folder** named after the video idea (use a short, slug-style name, e.g., `why-most-people-fail-programming`). Use lowercase letters and hyphens only.
-2. **Move the original idea file** (if one exists in the current directory) into that folder and rename it `idea` (preserving its extension, e.g., `idea.md` or `idea.txt`).
-3. **Create a new file** called `script.md` inside that folder.
+1. **Create a folder** under `youtube/scripts/` named after the video idea (use a short, slug-style name, e.g., `youtube/scripts/why-most-people-fail-programming/`). Use lowercase letters and hyphens only.
+2. **Move the original idea file** from `youtube/ideas/` (if one exists) into that folder and rename it `idea` (preserving its extension, e.g., `idea.md`).
+3. **Create a new file** called `script.md` inside that folder (`youtube/scripts/<slug>/script.md`).
 4. **Write the full script table** into `script.md`, including:
    - The video title at the top (formatted as a heading)
    - The tone/theme used
    - The estimated duration
    - The full Markdown table
 
-If no idea file exists, create the folder and the `script.md` file only, and note this to the user.
+If no idea file exists in `youtube/ideas/`, create the folder and the `script.md` file only, and note this to the user.
 
 ---
 
