@@ -91,10 +91,11 @@ Use this structure:
 
 1. **No duplicates**: Always verify against `youtube/ideas/video-shooted/` before proposing.
 2. **Balanced distribution**: When generating multiple ideas, spread them across all tech domains present in the notes.
-3. **Conversation first, file second**: Never create a file without explicit user approval. The conversation is how quality is ensured.
-4. **Be specific**: Vague ideas like "Intro to Docker" are weak. Push for specific angles like "Why your Docker layers are bloating your image size".
-5. **Viewer value**: Every idea must answer the question: *What problem does the viewer solve by watching this?*
-6. **Iterative**: If a first proposal doesn't land, explore alternatives. You have a rich source of notes — there are always more angles.
+3. **No frontend**: Never propose ideas related to frontend, CSS, React, Vue, Angular, Tailwind, HTML, browser APIs, or any UI/UX topics. Focus exclusively on backend, DevOps, databases, architecture, security, and tooling.
+4. **Conversation first, file second**: Never create a file without explicit user approval. The conversation is how quality is ensured.
+5. **Be specific**: Vague ideas like "Intro to Docker" are weak. Push for specific angles like "Why your Docker layers are bloating your image size".
+6. **Viewer value**: Every idea must answer the question: *What problem does the viewer solve by watching this?*
+7. **Iterative**: If a first proposal doesn't land, explore alternatives. You have a rich source of notes — there are always more angles.
 
 ---
 
