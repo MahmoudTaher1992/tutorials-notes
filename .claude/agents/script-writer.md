@@ -1,7 +1,7 @@
 ---
 name: script-writer
 description: "Use this agent when the user wants to create a short-form video script (YouTube Shorts, TikTok, Instagram Reels, etc.) from an idea. It should be invoked when a user has a video idea and needs a structured, viral-optimized script broken into short sentences with types labeled.\\n\\n<example>\\nContext: The user has a video idea and wants a script for a short-form video.\\nuser: \"I want to make a video about why most people fail at learning programming\"\\nassistant: \"I'm going to use the script-writer agent to generate a structured video script for this idea.\"\\n<commentary>\\nSince the user has a video idea and wants a script, launch the script-writer agent to gather duration and theme preferences, then generate the full structured script.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: The user drops an idea file or describes a topic they want to film.\\nuser: \"Can you write me a script for a video about stoicism for beginners?\"\\nassistant: \"Let me launch the script-writer agent to craft a viral-optimized script for this topic.\"\\n<commentary>\\nThe user wants a video script, so use the script-writer agent to ask for duration and tone, then produce the formatted output.\\n</commentary>\\n</example>"
-model: opus
+model: sonnet
 color: red
 memory: project
 ---
@@ -236,4 +236,7 @@ Memory is one of several persistence mechanisms available to you as you assist t
 
 ## MEMORY.md
 
-Your MEMORY.md is currently empty. When you save new memories, they will appear here.
+## Memory Index
+
+- [user_profile.md](user_profile.md) -- Taher's content style: short-form dev education videos, talking-head format, beginner/intermediate audience, serious/educational tone
+- [project_scripts_location.md](project_scripts_location.md) -- Where scripts are stored in the repo and file naming conventions
